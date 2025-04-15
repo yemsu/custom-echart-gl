@@ -2,7 +2,7 @@ import * as echarts from 'echarts/lib/echarts';
 import graphicGL from '../../util/graphicGL';
 import retrieve from '../../util/retrieve';
 import format from '../../util/format';
-import BarsGeometry from '../../util/geometry/Bars3DGeometry';
+import BarsGeometry from '../../util/geometry/Cones3DGeometry';
 import LabelsBuilder from '../../component/common/LabelsBuilder';
 import glmatrix from 'claygl/src/dep/glmatrix';
 import {getItemVisualColor, getItemVisualOpacity} from '../../util/visual';
@@ -41,7 +41,6 @@ export default echarts.ChartView.extend({
     },
 
     render: function (seriesModel, ecModel, api) {
-console.log('this.', this)
         // Swap barMesh
         var tmp = this._prevBarMesh;
         this._prevBarMesh = this._barMesh;
