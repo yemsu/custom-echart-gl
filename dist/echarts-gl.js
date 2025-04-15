@@ -7,23 +7,71 @@
 		exports["echarts-gl"] = factory(require("echarts"));
 	else
 		root["echarts-gl"] = factory(root["echarts"]);
-})(self, function(__WEBPACK_EXTERNAL_MODULE_echarts_lib_echarts__) {
+})(self, (__WEBPACK_EXTERNAL_MODULE_echarts_lib_echarts__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/export/all.js":
-/*!*****************************************!*\
-  !*** ./src/export/all.js + 360 modules ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "echarts/lib/echarts":
+/*!**************************!*\
+  !*** external "echarts" ***!
+  \**************************/
+/***/ ((module) => {
 
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
+module.exports = __WEBPACK_EXTERNAL_MODULE_echarts_lib_echarts__;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!*****************************************!*\
+  !*** ./src/export/all.js + 350 modules ***!
+  \*****************************************/
 
 // EXTERNAL MODULE: external "echarts"
 var external_echarts_ = __webpack_require__("echarts/lib/echarts");
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/mixin/extend.js
+;// ./node_modules/claygl/src/core/mixin/extend.js
 /**
  * Extend a sub class from base class
  * @param {object|Function} makeDefaultOpt default option of this sub class, method of the sub can use this.xxx to access this option
@@ -131,7 +179,7 @@ function extendWithPropList(target, source, propList) {
     derive: derive
 });
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/mixin/notifier.js
+;// ./node_modules/claygl/src/core/mixin/notifier.js
 function Handler(action, context) {
     this.action = action;
     this.context = context;
@@ -335,7 +383,7 @@ var notifier = {
 };
 
 /* harmony default export */ const mixin_notifier = (notifier);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/util.js
+;// ./node_modules/claygl/src/core/util.js
 var guid = 0;
 
 var ArrayProto = Array.prototype;
@@ -540,7 +588,7 @@ var util = {
 
 /* harmony default export */ const core_util = (util);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/Base.js
+;// ./node_modules/claygl/src/core/Base.js
 
 
 
@@ -569,7 +617,7 @@ core_util.extend(Base.prototype, mixin_notifier);
 
 /* harmony default export */ const core_Base = (Base);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/GLInfo.js
+;// ./node_modules/claygl/src/core/GLInfo.js
 var EXTENSION_LIST = [
     'OES_texture_float',
     'OES_texture_half_float',
@@ -635,7 +683,7 @@ function GLInfo(_gl) {
 
 /* harmony default export */ const core_GLInfo = (GLInfo);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/glenum.js
+;// ./node_modules/claygl/src/core/glenum.js
 /**
  * @namespace clay.core.glenum
  * @see http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
@@ -1057,7 +1105,7 @@ function GLInfo(_gl) {
     BROWSER_DEFAULT_WEBGL          : 0x9244,
 });
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/request.js
+;// ./node_modules/claygl/src/core/request.js
 function get(options) {
 
     var xhr = new XMLHttpRequest();
@@ -1099,7 +1147,7 @@ function get(options) {
     get: get
 });
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/vendor.js
+;// ./node_modules/claygl/src/core/vendor.js
 
 
 var supportWebGL;
@@ -1178,7 +1226,7 @@ vendor.removeEventListener = function (dom, type, func) {
 
 /* harmony default export */ const core_vendor = (vendor);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/LinkedList.js
+;// ./node_modules/claygl/src/core/LinkedList.js
 /**
  * Simple double linked list. Compared with array, it has O(1) remove operation.
  * @constructor
@@ -1438,7 +1486,7 @@ LinkedList.Entry = function (val) {
 
 /* harmony default export */ const core_LinkedList = (LinkedList);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/LRU.js
+;// ./node_modules/claygl/src/core/LRU.js
 
 
 /**
@@ -1521,7 +1569,7 @@ LRU.prototype.clear = function () {
 
 /* harmony default export */ const core_LRU = (LRU);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/color.js
+;// ./node_modules/claygl/src/core/color.js
 /**
  * @namespace clay.core.color
  */
@@ -2068,7 +2116,7 @@ colorUtil.stringify = function (arrColor, type) {
 
 
 /* harmony default export */ const color = (colorUtil);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Material.js
+;// ./node_modules/claygl/src/Material.js
 
 
 
@@ -2569,7 +2617,7 @@ var Material = core_Base.extend(function () {
 
 /* harmony default export */ const src_Material = (Material);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/common.js
+;// ./node_modules/claygl/src/glmatrix/common.js
 
 var GLMAT_EPSILON = 0.000001;
 
@@ -2581,7 +2629,7 @@ var GLMAT_ARRAY_TYPE = Array;
 
 var common_GLMAT_RANDOM = Math.random;
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/vec2.js
+;// ./node_modules/claygl/src/glmatrix/vec2.js
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
 
@@ -3099,7 +3147,7 @@ vec2.forEach = (function() {
 })();
 
 /* harmony default export */ const glmatrix_vec2 = (vec2);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Vector2.js
+;// ./node_modules/claygl/src/math/Vector2.js
 
 
 /**
@@ -3830,7 +3878,7 @@ Vector2.transformMat4 = function(out, a, m) {
 
 /* harmony default export */ const math_Vector2 = (Vector2);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/gpu/GLProgram.js
+;// ./node_modules/claygl/src/gpu/GLProgram.js
 
 
 
@@ -4169,7 +4217,7 @@ var GLProgram = core_Base.extend({
 });
 
 /* harmony default export */ const gpu_GLProgram = (GLProgram);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/gpu/ProgramManager.js
+;// ./node_modules/claygl/src/gpu/ProgramManager.js
 
 
 var loopRegex = /for\s*?\(int\s*?_idx_\s*\=\s*([\w-]+)\;\s*_idx_\s*<\s*([\w-]+);\s*_idx_\s*\+\+\s*\)\s*\{\{([\s\S]+?)(?=\}\})\}\}/g;
@@ -4357,7 +4405,7 @@ ProgramManager.prototype.getProgram = function (renderable, material, scene) {
 };
 
 /* harmony default export */ const gpu_ProgramManager = (ProgramManager);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Shader.js
+;// ./node_modules/claygl/src/Shader.js
 /**
  * Mainly do the parse and compile of shader string
  * Support shader code chunk import and export
@@ -5039,10 +5087,10 @@ Shader.source = function (name) {
 
 /* harmony default export */ const src_Shader = (Shader);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/prez.glsl.js
+;// ./node_modules/claygl/src/shader/source/prez.glsl.js
 /* harmony default export */ const prez_glsl = ("@export clay.prez.vertex\nuniform mat4 WVP : WORLDVIEWPROJECTION;\nattribute vec3 pos : POSITION;\nattribute vec2 uv : TEXCOORD_0;\nuniform vec2 uvRepeat : [1.0, 1.0];\nuniform vec2 uvOffset : [0.0, 0.0];\n@import clay.chunk.skinning_header\n@import clay.chunk.instancing_header\nvarying vec2 v_Texcoord;\nvoid main()\n{\n vec4 P = vec4(pos, 1.0);\n#ifdef SKINNING\n @import clay.chunk.skin_matrix\n P = skinMatrixWS * P;\n#endif\n#ifdef INSTANCING\n @import clay.chunk.instancing_matrix\n P = instanceMat * P;\n#endif\n gl_Position = WVP * P;\n v_Texcoord = uv * uvRepeat + uvOffset;\n}\n@end\n@export clay.prez.fragment\nuniform sampler2D alphaMap;\nuniform float alphaCutoff: 0.0;\nvarying vec2 v_Texcoord;\nvoid main()\n{\n if (alphaCutoff > 0.0) {\n if (texture2D(alphaMap, v_Texcoord).a <= alphaCutoff) {\n discard;\n }\n }\n gl_FragColor = vec4(0.0,0.0,0.0,1.0);\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/mat4.js
+;// ./node_modules/claygl/src/glmatrix/mat4.js
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
 
@@ -5987,7 +6035,7 @@ mat4.frob = function (a) {
 };
 
 /* harmony default export */ const glmatrix_mat4 = (mat4);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/vec3.js
+;// ./node_modules/claygl/src/glmatrix/vec3.js
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
 
@@ -6639,7 +6687,7 @@ vec3.angle = function(a, b) {
 };
 
 /* harmony default export */ const glmatrix_vec3 = (vec3);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Renderer.js
+;// ./node_modules/claygl/src/Renderer.js
 // TODO Resources like shader, texture, geometry reference management
 // Trace and find out which shader, texture, geometry can be destroyed
 
@@ -6655,7 +6703,7 @@ vec3.angle = function(a, b) {
 
 
 
-src_Shader.import(prez_glsl);
+src_Shader['import'](prez_glsl);
 
 
 
@@ -8049,7 +8097,7 @@ Renderer.STENCIL_BUFFER_BIT = glenum.STENCIL_BUFFER_BIT;
 
 /* harmony default export */ const src_Renderer = (Renderer);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Vector3.js
+;// ./node_modules/claygl/src/math/Vector3.js
 
 
 /**
@@ -9051,7 +9099,7 @@ Object.defineProperties(Vector3, {
 
 /* harmony default export */ const math_Vector3 = (Vector3);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Ray.js
+;// ./node_modules/claygl/src/math/Ray.js
 
 
 
@@ -9372,7 +9420,7 @@ Ray.prototype = {
 
 /* harmony default export */ const math_Ray = (Ray);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/vec4.js
+;// ./node_modules/claygl/src/glmatrix/vec4.js
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
 
@@ -9903,7 +9951,7 @@ vec4.forEach = (function() {
 })();
 
 /* harmony default export */ const glmatrix_vec4 = (vec4);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/mat3.js
+;// ./node_modules/claygl/src/glmatrix/mat3.js
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
 
@@ -10383,7 +10431,7 @@ mat3.frob = function (a) {
 
 
 /* harmony default export */ const glmatrix_mat3 = (mat3);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/quat.js
+;// ./node_modules/claygl/src/glmatrix/quat.js
 
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
@@ -10909,7 +10957,7 @@ quat.fromMat3 = function(out, m) {
 };
 
 /* harmony default export */ const glmatrix_quat = (quat);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Matrix4.js
+;// ./node_modules/claygl/src/math/Matrix4.js
 
 
 
@@ -11630,7 +11678,7 @@ Matrix4.translate = function(out, a, v) {
 
 /* harmony default export */ const math_Matrix4 = (Matrix4);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Quaternion.js
+;// ./node_modules/claygl/src/math/Quaternion.js
 
 
 
@@ -12406,7 +12454,7 @@ Quaternion.fromEuler = function (out, v, order) {
 
 /* harmony default export */ const math_Quaternion = (Quaternion);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/BoundingBox.js
+;// ./node_modules/claygl/src/math/BoundingBox.js
 
 
 
@@ -12718,7 +12766,7 @@ BoundingBox.prototype = {
 
 /* harmony default export */ const math_BoundingBox = (BoundingBox);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Node.js
+;// ./node_modules/claygl/src/Node.js
 
 
 
@@ -13386,7 +13434,7 @@ var Node = core_Base.extend(/** @lends clay.Node# */{
 
 /* harmony default export */ const src_Node = (Node);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Renderable.js
+;// ./node_modules/claygl/src/Renderable.js
 
 
 
@@ -13599,7 +13647,7 @@ Renderable.CCW = glenum.CCW;
 
 /* harmony default export */ const src_Renderable = (Renderable);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/picking/RayPicking.js
+;// ./node_modules/claygl/src/picking/RayPicking.js
 
 
 
@@ -13862,7 +13910,7 @@ RayPicking.Intersection = function (point, pointWorld, target, triangle, triangl
 
 /* harmony default export */ const picking_RayPicking = (RayPicking);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/core/Cache.js
+;// ./node_modules/claygl/src/core/Cache.js
 var DIRTY_PREFIX = '__dt__';
 
 var Cache = function () {
@@ -13973,7 +14021,7 @@ Cache.prototype.constructor = Cache;
 
 /* harmony default export */ const core_Cache = (Cache);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Texture.js
+;// ./node_modules/claygl/src/Texture.js
 /**
  * Base class for all textures like compressed texture, texture2d, texturecube
  * TODO mapping
@@ -14390,7 +14438,7 @@ Texture.MIRRORED_REPEAT = glenum.MIRRORED_REPEAT;
 
 /* harmony default export */ const src_Texture = (Texture);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Mesh.js
+;// ./node_modules/claygl/src/Mesh.js
 
 
 
@@ -14455,7 +14503,7 @@ Mesh.CCW = glenum.CCW;
 
 /* harmony default export */ const src_Mesh = (Mesh);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/util.js
+;// ./node_modules/claygl/src/math/util.js
 var mathUtil = {};
 
 mathUtil.isPowerOfTwo = function (value) {
@@ -14480,7 +14528,7 @@ mathUtil.nearestPowerOfTwo = function (value) {
 
 /* harmony default export */ const math_util = (mathUtil);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Texture2D.js
+;// ./node_modules/claygl/src/Texture2D.js
 
 
 
@@ -14734,7 +14782,7 @@ Object.defineProperty(Texture2D.prototype, 'height', {
 
 /* harmony default export */ const src_Texture2D = (Texture2D);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/GeometryBase.js
+;// ./node_modules/claygl/src/GeometryBase.js
 
 
 
@@ -15404,7 +15452,7 @@ GeometryBase.Attribute = Attribute;
 
 /* harmony default export */ const src_GeometryBase = (GeometryBase);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Geometry.js
+;// ./node_modules/claygl/src/Geometry.js
 
 
 
@@ -15978,10 +16026,10 @@ Geometry.Attribute = Geometry_Attribute;
 
 /* harmony default export */ const src_Geometry = (Geometry);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/header/calcAmbientSHLight.glsl.js
+;// ./node_modules/claygl/src/shader/source/header/calcAmbientSHLight.glsl.js
 /* harmony default export */ const calcAmbientSHLight_glsl = ("vec3 calcAmbientSHLight(int idx, vec3 N) {\n int offset = 9 * idx;\n return ambientSHLightCoefficients[0]\n + ambientSHLightCoefficients[1] * N.x\n + ambientSHLightCoefficients[2] * N.y\n + ambientSHLightCoefficients[3] * N.z\n + ambientSHLightCoefficients[4] * N.x * N.z\n + ambientSHLightCoefficients[5] * N.z * N.y\n + ambientSHLightCoefficients[6] * N.y * N.x\n + ambientSHLightCoefficients[7] * (3.0 * N.z * N.z - 1.0)\n + ambientSHLightCoefficients[8] * (N.x * N.x - N.y * N.y);\n}");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/header/light.js
+;// ./node_modules/claygl/src/shader/source/header/light.js
 
 
 var uniformVec3Prefix = 'uniform vec3 ';
@@ -16028,12 +16076,12 @@ var unconfigurable = ':unconfigurable;';
     exportEnd
 ].join('\n'));
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Light.js
+;// ./node_modules/claygl/src/Light.js
 
 
 
 
-src_Shader.import(light);
+src_Shader['import'](light);
 
 /**
  * @constructor clay.Light
@@ -16101,7 +16149,7 @@ var Light = src_Node.extend(function(){
 
 /* harmony default export */ const src_Light = (Light);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Plane.js
+;// ./node_modules/claygl/src/math/Plane.js
 
 
 
@@ -16270,7 +16318,7 @@ Plane.prototype = {
 
 /* harmony default export */ const math_Plane = (Plane);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Frustum.js
+;// ./node_modules/claygl/src/math/Frustum.js
 
 
 
@@ -16455,7 +16503,7 @@ Frustum.prototype = {
 };
 /* harmony default export */ const math_Frustum = (Frustum);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Camera.js
+;// ./node_modules/claygl/src/Camera.js
 
 
 
@@ -16581,7 +16629,7 @@ var Camera = src_Node.extend(function () {
 
 /* harmony default export */ const src_Camera = (Camera);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/Scene.js
+;// ./node_modules/claygl/src/Scene.js
 
 
 
@@ -17140,7 +17188,7 @@ function lightSortFunc(a, b) {
 
 /* harmony default export */ const src_Scene = (Scene);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/LRU.js
+;// ./node_modules/zrender/lib/core/LRU.js
 var Entry = (function () {
     function Entry(val) {
         this.value = val;
@@ -17252,7 +17300,7 @@ var LRU_LRU = (function () {
 }());
 /* harmony default export */ const lib_core_LRU = (LRU_LRU);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/TextureCube.js
+;// ./node_modules/claygl/src/TextureCube.js
 
 
 
@@ -17524,7 +17572,7 @@ function isImageRenderable(image) {
 
 /* harmony default export */ const src_TextureCube = (TextureCube);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/camera/Perspective.js
+;// ./node_modules/claygl/src/camera/Perspective.js
 
 
 /**
@@ -17584,7 +17632,7 @@ var Perspective = src_Camera.extend(/** @lends clay.camera.Perspective# */{
 
 /* harmony default export */ const camera_Perspective = (Perspective);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/FrameBuffer.js
+;// ./node_modules/claygl/src/FrameBuffer.js
 
 
 
@@ -17978,7 +18026,7 @@ FrameBuffer.DEPTH_STENCIL_ATTACHMENT = glenum.DEPTH_STENCIL_ATTACHMENT;
 
 /* harmony default export */ const src_FrameBuffer = (FrameBuffer);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/prePass/EnvironmentMap.js
+;// ./node_modules/claygl/src/prePass/EnvironmentMap.js
 
 
 
@@ -18123,7 +18171,7 @@ var EnvironmentMapPass = core_Base.extend(function() {
 
 /* harmony default export */ const EnvironmentMap = (EnvironmentMapPass);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/geometry/Plane.js
+;// ./node_modules/claygl/src/geometry/Plane.js
 
 
 
@@ -18197,7 +18245,7 @@ var Plane_Plane = src_Geometry.extend(
 
 /* harmony default export */ const geometry_Plane = (Plane_Plane);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/geometry/Cube.js
+;// ./node_modules/claygl/src/geometry/Cube.js
 
 
 
@@ -18337,10 +18385,10 @@ function createPlane(pos, widthSegments, heightSegments) {
 
 /* harmony default export */ const geometry_Cube = (Cube);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/skybox.glsl.js
+;// ./node_modules/claygl/src/shader/source/skybox.glsl.js
 /* harmony default export */ const skybox_glsl = ("@export clay.skybox.vertex\n#define SHADER_NAME skybox\nuniform mat4 world : WORLD;\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nattribute vec3 position : POSITION;\nvarying vec3 v_WorldPosition;\nvoid main()\n{\n v_WorldPosition = (world * vec4(position, 1.0)).xyz;\n gl_Position = worldViewProjection * vec4(position, 1.0);\n}\n@end\n@export clay.skybox.fragment\n#define PI 3.1415926\nuniform mat4 viewInverse : VIEWINVERSE;\n#ifdef EQUIRECTANGULAR\nuniform sampler2D environmentMap;\n#else\nuniform samplerCube environmentMap;\n#endif\nuniform float lod: 0.0;\nvarying vec3 v_WorldPosition;\n@import clay.util.rgbm\n@import clay.util.srgb\n@import clay.util.ACES\nvoid main()\n{\n vec3 eyePos = viewInverse[3].xyz;\n vec3 V = normalize(v_WorldPosition - eyePos);\n#ifdef EQUIRECTANGULAR\n float phi = acos(V.y);\n float theta = atan(-V.x, V.z) + PI * 0.5;\n vec2 uv = vec2(theta / 2.0 / PI, phi / PI);\n vec4 texel = decodeHDR(texture2D(environmentMap, fract(uv)));\n#else\n #if defined(LOD) || defined(SUPPORT_TEXTURE_LOD)\n vec4 texel = decodeHDR(textureCubeLodEXT(environmentMap, V, lod));\n #else\n vec4 texel = decodeHDR(textureCube(environmentMap, V));\n #endif\n#endif\n#ifdef SRGB_DECODE\n texel = sRGBToLinear(texel);\n#endif\n#ifdef TONEMAPPING\n texel.rgb = ACESToneMapping(texel.rgb);\n#endif\n#ifdef SRGB_ENCODE\n texel = linearTosRGB(texel);\n#endif\n gl_FragColor = encodeHDR(vec4(texel.rgb, 1.0));\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/plugin/Skybox.js
+;// ./node_modules/claygl/src/plugin/Skybox.js
 // TODO Should not derived from mesh?
 
 
@@ -18492,11 +18540,11 @@ var Skybox = src_Mesh.extend(function () {
 
 /* harmony default export */ const plugin_Skybox = (Skybox);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/plugin/Skydome.js
+;// ./node_modules/claygl/src/plugin/Skydome.js
 
 
 /* harmony default export */ const Skydome = (plugin_Skybox);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/dds.js
+;// ./node_modules/claygl/src/util/dds.js
 
 
 
@@ -18654,7 +18702,7 @@ var ret = {
 
 /* harmony default export */ const dds = (ret);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/hdr.js
+;// ./node_modules/claygl/src/util/hdr.js
 
 
 var toChar = String.fromCharCode;
@@ -18833,7 +18881,7 @@ var hdr_ret = {
 
 /* harmony default export */ const hdr = (hdr_ret);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/texture.js
+;// ./node_modules/claygl/src/util/texture.js
 
 
 
@@ -19147,7 +19195,7 @@ var textureUtil = {
 
 /* harmony default export */ const util_texture = (textureUtil);
 
-;// CONCATENATED MODULE: ./src/util/EChartsSurface.js
+;// ./src/util/EChartsSurface.js
 /**
  * Surface texture in the 3D scene.
  * Provide management and rendering of zrender shapes and groups
@@ -19325,7 +19373,7 @@ EChartsSurface.prototype = {
 };
 
 /* harmony default export */ const util_EChartsSurface = (EChartsSurface);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/camera/Orthographic.js
+;// ./node_modules/claygl/src/camera/Orthographic.js
 
 /**
  * @constructor clay.camera.Orthographic
@@ -19393,10 +19441,10 @@ var Orthographic = src_Camera.extend(
 
 /* harmony default export */ const camera_Orthographic = (Orthographic);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/vertex.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/vertex.glsl.js
 /* harmony default export */ const vertex_glsl = ("\n@export clay.compositor.vertex\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nattribute vec3 position : POSITION;\nattribute vec2 texcoord : TEXCOORD_0;\nvarying vec2 v_Texcoord;\nvoid main()\n{\n v_Texcoord = texcoord;\n gl_Position = worldViewProjection * vec4(position, 1.0);\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/Pass.js
+;// ./node_modules/claygl/src/compositor/Pass.js
 
 
 
@@ -19406,7 +19454,7 @@ var Orthographic = src_Camera.extend(
 
 
 
-src_Shader.import(vertex_glsl);
+src_Shader['import'](vertex_glsl);
 
 var planeGeo = new geometry_Plane();
 var mesh = new src_Mesh({
@@ -19602,13 +19650,13 @@ var Pass = core_Base.extend(function () {
 
 /* harmony default export */ const compositor_Pass = (Pass);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/shader/integrateBRDF.glsl.js
+;// ./node_modules/claygl/src/util/shader/integrateBRDF.glsl.js
 /* harmony default export */ const integrateBRDF_glsl = ("#define SAMPLE_NUMBER 1024\n#define PI 3.14159265358979\nuniform sampler2D normalDistribution;\nuniform vec2 viewportSize : [512, 256];\nconst vec3 N = vec3(0.0, 0.0, 1.0);\nconst float fSampleNumber = float(SAMPLE_NUMBER);\nvec3 importanceSampleNormal(float i, float roughness, vec3 N) {\n vec3 H = texture2D(normalDistribution, vec2(roughness, i)).rgb;\n vec3 upVector = abs(N.y) > 0.999 ? vec3(1.0, 0.0, 0.0) : vec3(0.0, 1.0, 0.0);\n vec3 tangentX = normalize(cross(N, upVector));\n vec3 tangentZ = cross(N, tangentX);\n return normalize(tangentX * H.x + N * H.y + tangentZ * H.z);\n}\nfloat G_Smith(float roughness, float NoV, float NoL) {\n float k = roughness * roughness / 2.0;\n float G1V = NoV / (NoV * (1.0 - k) + k);\n float G1L = NoL / (NoL * (1.0 - k) + k);\n return G1L * G1V;\n}\nvoid main() {\n vec2 uv = gl_FragCoord.xy / viewportSize;\n float NoV = uv.x;\n float roughness = uv.y;\n vec3 V;\n V.x = sqrt(1.0 - NoV * NoV);\n V.y = 0.0;\n V.z = NoV;\n float A = 0.0;\n float B = 0.0;\n for (int i = 0; i < SAMPLE_NUMBER; i++) {\n vec3 H = importanceSampleNormal(float(i) / fSampleNumber, roughness, N);\n vec3 L = reflect(-V, H);\n float NoL = clamp(L.z, 0.0, 1.0);\n float NoH = clamp(H.z, 0.0, 1.0);\n float VoH = clamp(dot(V, H), 0.0, 1.0);\n if (NoL > 0.0) {\n float G = G_Smith(roughness, NoV, NoL);\n float G_Vis = G * VoH / (NoH * NoV);\n float Fc = pow(1.0 - VoH, 5.0);\n A += (1.0 - Fc) * G_Vis;\n B += Fc * G_Vis;\n }\n }\n gl_FragColor = vec4(vec2(A, B) / fSampleNumber, 0.0, 1.0);\n}\n");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/shader/prefilter.glsl.js
+;// ./node_modules/claygl/src/util/shader/prefilter.glsl.js
 /* harmony default export */ const prefilter_glsl = ("#define SHADER_NAME prefilter\n#define SAMPLE_NUMBER 1024\n#define PI 3.14159265358979\nuniform mat4 viewInverse : VIEWINVERSE;\nuniform samplerCube environmentMap;\nuniform sampler2D normalDistribution;\nuniform float roughness : 0.5;\nvarying vec2 v_Texcoord;\nvarying vec3 v_WorldPosition;\n@import clay.util.rgbm\nvec3 importanceSampleNormal(float i, float roughness, vec3 N) {\n vec3 H = texture2D(normalDistribution, vec2(roughness, i)).rgb;\n vec3 upVector = abs(N.y) > 0.999 ? vec3(1.0, 0.0, 0.0) : vec3(0.0, 1.0, 0.0);\n vec3 tangentX = normalize(cross(N, upVector));\n vec3 tangentZ = cross(N, tangentX);\n return normalize(tangentX * H.x + N * H.y + tangentZ * H.z);\n}\nvoid main() {\n vec3 eyePos = viewInverse[3].xyz;\n vec3 V = normalize(v_WorldPosition - eyePos);\n vec3 N = V;\n vec3 prefilteredColor = vec3(0.0);\n float totalWeight = 0.0;\n float fMaxSampleNumber = float(SAMPLE_NUMBER);\n for (int i = 0; i < SAMPLE_NUMBER; i++) {\n vec3 H = importanceSampleNormal(float(i) / fMaxSampleNumber, roughness, N);\n vec3 L = reflect(-V, H);\n float NoL = clamp(dot(N, L), 0.0, 1.0);\n if (NoL > 0.0) {\n prefilteredColor += decodeHDR(textureCube(environmentMap, L)).rgb * NoL;\n totalWeight += NoL;\n }\n }\n gl_FragColor = encodeHDR(vec4(prefilteredColor / totalWeight, 1.0));\n}\n");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/cubemap.js
+;// ./node_modules/claygl/src/util/cubemap.js
 // Cubemap prefilter utility
 // http://www.unrealengine.com/files/downloads/2013SiggraphPresentationsNotes.pdf
 // http://http.developer.nvidia.com/GPUGems3/gpugems3_ch20.html
@@ -19897,7 +19945,7 @@ cubemapUtil.generateNormalDistribution = function (roughnessLevels, sampleSize) 
 
 /* harmony default export */ const util_cubemap = (cubemapUtil);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/light/AmbientCubemap.js
+;// ./node_modules/claygl/src/light/AmbientCubemap.js
 // https://docs.unrealengine.com/latest/INT/Engine/Rendering/LightingAndShadows/AmbientCubemap/
 
 
@@ -19998,7 +20046,7 @@ var AmbientCubemapLight = src_Light.extend({
 
 /* harmony default export */ const AmbientCubemap = (AmbientCubemapLight);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/light/AmbientSH.js
+;// ./node_modules/claygl/src/light/AmbientSH.js
 
 
 
@@ -20055,10 +20103,10 @@ var AmbientSHLight = src_Light.extend({
 
 /* harmony default export */ const AmbientSH = (AmbientSHLight);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/shader/projectEnvMap.glsl.js
+;// ./node_modules/claygl/src/util/shader/projectEnvMap.glsl.js
 /* harmony default export */ const projectEnvMap_glsl = ("uniform samplerCube environmentMap;\nvarying vec2 v_Texcoord;\n#define TEXTURE_SIZE 16\nmat3 front = mat3(\n 1.0, 0.0, 0.0,\n 0.0, 1.0, 0.0,\n 0.0, 0.0, 1.0\n);\nmat3 back = mat3(\n -1.0, 0.0, 0.0,\n 0.0, 1.0, 0.0,\n 0.0, 0.0, -1.0\n);\nmat3 left = mat3(\n 0.0, 0.0, -1.0,\n 0.0, 1.0, 0.0,\n 1.0, 0.0, 0.0\n);\nmat3 right = mat3(\n 0.0, 0.0, 1.0,\n 0.0, 1.0, 0.0,\n -1.0, 0.0, 0.0\n);\nmat3 up = mat3(\n 1.0, 0.0, 0.0,\n 0.0, 0.0, 1.0,\n 0.0, -1.0, 0.0\n);\nmat3 down = mat3(\n 1.0, 0.0, 0.0,\n 0.0, 0.0, -1.0,\n 0.0, 1.0, 0.0\n);\nfloat harmonics(vec3 normal){\n int index = int(gl_FragCoord.x);\n float x = normal.x;\n float y = normal.y;\n float z = normal.z;\n if(index==0){\n return 1.0;\n }\n else if(index==1){\n return x;\n }\n else if(index==2){\n return y;\n }\n else if(index==3){\n return z;\n }\n else if(index==4){\n return x*z;\n }\n else if(index==5){\n return y*z;\n }\n else if(index==6){\n return x*y;\n }\n else if(index==7){\n return 3.0*z*z - 1.0;\n }\n else{\n return x*x - y*y;\n }\n}\nvec3 sampleSide(mat3 rot)\n{\n vec3 result = vec3(0.0);\n float divider = 0.0;\n for (int i = 0; i < TEXTURE_SIZE * TEXTURE_SIZE; i++) {\n float x = mod(float(i), float(TEXTURE_SIZE));\n float y = float(i / TEXTURE_SIZE);\n vec2 sidecoord = ((vec2(x, y) + vec2(0.5, 0.5)) / vec2(TEXTURE_SIZE)) * 2.0 - 1.0;\n vec3 normal = normalize(vec3(sidecoord, -1.0));\n vec3 fetchNormal = rot * normal;\n vec3 texel = textureCube(environmentMap, fetchNormal).rgb;\n result += harmonics(fetchNormal) * texel * -normal.z;\n divider += -normal.z;\n }\n return result / divider;\n}\nvoid main()\n{\n vec3 result = (\n sampleSide(front) +\n sampleSide(back) +\n sampleSide(left) +\n sampleSide(right) +\n sampleSide(up) +\n sampleSide(down)\n ) / 6.0;\n gl_FragColor = vec4(result, 1.0);\n}");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/util/sh.js
+;// ./node_modules/claygl/src/util/sh.js
 // Spherical Harmonic Helpers
 
 
@@ -20276,7 +20324,7 @@ sh.projectEnvironmentMap = function (renderer, envMap, opts) {
 
 /* harmony default export */ const util_sh = (sh);
 
-;// CONCATENATED MODULE: ./src/util/retrieve.js
+;// ./src/util/retrieve.js
 
 
 var retrieve = {
@@ -20317,7 +20365,7 @@ var retrieve = {
 };
 
 /* harmony default export */ const util_retrieve = (retrieve);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/geometry/Sphere.js
+;// ./node_modules/claygl/src/geometry/Sphere.js
 
 
 
@@ -20458,7 +20506,7 @@ var Sphere = src_Geometry.extend(/** @lends clay.geometry.Sphere# */ {
 
 /* harmony default export */ const geometry_Sphere = (Sphere);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/light/Ambient.js
+;// ./node_modules/claygl/src/light/Ambient.js
 
 
 /**
@@ -20493,7 +20541,7 @@ var AmbientLight = src_Light.extend({
 
 /* harmony default export */ const Ambient = (AmbientLight);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/light/Directional.js
+;// ./node_modules/claygl/src/light/Directional.js
 
 
 
@@ -20567,7 +20615,7 @@ var DirectionalLight = src_Light.extend(/** @lends clay.light.Directional# */ {
 
 /* harmony default export */ const Directional = (DirectionalLight);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/light/Point.js
+;// ./node_modules/claygl/src/light/Point.js
 
 
 /**
@@ -20623,7 +20671,7 @@ var PointLight = src_Light.extend(/** @lends clay.light.Point# */ {
 
 /* harmony default export */ const Point = (PointLight);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/light/Spot.js
+;// ./node_modules/claygl/src/light/Spot.js
 
 
 
@@ -20726,7 +20774,7 @@ var SpotLight = src_Light.extend(/**@lends clay.light.Spot */ {
 
 /* harmony default export */ const Spot = (SpotLight);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Vector4.js
+;// ./node_modules/claygl/src/math/Vector4.js
 
 
 /**
@@ -21447,7 +21495,7 @@ Vector4.transformQuat = function(out, a, q) {
 
 /* harmony default export */ const math_Vector4 = (Vector4);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/mat2.js
+;// ./node_modules/claygl/src/glmatrix/mat2.js
 
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
@@ -21705,7 +21753,7 @@ mat2.LDU = function (L, D, U, a) {
 
 
 /* harmony default export */ const glmatrix_mat2 = (mat2);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Matrix2.js
+;// ./node_modules/claygl/src/math/Matrix2.js
 
 
 /**
@@ -21994,7 +22042,7 @@ Matrix2.transpose = function(out, a) {
 
 /* harmony default export */ const math_Matrix2 = (Matrix2);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/mat2d.js
+;// ./node_modules/claygl/src/glmatrix/mat2d.js
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
 
@@ -22243,7 +22291,7 @@ mat2d.frob = function (a) {
 
 
 /* harmony default export */ const glmatrix_mat2d = (mat2d);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Matrix2d.js
+;// ./node_modules/claygl/src/math/Matrix2d.js
 
 
 /**
@@ -22514,7 +22562,7 @@ Matrix2d.translate = function(out, a, v) {
 
 /* harmony default export */ const math_Matrix2d = (Matrix2d);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/math/Matrix3.js
+;// ./node_modules/claygl/src/math/Matrix3.js
 
 
 /**
@@ -22912,8 +22960,8 @@ Matrix3.translate = function (out, a, v) {
 
 /* harmony default export */ const math_Matrix3 = (Matrix3);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/animation/easing.js
-var easing = {
+;// ./node_modules/zrender/lib/animation/easing.js
+var easingFuncs = {
     linear: function (k) {
         return k;
     },
@@ -23084,7 +23132,7 @@ var easing = {
         return 0.5 * ((k -= 2) * k * ((s + 1) * k + s) + 2);
     },
     bounceIn: function (k) {
-        return 1 - easing.bounceOut(1 - k);
+        return 1 - easingFuncs.bounceOut(1 - k);
     },
     bounceOut: function (k) {
         if (k < (1 / 2.75)) {
@@ -23102,506 +23150,116 @@ var easing = {
     },
     bounceInOut: function (k) {
         if (k < 0.5) {
-            return easing.bounceIn(k * 2) * 0.5;
+            return easingFuncs.bounceIn(k * 2) * 0.5;
         }
-        return easing.bounceOut(k * 2 - 1) * 0.5 + 0.5;
+        return easingFuncs.bounceOut(k * 2 - 1) * 0.5 + 0.5;
     }
 };
-/* harmony default export */ const animation_easing = (easing);
+/* harmony default export */ const animation_easing = (easingFuncs);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/animation/Clip.js
-
-var Clip = (function () {
-    function Clip(opts) {
-        this._initialized = false;
-        this._startTime = 0;
-        this._pausedTime = 0;
-        this._paused = false;
-        this._life = opts.life || 1000;
-        this._delay = opts.delay || 0;
-        this.loop = opts.loop == null ? false : opts.loop;
-        this.gap = opts.gap || 0;
-        this.easing = opts.easing || 'linear';
-        this.onframe = opts.onframe;
-        this.ondestroy = opts.ondestroy;
-        this.onrestart = opts.onrestart;
+;// ./node_modules/zrender/lib/core/platform.js
+var DEFAULT_FONT_SIZE = 12;
+var DEFAULT_FONT_FAMILY = 'sans-serif';
+var DEFAULT_FONT = DEFAULT_FONT_SIZE + "px " + DEFAULT_FONT_FAMILY;
+var OFFSET = 20;
+var SCALE = 100;
+var defaultWidthMapStr = "007LLmW'55;N0500LLLLLLLLLL00NNNLzWW\\\\WQb\\0FWLg\\bWb\\WQ\\WrWWQ000CL5LLFLL0LL**F*gLLLL5F0LF\\FFF5.5N";
+function getTextWidthMap(mapStr) {
+    var map = {};
+    if (typeof JSON === 'undefined') {
+        return map;
     }
-    Clip.prototype.step = function (globalTime, deltaTime) {
-        if (!this._initialized) {
-            this._startTime = globalTime + this._delay;
-            this._initialized = true;
-        }
-        if (this._paused) {
-            this._pausedTime += deltaTime;
-            return;
-        }
-        var percent = (globalTime - this._startTime - this._pausedTime) / this._life;
-        if (percent < 0) {
-            percent = 0;
-        }
-        percent = Math.min(percent, 1);
-        var easing = this.easing;
-        var easingFunc = typeof easing === 'string'
-            ? animation_easing[easing] : easing;
-        var schedule = typeof easingFunc === 'function'
-            ? easingFunc(percent)
-            : percent;
-        this.onframe && this.onframe(schedule);
-        if (percent === 1) {
-            if (this.loop) {
-                this._restart(globalTime);
-                this.onrestart && this.onrestart();
+    for (var i = 0; i < mapStr.length; i++) {
+        var char = String.fromCharCode(i + 32);
+        var size = (mapStr.charCodeAt(i) - OFFSET) / SCALE;
+        map[char] = size;
+    }
+    return map;
+}
+var DEFAULT_TEXT_WIDTH_MAP = getTextWidthMap(defaultWidthMapStr);
+var platformApi = {
+    createCanvas: function () {
+        return typeof document !== 'undefined'
+            && document.createElement('canvas');
+    },
+    measureText: (function () {
+        var _ctx;
+        var _cachedFont;
+        return function (text, font) {
+            if (!_ctx) {
+                var canvas = platformApi.createCanvas();
+                _ctx = canvas && canvas.getContext('2d');
+            }
+            if (_ctx) {
+                if (_cachedFont !== font) {
+                    _cachedFont = _ctx.font = font || DEFAULT_FONT;
+                }
+                return _ctx.measureText(text);
             }
             else {
-                return true;
+                text = text || '';
+                font = font || DEFAULT_FONT;
+                var res = /((?:\d+)?\.?\d*)px/.exec(font);
+                var fontSize = res && +res[1] || DEFAULT_FONT_SIZE;
+                var width = 0;
+                if (font.indexOf('mono') >= 0) {
+                    width = fontSize * text.length;
+                }
+                else {
+                    for (var i = 0; i < text.length; i++) {
+                        var preCalcWidth = DEFAULT_TEXT_WIDTH_MAP[text[i]];
+                        width += preCalcWidth == null ? fontSize : (preCalcWidth * fontSize);
+                    }
+                }
+                return { width: width };
             }
-        }
-        return false;
-    };
-    Clip.prototype._restart = function (globalTime) {
-        var remainder = (globalTime - this._startTime - this._pausedTime) % this._life;
-        this._startTime = globalTime - remainder + this.gap;
-        this._pausedTime = 0;
-    };
-    Clip.prototype.pause = function () {
-        this._paused = true;
-    };
-    Clip.prototype.resume = function () {
-        this._paused = false;
-    };
-    return Clip;
-}());
-/* harmony default export */ const animation_Clip = (Clip);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/tool/color.js
-
-var color_kCSSColorTable = {
-    'transparent': [0, 0, 0, 0], 'aliceblue': [240, 248, 255, 1],
-    'antiquewhite': [250, 235, 215, 1], 'aqua': [0, 255, 255, 1],
-    'aquamarine': [127, 255, 212, 1], 'azure': [240, 255, 255, 1],
-    'beige': [245, 245, 220, 1], 'bisque': [255, 228, 196, 1],
-    'black': [0, 0, 0, 1], 'blanchedalmond': [255, 235, 205, 1],
-    'blue': [0, 0, 255, 1], 'blueviolet': [138, 43, 226, 1],
-    'brown': [165, 42, 42, 1], 'burlywood': [222, 184, 135, 1],
-    'cadetblue': [95, 158, 160, 1], 'chartreuse': [127, 255, 0, 1],
-    'chocolate': [210, 105, 30, 1], 'coral': [255, 127, 80, 1],
-    'cornflowerblue': [100, 149, 237, 1], 'cornsilk': [255, 248, 220, 1],
-    'crimson': [220, 20, 60, 1], 'cyan': [0, 255, 255, 1],
-    'darkblue': [0, 0, 139, 1], 'darkcyan': [0, 139, 139, 1],
-    'darkgoldenrod': [184, 134, 11, 1], 'darkgray': [169, 169, 169, 1],
-    'darkgreen': [0, 100, 0, 1], 'darkgrey': [169, 169, 169, 1],
-    'darkkhaki': [189, 183, 107, 1], 'darkmagenta': [139, 0, 139, 1],
-    'darkolivegreen': [85, 107, 47, 1], 'darkorange': [255, 140, 0, 1],
-    'darkorchid': [153, 50, 204, 1], 'darkred': [139, 0, 0, 1],
-    'darksalmon': [233, 150, 122, 1], 'darkseagreen': [143, 188, 143, 1],
-    'darkslateblue': [72, 61, 139, 1], 'darkslategray': [47, 79, 79, 1],
-    'darkslategrey': [47, 79, 79, 1], 'darkturquoise': [0, 206, 209, 1],
-    'darkviolet': [148, 0, 211, 1], 'deeppink': [255, 20, 147, 1],
-    'deepskyblue': [0, 191, 255, 1], 'dimgray': [105, 105, 105, 1],
-    'dimgrey': [105, 105, 105, 1], 'dodgerblue': [30, 144, 255, 1],
-    'firebrick': [178, 34, 34, 1], 'floralwhite': [255, 250, 240, 1],
-    'forestgreen': [34, 139, 34, 1], 'fuchsia': [255, 0, 255, 1],
-    'gainsboro': [220, 220, 220, 1], 'ghostwhite': [248, 248, 255, 1],
-    'gold': [255, 215, 0, 1], 'goldenrod': [218, 165, 32, 1],
-    'gray': [128, 128, 128, 1], 'green': [0, 128, 0, 1],
-    'greenyellow': [173, 255, 47, 1], 'grey': [128, 128, 128, 1],
-    'honeydew': [240, 255, 240, 1], 'hotpink': [255, 105, 180, 1],
-    'indianred': [205, 92, 92, 1], 'indigo': [75, 0, 130, 1],
-    'ivory': [255, 255, 240, 1], 'khaki': [240, 230, 140, 1],
-    'lavender': [230, 230, 250, 1], 'lavenderblush': [255, 240, 245, 1],
-    'lawngreen': [124, 252, 0, 1], 'lemonchiffon': [255, 250, 205, 1],
-    'lightblue': [173, 216, 230, 1], 'lightcoral': [240, 128, 128, 1],
-    'lightcyan': [224, 255, 255, 1], 'lightgoldenrodyellow': [250, 250, 210, 1],
-    'lightgray': [211, 211, 211, 1], 'lightgreen': [144, 238, 144, 1],
-    'lightgrey': [211, 211, 211, 1], 'lightpink': [255, 182, 193, 1],
-    'lightsalmon': [255, 160, 122, 1], 'lightseagreen': [32, 178, 170, 1],
-    'lightskyblue': [135, 206, 250, 1], 'lightslategray': [119, 136, 153, 1],
-    'lightslategrey': [119, 136, 153, 1], 'lightsteelblue': [176, 196, 222, 1],
-    'lightyellow': [255, 255, 224, 1], 'lime': [0, 255, 0, 1],
-    'limegreen': [50, 205, 50, 1], 'linen': [250, 240, 230, 1],
-    'magenta': [255, 0, 255, 1], 'maroon': [128, 0, 0, 1],
-    'mediumaquamarine': [102, 205, 170, 1], 'mediumblue': [0, 0, 205, 1],
-    'mediumorchid': [186, 85, 211, 1], 'mediumpurple': [147, 112, 219, 1],
-    'mediumseagreen': [60, 179, 113, 1], 'mediumslateblue': [123, 104, 238, 1],
-    'mediumspringgreen': [0, 250, 154, 1], 'mediumturquoise': [72, 209, 204, 1],
-    'mediumvioletred': [199, 21, 133, 1], 'midnightblue': [25, 25, 112, 1],
-    'mintcream': [245, 255, 250, 1], 'mistyrose': [255, 228, 225, 1],
-    'moccasin': [255, 228, 181, 1], 'navajowhite': [255, 222, 173, 1],
-    'navy': [0, 0, 128, 1], 'oldlace': [253, 245, 230, 1],
-    'olive': [128, 128, 0, 1], 'olivedrab': [107, 142, 35, 1],
-    'orange': [255, 165, 0, 1], 'orangered': [255, 69, 0, 1],
-    'orchid': [218, 112, 214, 1], 'palegoldenrod': [238, 232, 170, 1],
-    'palegreen': [152, 251, 152, 1], 'paleturquoise': [175, 238, 238, 1],
-    'palevioletred': [219, 112, 147, 1], 'papayawhip': [255, 239, 213, 1],
-    'peachpuff': [255, 218, 185, 1], 'peru': [205, 133, 63, 1],
-    'pink': [255, 192, 203, 1], 'plum': [221, 160, 221, 1],
-    'powderblue': [176, 224, 230, 1], 'purple': [128, 0, 128, 1],
-    'red': [255, 0, 0, 1], 'rosybrown': [188, 143, 143, 1],
-    'royalblue': [65, 105, 225, 1], 'saddlebrown': [139, 69, 19, 1],
-    'salmon': [250, 128, 114, 1], 'sandybrown': [244, 164, 96, 1],
-    'seagreen': [46, 139, 87, 1], 'seashell': [255, 245, 238, 1],
-    'sienna': [160, 82, 45, 1], 'silver': [192, 192, 192, 1],
-    'skyblue': [135, 206, 235, 1], 'slateblue': [106, 90, 205, 1],
-    'slategray': [112, 128, 144, 1], 'slategrey': [112, 128, 144, 1],
-    'snow': [255, 250, 250, 1], 'springgreen': [0, 255, 127, 1],
-    'steelblue': [70, 130, 180, 1], 'tan': [210, 180, 140, 1],
-    'teal': [0, 128, 128, 1], 'thistle': [216, 191, 216, 1],
-    'tomato': [255, 99, 71, 1], 'turquoise': [64, 224, 208, 1],
-    'violet': [238, 130, 238, 1], 'wheat': [245, 222, 179, 1],
-    'white': [255, 255, 255, 1], 'whitesmoke': [245, 245, 245, 1],
-    'yellow': [255, 255, 0, 1], 'yellowgreen': [154, 205, 50, 1]
+        };
+    })(),
+    loadImage: function (src, onload, onerror) {
+        var image = new Image();
+        image.onload = onload;
+        image.onerror = onerror;
+        image.src = src;
+        return image;
+    }
 };
-function color_clampCssByte(i) {
-    i = Math.round(i);
-    return i < 0 ? 0 : i > 255 ? 255 : i;
-}
-function color_clampCssAngle(i) {
-    i = Math.round(i);
-    return i < 0 ? 0 : i > 360 ? 360 : i;
-}
-function color_clampCssFloat(f) {
-    return f < 0 ? 0 : f > 1 ? 1 : f;
-}
-function color_parseCssInt(val) {
-    var str = val;
-    if (str.length && str.charAt(str.length - 1) === '%') {
-        return color_clampCssByte(parseFloat(str) / 100 * 255);
-    }
-    return color_clampCssByte(parseInt(str, 10));
-}
-function color_parseCssFloat(val) {
-    var str = val;
-    if (str.length && str.charAt(str.length - 1) === '%') {
-        return color_clampCssFloat(parseFloat(str) / 100);
-    }
-    return color_clampCssFloat(parseFloat(str));
-}
-function color_cssHueToRgb(m1, m2, h) {
-    if (h < 0) {
-        h += 1;
-    }
-    else if (h > 1) {
-        h -= 1;
-    }
-    if (h * 6 < 1) {
-        return m1 + (m2 - m1) * h * 6;
-    }
-    if (h * 2 < 1) {
-        return m2;
-    }
-    if (h * 3 < 2) {
-        return m1 + (m2 - m1) * (2 / 3 - h) * 6;
-    }
-    return m1;
-}
-function color_lerpNumber(a, b, p) {
-    return a + (b - a) * p;
-}
-function color_setRgba(out, r, g, b, a) {
-    out[0] = r;
-    out[1] = g;
-    out[2] = b;
-    out[3] = a;
-    return out;
-}
-function color_copyRgba(out, a) {
-    out[0] = a[0];
-    out[1] = a[1];
-    out[2] = a[2];
-    out[3] = a[3];
-    return out;
-}
-var color_colorCache = new lib_core_LRU(20);
-var color_lastRemovedArr = null;
-function color_putToCache(colorStr, rgbaArr) {
-    if (color_lastRemovedArr) {
-        color_copyRgba(color_lastRemovedArr, rgbaArr);
-    }
-    color_lastRemovedArr = color_colorCache.put(colorStr, color_lastRemovedArr || (rgbaArr.slice()));
-}
-function parse(colorStr, rgbaArr) {
-    if (!colorStr) {
-        return;
-    }
-    rgbaArr = rgbaArr || [];
-    var cached = color_colorCache.get(colorStr);
-    if (cached) {
-        return color_copyRgba(rgbaArr, cached);
-    }
-    colorStr = colorStr + '';
-    var str = colorStr.replace(/ /g, '').toLowerCase();
-    if (str in color_kCSSColorTable) {
-        color_copyRgba(rgbaArr, color_kCSSColorTable[str]);
-        color_putToCache(colorStr, rgbaArr);
-        return rgbaArr;
-    }
-    var strLen = str.length;
-    if (str.charAt(0) === '#') {
-        if (strLen === 4 || strLen === 5) {
-            var iv = parseInt(str.slice(1, 4), 16);
-            if (!(iv >= 0 && iv <= 0xfff)) {
-                color_setRgba(rgbaArr, 0, 0, 0, 1);
-                return;
-            }
-            color_setRgba(rgbaArr, ((iv & 0xf00) >> 4) | ((iv & 0xf00) >> 8), (iv & 0xf0) | ((iv & 0xf0) >> 4), (iv & 0xf) | ((iv & 0xf) << 4), strLen === 5 ? parseInt(str.slice(4), 16) / 0xf : 1);
-            color_putToCache(colorStr, rgbaArr);
-            return rgbaArr;
-        }
-        else if (strLen === 7 || strLen === 9) {
-            var iv = parseInt(str.slice(1, 7), 16);
-            if (!(iv >= 0 && iv <= 0xffffff)) {
-                color_setRgba(rgbaArr, 0, 0, 0, 1);
-                return;
-            }
-            color_setRgba(rgbaArr, (iv & 0xff0000) >> 16, (iv & 0xff00) >> 8, iv & 0xff, strLen === 9 ? parseInt(str.slice(7), 16) / 0xff : 1);
-            color_putToCache(colorStr, rgbaArr);
-            return rgbaArr;
-        }
-        return;
-    }
-    var op = str.indexOf('(');
-    var ep = str.indexOf(')');
-    if (op !== -1 && ep + 1 === strLen) {
-        var fname = str.substr(0, op);
-        var params = str.substr(op + 1, ep - (op + 1)).split(',');
-        var alpha = 1;
-        switch (fname) {
-            case 'rgba':
-                if (params.length !== 4) {
-                    return params.length === 3
-                        ? color_setRgba(rgbaArr, +params[0], +params[1], +params[2], 1)
-                        : color_setRgba(rgbaArr, 0, 0, 0, 1);
-                }
-                alpha = color_parseCssFloat(params.pop());
-            case 'rgb':
-                if (params.length !== 3) {
-                    color_setRgba(rgbaArr, 0, 0, 0, 1);
-                    return;
-                }
-                color_setRgba(rgbaArr, color_parseCssInt(params[0]), color_parseCssInt(params[1]), color_parseCssInt(params[2]), alpha);
-                color_putToCache(colorStr, rgbaArr);
-                return rgbaArr;
-            case 'hsla':
-                if (params.length !== 4) {
-                    color_setRgba(rgbaArr, 0, 0, 0, 1);
-                    return;
-                }
-                params[3] = color_parseCssFloat(params[3]);
-                color_hsla2rgba(params, rgbaArr);
-                color_putToCache(colorStr, rgbaArr);
-                return rgbaArr;
-            case 'hsl':
-                if (params.length !== 3) {
-                    color_setRgba(rgbaArr, 0, 0, 0, 1);
-                    return;
-                }
-                color_hsla2rgba(params, rgbaArr);
-                color_putToCache(colorStr, rgbaArr);
-                return rgbaArr;
-            default:
-                return;
+function setPlatformAPI(newPlatformApis) {
+    for (var key in platformApi) {
+        if (newPlatformApis[key]) {
+            platformApi[key] = newPlatformApis[key];
         }
     }
-    color_setRgba(rgbaArr, 0, 0, 0, 1);
-    return;
-}
-function color_hsla2rgba(hsla, rgba) {
-    var h = (((parseFloat(hsla[0]) % 360) + 360) % 360) / 360;
-    var s = color_parseCssFloat(hsla[1]);
-    var l = color_parseCssFloat(hsla[2]);
-    var m2 = l <= 0.5 ? l * (s + 1) : l + s - l * s;
-    var m1 = l * 2 - m2;
-    rgba = rgba || [];
-    color_setRgba(rgba, color_clampCssByte(color_cssHueToRgb(m1, m2, h + 1 / 3) * 255), color_clampCssByte(color_cssHueToRgb(m1, m2, h) * 255), color_clampCssByte(color_cssHueToRgb(m1, m2, h - 1 / 3) * 255), 1);
-    if (hsla.length === 4) {
-        rgba[3] = hsla[3];
-    }
-    return rgba;
-}
-function color_rgba2hsla(rgba) {
-    if (!rgba) {
-        return;
-    }
-    var R = rgba[0] / 255;
-    var G = rgba[1] / 255;
-    var B = rgba[2] / 255;
-    var vMin = Math.min(R, G, B);
-    var vMax = Math.max(R, G, B);
-    var delta = vMax - vMin;
-    var L = (vMax + vMin) / 2;
-    var H;
-    var S;
-    if (delta === 0) {
-        H = 0;
-        S = 0;
-    }
-    else {
-        if (L < 0.5) {
-            S = delta / (vMax + vMin);
-        }
-        else {
-            S = delta / (2 - vMax - vMin);
-        }
-        var deltaR = (((vMax - R) / 6) + (delta / 2)) / delta;
-        var deltaG = (((vMax - G) / 6) + (delta / 2)) / delta;
-        var deltaB = (((vMax - B) / 6) + (delta / 2)) / delta;
-        if (R === vMax) {
-            H = deltaB - deltaG;
-        }
-        else if (G === vMax) {
-            H = (1 / 3) + deltaR - deltaB;
-        }
-        else if (B === vMax) {
-            H = (2 / 3) + deltaG - deltaR;
-        }
-        if (H < 0) {
-            H += 1;
-        }
-        if (H > 1) {
-            H -= 1;
-        }
-    }
-    var hsla = [H * 360, S, L];
-    if (rgba[3] != null) {
-        hsla.push(rgba[3]);
-    }
-    return hsla;
-}
-function lift(color, level) {
-    var colorArr = parse(color);
-    if (colorArr) {
-        for (var i = 0; i < 3; i++) {
-            if (level < 0) {
-                colorArr[i] = colorArr[i] * (1 - level) | 0;
-            }
-            else {
-                colorArr[i] = ((255 - colorArr[i]) * level + colorArr[i]) | 0;
-            }
-            if (colorArr[i] > 255) {
-                colorArr[i] = 255;
-            }
-            else if (colorArr[i] < 0) {
-                colorArr[i] = 0;
-            }
-        }
-        return stringify(colorArr, colorArr.length === 4 ? 'rgba' : 'rgb');
-    }
-}
-function toHex(color) {
-    var colorArr = parse(color);
-    if (colorArr) {
-        return ((1 << 24) + (colorArr[0] << 16) + (colorArr[1] << 8) + (+colorArr[2])).toString(16).slice(1);
-    }
-}
-function fastLerp(normalizedValue, colors, out) {
-    if (!(colors && colors.length)
-        || !(normalizedValue >= 0 && normalizedValue <= 1)) {
-        return;
-    }
-    out = out || [];
-    var value = normalizedValue * (colors.length - 1);
-    var leftIndex = Math.floor(value);
-    var rightIndex = Math.ceil(value);
-    var leftColor = colors[leftIndex];
-    var rightColor = colors[rightIndex];
-    var dv = value - leftIndex;
-    out[0] = color_clampCssByte(color_lerpNumber(leftColor[0], rightColor[0], dv));
-    out[1] = color_clampCssByte(color_lerpNumber(leftColor[1], rightColor[1], dv));
-    out[2] = color_clampCssByte(color_lerpNumber(leftColor[2], rightColor[2], dv));
-    out[3] = color_clampCssFloat(color_lerpNumber(leftColor[3], rightColor[3], dv));
-    return out;
-}
-var fastMapToColor = fastLerp;
-function lerp(normalizedValue, colors, fullOutput) {
-    if (!(colors && colors.length)
-        || !(normalizedValue >= 0 && normalizedValue <= 1)) {
-        return;
-    }
-    var value = normalizedValue * (colors.length - 1);
-    var leftIndex = Math.floor(value);
-    var rightIndex = Math.ceil(value);
-    var leftColor = parse(colors[leftIndex]);
-    var rightColor = parse(colors[rightIndex]);
-    var dv = value - leftIndex;
-    var color = stringify([
-        color_clampCssByte(color_lerpNumber(leftColor[0], rightColor[0], dv)),
-        color_clampCssByte(color_lerpNumber(leftColor[1], rightColor[1], dv)),
-        color_clampCssByte(color_lerpNumber(leftColor[2], rightColor[2], dv)),
-        color_clampCssFloat(color_lerpNumber(leftColor[3], rightColor[3], dv))
-    ], 'rgba');
-    return fullOutput
-        ? {
-            color: color,
-            leftIndex: leftIndex,
-            rightIndex: rightIndex,
-            value: value
-        }
-        : color;
-}
-var mapToColor = lerp;
-function modifyHSL(color, h, s, l) {
-    var colorArr = parse(color);
-    if (color) {
-        colorArr = color_rgba2hsla(colorArr);
-        h != null && (colorArr[0] = color_clampCssAngle(h));
-        s != null && (colorArr[1] = color_parseCssFloat(s));
-        l != null && (colorArr[2] = color_parseCssFloat(l));
-        return stringify(color_hsla2rgba(colorArr), 'rgba');
-    }
-}
-function modifyAlpha(color, alpha) {
-    var colorArr = parse(color);
-    if (colorArr && alpha != null) {
-        colorArr[3] = color_clampCssFloat(alpha);
-        return stringify(colorArr, 'rgba');
-    }
-}
-function stringify(arrColor, type) {
-    if (!arrColor || !arrColor.length) {
-        return;
-    }
-    var colorStr = arrColor[0] + ',' + arrColor[1] + ',' + arrColor[2];
-    if (type === 'rgba' || type === 'hsva' || type === 'hsla') {
-        colorStr += ',' + arrColor[3];
-    }
-    return type + '(' + colorStr + ')';
-}
-function lum(color, backgroundLum) {
-    var arr = parse(color);
-    return arr
-        ? (0.299 * arr[0] + 0.587 * arr[1] + 0.114 * arr[2]) * arr[3] / 255
-            + (1 - arr[3]) * backgroundLum
-        : 0;
-}
-function random() {
-    var r = Math.round(Math.random() * 255);
-    var g = Math.round(Math.random() * 255);
-    var b = Math.round(Math.random() * 255);
-    return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/util.js
-var BUILTIN_OBJECT = {
-    '[object Function]': true,
-    '[object RegExp]': true,
-    '[object Date]': true,
-    '[object Error]': true,
-    '[object CanvasGradient]': true,
-    '[object CanvasPattern]': true,
-    '[object Image]': true,
-    '[object Canvas]': true
-};
-var TYPED_ARRAY = {
-    '[object Int8Array]': true,
-    '[object Uint8Array]': true,
-    '[object Uint8ClampedArray]': true,
-    '[object Int16Array]': true,
-    '[object Uint16Array]': true,
-    '[object Int32Array]': true,
-    '[object Uint32Array]': true,
-    '[object Float32Array]': true,
-    '[object Float64Array]': true
-};
+;// ./node_modules/zrender/lib/core/util.js
+
+var BUILTIN_OBJECT = reduce([
+    'Function',
+    'RegExp',
+    'Date',
+    'Error',
+    'CanvasGradient',
+    'CanvasPattern',
+    'Image',
+    'Canvas'
+], function (obj, val) {
+    obj['[object ' + val + ']'] = true;
+    return obj;
+}, {});
+var TYPED_ARRAY = reduce([
+    'Int8',
+    'Uint8',
+    'Uint8Clamped',
+    'Int16',
+    'Uint16',
+    'Int32',
+    'Uint32',
+    'Float32',
+    'Float64'
+], function (obj, val) {
+    obj['[object ' + val + 'Array]'] = true;
+    return obj;
+}, {});
 var objToString = Object.prototype.toString;
 var arrayProto = Array.prototype;
 var util_nativeForEach = arrayProto.forEach;
@@ -23610,10 +23268,7 @@ var nativeSlice = arrayProto.slice;
 var nativeMap = arrayProto.map;
 var ctorFunction = function () { }.constructor;
 var protoFunction = ctorFunction ? ctorFunction.prototype : null;
-var methods = {};
-function $override(name, fn) {
-    methods[name] = fn;
-}
+var protoKey = '__proto__';
 var idStart = 0x0907;
 function util_guid() {
     return idStart++;
@@ -23650,7 +23305,7 @@ function clone(source) {
             else {
                 result = new Ctor(source.length);
                 for (var i = 0, len = source.length; i < len; i++) {
-                    result[i] = clone(source[i]);
+                    result[i] = source[i];
                 }
             }
         }
@@ -23658,7 +23313,7 @@ function clone(source) {
     else if (!BUILTIN_OBJECT[typeStr] && !isPrimitive(source) && !isDom(source)) {
         result = {};
         for (var key in source) {
-            if (source.hasOwnProperty(key)) {
+            if (source.hasOwnProperty(key) && key !== protoKey) {
                 result[key] = clone(source[key]);
             }
         }
@@ -23670,7 +23325,7 @@ function merge(target, source, overwrite) {
         return overwrite ? clone(source) : target;
     }
     for (var key in source) {
-        if (source.hasOwnProperty(key)) {
+        if (source.hasOwnProperty(key) && key !== protoKey) {
             var targetProp = target[key];
             var sourceProp = source[key];
             if (isObject(sourceProp)
@@ -23705,7 +23360,7 @@ function util_extend(target, source) {
     }
     else {
         for (var key in source) {
-            if (source.hasOwnProperty(key)) {
+            if (source.hasOwnProperty(key) && key !== protoKey) {
                 target[key] = source[key];
             }
         }
@@ -23714,7 +23369,7 @@ function util_extend(target, source) {
 }
 function util_defaults(target, source, overlay) {
     var keysArr = keys(source);
-    for (var i = 0; i < keysArr.length; i++) {
+    for (var i = 0, len = keysArr.length; i < len; i++) {
         var key = keysArr[i];
         if ((overlay ? source[key] != null : target[key] == null)) {
             target[key] = source[key];
@@ -23722,12 +23377,7 @@ function util_defaults(target, source, overlay) {
     }
     return target;
 }
-var createCanvas = function () {
-    return methods.createCanvas();
-};
-methods.createCanvas = function () {
-    return document.createElement('canvas');
-};
+var createCanvas = platformApi.createCanvas;
 function indexOf(array, value) {
     if (array) {
         if (array.indexOf) {
@@ -24006,11 +23656,48 @@ function setAsPrimitive(obj) {
 function isPrimitive(obj) {
     return obj[primitiveKey];
 }
+var MapPolyfill = (function () {
+    function MapPolyfill() {
+        this.data = {};
+    }
+    MapPolyfill.prototype["delete"] = function (key) {
+        var existed = this.has(key);
+        if (existed) {
+            delete this.data[key];
+        }
+        return existed;
+    };
+    MapPolyfill.prototype.has = function (key) {
+        return this.data.hasOwnProperty(key);
+    };
+    MapPolyfill.prototype.get = function (key) {
+        return this.data[key];
+    };
+    MapPolyfill.prototype.set = function (key, value) {
+        this.data[key] = value;
+        return this;
+    };
+    MapPolyfill.prototype.keys = function () {
+        return keys(this.data);
+    };
+    MapPolyfill.prototype.forEach = function (callback) {
+        var data = this.data;
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+                callback(data[key], key);
+            }
+        }
+    };
+    return MapPolyfill;
+}());
+var isNativeMapSupported = typeof Map === 'function';
+function maybeNativeMap() {
+    return (isNativeMapSupported ? new Map() : new MapPolyfill());
+}
 var HashMap = (function () {
     function HashMap(obj) {
-        this.data = {};
         var isArr = isArray(obj);
-        this.data = {};
+        this.data = maybeNativeMap();
         var thisMap = this;
         (obj instanceof HashMap)
             ? obj.each(visit)
@@ -24019,24 +23706,29 @@ var HashMap = (function () {
             isArr ? thisMap.set(value, key) : thisMap.set(key, value);
         }
     }
+    HashMap.prototype.hasKey = function (key) {
+        return this.data.has(key);
+    };
     HashMap.prototype.get = function (key) {
-        return this.data.hasOwnProperty(key) ? this.data[key] : null;
+        return this.data.get(key);
     };
     HashMap.prototype.set = function (key, value) {
-        return (this.data[key] = value);
+        this.data.set(key, value);
+        return value;
     };
     HashMap.prototype.each = function (cb, context) {
-        for (var key in this.data) {
-            if (this.data.hasOwnProperty(key)) {
-                cb.call(context, this.data[key], key);
-            }
-        }
+        this.data.forEach(function (value, key) {
+            cb.call(context, value, key);
+        });
     };
     HashMap.prototype.keys = function () {
-        return keys(this.data);
+        var keys = this.data.keys();
+        return isNativeMapSupported
+            ? Array.from(keys)
+            : keys;
     };
     HashMap.prototype.removeKey = function (key) {
-        delete this.data[key];
+        this.data["delete"](key);
     };
     return HashMap;
 }());
@@ -24070,27 +23762,1256 @@ function createObject(proto, properties) {
     }
     return obj;
 }
+function disableUserSelect(dom) {
+    var domStyle = dom.style;
+    domStyle.webkitUserSelect = 'none';
+    domStyle.userSelect = 'none';
+    domStyle.webkitTapHighlightColor = 'rgba(0,0,0,0)';
+    domStyle['-webkit-touch-callout'] = 'none';
+}
 function hasOwn(own, prop) {
     return own.hasOwnProperty(prop);
 }
 function util_noop() { }
+var RADIAN_TO_DEGREE = 180 / Math.PI;
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/animation/Animator.js
+;// ./node_modules/zrender/lib/core/vector.js
+function create(x, y) {
+    if (x == null) {
+        x = 0;
+    }
+    if (y == null) {
+        y = 0;
+    }
+    return [x, y];
+}
+function copy(out, v) {
+    out[0] = v[0];
+    out[1] = v[1];
+    return out;
+}
+function vector_clone(v) {
+    return [v[0], v[1]];
+}
+function set(out, a, b) {
+    out[0] = a;
+    out[1] = b;
+    return out;
+}
+function add(out, v1, v2) {
+    out[0] = v1[0] + v2[0];
+    out[1] = v1[1] + v2[1];
+    return out;
+}
+function scaleAndAdd(out, v1, v2, a) {
+    out[0] = v1[0] + v2[0] * a;
+    out[1] = v1[1] + v2[1] * a;
+    return out;
+}
+function sub(out, v1, v2) {
+    out[0] = v1[0] - v2[0];
+    out[1] = v1[1] - v2[1];
+    return out;
+}
+function len(v) {
+    return Math.sqrt(lenSquare(v));
+}
+var vector_length = len;
+function lenSquare(v) {
+    return v[0] * v[0] + v[1] * v[1];
+}
+var lengthSquare = lenSquare;
+function mul(out, v1, v2) {
+    out[0] = v1[0] * v2[0];
+    out[1] = v1[1] * v2[1];
+    return out;
+}
+function div(out, v1, v2) {
+    out[0] = v1[0] / v2[0];
+    out[1] = v1[1] / v2[1];
+    return out;
+}
+function dot(v1, v2) {
+    return v1[0] * v2[0] + v1[1] * v2[1];
+}
+function scale(out, v, s) {
+    out[0] = v[0] * s;
+    out[1] = v[1] * s;
+    return out;
+}
+function normalize(out, v) {
+    var d = len(v);
+    if (d === 0) {
+        out[0] = 0;
+        out[1] = 0;
+    }
+    else {
+        out[0] = v[0] / d;
+        out[1] = v[1] / d;
+    }
+    return out;
+}
+function distance(v1, v2) {
+    return Math.sqrt((v1[0] - v2[0]) * (v1[0] - v2[0])
+        + (v1[1] - v2[1]) * (v1[1] - v2[1]));
+}
+var dist = distance;
+function distanceSquare(v1, v2) {
+    return (v1[0] - v2[0]) * (v1[0] - v2[0])
+        + (v1[1] - v2[1]) * (v1[1] - v2[1]);
+}
+var distSquare = distanceSquare;
+function negate(out, v) {
+    out[0] = -v[0];
+    out[1] = -v[1];
+    return out;
+}
+function lerp(out, v1, v2, t) {
+    out[0] = v1[0] + t * (v2[0] - v1[0]);
+    out[1] = v1[1] + t * (v2[1] - v1[1]);
+    return out;
+}
+function applyTransform(out, v, m) {
+    var x = v[0];
+    var y = v[1];
+    out[0] = m[0] * x + m[2] * y + m[4];
+    out[1] = m[1] * x + m[3] * y + m[5];
+    return out;
+}
+function vector_min(out, v1, v2) {
+    out[0] = Math.min(v1[0], v2[0]);
+    out[1] = Math.min(v1[1], v2[1]);
+    return out;
+}
+function vector_max(out, v1, v2) {
+    out[0] = Math.max(v1[0], v2[0]);
+    out[1] = Math.max(v1[1], v2[1]);
+    return out;
+}
+
+;// ./node_modules/zrender/lib/core/curve.js
+
+var mathPow = Math.pow;
+var mathSqrt = Math.sqrt;
+var curve_EPSILON = 1e-8;
+var EPSILON_NUMERIC = 1e-4;
+var THREE_SQRT = mathSqrt(3);
+var ONE_THIRD = 1 / 3;
+var _v0 = create();
+var _v1 = create();
+var _v2 = create();
+function isAroundZero(val) {
+    return val > -curve_EPSILON && val < curve_EPSILON;
+}
+function isNotAroundZero(val) {
+    return val > curve_EPSILON || val < -curve_EPSILON;
+}
+function curve_cubicAt(p0, p1, p2, p3, t) {
+    var onet = 1 - t;
+    return onet * onet * (onet * p0 + 3 * t * p1)
+        + t * t * (t * p3 + 3 * onet * p2);
+}
+function cubicDerivativeAt(p0, p1, p2, p3, t) {
+    var onet = 1 - t;
+    return 3 * (((p1 - p0) * onet + 2 * (p2 - p1) * t) * onet
+        + (p3 - p2) * t * t);
+}
+function cubicRootAt(p0, p1, p2, p3, val, roots) {
+    var a = p3 + 3 * (p1 - p2) - p0;
+    var b = 3 * (p2 - p1 * 2 + p0);
+    var c = 3 * (p1 - p0);
+    var d = p0 - val;
+    var A = b * b - 3 * a * c;
+    var B = b * c - 9 * a * d;
+    var C = c * c - 3 * b * d;
+    var n = 0;
+    if (isAroundZero(A) && isAroundZero(B)) {
+        if (isAroundZero(b)) {
+            roots[0] = 0;
+        }
+        else {
+            var t1 = -c / b;
+            if (t1 >= 0 && t1 <= 1) {
+                roots[n++] = t1;
+            }
+        }
+    }
+    else {
+        var disc = B * B - 4 * A * C;
+        if (isAroundZero(disc)) {
+            var K = B / A;
+            var t1 = -b / a + K;
+            var t2 = -K / 2;
+            if (t1 >= 0 && t1 <= 1) {
+                roots[n++] = t1;
+            }
+            if (t2 >= 0 && t2 <= 1) {
+                roots[n++] = t2;
+            }
+        }
+        else if (disc > 0) {
+            var discSqrt = mathSqrt(disc);
+            var Y1 = A * b + 1.5 * a * (-B + discSqrt);
+            var Y2 = A * b + 1.5 * a * (-B - discSqrt);
+            if (Y1 < 0) {
+                Y1 = -mathPow(-Y1, ONE_THIRD);
+            }
+            else {
+                Y1 = mathPow(Y1, ONE_THIRD);
+            }
+            if (Y2 < 0) {
+                Y2 = -mathPow(-Y2, ONE_THIRD);
+            }
+            else {
+                Y2 = mathPow(Y2, ONE_THIRD);
+            }
+            var t1 = (-b - (Y1 + Y2)) / (3 * a);
+            if (t1 >= 0 && t1 <= 1) {
+                roots[n++] = t1;
+            }
+        }
+        else {
+            var T = (2 * A * b - 3 * a * B) / (2 * mathSqrt(A * A * A));
+            var theta = Math.acos(T) / 3;
+            var ASqrt = mathSqrt(A);
+            var tmp = Math.cos(theta);
+            var t1 = (-b - 2 * ASqrt * tmp) / (3 * a);
+            var t2 = (-b + ASqrt * (tmp + THREE_SQRT * Math.sin(theta))) / (3 * a);
+            var t3 = (-b + ASqrt * (tmp - THREE_SQRT * Math.sin(theta))) / (3 * a);
+            if (t1 >= 0 && t1 <= 1) {
+                roots[n++] = t1;
+            }
+            if (t2 >= 0 && t2 <= 1) {
+                roots[n++] = t2;
+            }
+            if (t3 >= 0 && t3 <= 1) {
+                roots[n++] = t3;
+            }
+        }
+    }
+    return n;
+}
+function curve_cubicExtrema(p0, p1, p2, p3, extrema) {
+    var b = 6 * p2 - 12 * p1 + 6 * p0;
+    var a = 9 * p1 + 3 * p3 - 3 * p0 - 9 * p2;
+    var c = 3 * p1 - 3 * p0;
+    var n = 0;
+    if (isAroundZero(a)) {
+        if (isNotAroundZero(b)) {
+            var t1 = -c / b;
+            if (t1 >= 0 && t1 <= 1) {
+                extrema[n++] = t1;
+            }
+        }
+    }
+    else {
+        var disc = b * b - 4 * a * c;
+        if (isAroundZero(disc)) {
+            extrema[0] = -b / (2 * a);
+        }
+        else if (disc > 0) {
+            var discSqrt = mathSqrt(disc);
+            var t1 = (-b + discSqrt) / (2 * a);
+            var t2 = (-b - discSqrt) / (2 * a);
+            if (t1 >= 0 && t1 <= 1) {
+                extrema[n++] = t1;
+            }
+            if (t2 >= 0 && t2 <= 1) {
+                extrema[n++] = t2;
+            }
+        }
+    }
+    return n;
+}
+function cubicSubdivide(p0, p1, p2, p3, t, out) {
+    var p01 = (p1 - p0) * t + p0;
+    var p12 = (p2 - p1) * t + p1;
+    var p23 = (p3 - p2) * t + p2;
+    var p012 = (p12 - p01) * t + p01;
+    var p123 = (p23 - p12) * t + p12;
+    var p0123 = (p123 - p012) * t + p012;
+    out[0] = p0;
+    out[1] = p01;
+    out[2] = p012;
+    out[3] = p0123;
+    out[4] = p0123;
+    out[5] = p123;
+    out[6] = p23;
+    out[7] = p3;
+}
+function cubicProjectPoint(x0, y0, x1, y1, x2, y2, x3, y3, x, y, out) {
+    var t;
+    var interval = 0.005;
+    var d = Infinity;
+    var prev;
+    var next;
+    var d1;
+    var d2;
+    _v0[0] = x;
+    _v0[1] = y;
+    for (var _t = 0; _t < 1; _t += 0.05) {
+        _v1[0] = curve_cubicAt(x0, x1, x2, x3, _t);
+        _v1[1] = curve_cubicAt(y0, y1, y2, y3, _t);
+        d1 = distSquare(_v0, _v1);
+        if (d1 < d) {
+            t = _t;
+            d = d1;
+        }
+    }
+    d = Infinity;
+    for (var i = 0; i < 32; i++) {
+        if (interval < EPSILON_NUMERIC) {
+            break;
+        }
+        prev = t - interval;
+        next = t + interval;
+        _v1[0] = curve_cubicAt(x0, x1, x2, x3, prev);
+        _v1[1] = curve_cubicAt(y0, y1, y2, y3, prev);
+        d1 = distSquare(_v1, _v0);
+        if (prev >= 0 && d1 < d) {
+            t = prev;
+            d = d1;
+        }
+        else {
+            _v2[0] = curve_cubicAt(x0, x1, x2, x3, next);
+            _v2[1] = curve_cubicAt(y0, y1, y2, y3, next);
+            d2 = distSquare(_v2, _v0);
+            if (next <= 1 && d2 < d) {
+                t = next;
+                d = d2;
+            }
+            else {
+                interval *= 0.5;
+            }
+        }
+    }
+    if (out) {
+        out[0] = curve_cubicAt(x0, x1, x2, x3, t);
+        out[1] = curve_cubicAt(y0, y1, y2, y3, t);
+    }
+    return mathSqrt(d);
+}
+function cubicLength(x0, y0, x1, y1, x2, y2, x3, y3, iteration) {
+    var px = x0;
+    var py = y0;
+    var d = 0;
+    var step = 1 / iteration;
+    for (var i = 1; i <= iteration; i++) {
+        var t = i * step;
+        var x = curve_cubicAt(x0, x1, x2, x3, t);
+        var y = curve_cubicAt(y0, y1, y2, y3, t);
+        var dx = x - px;
+        var dy = y - py;
+        d += Math.sqrt(dx * dx + dy * dy);
+        px = x;
+        py = y;
+    }
+    return d;
+}
+function curve_quadraticAt(p0, p1, p2, t) {
+    var onet = 1 - t;
+    return onet * (onet * p0 + 2 * t * p1) + t * t * p2;
+}
+function quadraticDerivativeAt(p0, p1, p2, t) {
+    return 2 * ((1 - t) * (p1 - p0) + t * (p2 - p1));
+}
+function quadraticRootAt(p0, p1, p2, val, roots) {
+    var a = p0 - 2 * p1 + p2;
+    var b = 2 * (p1 - p0);
+    var c = p0 - val;
+    var n = 0;
+    if (isAroundZero(a)) {
+        if (isNotAroundZero(b)) {
+            var t1 = -c / b;
+            if (t1 >= 0 && t1 <= 1) {
+                roots[n++] = t1;
+            }
+        }
+    }
+    else {
+        var disc = b * b - 4 * a * c;
+        if (isAroundZero(disc)) {
+            var t1 = -b / (2 * a);
+            if (t1 >= 0 && t1 <= 1) {
+                roots[n++] = t1;
+            }
+        }
+        else if (disc > 0) {
+            var discSqrt = mathSqrt(disc);
+            var t1 = (-b + discSqrt) / (2 * a);
+            var t2 = (-b - discSqrt) / (2 * a);
+            if (t1 >= 0 && t1 <= 1) {
+                roots[n++] = t1;
+            }
+            if (t2 >= 0 && t2 <= 1) {
+                roots[n++] = t2;
+            }
+        }
+    }
+    return n;
+}
+function curve_quadraticExtremum(p0, p1, p2) {
+    var divider = p0 + p2 - 2 * p1;
+    if (divider === 0) {
+        return 0.5;
+    }
+    else {
+        return (p0 - p1) / divider;
+    }
+}
+function quadraticSubdivide(p0, p1, p2, t, out) {
+    var p01 = (p1 - p0) * t + p0;
+    var p12 = (p2 - p1) * t + p1;
+    var p012 = (p12 - p01) * t + p01;
+    out[0] = p0;
+    out[1] = p01;
+    out[2] = p012;
+    out[3] = p012;
+    out[4] = p12;
+    out[5] = p2;
+}
+function quadraticProjectPoint(x0, y0, x1, y1, x2, y2, x, y, out) {
+    var t;
+    var interval = 0.005;
+    var d = Infinity;
+    _v0[0] = x;
+    _v0[1] = y;
+    for (var _t = 0; _t < 1; _t += 0.05) {
+        _v1[0] = curve_quadraticAt(x0, x1, x2, _t);
+        _v1[1] = curve_quadraticAt(y0, y1, y2, _t);
+        var d1 = distSquare(_v0, _v1);
+        if (d1 < d) {
+            t = _t;
+            d = d1;
+        }
+    }
+    d = Infinity;
+    for (var i = 0; i < 32; i++) {
+        if (interval < EPSILON_NUMERIC) {
+            break;
+        }
+        var prev = t - interval;
+        var next = t + interval;
+        _v1[0] = curve_quadraticAt(x0, x1, x2, prev);
+        _v1[1] = curve_quadraticAt(y0, y1, y2, prev);
+        var d1 = distSquare(_v1, _v0);
+        if (prev >= 0 && d1 < d) {
+            t = prev;
+            d = d1;
+        }
+        else {
+            _v2[0] = curve_quadraticAt(x0, x1, x2, next);
+            _v2[1] = curve_quadraticAt(y0, y1, y2, next);
+            var d2 = distSquare(_v2, _v0);
+            if (next <= 1 && d2 < d) {
+                t = next;
+                d = d2;
+            }
+            else {
+                interval *= 0.5;
+            }
+        }
+    }
+    if (out) {
+        out[0] = curve_quadraticAt(x0, x1, x2, t);
+        out[1] = curve_quadraticAt(y0, y1, y2, t);
+    }
+    return mathSqrt(d);
+}
+function quadraticLength(x0, y0, x1, y1, x2, y2, iteration) {
+    var px = x0;
+    var py = y0;
+    var d = 0;
+    var step = 1 / iteration;
+    for (var i = 1; i <= iteration; i++) {
+        var t = i * step;
+        var x = curve_quadraticAt(x0, x1, x2, t);
+        var y = curve_quadraticAt(y0, y1, y2, t);
+        var dx = x - px;
+        var dy = y - py;
+        d += Math.sqrt(dx * dx + dy * dy);
+        px = x;
+        py = y;
+    }
+    return d;
+}
+
+;// ./node_modules/zrender/lib/animation/cubicEasing.js
+
+
+var regexp = /cubic-bezier\(([0-9,\.e ]+)\)/;
+function createCubicEasingFunc(cubicEasingStr) {
+    var cubic = cubicEasingStr && regexp.exec(cubicEasingStr);
+    if (cubic) {
+        var points = cubic[1].split(',');
+        var a_1 = +trim(points[0]);
+        var b_1 = +trim(points[1]);
+        var c_1 = +trim(points[2]);
+        var d_1 = +trim(points[3]);
+        if (isNaN(a_1 + b_1 + c_1 + d_1)) {
+            return;
+        }
+        var roots_1 = [];
+        return function (p) {
+            return p <= 0
+                ? 0 : p >= 1
+                ? 1
+                : cubicRootAt(0, a_1, c_1, 1, p, roots_1) && curve_cubicAt(0, b_1, d_1, 1, roots_1[0]);
+        };
+    }
+}
+
+;// ./node_modules/zrender/lib/animation/Clip.js
 
 
 
+var Clip = (function () {
+    function Clip(opts) {
+        this._inited = false;
+        this._startTime = 0;
+        this._pausedTime = 0;
+        this._paused = false;
+        this._life = opts.life || 1000;
+        this._delay = opts.delay || 0;
+        this.loop = opts.loop || false;
+        this.onframe = opts.onframe || util_noop;
+        this.ondestroy = opts.ondestroy || util_noop;
+        this.onrestart = opts.onrestart || util_noop;
+        opts.easing && this.setEasing(opts.easing);
+    }
+    Clip.prototype.step = function (globalTime, deltaTime) {
+        if (!this._inited) {
+            this._startTime = globalTime + this._delay;
+            this._inited = true;
+        }
+        if (this._paused) {
+            this._pausedTime += deltaTime;
+            return;
+        }
+        var life = this._life;
+        var elapsedTime = globalTime - this._startTime - this._pausedTime;
+        var percent = elapsedTime / life;
+        if (percent < 0) {
+            percent = 0;
+        }
+        percent = Math.min(percent, 1);
+        var easingFunc = this.easingFunc;
+        var schedule = easingFunc ? easingFunc(percent) : percent;
+        this.onframe(schedule);
+        if (percent === 1) {
+            if (this.loop) {
+                var remainder = elapsedTime % life;
+                this._startTime = globalTime - remainder;
+                this._pausedTime = 0;
+                this.onrestart();
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
+    };
+    Clip.prototype.pause = function () {
+        this._paused = true;
+    };
+    Clip.prototype.resume = function () {
+        this._paused = false;
+    };
+    Clip.prototype.setEasing = function (easing) {
+        this.easing = easing;
+        this.easingFunc = isFunction(easing)
+            ? easing
+            : animation_easing[easing] || createCubicEasingFunc(easing);
+    };
+    return Clip;
+}());
+/* harmony default export */ const animation_Clip = (Clip);
+
+;// ./node_modules/zrender/lib/tool/color.js
+
+
+var color_kCSSColorTable = {
+    'transparent': [0, 0, 0, 0], 'aliceblue': [240, 248, 255, 1],
+    'antiquewhite': [250, 235, 215, 1], 'aqua': [0, 255, 255, 1],
+    'aquamarine': [127, 255, 212, 1], 'azure': [240, 255, 255, 1],
+    'beige': [245, 245, 220, 1], 'bisque': [255, 228, 196, 1],
+    'black': [0, 0, 0, 1], 'blanchedalmond': [255, 235, 205, 1],
+    'blue': [0, 0, 255, 1], 'blueviolet': [138, 43, 226, 1],
+    'brown': [165, 42, 42, 1], 'burlywood': [222, 184, 135, 1],
+    'cadetblue': [95, 158, 160, 1], 'chartreuse': [127, 255, 0, 1],
+    'chocolate': [210, 105, 30, 1], 'coral': [255, 127, 80, 1],
+    'cornflowerblue': [100, 149, 237, 1], 'cornsilk': [255, 248, 220, 1],
+    'crimson': [220, 20, 60, 1], 'cyan': [0, 255, 255, 1],
+    'darkblue': [0, 0, 139, 1], 'darkcyan': [0, 139, 139, 1],
+    'darkgoldenrod': [184, 134, 11, 1], 'darkgray': [169, 169, 169, 1],
+    'darkgreen': [0, 100, 0, 1], 'darkgrey': [169, 169, 169, 1],
+    'darkkhaki': [189, 183, 107, 1], 'darkmagenta': [139, 0, 139, 1],
+    'darkolivegreen': [85, 107, 47, 1], 'darkorange': [255, 140, 0, 1],
+    'darkorchid': [153, 50, 204, 1], 'darkred': [139, 0, 0, 1],
+    'darksalmon': [233, 150, 122, 1], 'darkseagreen': [143, 188, 143, 1],
+    'darkslateblue': [72, 61, 139, 1], 'darkslategray': [47, 79, 79, 1],
+    'darkslategrey': [47, 79, 79, 1], 'darkturquoise': [0, 206, 209, 1],
+    'darkviolet': [148, 0, 211, 1], 'deeppink': [255, 20, 147, 1],
+    'deepskyblue': [0, 191, 255, 1], 'dimgray': [105, 105, 105, 1],
+    'dimgrey': [105, 105, 105, 1], 'dodgerblue': [30, 144, 255, 1],
+    'firebrick': [178, 34, 34, 1], 'floralwhite': [255, 250, 240, 1],
+    'forestgreen': [34, 139, 34, 1], 'fuchsia': [255, 0, 255, 1],
+    'gainsboro': [220, 220, 220, 1], 'ghostwhite': [248, 248, 255, 1],
+    'gold': [255, 215, 0, 1], 'goldenrod': [218, 165, 32, 1],
+    'gray': [128, 128, 128, 1], 'green': [0, 128, 0, 1],
+    'greenyellow': [173, 255, 47, 1], 'grey': [128, 128, 128, 1],
+    'honeydew': [240, 255, 240, 1], 'hotpink': [255, 105, 180, 1],
+    'indianred': [205, 92, 92, 1], 'indigo': [75, 0, 130, 1],
+    'ivory': [255, 255, 240, 1], 'khaki': [240, 230, 140, 1],
+    'lavender': [230, 230, 250, 1], 'lavenderblush': [255, 240, 245, 1],
+    'lawngreen': [124, 252, 0, 1], 'lemonchiffon': [255, 250, 205, 1],
+    'lightblue': [173, 216, 230, 1], 'lightcoral': [240, 128, 128, 1],
+    'lightcyan': [224, 255, 255, 1], 'lightgoldenrodyellow': [250, 250, 210, 1],
+    'lightgray': [211, 211, 211, 1], 'lightgreen': [144, 238, 144, 1],
+    'lightgrey': [211, 211, 211, 1], 'lightpink': [255, 182, 193, 1],
+    'lightsalmon': [255, 160, 122, 1], 'lightseagreen': [32, 178, 170, 1],
+    'lightskyblue': [135, 206, 250, 1], 'lightslategray': [119, 136, 153, 1],
+    'lightslategrey': [119, 136, 153, 1], 'lightsteelblue': [176, 196, 222, 1],
+    'lightyellow': [255, 255, 224, 1], 'lime': [0, 255, 0, 1],
+    'limegreen': [50, 205, 50, 1], 'linen': [250, 240, 230, 1],
+    'magenta': [255, 0, 255, 1], 'maroon': [128, 0, 0, 1],
+    'mediumaquamarine': [102, 205, 170, 1], 'mediumblue': [0, 0, 205, 1],
+    'mediumorchid': [186, 85, 211, 1], 'mediumpurple': [147, 112, 219, 1],
+    'mediumseagreen': [60, 179, 113, 1], 'mediumslateblue': [123, 104, 238, 1],
+    'mediumspringgreen': [0, 250, 154, 1], 'mediumturquoise': [72, 209, 204, 1],
+    'mediumvioletred': [199, 21, 133, 1], 'midnightblue': [25, 25, 112, 1],
+    'mintcream': [245, 255, 250, 1], 'mistyrose': [255, 228, 225, 1],
+    'moccasin': [255, 228, 181, 1], 'navajowhite': [255, 222, 173, 1],
+    'navy': [0, 0, 128, 1], 'oldlace': [253, 245, 230, 1],
+    'olive': [128, 128, 0, 1], 'olivedrab': [107, 142, 35, 1],
+    'orange': [255, 165, 0, 1], 'orangered': [255, 69, 0, 1],
+    'orchid': [218, 112, 214, 1], 'palegoldenrod': [238, 232, 170, 1],
+    'palegreen': [152, 251, 152, 1], 'paleturquoise': [175, 238, 238, 1],
+    'palevioletred': [219, 112, 147, 1], 'papayawhip': [255, 239, 213, 1],
+    'peachpuff': [255, 218, 185, 1], 'peru': [205, 133, 63, 1],
+    'pink': [255, 192, 203, 1], 'plum': [221, 160, 221, 1],
+    'powderblue': [176, 224, 230, 1], 'purple': [128, 0, 128, 1],
+    'red': [255, 0, 0, 1], 'rosybrown': [188, 143, 143, 1],
+    'royalblue': [65, 105, 225, 1], 'saddlebrown': [139, 69, 19, 1],
+    'salmon': [250, 128, 114, 1], 'sandybrown': [244, 164, 96, 1],
+    'seagreen': [46, 139, 87, 1], 'seashell': [255, 245, 238, 1],
+    'sienna': [160, 82, 45, 1], 'silver': [192, 192, 192, 1],
+    'skyblue': [135, 206, 235, 1], 'slateblue': [106, 90, 205, 1],
+    'slategray': [112, 128, 144, 1], 'slategrey': [112, 128, 144, 1],
+    'snow': [255, 250, 250, 1], 'springgreen': [0, 255, 127, 1],
+    'steelblue': [70, 130, 180, 1], 'tan': [210, 180, 140, 1],
+    'teal': [0, 128, 128, 1], 'thistle': [216, 191, 216, 1],
+    'tomato': [255, 99, 71, 1], 'turquoise': [64, 224, 208, 1],
+    'violet': [238, 130, 238, 1], 'wheat': [245, 222, 179, 1],
+    'white': [255, 255, 255, 1], 'whitesmoke': [245, 245, 245, 1],
+    'yellow': [255, 255, 0, 1], 'yellowgreen': [154, 205, 50, 1]
+};
+function color_clampCssByte(i) {
+    i = Math.round(i);
+    return i < 0 ? 0 : i > 255 ? 255 : i;
+}
+function color_clampCssAngle(i) {
+    i = Math.round(i);
+    return i < 0 ? 0 : i > 360 ? 360 : i;
+}
+function color_clampCssFloat(f) {
+    return f < 0 ? 0 : f > 1 ? 1 : f;
+}
+function color_parseCssInt(val) {
+    var str = val;
+    if (str.length && str.charAt(str.length - 1) === '%') {
+        return color_clampCssByte(parseFloat(str) / 100 * 255);
+    }
+    return color_clampCssByte(parseInt(str, 10));
+}
+function color_parseCssFloat(val) {
+    var str = val;
+    if (str.length && str.charAt(str.length - 1) === '%') {
+        return color_clampCssFloat(parseFloat(str) / 100);
+    }
+    return color_clampCssFloat(parseFloat(str));
+}
+function color_cssHueToRgb(m1, m2, h) {
+    if (h < 0) {
+        h += 1;
+    }
+    else if (h > 1) {
+        h -= 1;
+    }
+    if (h * 6 < 1) {
+        return m1 + (m2 - m1) * h * 6;
+    }
+    if (h * 2 < 1) {
+        return m2;
+    }
+    if (h * 3 < 2) {
+        return m1 + (m2 - m1) * (2 / 3 - h) * 6;
+    }
+    return m1;
+}
+function color_lerpNumber(a, b, p) {
+    return a + (b - a) * p;
+}
+function color_setRgba(out, r, g, b, a) {
+    out[0] = r;
+    out[1] = g;
+    out[2] = b;
+    out[3] = a;
+    return out;
+}
+function color_copyRgba(out, a) {
+    out[0] = a[0];
+    out[1] = a[1];
+    out[2] = a[2];
+    out[3] = a[3];
+    return out;
+}
+var color_colorCache = new lib_core_LRU(20);
+var color_lastRemovedArr = null;
+function color_putToCache(colorStr, rgbaArr) {
+    if (color_lastRemovedArr) {
+        color_copyRgba(color_lastRemovedArr, rgbaArr);
+    }
+    color_lastRemovedArr = color_colorCache.put(colorStr, color_lastRemovedArr || (rgbaArr.slice()));
+}
+function parse(colorStr, rgbaArr) {
+    if (!colorStr) {
+        return;
+    }
+    rgbaArr = rgbaArr || [];
+    var cached = color_colorCache.get(colorStr);
+    if (cached) {
+        return color_copyRgba(rgbaArr, cached);
+    }
+    colorStr = colorStr + '';
+    var str = colorStr.replace(/ /g, '').toLowerCase();
+    if (str in color_kCSSColorTable) {
+        color_copyRgba(rgbaArr, color_kCSSColorTable[str]);
+        color_putToCache(colorStr, rgbaArr);
+        return rgbaArr;
+    }
+    var strLen = str.length;
+    if (str.charAt(0) === '#') {
+        if (strLen === 4 || strLen === 5) {
+            var iv = parseInt(str.slice(1, 4), 16);
+            if (!(iv >= 0 && iv <= 0xfff)) {
+                color_setRgba(rgbaArr, 0, 0, 0, 1);
+                return;
+            }
+            color_setRgba(rgbaArr, ((iv & 0xf00) >> 4) | ((iv & 0xf00) >> 8), (iv & 0xf0) | ((iv & 0xf0) >> 4), (iv & 0xf) | ((iv & 0xf) << 4), strLen === 5 ? parseInt(str.slice(4), 16) / 0xf : 1);
+            color_putToCache(colorStr, rgbaArr);
+            return rgbaArr;
+        }
+        else if (strLen === 7 || strLen === 9) {
+            var iv = parseInt(str.slice(1, 7), 16);
+            if (!(iv >= 0 && iv <= 0xffffff)) {
+                color_setRgba(rgbaArr, 0, 0, 0, 1);
+                return;
+            }
+            color_setRgba(rgbaArr, (iv & 0xff0000) >> 16, (iv & 0xff00) >> 8, iv & 0xff, strLen === 9 ? parseInt(str.slice(7), 16) / 0xff : 1);
+            color_putToCache(colorStr, rgbaArr);
+            return rgbaArr;
+        }
+        return;
+    }
+    var op = str.indexOf('(');
+    var ep = str.indexOf(')');
+    if (op !== -1 && ep + 1 === strLen) {
+        var fname = str.substr(0, op);
+        var params = str.substr(op + 1, ep - (op + 1)).split(',');
+        var alpha = 1;
+        switch (fname) {
+            case 'rgba':
+                if (params.length !== 4) {
+                    return params.length === 3
+                        ? color_setRgba(rgbaArr, +params[0], +params[1], +params[2], 1)
+                        : color_setRgba(rgbaArr, 0, 0, 0, 1);
+                }
+                alpha = color_parseCssFloat(params.pop());
+            case 'rgb':
+                if (params.length >= 3) {
+                    color_setRgba(rgbaArr, color_parseCssInt(params[0]), color_parseCssInt(params[1]), color_parseCssInt(params[2]), params.length === 3 ? alpha : color_parseCssFloat(params[3]));
+                    color_putToCache(colorStr, rgbaArr);
+                    return rgbaArr;
+                }
+                else {
+                    color_setRgba(rgbaArr, 0, 0, 0, 1);
+                    return;
+                }
+            case 'hsla':
+                if (params.length !== 4) {
+                    color_setRgba(rgbaArr, 0, 0, 0, 1);
+                    return;
+                }
+                params[3] = color_parseCssFloat(params[3]);
+                color_hsla2rgba(params, rgbaArr);
+                color_putToCache(colorStr, rgbaArr);
+                return rgbaArr;
+            case 'hsl':
+                if (params.length !== 3) {
+                    color_setRgba(rgbaArr, 0, 0, 0, 1);
+                    return;
+                }
+                color_hsla2rgba(params, rgbaArr);
+                color_putToCache(colorStr, rgbaArr);
+                return rgbaArr;
+            default:
+                return;
+        }
+    }
+    color_setRgba(rgbaArr, 0, 0, 0, 1);
+    return;
+}
+function color_hsla2rgba(hsla, rgba) {
+    var h = (((parseFloat(hsla[0]) % 360) + 360) % 360) / 360;
+    var s = color_parseCssFloat(hsla[1]);
+    var l = color_parseCssFloat(hsla[2]);
+    var m2 = l <= 0.5 ? l * (s + 1) : l + s - l * s;
+    var m1 = l * 2 - m2;
+    rgba = rgba || [];
+    color_setRgba(rgba, color_clampCssByte(color_cssHueToRgb(m1, m2, h + 1 / 3) * 255), color_clampCssByte(color_cssHueToRgb(m1, m2, h) * 255), color_clampCssByte(color_cssHueToRgb(m1, m2, h - 1 / 3) * 255), 1);
+    if (hsla.length === 4) {
+        rgba[3] = hsla[3];
+    }
+    return rgba;
+}
+function color_rgba2hsla(rgba) {
+    if (!rgba) {
+        return;
+    }
+    var R = rgba[0] / 255;
+    var G = rgba[1] / 255;
+    var B = rgba[2] / 255;
+    var vMin = Math.min(R, G, B);
+    var vMax = Math.max(R, G, B);
+    var delta = vMax - vMin;
+    var L = (vMax + vMin) / 2;
+    var H;
+    var S;
+    if (delta === 0) {
+        H = 0;
+        S = 0;
+    }
+    else {
+        if (L < 0.5) {
+            S = delta / (vMax + vMin);
+        }
+        else {
+            S = delta / (2 - vMax - vMin);
+        }
+        var deltaR = (((vMax - R) / 6) + (delta / 2)) / delta;
+        var deltaG = (((vMax - G) / 6) + (delta / 2)) / delta;
+        var deltaB = (((vMax - B) / 6) + (delta / 2)) / delta;
+        if (R === vMax) {
+            H = deltaB - deltaG;
+        }
+        else if (G === vMax) {
+            H = (1 / 3) + deltaR - deltaB;
+        }
+        else if (B === vMax) {
+            H = (2 / 3) + deltaG - deltaR;
+        }
+        if (H < 0) {
+            H += 1;
+        }
+        if (H > 1) {
+            H -= 1;
+        }
+    }
+    var hsla = [H * 360, S, L];
+    if (rgba[3] != null) {
+        hsla.push(rgba[3]);
+    }
+    return hsla;
+}
+function lift(color, level) {
+    var colorArr = parse(color);
+    if (colorArr) {
+        for (var i = 0; i < 3; i++) {
+            if (level < 0) {
+                colorArr[i] = colorArr[i] * (1 - level) | 0;
+            }
+            else {
+                colorArr[i] = ((255 - colorArr[i]) * level + colorArr[i]) | 0;
+            }
+            if (colorArr[i] > 255) {
+                colorArr[i] = 255;
+            }
+            else if (colorArr[i] < 0) {
+                colorArr[i] = 0;
+            }
+        }
+        return stringify(colorArr, colorArr.length === 4 ? 'rgba' : 'rgb');
+    }
+}
+function toHex(color) {
+    var colorArr = parse(color);
+    if (colorArr) {
+        return ((1 << 24) + (colorArr[0] << 16) + (colorArr[1] << 8) + (+colorArr[2])).toString(16).slice(1);
+    }
+}
+function fastLerp(normalizedValue, colors, out) {
+    if (!(colors && colors.length)
+        || !(normalizedValue >= 0 && normalizedValue <= 1)) {
+        return;
+    }
+    out = out || [];
+    var value = normalizedValue * (colors.length - 1);
+    var leftIndex = Math.floor(value);
+    var rightIndex = Math.ceil(value);
+    var leftColor = colors[leftIndex];
+    var rightColor = colors[rightIndex];
+    var dv = value - leftIndex;
+    out[0] = color_clampCssByte(color_lerpNumber(leftColor[0], rightColor[0], dv));
+    out[1] = color_clampCssByte(color_lerpNumber(leftColor[1], rightColor[1], dv));
+    out[2] = color_clampCssByte(color_lerpNumber(leftColor[2], rightColor[2], dv));
+    out[3] = color_clampCssFloat(color_lerpNumber(leftColor[3], rightColor[3], dv));
+    return out;
+}
+var fastMapToColor = fastLerp;
+function color_lerp(normalizedValue, colors, fullOutput) {
+    if (!(colors && colors.length)
+        || !(normalizedValue >= 0 && normalizedValue <= 1)) {
+        return;
+    }
+    var value = normalizedValue * (colors.length - 1);
+    var leftIndex = Math.floor(value);
+    var rightIndex = Math.ceil(value);
+    var leftColor = parse(colors[leftIndex]);
+    var rightColor = parse(colors[rightIndex]);
+    var dv = value - leftIndex;
+    var color = stringify([
+        color_clampCssByte(color_lerpNumber(leftColor[0], rightColor[0], dv)),
+        color_clampCssByte(color_lerpNumber(leftColor[1], rightColor[1], dv)),
+        color_clampCssByte(color_lerpNumber(leftColor[2], rightColor[2], dv)),
+        color_clampCssFloat(color_lerpNumber(leftColor[3], rightColor[3], dv))
+    ], 'rgba');
+    return fullOutput
+        ? {
+            color: color,
+            leftIndex: leftIndex,
+            rightIndex: rightIndex,
+            value: value
+        }
+        : color;
+}
+var mapToColor = color_lerp;
+function modifyHSL(color, h, s, l) {
+    var colorArr = parse(color);
+    if (color) {
+        colorArr = color_rgba2hsla(colorArr);
+        h != null && (colorArr[0] = color_clampCssAngle(h));
+        s != null && (colorArr[1] = color_parseCssFloat(s));
+        l != null && (colorArr[2] = color_parseCssFloat(l));
+        return stringify(color_hsla2rgba(colorArr), 'rgba');
+    }
+}
+function modifyAlpha(color, alpha) {
+    var colorArr = parse(color);
+    if (colorArr && alpha != null) {
+        colorArr[3] = color_clampCssFloat(alpha);
+        return stringify(colorArr, 'rgba');
+    }
+}
+function stringify(arrColor, type) {
+    if (!arrColor || !arrColor.length) {
+        return;
+    }
+    var colorStr = arrColor[0] + ',' + arrColor[1] + ',' + arrColor[2];
+    if (type === 'rgba' || type === 'hsva' || type === 'hsla') {
+        colorStr += ',' + arrColor[3];
+    }
+    return type + '(' + colorStr + ')';
+}
+function lum(color, backgroundLum) {
+    var arr = parse(color);
+    return arr
+        ? (0.299 * arr[0] + 0.587 * arr[1] + 0.114 * arr[2]) * arr[3] / 255
+            + (1 - arr[3]) * backgroundLum
+        : 0;
+}
+function random() {
+    return stringify([
+        Math.round(Math.random() * 255),
+        Math.round(Math.random() * 255),
+        Math.round(Math.random() * 255)
+    ], 'rgb');
+}
+var liftedColorCache = new lib_core_LRU(100);
+function liftColor(color) {
+    if (isString(color)) {
+        var liftedColor = liftedColorCache.get(color);
+        if (!liftedColor) {
+            liftedColor = lift(color, -0.1);
+            liftedColorCache.put(color, liftedColor);
+        }
+        return liftedColor;
+    }
+    else if (isGradientObject(color)) {
+        var ret = util_extend({}, color);
+        ret.colorStops = map(color.colorStops, function (stop) { return ({
+            offset: stop.offset,
+            color: lift(stop.color, -0.1)
+        }); });
+        return ret;
+    }
+    return color;
+}
+
+;// ./node_modules/zrender/lib/core/env.js
+var Browser = (function () {
+    function Browser() {
+        this.firefox = false;
+        this.ie = false;
+        this.edge = false;
+        this.newEdge = false;
+        this.weChat = false;
+    }
+    return Browser;
+}());
+var Env = (function () {
+    function Env() {
+        this.browser = new Browser();
+        this.node = false;
+        this.wxa = false;
+        this.worker = false;
+        this.svgSupported = false;
+        this.touchEventsSupported = false;
+        this.pointerEventsSupported = false;
+        this.domSupported = false;
+        this.transformSupported = false;
+        this.transform3dSupported = false;
+        this.hasGlobalWindow = typeof window !== 'undefined';
+    }
+    return Env;
+}());
+var env = new Env();
+if (typeof wx === 'object' && typeof wx.getSystemInfoSync === 'function') {
+    env.wxa = true;
+    env.touchEventsSupported = true;
+}
+else if (typeof document === 'undefined' && typeof self !== 'undefined') {
+    env.worker = true;
+}
+else if (!env.hasGlobalWindow || 'Deno' in window) {
+    env.node = true;
+    env.svgSupported = true;
+}
+else {
+    detect(navigator.userAgent, env);
+}
+function detect(ua, env) {
+    var browser = env.browser;
+    var firefox = ua.match(/Firefox\/([\d.]+)/);
+    var ie = ua.match(/MSIE\s([\d.]+)/)
+        || ua.match(/Trident\/.+?rv:(([\d.]+))/);
+    var edge = ua.match(/Edge?\/([\d.]+)/);
+    var weChat = (/micromessenger/i).test(ua);
+    if (firefox) {
+        browser.firefox = true;
+        browser.version = firefox[1];
+    }
+    if (ie) {
+        browser.ie = true;
+        browser.version = ie[1];
+    }
+    if (edge) {
+        browser.edge = true;
+        browser.version = edge[1];
+        browser.newEdge = +edge[1].split('.')[0] > 18;
+    }
+    if (weChat) {
+        browser.weChat = true;
+    }
+    env.svgSupported = typeof SVGRect !== 'undefined';
+    env.touchEventsSupported = 'ontouchstart' in window && !browser.ie && !browser.edge;
+    env.pointerEventsSupported = 'onpointerdown' in window
+        && (browser.edge || (browser.ie && +browser.version >= 11));
+    env.domSupported = typeof document !== 'undefined';
+    var style = document.documentElement.style;
+    env.transform3dSupported = ((browser.ie && 'transition' in style)
+        || browser.edge
+        || (('WebKitCSSMatrix' in window) && ('m11' in new WebKitCSSMatrix()))
+        || 'MozPerspective' in style)
+        && !('OTransition' in style);
+    env.transformSupported = env.transform3dSupported
+        || (browser.ie && +browser.version >= 9);
+}
+/* harmony default export */ const core_env = (env);
+
+;// ./node_modules/zrender/lib/svg/helper.js
+
+
+
+var mathRound = Math.round;
+function normalizeColor(color) {
+    var opacity;
+    if (!color || color === 'transparent') {
+        color = 'none';
+    }
+    else if (typeof color === 'string' && color.indexOf('rgba') > -1) {
+        var arr = parse(color);
+        if (arr) {
+            color = 'rgb(' + arr[0] + ',' + arr[1] + ',' + arr[2] + ')';
+            opacity = arr[3];
+        }
+    }
+    return {
+        color: color,
+        opacity: opacity == null ? 1 : opacity
+    };
+}
+var helper_EPSILON = 1e-4;
+function helper_isAroundZero(transform) {
+    return transform < helper_EPSILON && transform > -helper_EPSILON;
+}
+function round3(transform) {
+    return mathRound(transform * 1e3) / 1e3;
+}
+function round4(transform) {
+    return mathRound(transform * 1e4) / 1e4;
+}
+function round1(transform) {
+    return mathRound(transform * 10) / 10;
+}
+function getMatrixStr(m) {
+    return 'matrix('
+        + round3(m[0]) + ','
+        + round3(m[1]) + ','
+        + round3(m[2]) + ','
+        + round3(m[3]) + ','
+        + round4(m[4]) + ','
+        + round4(m[5])
+        + ')';
+}
+var TEXT_ALIGN_TO_ANCHOR = {
+    left: 'start',
+    right: 'end',
+    center: 'middle',
+    middle: 'middle'
+};
+function adjustTextY(y, lineHeight, textBaseline) {
+    if (textBaseline === 'top') {
+        y += lineHeight / 2;
+    }
+    else if (textBaseline === 'bottom') {
+        y -= lineHeight / 2;
+    }
+    return y;
+}
+function hasShadow(style) {
+    return style
+        && (style.shadowBlur || style.shadowOffsetX || style.shadowOffsetY);
+}
+function getShadowKey(displayable) {
+    var style = displayable.style;
+    var globalScale = displayable.getGlobalScale();
+    return [
+        style.shadowColor,
+        (style.shadowBlur || 0).toFixed(2),
+        (style.shadowOffsetX || 0).toFixed(2),
+        (style.shadowOffsetY || 0).toFixed(2),
+        globalScale[0],
+        globalScale[1]
+    ].join(',');
+}
+function getClipPathsKey(clipPaths) {
+    var key = [];
+    if (clipPaths) {
+        for (var i = 0; i < clipPaths.length; i++) {
+            var clipPath = clipPaths[i];
+            key.push(clipPath.id);
+        }
+    }
+    return key.join(',');
+}
+function isImagePattern(val) {
+    return val && (!!val.image);
+}
+function isSVGPattern(val) {
+    return val && (!!val.svgElement);
+}
+function isPattern(val) {
+    return isImagePattern(val) || isSVGPattern(val);
+}
+function isLinearGradient(val) {
+    return val.type === 'linear';
+}
+function isRadialGradient(val) {
+    return val.type === 'radial';
+}
+function isGradient(val) {
+    return val && (val.type === 'linear'
+        || val.type === 'radial');
+}
+function getIdURL(id) {
+    return "url(#" + id + ")";
+}
+function getPathPrecision(el) {
+    var scale = el.getGlobalScale();
+    var size = Math.max(scale[0], scale[1]);
+    return Math.max(Math.ceil(Math.log(size) / Math.log(10)), 1);
+}
+function getSRTTransformString(transform) {
+    var x = transform.x || 0;
+    var y = transform.y || 0;
+    var rotation = (transform.rotation || 0) * RADIAN_TO_DEGREE;
+    var scaleX = retrieve2(transform.scaleX, 1);
+    var scaleY = retrieve2(transform.scaleY, 1);
+    var skewX = transform.skewX || 0;
+    var skewY = transform.skewY || 0;
+    var res = [];
+    if (x || y) {
+        res.push("translate(" + x + "px," + y + "px)");
+    }
+    if (rotation) {
+        res.push("rotate(" + rotation + ")");
+    }
+    if (scaleX !== 1 || scaleY !== 1) {
+        res.push("scale(" + scaleX + "," + scaleY + ")");
+    }
+    if (skewX || skewY) {
+        res.push("skew(" + mathRound(skewX * RADIAN_TO_DEGREE) + "deg, " + mathRound(skewY * RADIAN_TO_DEGREE) + "deg)");
+    }
+    return res.join(' ');
+}
+var encodeBase64 = (function () {
+    if (core_env.hasGlobalWindow && isFunction(window.btoa)) {
+        return function (str) {
+            return window.btoa(unescape(encodeURIComponent(str)));
+        };
+    }
+    if (typeof Buffer !== 'undefined') {
+        return function (str) {
+            return Buffer.from(str).toString('base64');
+        };
+    }
+    return function (str) {
+        if (true) {
+            logError('Base64 isn\'t natively supported in the current environment.');
+        }
+        return null;
+    };
+})();
+
+;// ./node_modules/zrender/lib/animation/Animator.js
+
+
+
+
+
+
+;
 var arraySlice = Array.prototype.slice;
 function interpolateNumber(p0, p1, percent) {
     return (p1 - p0) * percent + p0;
-}
-function step(p0, p1, percent) {
-    return percent > 0.5 ? p1 : p0;
 }
 function interpolate1DArray(out, p0, p1, percent) {
     var len = p0.length;
     for (var i = 0; i < len; i++) {
         out[i] = interpolateNumber(p0[i], p1[i], percent);
     }
+    return out;
 }
 function interpolate2DArray(out, p0, p1, percent) {
     var len = p0.length;
@@ -24103,6 +25024,7 @@ function interpolate2DArray(out, p0, p1, percent) {
             out[i][j] = interpolateNumber(p0[i][j], p1[i][j], percent);
         }
     }
+    return out;
 }
 function add1DArray(out, p0, p1, sign) {
     var len = p0.length;
@@ -24123,6 +25045,19 @@ function add2DArray(out, p0, p1, sign) {
         }
     }
     return out;
+}
+function fillColorStops(val0, val1) {
+    var len0 = val0.length;
+    var len1 = val1.length;
+    var shorterArr = len0 > len1 ? val1 : val0;
+    var shorterLen = Math.min(len0, len1);
+    var last = shorterArr[shorterLen - 1] || { color: [0, 0, 0, 0], offset: 0 };
+    for (var i = shorterLen; i < Math.max(len0, len1); i++) {
+        shorterArr.push({
+            offset: last.offset,
+            color: last.color.slice()
+        });
+    }
 }
 function fillArray(val0, val1, arrDim) {
     var arr0 = val0;
@@ -24159,58 +25094,6 @@ function fillArray(val0, val1, arrDim) {
         }
     }
 }
-function is1DArraySame(arr0, arr1) {
-    var len = arr0.length;
-    if (len !== arr1.length) {
-        return false;
-    }
-    for (var i = 0; i < len; i++) {
-        if (arr0[i] !== arr1[i]) {
-            return false;
-        }
-    }
-    return true;
-}
-function is2DArraySame(arr0, arr1) {
-    var len = arr0.length;
-    if (len !== arr1.length) {
-        return false;
-    }
-    var len2 = arr0[0].length;
-    for (var i = 0; i < len; i++) {
-        for (var j = 0; j < len2; j++) {
-            if (arr0[i][j] !== arr1[i][j]) {
-                return false;
-            }
-        }
-    }
-    return true;
-}
-function catmullRomInterpolate(p0, p1, p2, p3, t, t2, t3) {
-    var v0 = (p2 - p0) * 0.5;
-    var v1 = (p3 - p1) * 0.5;
-    return (2 * (p1 - p2) + v0 + v1) * t3
-        + (-3 * (p1 - p2) - 2 * v0 - v1) * t2
-        + v0 * t + p1;
-}
-function catmullRomInterpolate1DArray(out, p0, p1, p2, p3, t, t2, t3) {
-    var len = p0.length;
-    for (var i = 0; i < len; i++) {
-        out[i] = catmullRomInterpolate(p0[i], p1[i], p2[i], p3[i], t, t2, t3);
-    }
-}
-function catmullRomInterpolate2DArray(out, p0, p1, p2, p3, t, t2, t3) {
-    var len = p0.length;
-    var len2 = p0[0].length;
-    for (var i = 0; i < len; i++) {
-        if (!out[i]) {
-            out[1] = [];
-        }
-        for (var j = 0; j < len2; j++) {
-            out[i][j] = catmullRomInterpolate(p0[i][j], p1[i][j], p2[i][j], p3[i][j], t, t2, t3);
-        }
-    }
-}
 function cloneValue(value) {
     if (isArrayLike(value)) {
         var len = value.length;
@@ -24226,25 +25109,37 @@ function cloneValue(value) {
     return value;
 }
 function rgba2String(rgba) {
-    rgba[0] = Math.floor(rgba[0]);
-    rgba[1] = Math.floor(rgba[1]);
-    rgba[2] = Math.floor(rgba[2]);
+    rgba[0] = Math.floor(rgba[0]) || 0;
+    rgba[1] = Math.floor(rgba[1]) || 0;
+    rgba[2] = Math.floor(rgba[2]) || 0;
+    rgba[3] = rgba[3] == null ? 1 : rgba[3];
     return 'rgba(' + rgba.join(',') + ')';
 }
 function guessArrayDim(value) {
     return isArrayLike(value && value[0]) ? 2 : 1;
 }
+var VALUE_TYPE_NUMBER = 0;
+var VALUE_TYPE_1D_ARRAY = 1;
+var VALUE_TYPE_2D_ARRAY = 2;
+var VALUE_TYPE_COLOR = 3;
+var VALUE_TYPE_LINEAR_GRADIENT = 4;
+var VALUE_TYPE_RADIAL_GRADIENT = 5;
+var VALUE_TYPE_UNKOWN = 6;
+function isGradientValueType(valType) {
+    return valType === VALUE_TYPE_LINEAR_GRADIENT || valType === VALUE_TYPE_RADIAL_GRADIENT;
+}
+function isArrayValueType(valType) {
+    return valType === VALUE_TYPE_1D_ARRAY || valType === VALUE_TYPE_2D_ARRAY;
+}
 var tmpRgba = [0, 0, 0, 0];
 var Track = (function () {
     function Track(propName) {
         this.keyframes = [];
-        this.maxTime = 0;
-        this.arrDim = 0;
-        this.interpolable = true;
+        this.discrete = false;
+        this._invalid = false;
         this._needsSort = false;
-        this._isAllValueEqual = true;
-        this._lastFrame = 0;
-        this._lastFramePercent = 0;
+        this._lastFr = 0;
+        this._lastFrP = 0;
         this.propName = propName;
     }
     Track.prototype.isFinished = function () {
@@ -24257,124 +25152,127 @@ var Track = (function () {
         }
     };
     Track.prototype.needsAnimate = function () {
-        return !this._isAllValueEqual && this.keyframes.length >= 2 && this.interpolable;
+        return this.keyframes.length >= 1;
     };
     Track.prototype.getAdditiveTrack = function () {
         return this._additiveTrack;
     };
-    Track.prototype.addKeyframe = function (time, value) {
-        if (time >= this.maxTime) {
-            this.maxTime = time;
-        }
-        else {
-            this._needsSort = true;
-        }
+    Track.prototype.addKeyframe = function (time, rawValue, easing) {
+        this._needsSort = true;
         var keyframes = this.keyframes;
         var len = keyframes.length;
-        if (this.interpolable) {
-            if (isArrayLike(value)) {
-                var arrayDim = guessArrayDim(value);
-                if (len > 0 && this.arrDim !== arrayDim) {
-                    this.interpolable = false;
-                    return;
-                }
-                if (arrayDim === 1 && typeof value[0] !== 'number'
-                    || arrayDim === 2 && typeof value[0][0] !== 'number') {
-                    this.interpolable = false;
-                    return;
-                }
-                if (len > 0) {
-                    var lastFrame = keyframes[len - 1];
-                    if (this._isAllValueEqual) {
-                        if (arrayDim === 1) {
-                            if (!is1DArraySame(value, lastFrame.value)) {
-                                this._isAllValueEqual = false;
-                            }
-                        }
-                        else {
-                            this._isAllValueEqual = false;
-                        }
-                    }
-                }
-                this.arrDim = arrayDim;
-            }
-            else {
-                if (this.arrDim > 0) {
-                    this.interpolable = false;
-                    return;
-                }
-                if (typeof value === 'string') {
-                    var colorArray = parse(value);
-                    if (colorArray) {
-                        value = colorArray;
-                        this.isValueColor = true;
-                    }
-                    else {
-                        this.interpolable = false;
-                    }
-                }
-                else if (typeof value !== 'number' || isNaN(value)) {
-                    this.interpolable = false;
-                    return;
-                }
-                if (this._isAllValueEqual && len > 0) {
-                    var lastFrame = keyframes[len - 1];
-                    if (this.isValueColor && !is1DArraySame(lastFrame.value, value)) {
-                        this._isAllValueEqual = false;
-                    }
-                    else if (lastFrame.value !== value) {
-                        this._isAllValueEqual = false;
-                    }
-                }
+        var discrete = false;
+        var valType = VALUE_TYPE_UNKOWN;
+        var value = rawValue;
+        if (isArrayLike(rawValue)) {
+            var arrayDim = guessArrayDim(rawValue);
+            valType = arrayDim;
+            if (arrayDim === 1 && !isNumber(rawValue[0])
+                || arrayDim === 2 && !isNumber(rawValue[0][0])) {
+                discrete = true;
             }
         }
+        else {
+            if (isNumber(rawValue) && !eqNaN(rawValue)) {
+                valType = VALUE_TYPE_NUMBER;
+            }
+            else if (isString(rawValue)) {
+                if (!isNaN(+rawValue)) {
+                    valType = VALUE_TYPE_NUMBER;
+                }
+                else {
+                    var colorArray = parse(rawValue);
+                    if (colorArray) {
+                        value = colorArray;
+                        valType = VALUE_TYPE_COLOR;
+                    }
+                }
+            }
+            else if (isGradientObject(rawValue)) {
+                var parsedGradient = util_extend({}, value);
+                parsedGradient.colorStops = map(rawValue.colorStops, function (colorStop) { return ({
+                    offset: colorStop.offset,
+                    color: parse(colorStop.color)
+                }); });
+                if (isLinearGradient(rawValue)) {
+                    valType = VALUE_TYPE_LINEAR_GRADIENT;
+                }
+                else if (isRadialGradient(rawValue)) {
+                    valType = VALUE_TYPE_RADIAL_GRADIENT;
+                }
+                value = parsedGradient;
+            }
+        }
+        if (len === 0) {
+            this.valType = valType;
+        }
+        else if (valType !== this.valType || valType === VALUE_TYPE_UNKOWN) {
+            discrete = true;
+        }
+        this.discrete = this.discrete || discrete;
         var kf = {
             time: time,
             value: value,
+            rawValue: rawValue,
             percent: 0
         };
-        this.keyframes.push(kf);
+        if (easing) {
+            kf.easing = easing;
+            kf.easingFunc = isFunction(easing)
+                ? easing
+                : animation_easing[easing] || createCubicEasingFunc(easing);
+        }
+        keyframes.push(kf);
         return kf;
     };
-    Track.prototype.prepare = function (additiveTrack) {
+    Track.prototype.prepare = function (maxTime, additiveTrack) {
         var kfs = this.keyframes;
         if (this._needsSort) {
             kfs.sort(function (a, b) {
                 return a.time - b.time;
             });
         }
-        var arrDim = this.arrDim;
+        var valType = this.valType;
         var kfsLen = kfs.length;
         var lastKf = kfs[kfsLen - 1];
+        var isDiscrete = this.discrete;
+        var isArr = isArrayValueType(valType);
+        var isGradient = isGradientValueType(valType);
         for (var i = 0; i < kfsLen; i++) {
-            kfs[i].percent = kfs[i].time / this.maxTime;
-            if (arrDim > 0 && i !== kfsLen - 1) {
-                fillArray(kfs[i].value, lastKf.value, arrDim);
+            var kf = kfs[i];
+            var value = kf.value;
+            var lastValue = lastKf.value;
+            kf.percent = kf.time / maxTime;
+            if (!isDiscrete) {
+                if (isArr && i !== kfsLen - 1) {
+                    fillArray(value, lastValue, valType);
+                }
+                else if (isGradient) {
+                    fillColorStops(value.colorStops, lastValue.colorStops);
+                }
             }
         }
-        if (additiveTrack
+        if (!isDiscrete
+            && valType !== VALUE_TYPE_RADIAL_GRADIENT
+            && additiveTrack
             && this.needsAnimate()
             && additiveTrack.needsAnimate()
-            && arrDim === additiveTrack.arrDim
-            && this.isValueColor === additiveTrack.isValueColor
+            && valType === additiveTrack.valType
             && !additiveTrack._finished) {
             this._additiveTrack = additiveTrack;
             var startValue = kfs[0].value;
             for (var i = 0; i < kfsLen; i++) {
-                if (arrDim === 0) {
-                    if (this.isValueColor) {
-                        kfs[i].additiveValue
-                            = add1DArray([], kfs[i].value, startValue, -1);
-                    }
-                    else {
-                        kfs[i].additiveValue = kfs[i].value - startValue;
-                    }
+                if (valType === VALUE_TYPE_NUMBER) {
+                    kfs[i].additiveValue = kfs[i].value - startValue;
                 }
-                else if (arrDim === 1) {
-                    kfs[i].additiveValue = add1DArray([], kfs[i].value, startValue, -1);
+                else if (valType === VALUE_TYPE_COLOR) {
+                    kfs[i].additiveValue =
+                        add1DArray([], kfs[i].value, startValue, -1);
                 }
-                else if (arrDim === 2) {
-                    kfs[i].additiveValue = add2DArray([], kfs[i].value, startValue, -1);
+                else if (isArrayValueType(valType)) {
+                    kfs[i].additiveValue = valType === VALUE_TYPE_1D_ARRAY
+                        ? add1DArray([], kfs[i].value, startValue, -1)
+                        : add2DArray([], kfs[i].value, startValue, -1);
                 }
             }
         }
@@ -24388,107 +25286,104 @@ var Track = (function () {
         }
         var isAdditive = this._additiveTrack != null;
         var valueKey = isAdditive ? 'additiveValue' : 'value';
+        var valType = this.valType;
         var keyframes = this.keyframes;
-        var kfsNum = this.keyframes.length;
+        var kfsNum = keyframes.length;
         var propName = this.propName;
-        var arrDim = this.arrDim;
-        var isValueColor = this.isValueColor;
+        var isValueColor = valType === VALUE_TYPE_COLOR;
         var frameIdx;
-        if (percent < 0) {
-            frameIdx = 0;
-        }
-        else if (percent < this._lastFramePercent) {
-            var start = Math.min(this._lastFrame + 1, kfsNum - 1);
-            for (frameIdx = start; frameIdx >= 0; frameIdx--) {
-                if (keyframes[frameIdx].percent <= percent) {
-                    break;
-                }
-            }
-            frameIdx = Math.min(frameIdx, kfsNum - 2);
+        var lastFrame = this._lastFr;
+        var mathMin = Math.min;
+        var frame;
+        var nextFrame;
+        if (kfsNum === 1) {
+            frame = nextFrame = keyframes[0];
         }
         else {
-            for (frameIdx = this._lastFrame; frameIdx < kfsNum; frameIdx++) {
-                if (keyframes[frameIdx].percent > percent) {
-                    break;
-                }
+            if (percent < 0) {
+                frameIdx = 0;
             }
-            frameIdx = Math.min(frameIdx - 1, kfsNum - 2);
+            else if (percent < this._lastFrP) {
+                var start = mathMin(lastFrame + 1, kfsNum - 1);
+                for (frameIdx = start; frameIdx >= 0; frameIdx--) {
+                    if (keyframes[frameIdx].percent <= percent) {
+                        break;
+                    }
+                }
+                frameIdx = mathMin(frameIdx, kfsNum - 2);
+            }
+            else {
+                for (frameIdx = lastFrame; frameIdx < kfsNum; frameIdx++) {
+                    if (keyframes[frameIdx].percent > percent) {
+                        break;
+                    }
+                }
+                frameIdx = mathMin(frameIdx - 1, kfsNum - 2);
+            }
+            nextFrame = keyframes[frameIdx + 1];
+            frame = keyframes[frameIdx];
         }
-        var nextFrame = keyframes[frameIdx + 1];
-        var frame = keyframes[frameIdx];
         if (!(frame && nextFrame)) {
             return;
         }
-        this._lastFrame = frameIdx;
-        this._lastFramePercent = percent;
-        var range = (nextFrame.percent - frame.percent);
-        if (range === 0) {
-            return;
+        this._lastFr = frameIdx;
+        this._lastFrP = percent;
+        var interval = (nextFrame.percent - frame.percent);
+        var w = interval === 0 ? 1 : mathMin((percent - frame.percent) / interval, 1);
+        if (nextFrame.easingFunc) {
+            w = nextFrame.easingFunc(w);
         }
-        var w = (percent - frame.percent) / range;
         var targetArr = isAdditive ? this._additiveValue
             : (isValueColor ? tmpRgba : target[propName]);
-        if ((arrDim > 0 || isValueColor) && !targetArr) {
+        if ((isArrayValueType(valType) || isValueColor) && !targetArr) {
             targetArr = this._additiveValue = [];
         }
-        if (this.useSpline) {
-            var p1 = keyframes[frameIdx][valueKey];
-            var p0 = keyframes[frameIdx === 0 ? frameIdx : frameIdx - 1][valueKey];
-            var p2 = keyframes[frameIdx > kfsNum - 2 ? kfsNum - 1 : frameIdx + 1][valueKey];
-            var p3 = keyframes[frameIdx > kfsNum - 3 ? kfsNum - 1 : frameIdx + 2][valueKey];
-            if (arrDim > 0) {
-                arrDim === 1
-                    ? catmullRomInterpolate1DArray(targetArr, p0, p1, p2, p3, w, w * w, w * w * w)
-                    : catmullRomInterpolate2DArray(targetArr, p0, p1, p2, p3, w, w * w, w * w * w);
-            }
-            else if (isValueColor) {
-                catmullRomInterpolate1DArray(targetArr, p0, p1, p2, p3, w, w * w, w * w * w);
-                if (!isAdditive) {
-                    target[propName] = rgba2String(targetArr);
-                }
+        if (this.discrete) {
+            target[propName] = w < 1 ? frame.rawValue : nextFrame.rawValue;
+        }
+        else if (isArrayValueType(valType)) {
+            valType === VALUE_TYPE_1D_ARRAY
+                ? interpolate1DArray(targetArr, frame[valueKey], nextFrame[valueKey], w)
+                : interpolate2DArray(targetArr, frame[valueKey], nextFrame[valueKey], w);
+        }
+        else if (isGradientValueType(valType)) {
+            var val = frame[valueKey];
+            var nextVal_1 = nextFrame[valueKey];
+            var isLinearGradient_1 = valType === VALUE_TYPE_LINEAR_GRADIENT;
+            target[propName] = {
+                type: isLinearGradient_1 ? 'linear' : 'radial',
+                x: interpolateNumber(val.x, nextVal_1.x, w),
+                y: interpolateNumber(val.y, nextVal_1.y, w),
+                colorStops: map(val.colorStops, function (colorStop, idx) {
+                    var nextColorStop = nextVal_1.colorStops[idx];
+                    return {
+                        offset: interpolateNumber(colorStop.offset, nextColorStop.offset, w),
+                        color: rgba2String(interpolate1DArray([], colorStop.color, nextColorStop.color, w))
+                    };
+                }),
+                global: nextVal_1.global
+            };
+            if (isLinearGradient_1) {
+                target[propName].x2 = interpolateNumber(val.x2, nextVal_1.x2, w);
+                target[propName].y2 = interpolateNumber(val.y2, nextVal_1.y2, w);
             }
             else {
-                var value = void 0;
-                if (!this.interpolable) {
-                    value = p2;
-                }
-                else {
-                    value = catmullRomInterpolate(p0, p1, p2, p3, w, w * w, w * w * w);
-                }
-                if (isAdditive) {
-                    this._additiveValue = value;
-                }
-                else {
-                    target[propName] = value;
-                }
+                target[propName].r = interpolateNumber(val.r, nextVal_1.r, w);
+            }
+        }
+        else if (isValueColor) {
+            interpolate1DArray(targetArr, frame[valueKey], nextFrame[valueKey], w);
+            if (!isAdditive) {
+                target[propName] = rgba2String(targetArr);
             }
         }
         else {
-            if (arrDim > 0) {
-                arrDim === 1
-                    ? interpolate1DArray(targetArr, frame[valueKey], nextFrame[valueKey], w)
-                    : interpolate2DArray(targetArr, frame[valueKey], nextFrame[valueKey], w);
-            }
-            else if (isValueColor) {
-                interpolate1DArray(targetArr, frame[valueKey], nextFrame[valueKey], w);
-                if (!isAdditive) {
-                    target[propName] = rgba2String(targetArr);
-                }
+            var value = interpolateNumber(frame[valueKey], nextFrame[valueKey], w);
+            if (isAdditive) {
+                this._additiveValue = value;
             }
             else {
-                var value = void 0;
-                if (!this.interpolable) {
-                    value = step(frame[valueKey], nextFrame[valueKey], w);
-                }
-                else {
-                    value = interpolateNumber(frame[valueKey], nextFrame[valueKey], w);
-                }
-                if (isAdditive) {
-                    this._additiveValue = value;
-                }
-                else {
-                    target[propName] = value;
-                }
+                target[propName] = value;
             }
         }
         if (isAdditive) {
@@ -24496,35 +25391,31 @@ var Track = (function () {
         }
     };
     Track.prototype._addToTarget = function (target) {
-        var arrDim = this.arrDim;
+        var valType = this.valType;
         var propName = this.propName;
         var additiveValue = this._additiveValue;
-        if (arrDim === 0) {
-            if (this.isValueColor) {
-                parse(target[propName], tmpRgba);
-                add1DArray(tmpRgba, tmpRgba, additiveValue, 1);
-                target[propName] = rgba2String(tmpRgba);
-            }
-            else {
-                target[propName] = target[propName] + additiveValue;
-            }
+        if (valType === VALUE_TYPE_NUMBER) {
+            target[propName] = target[propName] + additiveValue;
         }
-        else if (arrDim === 1) {
+        else if (valType === VALUE_TYPE_COLOR) {
+            parse(target[propName], tmpRgba);
+            add1DArray(tmpRgba, tmpRgba, additiveValue, 1);
+            target[propName] = rgba2String(tmpRgba);
+        }
+        else if (valType === VALUE_TYPE_1D_ARRAY) {
             add1DArray(target[propName], target[propName], additiveValue, 1);
         }
-        else if (arrDim === 2) {
+        else if (valType === VALUE_TYPE_2D_ARRAY) {
             add2DArray(target[propName], target[propName], additiveValue, 1);
         }
     };
     return Track;
 }());
 var Animator = (function () {
-    function Animator(target, loop, additiveTo) {
+    function Animator(target, loop, allowDiscreteAnimation, additiveTo) {
         this._tracks = {};
         this._trackKeys = [];
-        this._delay = 0;
         this._maxTime = 0;
-        this._paused = false;
         this._started = 0;
         this._clip = null;
         this._target = target;
@@ -24534,17 +25425,27 @@ var Animator = (function () {
             return;
         }
         this._additiveAnimators = additiveTo;
+        this._allowDiscrete = allowDiscreteAnimation;
     }
+    Animator.prototype.getMaxTime = function () {
+        return this._maxTime;
+    };
+    Animator.prototype.getDelay = function () {
+        return this._delay;
+    };
+    Animator.prototype.getLoop = function () {
+        return this._loop;
+    };
     Animator.prototype.getTarget = function () {
         return this._target;
     };
     Animator.prototype.changeTarget = function (target) {
         this._target = target;
     };
-    Animator.prototype.when = function (time, props) {
-        return this.whenWithKeys(time, props, keys(props));
+    Animator.prototype.when = function (time, props, easing) {
+        return this.whenWithKeys(time, props, keys(props), easing);
     };
-    Animator.prototype.whenWithKeys = function (time, props, propNames) {
+    Animator.prototype.whenWithKeys = function (time, props, propNames, easing) {
         var tracks = this._tracks;
         for (var i = 0; i < propNames.length; i++) {
             var propName = propNames[i];
@@ -24554,9 +25455,10 @@ var Animator = (function () {
                 var initialValue = void 0;
                 var additiveTrack = this._getAdditiveTrack(propName);
                 if (additiveTrack) {
-                    var lastFinalKf = additiveTrack.keyframes[additiveTrack.keyframes.length - 1];
+                    var addtiveTrackKfs = additiveTrack.keyframes;
+                    var lastFinalKf = addtiveTrackKfs[addtiveTrackKfs.length - 1];
                     initialValue = lastFinalKf && lastFinalKf.value;
-                    if (additiveTrack.isValueColor && initialValue) {
+                    if (additiveTrack.valType === VALUE_TYPE_COLOR && initialValue) {
                         initialValue = rgba2String(initialValue);
                     }
                 }
@@ -24566,12 +25468,12 @@ var Animator = (function () {
                 if (initialValue == null) {
                     continue;
                 }
-                if (time !== 0) {
-                    track.addKeyframe(0, cloneValue(initialValue));
+                if (time > 0) {
+                    track.addKeyframe(0, cloneValue(initialValue), easing);
                 }
                 this._trackKeys.push(propName);
             }
-            track.addKeyframe(time, cloneValue(props[propName]));
+            track.addKeyframe(time, cloneValue(props[propName]), easing);
         }
         this._maxTime = Math.max(this._maxTime, time);
         return this;
@@ -24587,10 +25489,15 @@ var Animator = (function () {
     Animator.prototype.isPaused = function () {
         return !!this._paused;
     };
+    Animator.prototype.duration = function (duration) {
+        this._maxTime = duration;
+        this._force = true;
+        return this;
+    };
     Animator.prototype._doneCallback = function () {
         this._setTracksFinished();
         this._clip = null;
-        var doneList = this._doneList;
+        var doneList = this._doneCbs;
         if (doneList) {
             var len = doneList.length;
             for (var i = 0; i < len; i++) {
@@ -24601,7 +25508,7 @@ var Animator = (function () {
     Animator.prototype._abortedCallback = function () {
         this._setTracksFinished();
         var animation = this.animation;
-        var abortedList = this._abortedList;
+        var abortedList = this._abortedCbs;
         if (animation) {
             animation.removeClip(this._clip);
         }
@@ -24632,34 +25539,39 @@ var Animator = (function () {
         }
         return additiveTrack;
     };
-    Animator.prototype.start = function (easing, forceAnimate) {
+    Animator.prototype.start = function (easing) {
         if (this._started > 0) {
             return;
         }
         this._started = 1;
         var self = this;
         var tracks = [];
+        var maxTime = this._maxTime || 0;
         for (var i = 0; i < this._trackKeys.length; i++) {
             var propName = this._trackKeys[i];
             var track = this._tracks[propName];
             var additiveTrack = this._getAdditiveTrack(propName);
             var kfs = track.keyframes;
-            track.prepare(additiveTrack);
+            var kfsNum = kfs.length;
+            track.prepare(maxTime, additiveTrack);
             if (track.needsAnimate()) {
-                tracks.push(track);
-            }
-            else if (!track.interpolable) {
-                var lastKf = kfs[kfs.length - 1];
-                if (lastKf) {
-                    self._target[track.propName] = lastKf.value;
+                if (!this._allowDiscrete && track.discrete) {
+                    var lastKf = kfs[kfsNum - 1];
+                    if (lastKf) {
+                        self._target[track.propName] = lastKf.rawValue;
+                    }
+                    track.setFinished();
+                }
+                else {
+                    tracks.push(track);
                 }
             }
         }
-        if (tracks.length || forceAnimate) {
+        if (tracks.length || this._force) {
             var clip = new animation_Clip({
-                life: this._maxTime,
+                life: maxTime,
                 loop: this._loop,
-                delay: this._delay,
+                delay: this._delay || 0,
                 onframe: function (percent) {
                     self._started = 2;
                     var additiveAnimators = self._additiveAnimators;
@@ -24678,7 +25590,7 @@ var Animator = (function () {
                     for (var i = 0; i < tracks.length; i++) {
                         tracks[i].step(self._target, percent);
                     }
-                    var onframeList = self._onframeList;
+                    var onframeList = self._onframeCbs;
                     if (onframeList) {
                         for (var i = 0; i < onframeList.length; i++) {
                             onframeList[i](self._target, percent);
@@ -24693,8 +25605,8 @@ var Animator = (function () {
             if (this.animation) {
                 this.animation.addClip(clip);
             }
-            if (easing && easing !== 'spline') {
-                clip.easing = easing;
+            if (easing) {
+                clip.setEasing(easing);
             }
         }
         else {
@@ -24718,28 +25630,28 @@ var Animator = (function () {
     };
     Animator.prototype.during = function (cb) {
         if (cb) {
-            if (!this._onframeList) {
-                this._onframeList = [];
+            if (!this._onframeCbs) {
+                this._onframeCbs = [];
             }
-            this._onframeList.push(cb);
+            this._onframeCbs.push(cb);
         }
         return this;
     };
     Animator.prototype.done = function (cb) {
         if (cb) {
-            if (!this._doneList) {
-                this._doneList = [];
+            if (!this._doneCbs) {
+                this._doneCbs = [];
             }
-            this._doneList.push(cb);
+            this._doneCbs.push(cb);
         }
         return this;
     };
     Animator.prototype.aborted = function (cb) {
         if (cb) {
-            if (!this._abortedList) {
-                this._abortedList = [];
+            if (!this._abortedCbs) {
+                this._abortedCbs = [];
             }
-            this._abortedList.push(cb);
+            this._abortedCbs.push(cb);
         }
         return this;
     };
@@ -24749,6 +25661,10 @@ var Animator = (function () {
     Animator.prototype.getTrack = function (propName) {
         return this._tracks[propName];
     };
+    Animator.prototype.getTracks = function () {
+        var _this = this;
+        return map(this._trackKeys, function (key) { return _this._tracks[key]; });
+    };
     Animator.prototype.stopTracks = function (propNames, forwardToLast) {
         if (!propNames.length || !this._clip) {
             return true;
@@ -24757,7 +25673,7 @@ var Animator = (function () {
         var tracksKeys = this._trackKeys;
         for (var i = 0; i < propNames.length; i++) {
             var track = tracks[propNames[i]];
-            if (track) {
+            if (track && !track.isFinished()) {
                 if (forwardToLast) {
                     track.step(this._target, 1);
                 }
@@ -24779,7 +25695,7 @@ var Animator = (function () {
         }
         return allAborted;
     };
-    Animator.prototype.saveFinalToTarget = function (target, trackKeys) {
+    Animator.prototype.saveTo = function (target, trackKeys, firstOrLast) {
         if (!target) {
             return;
         }
@@ -24791,13 +25707,9 @@ var Animator = (function () {
                 continue;
             }
             var kfs = track.keyframes;
-            var lastKf = kfs[kfs.length - 1];
-            if (lastKf) {
-                var val = cloneValue(lastKf.value);
-                if (track.isValueColor) {
-                    val = rgba2String(val);
-                }
-                target[propName] = val;
+            var kf = kfs[firstOrLast ? 0 : kfs.length - 1];
+            if (kf) {
+                target[propName] = cloneValue(kf.rawValue);
             }
         }
     };
@@ -24813,7 +25725,7 @@ var Animator = (function () {
             if (kfs.length > 1) {
                 var lastKf = kfs.pop();
                 track.addKeyframe(lastKf.time, finalProps[propName]);
-                track.prepare(track.getAdditiveTrack());
+                track.prepare(this._maxTime, track.getAdditiveTrack());
             }
         }
     };
@@ -24821,7 +25733,7 @@ var Animator = (function () {
 }());
 /* harmony default export */ const animation_Animator = (Animator);
 
-;// CONCATENATED MODULE: ./src/util/animatableMixin.js
+;// ./src/util/animatableMixin.js
 
 
 var animatableMixin = {
@@ -24915,28 +25827,28 @@ var animatableMixin = {
 };
 
 /* harmony default export */ const util_animatableMixin = (animatableMixin);
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/util.glsl.js
+;// ./node_modules/claygl/src/shader/source/util.glsl.js
 /* harmony default export */ const util_glsl = ("\n@export clay.util.rand\nhighp float rand(vec2 uv) {\n const highp float a = 12.9898, b = 78.233, c = 43758.5453;\n highp float dt = dot(uv.xy, vec2(a,b)), sn = mod(dt, 3.141592653589793);\n return fract(sin(sn) * c);\n}\n@end\n@export clay.util.calculate_attenuation\nuniform float attenuationFactor : 5.0;\nfloat lightAttenuation(float dist, float range)\n{\n float attenuation = 1.0;\n attenuation = dist*dist/(range*range+1.0);\n float att_s = attenuationFactor;\n attenuation = 1.0/(attenuation*att_s+1.0);\n att_s = 1.0/(att_s+1.0);\n attenuation = attenuation - att_s;\n attenuation /= 1.0 - att_s;\n return clamp(attenuation, 0.0, 1.0);\n}\n@end\n@export clay.util.edge_factor\n#ifdef SUPPORT_STANDARD_DERIVATIVES\nfloat edgeFactor(float width)\n{\n vec3 d = fwidth(v_Barycentric);\n vec3 a3 = smoothstep(vec3(0.0), d * width, v_Barycentric);\n return min(min(a3.x, a3.y), a3.z);\n}\n#else\nfloat edgeFactor(float width)\n{\n return 1.0;\n}\n#endif\n@end\n@export clay.util.encode_float\nvec4 encodeFloat(const in float depth)\n{\n const vec4 bitShifts = vec4(256.0*256.0*256.0, 256.0*256.0, 256.0, 1.0);\n const vec4 bit_mask = vec4(0.0, 1.0/256.0, 1.0/256.0, 1.0/256.0);\n vec4 res = fract(depth * bitShifts);\n res -= res.xxyz * bit_mask;\n return res;\n}\n@end\n@export clay.util.decode_float\nfloat decodeFloat(const in vec4 color)\n{\n const vec4 bitShifts = vec4(1.0/(256.0*256.0*256.0), 1.0/(256.0*256.0), 1.0/256.0, 1.0);\n return dot(color, bitShifts);\n}\n@end\n@export clay.util.float\n@import clay.util.encode_float\n@import clay.util.decode_float\n@end\n@export clay.util.rgbm_decode\nvec3 RGBMDecode(vec4 rgbm, float range) {\n return range * rgbm.rgb * rgbm.a;\n}\n@end\n@export clay.util.rgbm_encode\nvec4 RGBMEncode(vec3 color, float range) {\n if (dot(color, color) == 0.0) {\n return vec4(0.0);\n }\n vec4 rgbm;\n color /= range;\n rgbm.a = clamp(max(max(color.r, color.g), max(color.b, 1e-6)), 0.0, 1.0);\n rgbm.a = ceil(rgbm.a * 255.0) / 255.0;\n rgbm.rgb = color / rgbm.a;\n return rgbm;\n}\n@end\n@export clay.util.rgbm\n@import clay.util.rgbm_decode\n@import clay.util.rgbm_encode\nvec4 decodeHDR(vec4 color)\n{\n#if defined(RGBM_DECODE) || defined(RGBM)\n return vec4(RGBMDecode(color, 8.12), 1.0);\n#else\n return color;\n#endif\n}\nvec4 encodeHDR(vec4 color)\n{\n#if defined(RGBM_ENCODE) || defined(RGBM)\n return RGBMEncode(color.xyz, 8.12);\n#else\n return color;\n#endif\n}\n@end\n@export clay.util.srgb\nvec4 sRGBToLinear(in vec4 value) {\n return vec4(mix(pow(value.rgb * 0.9478672986 + vec3(0.0521327014), vec3(2.4)), value.rgb * 0.0773993808, vec3(lessThanEqual(value.rgb, vec3(0.04045)))), value.w);\n}\nvec4 linearTosRGB(in vec4 value) {\n return vec4(mix(pow(value.rgb, vec3(0.41666)) * 1.055 - vec3(0.055), value.rgb * 12.92, vec3(lessThanEqual(value.rgb, vec3(0.0031308)))), value.w);\n}\n@end\n@export clay.chunk.skinning_header\n#ifdef SKINNING\nattribute vec3 weight : WEIGHT;\nattribute vec4 joint : JOINT;\n#ifdef USE_SKIN_MATRICES_TEXTURE\nuniform sampler2D skinMatricesTexture : ignore;\nuniform float skinMatricesTextureSize: ignore;\nmat4 getSkinMatrix(sampler2D tex, float idx) {\n float j = idx * 4.0;\n float x = mod(j, skinMatricesTextureSize);\n float y = floor(j / skinMatricesTextureSize) + 0.5;\n vec2 scale = vec2(skinMatricesTextureSize);\n return mat4(\n texture2D(tex, vec2(x + 0.5, y) / scale),\n texture2D(tex, vec2(x + 1.5, y) / scale),\n texture2D(tex, vec2(x + 2.5, y) / scale),\n texture2D(tex, vec2(x + 3.5, y) / scale)\n );\n}\nmat4 getSkinMatrix(float idx) {\n return getSkinMatrix(skinMatricesTexture, idx);\n}\n#else\nuniform mat4 skinMatrix[JOINT_COUNT] : SKIN_MATRIX;\nmat4 getSkinMatrix(float idx) {\n return skinMatrix[int(idx)];\n}\n#endif\n#endif\n@end\n@export clay.chunk.skin_matrix\nmat4 skinMatrixWS = getSkinMatrix(joint.x) * weight.x;\nif (weight.y > 1e-4)\n{\n skinMatrixWS += getSkinMatrix(joint.y) * weight.y;\n}\nif (weight.z > 1e-4)\n{\n skinMatrixWS += getSkinMatrix(joint.z) * weight.z;\n}\nfloat weightW = 1.0-weight.x-weight.y-weight.z;\nif (weightW > 1e-4)\n{\n skinMatrixWS += getSkinMatrix(joint.w) * weightW;\n}\n@end\n@export clay.chunk.instancing_header\n#ifdef INSTANCING\nattribute vec4 instanceMat1;\nattribute vec4 instanceMat2;\nattribute vec4 instanceMat3;\n#endif\n@end\n@export clay.chunk.instancing_matrix\nmat4 instanceMat = mat4(\n vec4(instanceMat1.xyz, 0.0),\n vec4(instanceMat2.xyz, 0.0),\n vec4(instanceMat3.xyz, 0.0),\n vec4(instanceMat1.w, instanceMat2.w, instanceMat3.w, 1.0)\n);\n@end\n@export clay.util.parallax_correct\nvec3 parallaxCorrect(in vec3 dir, in vec3 pos, in vec3 boxMin, in vec3 boxMax) {\n vec3 first = (boxMax - pos) / dir;\n vec3 second = (boxMin - pos) / dir;\n vec3 further = max(first, second);\n float dist = min(further.x, min(further.y, further.z));\n vec3 fixedPos = pos + dir * dist;\n vec3 boxCenter = (boxMax + boxMin) * 0.5;\n return normalize(fixedPos - boxCenter);\n}\n@end\n@export clay.util.clamp_sample\nvec4 clampSample(const in sampler2D texture, const in vec2 coord)\n{\n#ifdef STEREO\n float eye = step(0.5, coord.x) * 0.5;\n vec2 coordClamped = clamp(coord, vec2(eye, 0.0), vec2(0.5 + eye, 1.0));\n#else\n vec2 coordClamped = clamp(coord, vec2(0.0), vec2(1.0));\n#endif\n return texture2D(texture, coordClamped);\n}\n@end\n@export clay.util.ACES\nvec3 ACESToneMapping(vec3 color)\n{\n const float A = 2.51;\n const float B = 0.03;\n const float C = 2.43;\n const float D = 0.59;\n const float E = 0.14;\n return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\n@end");
 
-;// CONCATENATED MODULE: ./src/util/shader/common.glsl.js
+;// ./src/util/shader/common.glsl.js
 /* harmony default export */ const common_glsl = ("\n@export ecgl.common.transformUniforms\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform mat4 worldInverseTranspose : WORLDINVERSETRANSPOSE;\nuniform mat4 world : WORLD;\n@end\n\n@export ecgl.common.attributes\nattribute vec3 position : POSITION;\nattribute vec2 texcoord : TEXCOORD_0;\nattribute vec3 normal : NORMAL;\n@end\n\n@export ecgl.common.uv.header\nuniform vec2 uvRepeat : [1.0, 1.0];\nuniform vec2 uvOffset : [0.0, 0.0];\nuniform vec2 detailUvRepeat : [1.0, 1.0];\nuniform vec2 detailUvOffset : [0.0, 0.0];\n\nvarying vec2 v_Texcoord;\nvarying vec2 v_DetailTexcoord;\n@end\n\n@export ecgl.common.uv.main\nv_Texcoord = texcoord * uvRepeat + uvOffset;\nv_DetailTexcoord = texcoord * detailUvRepeat + detailUvOffset;\n@end\n\n@export ecgl.common.uv.fragmentHeader\nvarying vec2 v_Texcoord;\nvarying vec2 v_DetailTexcoord;\n@end\n\n\n@export ecgl.common.albedo.main\n\n vec4 albedoTexel = vec4(1.0);\n#ifdef DIFFUSEMAP_ENABLED\n albedoTexel = texture2D(diffuseMap, v_Texcoord);\n #ifdef SRGB_DECODE\n albedoTexel = sRGBToLinear(albedoTexel);\n #endif\n#endif\n\n#ifdef DETAILMAP_ENABLED\n vec4 detailTexel = texture2D(detailMap, v_DetailTexcoord);\n #ifdef SRGB_DECODE\n detailTexel = sRGBToLinear(detailTexel);\n #endif\n albedoTexel.rgb = mix(albedoTexel.rgb, detailTexel.rgb, detailTexel.a);\n albedoTexel.a = detailTexel.a + (1.0 - detailTexel.a) * albedoTexel.a;\n#endif\n\n@end\n\n@export ecgl.common.wireframe.vertexHeader\n\n#ifdef WIREFRAME_QUAD\nattribute vec4 barycentric;\nvarying vec4 v_Barycentric;\n#elif defined(WIREFRAME_TRIANGLE)\nattribute vec3 barycentric;\nvarying vec3 v_Barycentric;\n#endif\n\n@end\n\n@export ecgl.common.wireframe.vertexMain\n\n#if defined(WIREFRAME_QUAD) || defined(WIREFRAME_TRIANGLE)\n v_Barycentric = barycentric;\n#endif\n\n@end\n\n\n@export ecgl.common.wireframe.fragmentHeader\n\nuniform float wireframeLineWidth : 1;\nuniform vec4 wireframeLineColor: [0, 0, 0, 0.5];\n\n#ifdef WIREFRAME_QUAD\nvarying vec4 v_Barycentric;\nfloat edgeFactor () {\n vec4 d = fwidth(v_Barycentric);\n vec4 a4 = smoothstep(vec4(0.0), d * wireframeLineWidth, v_Barycentric);\n return min(min(min(a4.x, a4.y), a4.z), a4.w);\n}\n#elif defined(WIREFRAME_TRIANGLE)\nvarying vec3 v_Barycentric;\nfloat edgeFactor () {\n vec3 d = fwidth(v_Barycentric);\n vec3 a3 = smoothstep(vec3(0.0), d * wireframeLineWidth, v_Barycentric);\n return min(min(a3.x, a3.y), a3.z);\n}\n#endif\n\n@end\n\n\n@export ecgl.common.wireframe.fragmentMain\n\n#if defined(WIREFRAME_QUAD) || defined(WIREFRAME_TRIANGLE)\n if (wireframeLineWidth > 0.) {\n vec4 lineColor = wireframeLineColor;\n#ifdef SRGB_DECODE\n lineColor = sRGBToLinear(lineColor);\n#endif\n\n gl_FragColor.rgb = mix(gl_FragColor.rgb, lineColor.rgb, (1.0 - edgeFactor()) * lineColor.a);\n }\n#endif\n@end\n\n\n\n\n@export ecgl.common.bumpMap.header\n\n#ifdef BUMPMAP_ENABLED\nuniform sampler2D bumpMap;\nuniform float bumpScale : 1.0;\n\n\nvec3 bumpNormal(vec3 surfPos, vec3 surfNormal, vec3 baseNormal)\n{\n vec2 dSTdx = dFdx(v_Texcoord);\n vec2 dSTdy = dFdy(v_Texcoord);\n\n float Hll = bumpScale * texture2D(bumpMap, v_Texcoord).x;\n float dHx = bumpScale * texture2D(bumpMap, v_Texcoord + dSTdx).x - Hll;\n float dHy = bumpScale * texture2D(bumpMap, v_Texcoord + dSTdy).x - Hll;\n\n vec3 vSigmaX = dFdx(surfPos);\n vec3 vSigmaY = dFdy(surfPos);\n vec3 vN = surfNormal;\n\n vec3 R1 = cross(vSigmaY, vN);\n vec3 R2 = cross(vN, vSigmaX);\n\n float fDet = dot(vSigmaX, R1);\n\n vec3 vGrad = sign(fDet) * (dHx * R1 + dHy * R2);\n return normalize(abs(fDet) * baseNormal - vGrad);\n\n}\n#endif\n\n@end\n\n@export ecgl.common.normalMap.vertexHeader\n\n#ifdef NORMALMAP_ENABLED\nattribute vec4 tangent : TANGENT;\nvarying vec3 v_Tangent;\nvarying vec3 v_Bitangent;\n#endif\n\n@end\n\n@export ecgl.common.normalMap.vertexMain\n\n#ifdef NORMALMAP_ENABLED\n if (dot(tangent, tangent) > 0.0) {\n v_Tangent = normalize((worldInverseTranspose * vec4(tangent.xyz, 0.0)).xyz);\n v_Bitangent = normalize(cross(v_Normal, v_Tangent) * tangent.w);\n }\n#endif\n\n@end\n\n\n@export ecgl.common.normalMap.fragmentHeader\n\n#ifdef NORMALMAP_ENABLED\nuniform sampler2D normalMap;\nvarying vec3 v_Tangent;\nvarying vec3 v_Bitangent;\n#endif\n\n@end\n\n@export ecgl.common.normalMap.fragmentMain\n#ifdef NORMALMAP_ENABLED\n if (dot(v_Tangent, v_Tangent) > 0.0) {\n vec3 normalTexel = texture2D(normalMap, v_DetailTexcoord).xyz;\n if (dot(normalTexel, normalTexel) > 0.0) { N = normalTexel * 2.0 - 1.0;\n mat3 tbn = mat3(v_Tangent, v_Bitangent, v_Normal);\n N = normalize(tbn * N);\n }\n }\n#endif\n@end\n\n\n\n@export ecgl.common.vertexAnimation.header\n\n#ifdef VERTEX_ANIMATION\nattribute vec3 prevPosition;\nattribute vec3 prevNormal;\nuniform float percent;\n#endif\n\n@end\n\n@export ecgl.common.vertexAnimation.main\n\n#ifdef VERTEX_ANIMATION\n vec3 pos = mix(prevPosition, position, percent);\n vec3 norm = mix(prevNormal, normal, percent);\n#else\n vec3 pos = position;\n vec3 norm = normal;\n#endif\n\n@end\n\n\n@export ecgl.common.ssaoMap.header\n#ifdef SSAOMAP_ENABLED\nuniform sampler2D ssaoMap;\nuniform vec4 viewport : VIEWPORT;\n#endif\n@end\n\n@export ecgl.common.ssaoMap.main\n float ao = 1.0;\n#ifdef SSAOMAP_ENABLED\n ao = texture2D(ssaoMap, (gl_FragCoord.xy - viewport.xy) / viewport.zw).r;\n#endif\n@end\n\n\n\n\n@export ecgl.common.diffuseLayer.header\n\n#if (LAYER_DIFFUSEMAP_COUNT > 0)\nuniform float layerDiffuseIntensity[LAYER_DIFFUSEMAP_COUNT];\nuniform sampler2D layerDiffuseMap[LAYER_DIFFUSEMAP_COUNT];\n#endif\n\n@end\n\n@export ecgl.common.emissiveLayer.header\n\n#if (LAYER_EMISSIVEMAP_COUNT > 0)\nuniform float layerEmissionIntensity[LAYER_EMISSIVEMAP_COUNT];\nuniform sampler2D layerEmissiveMap[LAYER_EMISSIVEMAP_COUNT];\n#endif\n\n@end\n\n@export ecgl.common.layers.header\n@import ecgl.common.diffuseLayer.header\n@import ecgl.common.emissiveLayer.header\n@end\n\n@export ecgl.common.diffuseLayer.main\n\n#if (LAYER_DIFFUSEMAP_COUNT > 0)\n for (int _idx_ = 0; _idx_ < LAYER_DIFFUSEMAP_COUNT; _idx_++) {{\n float intensity = layerDiffuseIntensity[_idx_];\n vec4 texel2 = texture2D(layerDiffuseMap[_idx_], v_Texcoord);\n #ifdef SRGB_DECODE\n texel2 = sRGBToLinear(texel2);\n #endif\n albedoTexel.rgb = mix(albedoTexel.rgb, texel2.rgb * intensity, texel2.a);\n albedoTexel.a = texel2.a + (1.0 - texel2.a) * albedoTexel.a;\n }}\n#endif\n\n@end\n\n@export ecgl.common.emissiveLayer.main\n\n#if (LAYER_EMISSIVEMAP_COUNT > 0)\n for (int _idx_ = 0; _idx_ < LAYER_EMISSIVEMAP_COUNT; _idx_++)\n {{\n vec4 texel2 = texture2D(layerEmissiveMap[_idx_], v_Texcoord) * layerEmissionIntensity[_idx_];\n #ifdef SRGB_DECODE\n texel2 = sRGBToLinear(texel2);\n #endif\n float intensity = layerEmissionIntensity[_idx_];\n gl_FragColor.rgb += texel2.rgb * texel2.a * intensity;\n }}\n#endif\n\n@end\n");
 
-;// CONCATENATED MODULE: ./src/util/shader/color.glsl.js
+;// ./src/util/shader/color.glsl.js
 /* harmony default export */ const color_glsl = ("@export ecgl.color.vertex\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\n\n@import ecgl.common.uv.header\n\nattribute vec2 texcoord : TEXCOORD_0;\nattribute vec3 position: POSITION;\n\n@import ecgl.common.wireframe.vertexHeader\n\n#ifdef VERTEX_COLOR\nattribute vec4 a_Color : COLOR;\nvarying vec4 v_Color;\n#endif\n\n#ifdef VERTEX_ANIMATION\nattribute vec3 prevPosition;\nuniform float percent : 1.0;\n#endif\n\n#ifdef ATMOSPHERE_ENABLED\nattribute vec3 normal: NORMAL;\nuniform mat4 worldInverseTranspose : WORLDINVERSETRANSPOSE;\nvarying vec3 v_Normal;\n#endif\n\nvoid main()\n{\n#ifdef VERTEX_ANIMATION\n vec3 pos = mix(prevPosition, position, percent);\n#else\n vec3 pos = position;\n#endif\n\n gl_Position = worldViewProjection * vec4(pos, 1.0);\n\n @import ecgl.common.uv.main\n\n#ifdef VERTEX_COLOR\n v_Color = a_Color;\n#endif\n\n#ifdef ATMOSPHERE_ENABLED\n v_Normal = normalize((worldInverseTranspose * vec4(normal, 0.0)).xyz);\n#endif\n\n @import ecgl.common.wireframe.vertexMain\n\n}\n\n@end\n\n@export ecgl.color.fragment\n\n#define LAYER_DIFFUSEMAP_COUNT 0\n#define LAYER_EMISSIVEMAP_COUNT 0\n\nuniform sampler2D diffuseMap;\nuniform sampler2D detailMap;\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\n\n#ifdef ATMOSPHERE_ENABLED\nuniform mat4 viewTranspose: VIEWTRANSPOSE;\nuniform vec3 glowColor;\nuniform float glowPower;\nvarying vec3 v_Normal;\n#endif\n\n#ifdef VERTEX_COLOR\nvarying vec4 v_Color;\n#endif\n\n@import ecgl.common.layers.header\n\n@import ecgl.common.uv.fragmentHeader\n\n@import ecgl.common.wireframe.fragmentHeader\n\n@import clay.util.srgb\n\nvoid main()\n{\n#ifdef SRGB_DECODE\n gl_FragColor = sRGBToLinear(color);\n#else\n gl_FragColor = color;\n#endif\n\n#ifdef VERTEX_COLOR\n gl_FragColor *= v_Color;\n#endif\n\n @import ecgl.common.albedo.main\n\n @import ecgl.common.diffuseLayer.main\n\n gl_FragColor *= albedoTexel;\n\n#ifdef ATMOSPHERE_ENABLED\n float atmoIntensity = pow(1.0 - dot(v_Normal, (viewTranspose * vec4(0.0, 0.0, 1.0, 0.0)).xyz), glowPower);\n gl_FragColor.rgb += glowColor * atmoIntensity;\n#endif\n\n @import ecgl.common.emissiveLayer.main\n\n @import ecgl.common.wireframe.fragmentMain\n\n}\n@end");
 
-;// CONCATENATED MODULE: ./src/util/shader/lambert.glsl.js
+;// ./src/util/shader/lambert.glsl.js
 /* harmony default export */ const lambert_glsl = ("/**\n * http: */\n\n@export ecgl.lambert.vertex\n\n@import ecgl.common.transformUniforms\n\n@import ecgl.common.uv.header\n\n\n@import ecgl.common.attributes\n\n@import ecgl.common.wireframe.vertexHeader\n\n#ifdef VERTEX_COLOR\nattribute vec4 a_Color : COLOR;\nvarying vec4 v_Color;\n#endif\n\n\n@import ecgl.common.vertexAnimation.header\n\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\nvoid main()\n{\n @import ecgl.common.uv.main\n\n @import ecgl.common.vertexAnimation.main\n\n\n gl_Position = worldViewProjection * vec4(pos, 1.0);\n\n v_Normal = normalize((worldInverseTranspose * vec4(norm, 0.0)).xyz);\n v_WorldPosition = (world * vec4(pos, 1.0)).xyz;\n\n#ifdef VERTEX_COLOR\n v_Color = a_Color;\n#endif\n\n @import ecgl.common.wireframe.vertexMain\n}\n\n@end\n\n\n@export ecgl.lambert.fragment\n\n#define LAYER_DIFFUSEMAP_COUNT 0\n#define LAYER_EMISSIVEMAP_COUNT 0\n\n#define NORMAL_UP_AXIS 1\n#define NORMAL_FRONT_AXIS 2\n\n@import ecgl.common.uv.fragmentHeader\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\nuniform sampler2D diffuseMap;\nuniform sampler2D detailMap;\n\n@import ecgl.common.layers.header\n\nuniform float emissionIntensity: 1.0;\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\n\nuniform mat4 viewInverse : VIEWINVERSE;\n\n#ifdef ATMOSPHERE_ENABLED\nuniform mat4 viewTranspose: VIEWTRANSPOSE;\nuniform vec3 glowColor;\nuniform float glowPower;\n#endif\n\n#ifdef AMBIENT_LIGHT_COUNT\n@import clay.header.ambient_light\n#endif\n#ifdef AMBIENT_SH_LIGHT_COUNT\n@import clay.header.ambient_sh_light\n#endif\n\n#ifdef DIRECTIONAL_LIGHT_COUNT\n@import clay.header.directional_light\n#endif\n\n#ifdef VERTEX_COLOR\nvarying vec4 v_Color;\n#endif\n\n\n@import ecgl.common.ssaoMap.header\n\n@import ecgl.common.bumpMap.header\n\n@import clay.util.srgb\n\n@import ecgl.common.wireframe.fragmentHeader\n\n@import clay.plugin.compute_shadow_map\n\nvoid main()\n{\n#ifdef SRGB_DECODE\n gl_FragColor = sRGBToLinear(color);\n#else\n gl_FragColor = color;\n#endif\n\n#ifdef VERTEX_COLOR\n #ifdef SRGB_DECODE\n gl_FragColor *= sRGBToLinear(v_Color);\n #else\n gl_FragColor *= v_Color;\n #endif\n#endif\n\n @import ecgl.common.albedo.main\n\n @import ecgl.common.diffuseLayer.main\n\n gl_FragColor *= albedoTexel;\n\n vec3 N = v_Normal;\n#ifdef DOUBLE_SIDED\n vec3 eyePos = viewInverse[3].xyz;\n vec3 V = normalize(eyePos - v_WorldPosition);\n\n if (dot(N, V) < 0.0) {\n N = -N;\n }\n#endif\n\n float ambientFactor = 1.0;\n\n#ifdef BUMPMAP_ENABLED\n N = bumpNormal(v_WorldPosition, v_Normal, N);\n ambientFactor = dot(v_Normal, N);\n#endif\n\n vec3 N2 = vec3(N.x, N[NORMAL_UP_AXIS], N[NORMAL_FRONT_AXIS]);\n\n vec3 diffuseColor = vec3(0.0, 0.0, 0.0);\n\n @import ecgl.common.ssaoMap.main\n\n#ifdef AMBIENT_LIGHT_COUNT\n for(int i = 0; i < AMBIENT_LIGHT_COUNT; i++)\n {\n diffuseColor += ambientLightColor[i] * ambientFactor * ao;\n }\n#endif\n#ifdef AMBIENT_SH_LIGHT_COUNT\n for(int _idx_ = 0; _idx_ < AMBIENT_SH_LIGHT_COUNT; _idx_++)\n {{\n diffuseColor += calcAmbientSHLight(_idx_, N2) * ambientSHLightColor[_idx_] * ao;\n }}\n#endif\n#ifdef DIRECTIONAL_LIGHT_COUNT\n#if defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n float shadowContribsDir[DIRECTIONAL_LIGHT_COUNT];\n if(shadowEnabled)\n {\n computeShadowOfDirectionalLights(v_WorldPosition, shadowContribsDir);\n }\n#endif\n for(int i = 0; i < DIRECTIONAL_LIGHT_COUNT; i++)\n {\n vec3 lightDirection = -directionalLightDirection[i];\n vec3 lightColor = directionalLightColor[i];\n\n float shadowContrib = 1.0;\n#if defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n if (shadowEnabled)\n {\n shadowContrib = shadowContribsDir[i];\n }\n#endif\n\n float ndl = dot(N, normalize(lightDirection)) * shadowContrib;\n\n diffuseColor += lightColor * clamp(ndl, 0.0, 1.0);\n }\n#endif\n\n gl_FragColor.rgb *= diffuseColor;\n\n#ifdef ATMOSPHERE_ENABLED\n float atmoIntensity = pow(1.0 - dot(v_Normal, (viewTranspose * vec4(0.0, 0.0, 1.0, 0.0)).xyz), glowPower);\n gl_FragColor.rgb += glowColor * atmoIntensity;\n#endif\n\n @import ecgl.common.emissiveLayer.main\n\n @import ecgl.common.wireframe.fragmentMain\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/util/shader/realistic.glsl.js
+;// ./src/util/shader/realistic.glsl.js
 /* harmony default export */ const realistic_glsl = ("@export ecgl.realistic.vertex\n\n@import ecgl.common.transformUniforms\n\n@import ecgl.common.uv.header\n\n@import ecgl.common.attributes\n\n\n@import ecgl.common.wireframe.vertexHeader\n\n#ifdef VERTEX_COLOR\nattribute vec4 a_Color : COLOR;\nvarying vec4 v_Color;\n#endif\n\n#ifdef NORMALMAP_ENABLED\nattribute vec4 tangent : TANGENT;\nvarying vec3 v_Tangent;\nvarying vec3 v_Bitangent;\n#endif\n\n@import ecgl.common.vertexAnimation.header\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\nvoid main()\n{\n\n @import ecgl.common.uv.main\n\n @import ecgl.common.vertexAnimation.main\n\n gl_Position = worldViewProjection * vec4(pos, 1.0);\n\n v_Normal = normalize((worldInverseTranspose * vec4(norm, 0.0)).xyz);\n v_WorldPosition = (world * vec4(pos, 1.0)).xyz;\n\n#ifdef VERTEX_COLOR\n v_Color = a_Color;\n#endif\n\n#ifdef NORMALMAP_ENABLED\n v_Tangent = normalize((worldInverseTranspose * vec4(tangent.xyz, 0.0)).xyz);\n v_Bitangent = normalize(cross(v_Normal, v_Tangent) * tangent.w);\n#endif\n\n @import ecgl.common.wireframe.vertexMain\n\n}\n\n@end\n\n\n\n@export ecgl.realistic.fragment\n\n#define LAYER_DIFFUSEMAP_COUNT 0\n#define LAYER_EMISSIVEMAP_COUNT 0\n#define PI 3.14159265358979\n#define ROUGHNESS_CHANEL 0\n#define METALNESS_CHANEL 1\n\n#define NORMAL_UP_AXIS 1\n#define NORMAL_FRONT_AXIS 2\n\n#ifdef VERTEX_COLOR\nvarying vec4 v_Color;\n#endif\n\n@import ecgl.common.uv.fragmentHeader\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\nuniform sampler2D diffuseMap;\n\nuniform sampler2D detailMap;\nuniform sampler2D metalnessMap;\nuniform sampler2D roughnessMap;\n\n@import ecgl.common.layers.header\n\nuniform float emissionIntensity: 1.0;\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\n\nuniform float metalness : 0.0;\nuniform float roughness : 0.5;\n\nuniform mat4 viewInverse : VIEWINVERSE;\n\n#ifdef ATMOSPHERE_ENABLED\nuniform mat4 viewTranspose: VIEWTRANSPOSE;\nuniform vec3 glowColor;\nuniform float glowPower;\n#endif\n\n#ifdef AMBIENT_LIGHT_COUNT\n@import clay.header.ambient_light\n#endif\n\n#ifdef AMBIENT_SH_LIGHT_COUNT\n@import clay.header.ambient_sh_light\n#endif\n\n#ifdef AMBIENT_CUBEMAP_LIGHT_COUNT\n@import clay.header.ambient_cubemap_light\n#endif\n\n#ifdef DIRECTIONAL_LIGHT_COUNT\n@import clay.header.directional_light\n#endif\n\n@import ecgl.common.normalMap.fragmentHeader\n\n@import ecgl.common.ssaoMap.header\n\n@import ecgl.common.bumpMap.header\n\n@import clay.util.srgb\n\n@import clay.util.rgbm\n\n@import ecgl.common.wireframe.fragmentHeader\n\n@import clay.plugin.compute_shadow_map\n\nvec3 F_Schlick(float ndv, vec3 spec) {\n return spec + (1.0 - spec) * pow(1.0 - ndv, 5.0);\n}\n\nfloat D_Phong(float g, float ndh) {\n float a = pow(8192.0, g);\n return (a + 2.0) / 8.0 * pow(ndh, a);\n}\n\nvoid main()\n{\n vec4 albedoColor = color;\n\n vec3 eyePos = viewInverse[3].xyz;\n vec3 V = normalize(eyePos - v_WorldPosition);\n#ifdef VERTEX_COLOR\n #ifdef SRGB_DECODE\n albedoColor *= sRGBToLinear(v_Color);\n #else\n albedoColor *= v_Color;\n #endif\n#endif\n\n @import ecgl.common.albedo.main\n\n @import ecgl.common.diffuseLayer.main\n\n albedoColor *= albedoTexel;\n\n float m = metalness;\n\n#ifdef METALNESSMAP_ENABLED\n float m2 = texture2D(metalnessMap, v_DetailTexcoord)[METALNESS_CHANEL];\n m = clamp(m2 + (m - 0.5) * 2.0, 0.0, 1.0);\n#endif\n\n vec3 baseColor = albedoColor.rgb;\n albedoColor.rgb = baseColor * (1.0 - m);\n vec3 specFactor = mix(vec3(0.04), baseColor, m);\n\n float g = 1.0 - roughness;\n\n#ifdef ROUGHNESSMAP_ENABLED\n float g2 = 1.0 - texture2D(roughnessMap, v_DetailTexcoord)[ROUGHNESS_CHANEL];\n g = clamp(g2 + (g - 0.5) * 2.0, 0.0, 1.0);\n#endif\n\n vec3 N = v_Normal;\n\n#ifdef DOUBLE_SIDED\n if (dot(N, V) < 0.0) {\n N = -N;\n }\n#endif\n\n float ambientFactor = 1.0;\n\n#ifdef BUMPMAP_ENABLED\n N = bumpNormal(v_WorldPosition, v_Normal, N);\n ambientFactor = dot(v_Normal, N);\n#endif\n\n@import ecgl.common.normalMap.fragmentMain\n\n vec3 N2 = vec3(N.x, N[NORMAL_UP_AXIS], N[NORMAL_FRONT_AXIS]);\n\n vec3 diffuseTerm = vec3(0.0);\n vec3 specularTerm = vec3(0.0);\n\n float ndv = clamp(dot(N, V), 0.0, 1.0);\n vec3 fresnelTerm = F_Schlick(ndv, specFactor);\n\n @import ecgl.common.ssaoMap.main\n\n#ifdef AMBIENT_LIGHT_COUNT\n for(int _idx_ = 0; _idx_ < AMBIENT_LIGHT_COUNT; _idx_++)\n {{\n diffuseTerm += ambientLightColor[_idx_] * ambientFactor * ao;\n }}\n#endif\n\n#ifdef AMBIENT_SH_LIGHT_COUNT\n for(int _idx_ = 0; _idx_ < AMBIENT_SH_LIGHT_COUNT; _idx_++)\n {{\n diffuseTerm += calcAmbientSHLight(_idx_, N2) * ambientSHLightColor[_idx_] * ao;\n }}\n#endif\n\n#ifdef DIRECTIONAL_LIGHT_COUNT\n#if defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n float shadowContribsDir[DIRECTIONAL_LIGHT_COUNT];\n if(shadowEnabled)\n {\n computeShadowOfDirectionalLights(v_WorldPosition, shadowContribsDir);\n }\n#endif\n for(int _idx_ = 0; _idx_ < DIRECTIONAL_LIGHT_COUNT; _idx_++)\n {{\n vec3 L = -directionalLightDirection[_idx_];\n vec3 lc = directionalLightColor[_idx_];\n\n vec3 H = normalize(L + V);\n float ndl = clamp(dot(N, normalize(L)), 0.0, 1.0);\n float ndh = clamp(dot(N, H), 0.0, 1.0);\n\n float shadowContrib = 1.0;\n#if defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n if (shadowEnabled)\n {\n shadowContrib = shadowContribsDir[_idx_];\n }\n#endif\n\n vec3 li = lc * ndl * shadowContrib;\n\n diffuseTerm += li;\n specularTerm += li * fresnelTerm * D_Phong(g, ndh);\n }}\n#endif\n\n\n#ifdef AMBIENT_CUBEMAP_LIGHT_COUNT\n vec3 L = reflect(-V, N);\n L = vec3(L.x, L[NORMAL_UP_AXIS], L[NORMAL_FRONT_AXIS]);\n float rough2 = clamp(1.0 - g, 0.0, 1.0);\n float bias2 = rough2 * 5.0;\n vec2 brdfParam2 = texture2D(ambientCubemapLightBRDFLookup[0], vec2(rough2, ndv)).xy;\n vec3 envWeight2 = specFactor * brdfParam2.x + brdfParam2.y;\n vec3 envTexel2;\n for(int _idx_ = 0; _idx_ < AMBIENT_CUBEMAP_LIGHT_COUNT; _idx_++)\n {{\n envTexel2 = RGBMDecode(textureCubeLodEXT(ambientCubemapLightCubemap[_idx_], L, bias2), 8.12);\n specularTerm += ambientCubemapLightColor[_idx_] * envTexel2 * envWeight2 * ao;\n }}\n#endif\n\n gl_FragColor.rgb = albedoColor.rgb * diffuseTerm + specularTerm;\n gl_FragColor.a = albedoColor.a;\n\n#ifdef ATMOSPHERE_ENABLED\n float atmoIntensity = pow(1.0 - dot(v_Normal, (viewTranspose * vec4(0.0, 0.0, 1.0, 0.0)).xyz), glowPower);\n gl_FragColor.rgb += glowColor * atmoIntensity;\n#endif\n\n#ifdef SRGB_ENCODE\n gl_FragColor = linearTosRGB(gl_FragColor);\n#endif\n\n @import ecgl.common.emissiveLayer.main\n\n @import ecgl.common.wireframe.fragmentMain\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/util/shader/hatching.glsl.js
+;// ./src/util/shader/hatching.glsl.js
 /* harmony default export */ const hatching_glsl = ("@export ecgl.hatching.vertex\n\n@import ecgl.realistic.vertex\n\n@end\n\n\n@export ecgl.hatching.fragment\n\n#define NORMAL_UP_AXIS 1\n#define NORMAL_FRONT_AXIS 2\n\n@import ecgl.common.uv.fragmentHeader\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\nuniform vec4 color : [0.0, 0.0, 0.0, 1.0];\nuniform vec4 paperColor : [1.0, 1.0, 1.0, 1.0];\n\nuniform mat4 viewInverse : VIEWINVERSE;\n\n#ifdef AMBIENT_LIGHT_COUNT\n@import clay.header.ambient_light\n#endif\n#ifdef AMBIENT_SH_LIGHT_COUNT\n@import clay.header.ambient_sh_light\n#endif\n\n#ifdef DIRECTIONAL_LIGHT_COUNT\n@import clay.header.directional_light\n#endif\n\n#ifdef VERTEX_COLOR\nvarying vec4 v_Color;\n#endif\n\n\n@import ecgl.common.ssaoMap.header\n\n@import ecgl.common.bumpMap.header\n\n@import clay.util.srgb\n\n@import ecgl.common.wireframe.fragmentHeader\n\n@import clay.plugin.compute_shadow_map\n\nuniform sampler2D hatch1;\nuniform sampler2D hatch2;\nuniform sampler2D hatch3;\nuniform sampler2D hatch4;\nuniform sampler2D hatch5;\nuniform sampler2D hatch6;\n\nfloat shade(in float tone) {\n vec4 c = vec4(1. ,1., 1., 1.);\n float step = 1. / 6.;\n vec2 uv = v_DetailTexcoord;\n if (tone <= step / 2.0) {\n c = mix(vec4(0.), texture2D(hatch6, uv), 12. * tone);\n }\n else if (tone <= step) {\n c = mix(texture2D(hatch6, uv), texture2D(hatch5, uv), 6. * tone);\n }\n if(tone > step && tone <= 2. * step){\n c = mix(texture2D(hatch5, uv), texture2D(hatch4, uv) , 6. * (tone - step));\n }\n if(tone > 2. * step && tone <= 3. * step){\n c = mix(texture2D(hatch4, uv), texture2D(hatch3, uv), 6. * (tone - 2. * step));\n }\n if(tone > 3. * step && tone <= 4. * step){\n c = mix(texture2D(hatch3, uv), texture2D(hatch2, uv), 6. * (tone - 3. * step));\n }\n if(tone > 4. * step && tone <= 5. * step){\n c = mix(texture2D(hatch2, uv), texture2D(hatch1, uv), 6. * (tone - 4. * step));\n }\n if(tone > 5. * step){\n c = mix(texture2D(hatch1, uv), vec4(1.), 6. * (tone - 5. * step));\n }\n\n return c.r;\n}\n\nconst vec3 w = vec3(0.2125, 0.7154, 0.0721);\n\nvoid main()\n{\n#ifdef SRGB_DECODE\n vec4 inkColor = sRGBToLinear(color);\n#else\n vec4 inkColor = color;\n#endif\n\n#ifdef VERTEX_COLOR\n #ifdef SRGB_DECODE\n inkColor *= sRGBToLinear(v_Color);\n #else\n inkColor *= v_Color;\n #endif\n#endif\n\n vec3 N = v_Normal;\n#ifdef DOUBLE_SIDED\n vec3 eyePos = viewInverse[3].xyz;\n vec3 V = normalize(eyePos - v_WorldPosition);\n\n if (dot(N, V) < 0.0) {\n N = -N;\n }\n#endif\n\n float tone = 0.0;\n\n float ambientFactor = 1.0;\n\n#ifdef BUMPMAP_ENABLED\n N = bumpNormal(v_WorldPosition, v_Normal, N);\n ambientFactor = dot(v_Normal, N);\n#endif\n\n vec3 N2 = vec3(N.x, N[NORMAL_UP_AXIS], N[NORMAL_FRONT_AXIS]);\n\n @import ecgl.common.ssaoMap.main\n\n#ifdef AMBIENT_LIGHT_COUNT\n for(int i = 0; i < AMBIENT_LIGHT_COUNT; i++)\n {\n tone += dot(ambientLightColor[i], w) * ambientFactor * ao;\n }\n#endif\n#ifdef AMBIENT_SH_LIGHT_COUNT\n for(int _idx_ = 0; _idx_ < AMBIENT_SH_LIGHT_COUNT; _idx_++)\n {{\n tone += dot(calcAmbientSHLight(_idx_, N2) * ambientSHLightColor[_idx_], w) * ao;\n }}\n#endif\n#ifdef DIRECTIONAL_LIGHT_COUNT\n#if defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n float shadowContribsDir[DIRECTIONAL_LIGHT_COUNT];\n if(shadowEnabled)\n {\n computeShadowOfDirectionalLights(v_WorldPosition, shadowContribsDir);\n }\n#endif\n for(int i = 0; i < DIRECTIONAL_LIGHT_COUNT; i++)\n {\n vec3 lightDirection = -directionalLightDirection[i];\n float lightTone = dot(directionalLightColor[i], w);\n\n float shadowContrib = 1.0;\n#if defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n if (shadowEnabled)\n {\n shadowContrib = shadowContribsDir[i];\n }\n#endif\n\n float ndl = dot(N, normalize(lightDirection)) * shadowContrib;\n\n tone += lightTone * clamp(ndl, 0.0, 1.0);\n }\n#endif\n\n gl_FragColor = mix(inkColor, paperColor, shade(clamp(tone, 0.0, 1.0)));\n }\n@end\n");
 
-;// CONCATENATED MODULE: ./src/util/shader/shadow.glsl.js
+;// ./src/util/shader/shadow.glsl.js
 /* harmony default export */ const shadow_glsl = ("@export ecgl.sm.depth.vertex\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\n\nattribute vec3 position : POSITION;\nattribute vec2 texcoord : TEXCOORD_0;\n\n#ifdef VERTEX_ANIMATION\nattribute vec3 prevPosition;\nuniform float percent : 1.0;\n#endif\n\nvarying vec4 v_ViewPosition;\nvarying vec2 v_Texcoord;\n\nvoid main(){\n\n#ifdef VERTEX_ANIMATION\n vec3 pos = mix(prevPosition, position, percent);\n#else\n vec3 pos = position;\n#endif\n\n v_ViewPosition = worldViewProjection * vec4(pos, 1.0);\n gl_Position = v_ViewPosition;\n\n v_Texcoord = texcoord;\n\n}\n@end\n\n\n\n@export ecgl.sm.depth.fragment\n\n@import clay.sm.depth.fragment\n\n@end");
 
-;// CONCATENATED MODULE: ./src/util/graphicGL.js
+;// ./src/util/graphicGL.js
 
 
 
@@ -25623,9 +26535,10 @@ graphicGL.updateVertexAnimation = function (
 
 /* harmony default export */ const util_graphicGL = (graphicGL);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/animation/requestAnimationFrame.js
+;// ./node_modules/zrender/lib/animation/requestAnimationFrame.js
+
 var requestAnimationFrame;
-requestAnimationFrame = (typeof window !== 'undefined'
+requestAnimationFrame = (core_env.hasGlobalWindow
     && ((window.requestAnimationFrame && window.requestAnimationFrame.bind(window))
         || (window.msRequestAnimationFrame && window.msRequestAnimationFrame.bind(window))
         || window.mozRequestAnimationFrame
@@ -25634,7 +26547,7 @@ requestAnimationFrame = (typeof window !== 'undefined'
 };
 /* harmony default export */ const animation_requestAnimationFrame = (requestAnimationFrame);
 
-;// CONCATENATED MODULE: ./src/core/LayerGL.js
+;// ./src/core/LayerGL.js
 /**
  * Provide WebGL layer to zrender. Which is rendered on top of clay.
  *
@@ -26313,10 +27226,10 @@ LayerGL.prototype._dispatchToView = function (eventName, e) {
 Object.assign(LayerGL.prototype, mixin_notifier);
 
 /* harmony default export */ const core_LayerGL = (LayerGL);
-;// CONCATENATED MODULE: ./src/preprocessor/backwardCompat.js
+;// ./src/preprocessor/backwardCompat.js
 
 
-var GL_SERIES = ['bar3D', 'line3D', 'map3D', 'scatter3D', 'surface', 'lines3D', 'scatterGL', 'scatter3D'];
+var GL_SERIES = ['bar3D', 'wafermap3D', 'line3D', 'map3D', 'scatter3D', 'surface', 'lines3D', 'scatterGL', 'scatter3D'];
 
 function convertNormalEmphasis(option, optType) {
     if (option && option[optType] && (option[optType].normal || option[optType].emphasis)) {
@@ -26376,7 +27289,7 @@ function removeTextStyleInAxis(axesOpt) {
 
     convertNormalEmphasis(option.geo3D);
 };
-;// CONCATENATED MODULE: ./src/echarts-gl.js
+;// ./src/echarts-gl.js
 /**
  * echarts-gl
  * Extension pack of ECharts providing 3d plots and globe visualization
@@ -26635,7 +27548,7 @@ external_echarts_.registerPreprocessor(backwardCompat);
 
 
 /* harmony default export */ const echarts_gl = (EChartsGL);
-;// CONCATENATED MODULE: ./src/component/common/componentViewControlMixin.js
+;// ./src/component/common/componentViewControlMixin.js
 /* harmony default export */ const componentViewControlMixin = ({
     defaultOption: {
 
@@ -26714,7 +27627,7 @@ external_echarts_.registerPreprocessor(backwardCompat);
         }
     }
 });
-;// CONCATENATED MODULE: ./src/component/common/componentPostEffectMixin.js
+;// ./src/component/common/componentPostEffectMixin.js
 /* harmony default export */ const componentPostEffectMixin = ({
     defaultOption: {
         // Post effect
@@ -26778,7 +27691,7 @@ external_echarts_.registerPreprocessor(backwardCompat);
         }
     }
 });
-;// CONCATENATED MODULE: ./src/component/common/componentLightMixin.js
+;// ./src/component/common/componentLightMixin.js
 /* harmony default export */ const componentLightMixin = ({
     defaultOption: {
         // Light is available when material.shading is not color
@@ -26813,7 +27726,7 @@ external_echarts_.registerPreprocessor(backwardCompat);
         }
     }
 });
-;// CONCATENATED MODULE: ./src/component/grid3D/Grid3DModel.js
+;// ./src/component/grid3D/Grid3DModel.js
 
 
 
@@ -26960,7 +27873,7 @@ external_echarts_.util.merge(Grid3DModel.prototype, componentLightMixin);
 /* harmony default export */ const grid3D_Grid3DModel = (Grid3DModel);
 
 
-;// CONCATENATED MODULE: ./node_modules/zrender/node_modules/tslib/tslib.es6.js
+;// ./node_modules/tslib/tslib.es6.js
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -26985,6 +27898,8 @@ var extendStatics = function(d, b) {
 };
 
 function __extends(d, b) {
+    if (typeof b !== "function" && b !== null)
+        throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
     extendStatics(d, b);
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -27107,19 +28022,31 @@ function __read(o, n) {
     return ar;
 }
 
+/** @deprecated */
 function __spread() {
     for (var ar = [], i = 0; i < arguments.length; i++)
         ar = ar.concat(__read(arguments[i]));
     return ar;
 }
 
+/** @deprecated */
 function __spreadArrays() {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
         for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
             r[k] = a[j];
     return r;
-};
+}
+
+function __spreadArray(to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || from);
+}
 
 function __await(v) {
     return this instanceof __await ? (this.v = v, this) : new __await(v);
@@ -27174,22 +28101,21 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
-function __classPrivateFieldGet(receiver, privateMap) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to get private field on non-instance");
-    }
-    return privateMap.get(receiver);
+function __classPrivateFieldGet(receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 }
 
-function __classPrivateFieldSet(receiver, privateMap, value) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to set private field on non-instance");
-    }
-    privateMap.set(receiver, value);
-    return value;
+function __classPrivateFieldSet(receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/image.js
+;// ./node_modules/zrender/lib/graphic/helper/image.js
+
 
 var globalImageCache = new lib_core_LRU(50);
 function findExistImage(newImageOrSrc) {
@@ -27216,13 +28142,12 @@ function createOrUpdateImage(newImageOrSrc, image, hostEl, onload, cbPayload) {
             !isImageReady(image) && cachedImgObj.pending.push(pendingWrap);
         }
         else {
-            image = new Image();
-            image.onload = image.onerror = imageOnLoad;
+            image = platformApi.loadImage(newImageOrSrc, imageOnLoad, imageOnLoad);
+            image.__zrImageSrc = newImageOrSrc;
             globalImageCache.put(newImageOrSrc, image.__cachedImgObj = {
                 image: image,
                 pending: [pendingWrap]
             });
-            image.src = image.__zrImageSrc = newImageOrSrc;
         }
         return image;
     }
@@ -27245,8 +28170,8 @@ function isImageReady(image) {
     return image && image.width && image.height;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/matrix.js
-function create() {
+;// ./node_modules/zrender/lib/core/matrix.js
+function matrix_create() {
     return [1, 0, 0, 1, 0, 0];
 }
 function identity(out) {
@@ -27258,7 +28183,7 @@ function identity(out) {
     out[5] = 0;
     return out;
 }
-function copy(out, m) {
+function matrix_copy(out, m) {
     out[0] = m[0];
     out[1] = m[1];
     out[2] = m[2];
@@ -27267,7 +28192,7 @@ function copy(out, m) {
     out[5] = m[5];
     return out;
 }
-function mul(out, m1, m2) {
+function matrix_mul(out, m1, m2) {
     var out0 = m1[0] * m2[0] + m1[2] * m2[1];
     var out1 = m1[1] * m2[0] + m1[3] * m2[1];
     var out2 = m1[0] * m2[2] + m1[2] * m2[3];
@@ -27291,7 +28216,8 @@ function translate(out, a, v) {
     out[5] = a[5] + v[1];
     return out;
 }
-function rotate(out, a, rad) {
+function rotate(out, a, rad, pivot) {
+    if (pivot === void 0) { pivot = [0, 0]; }
     var aa = a[0];
     var ac = a[2];
     var atx = a[4];
@@ -27304,11 +28230,11 @@ function rotate(out, a, rad) {
     out[1] = -aa * st + ab * ct;
     out[2] = ac * ct + ad * st;
     out[3] = -ac * st + ct * ad;
-    out[4] = ct * atx + st * aty;
-    out[5] = ct * aty - st * atx;
+    out[4] = ct * (atx - pivot[0]) + st * (aty - pivot[1]) + pivot[0];
+    out[5] = ct * (aty - pivot[1]) - st * (atx - pivot[0]) + pivot[1];
     return out;
 }
-function scale(out, a, v) {
+function matrix_scale(out, a, v) {
     var vx = v[0];
     var vy = v[1];
     out[0] = a[0] * vx;
@@ -27319,7 +28245,7 @@ function scale(out, a, v) {
     out[5] = a[5] * vy;
     return out;
 }
-function matrix_invert(out, a) {
+function invert(out, a) {
     var aa = a[0];
     var ac = a[2];
     var atx = a[4];
@@ -27340,12 +28266,12 @@ function matrix_invert(out, a) {
     return out;
 }
 function matrix_clone(a) {
-    var b = create();
-    copy(b, a);
+    var b = matrix_create();
+    matrix_copy(b, a);
     return b;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/Point.js
+;// ./node_modules/zrender/lib/core/Point.js
 var Point_Point = (function () {
     function Point(x, y) {
         this.x = x || 0;
@@ -27476,7 +28402,7 @@ var Point_Point = (function () {
 }());
 /* harmony default export */ const core_Point = (Point_Point);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/BoundingRect.js
+;// ./node_modules/zrender/lib/core/BoundingRect.js
 
 
 var BoundingRect_mathMin = Math.min;
@@ -27527,9 +28453,9 @@ var BoundingRect = (function () {
         var a = this;
         var sx = b.width / a.width;
         var sy = b.height / a.height;
-        var m = create();
+        var m = matrix_create();
         translate(m, m, [-a.x, -a.y]);
-        scale(m, m, [sx, sy]);
+        matrix_scale(m, m, [sx, sy]);
         translate(m, m, [b.x, b.y]);
         return m;
     };
@@ -27693,29 +28619,11 @@ var BoundingRect = (function () {
 }());
 /* harmony default export */ const core_BoundingRect = (BoundingRect);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/text.js
+;// ./node_modules/zrender/lib/contain/text.js
 
 
 
 var textWidthCache = {};
-var DEFAULT_FONT = '12px sans-serif';
-var _ctx;
-var _cachedFont;
-function defaultMeasureText(text, font) {
-    if (!_ctx) {
-        _ctx = createCanvas().getContext('2d');
-    }
-    if (_cachedFont !== font) {
-        _cachedFont = _ctx.font = font || DEFAULT_FONT;
-    }
-    return _ctx.measureText(text);
-}
-var text_methods = {
-    measureText: defaultMeasureText
-};
-function text_$override(name, fn) {
-    text_methods[name] = fn;
-}
 function getWidth(text, font) {
     font = font || DEFAULT_FONT;
     var cacheOfFont = textWidthCache[font];
@@ -27724,7 +28632,7 @@ function getWidth(text, font) {
     }
     var width = cacheOfFont.get(text);
     if (width == null) {
-        width = text_methods.measureText(text, font).width;
+        width = platformApi.measureText(text, font).width;
         cacheOfFont.put(text, width);
     }
     return width;
@@ -27733,7 +28641,7 @@ function innerGetBoundingRect(text, font, textAlign, textBaseline) {
     var width = getWidth(text, font);
     var height = getLineHeight(font);
     var x = adjustTextX(0, width, textAlign);
-    var y = adjustTextY(0, height, textBaseline);
+    var y = text_adjustTextY(0, height, textBaseline);
     var rect = new core_BoundingRect(x, y, width, height);
     return rect;
 }
@@ -27761,7 +28669,7 @@ function adjustTextX(x, width, textAlign) {
     }
     return x;
 }
-function adjustTextY(y, height, verticalAlign) {
+function text_adjustTextY(y, height, verticalAlign) {
     if (verticalAlign === 'middle') {
         y -= height / 2;
     }
@@ -27774,7 +28682,7 @@ function getLineHeight(font) {
     return getWidth('国', font);
 }
 function measureText(text, font) {
-    return text_methods.measureText(text, font);
+    return platformApi.measureText(text, font);
 }
 function parsePercent(value, maxValue) {
     if (typeof value === 'string') {
@@ -27883,21 +28791,33 @@ function calculateTextPosition(out, opts, rect) {
     return out;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/parseText.js
+;// ./node_modules/zrender/lib/graphic/helper/parseText.js
 
 
 
 var STYLE_REG = /\{([a-zA-Z0-9_]+)\|([^}]*)\}/g;
 function truncateText(text, containerWidth, font, ellipsis, options) {
+    var out = {};
+    truncateText2(out, text, containerWidth, font, ellipsis, options);
+    return out.text;
+}
+function truncateText2(out, text, containerWidth, font, ellipsis, options) {
     if (!containerWidth) {
-        return '';
+        out.text = '';
+        out.isTruncated = false;
+        return;
     }
     var textLines = (text + '').split('\n');
     options = prepareTruncateOptions(containerWidth, font, ellipsis, options);
+    var isTruncated = false;
+    var truncateOut = {};
     for (var i = 0, len = textLines.length; i < len; i++) {
-        textLines[i] = truncateSingleLine(textLines[i], options);
+        truncateSingleLine(truncateOut, textLines[i], options);
+        textLines[i] = truncateOut.textLine;
+        isTruncated = isTruncated || truncateOut.isTruncated;
     }
-    return textLines.join('\n');
+    out.text = textLines.join('\n');
+    out.isTruncated = isTruncated;
 }
 function prepareTruncateOptions(containerWidth, font, ellipsis, options) {
     options = options || {};
@@ -27925,16 +28845,20 @@ function prepareTruncateOptions(containerWidth, font, ellipsis, options) {
     preparedOpts.containerWidth = containerWidth;
     return preparedOpts;
 }
-function truncateSingleLine(textLine, options) {
+function truncateSingleLine(out, textLine, options) {
     var containerWidth = options.containerWidth;
     var font = options.font;
     var contentWidth = options.contentWidth;
     if (!containerWidth) {
-        return '';
+        out.textLine = '';
+        out.isTruncated = false;
+        return;
     }
     var lineWidth = getWidth(textLine, font);
     if (lineWidth <= containerWidth) {
-        return textLine;
+        out.textLine = textLine;
+        out.isTruncated = false;
+        return;
     }
     for (var j = 0;; j++) {
         if (lineWidth <= contentWidth || j >= options.maxIterations) {
@@ -27952,7 +28876,8 @@ function truncateSingleLine(textLine, options) {
     if (textLine === '') {
         textLine = options.placeholder;
     }
-    return textLine;
+    out.textLine = textLine;
+    out.isTruncated = true;
 }
 function estimateLength(text, contentWidth, ascCharWidth, cnCharWidth) {
     var width = 0;
@@ -27971,10 +28896,12 @@ function parsePlainText(text, style) {
     var truncate = overflow === 'truncate';
     var calculatedLineHeight = getLineHeight(font);
     var lineHeight = retrieve2(style.lineHeight, calculatedLineHeight);
+    var bgColorDrawn = !!(style.backgroundColor);
     var truncateLineOverflow = style.lineOverflow === 'truncate';
+    var isTruncated = false;
     var width = style.width;
     var lines;
-    if (width != null && overflow === 'break' || overflow === 'breakAll') {
+    if (width != null && (overflow === 'break' || overflow === 'breakAll')) {
         lines = text ? wrapText(text, style.font, width, overflow === 'breakAll', 0).lines : [];
     }
     else {
@@ -27984,40 +28911,49 @@ function parsePlainText(text, style) {
     var height = retrieve2(style.height, contentHeight);
     if (contentHeight > height && truncateLineOverflow) {
         var lineCount = Math.floor(height / lineHeight);
+        isTruncated = isTruncated || (lines.length > lineCount);
         lines = lines.slice(0, lineCount);
     }
-    var outerHeight = height;
-    var outerWidth = width;
-    if (padding) {
-        outerHeight += padding[0] + padding[2];
-        if (outerWidth != null) {
-            outerWidth += padding[1] + padding[3];
-        }
-    }
-    if (text && truncate && outerWidth != null) {
+    if (text && truncate && width != null) {
         var options = prepareTruncateOptions(width, font, style.ellipsis, {
             minChar: style.truncateMinChar,
             placeholder: style.placeholder
         });
+        var singleOut = {};
         for (var i = 0; i < lines.length; i++) {
-            lines[i] = truncateSingleLine(lines[i], options);
+            truncateSingleLine(singleOut, lines[i], options);
+            lines[i] = singleOut.textLine;
+            isTruncated = isTruncated || singleOut.isTruncated;
         }
     }
+    var outerHeight = height;
+    var contentWidth = 0;
+    for (var i = 0; i < lines.length; i++) {
+        contentWidth = Math.max(getWidth(lines[i], font), contentWidth);
+    }
     if (width == null) {
-        var maxWidth = 0;
-        for (var i = 0; i < lines.length; i++) {
-            maxWidth = Math.max(getWidth(lines[i], font), maxWidth);
-        }
-        width = maxWidth;
+        width = contentWidth;
+    }
+    var outerWidth = contentWidth;
+    if (padding) {
+        outerHeight += padding[0] + padding[2];
+        outerWidth += padding[1] + padding[3];
+        width += padding[1] + padding[3];
+    }
+    if (bgColorDrawn) {
+        outerWidth = width;
     }
     return {
         lines: lines,
         height: height,
+        outerWidth: outerWidth,
         outerHeight: outerHeight,
         lineHeight: lineHeight,
         calculatedLineHeight: calculatedLineHeight,
+        contentWidth: contentWidth,
         contentHeight: contentHeight,
-        width: width
+        width: width,
+        isTruncated: isTruncated
     };
 }
 var RichTextToken = (function () {
@@ -28043,6 +28979,7 @@ var RichTextContentBlock = (function () {
         this.outerWidth = 0;
         this.outerHeight = 0;
         this.lines = [];
+        this.isTruncated = false;
     }
     return RichTextContentBlock;
 }());
@@ -28078,6 +29015,7 @@ function parseRichText(text, style) {
     var stlPadding = style.padding;
     var truncate = overflow === 'truncate';
     var truncateLine = style.lineOverflow === 'truncate';
+    var tmpTruncateOut = {};
     function finishLine(line, lineWidth, lineHeight) {
         line.width = lineWidth;
         line.lineHeight = lineHeight;
@@ -28103,6 +29041,7 @@ function parseRichText(text, style) {
             token.align = tokenStyle && tokenStyle.align || style.align;
             token.verticalAlign = tokenStyle && tokenStyle.verticalAlign || 'middle';
             if (truncateLine && topHeight != null && calculatedHeight + token.lineHeight > topHeight) {
+                var originalLength = contentBlock.lines.length;
                 if (j > 0) {
                     line.tokens = line.tokens.slice(0, j);
                     finishLine(line, lineWidth, lineHeight);
@@ -28111,6 +29050,7 @@ function parseRichText(text, style) {
                 else {
                     contentBlock.lines = contentBlock.lines.slice(0, i);
                 }
+                contentBlock.isTruncated = contentBlock.isTruncated || (contentBlock.lines.length < originalLength);
                 break outer;
             }
             var styleTokenWidth = tokenStyle.width;
@@ -28139,7 +29079,9 @@ function parseRichText(text, style) {
                         token.width = token.contentWidth = 0;
                     }
                     else {
-                        token.text = truncateText(token.text, remainTruncWidth - paddingH, font, style.ellipsis, { minChar: style.truncateMinChar });
+                        truncateText2(tmpTruncateOut, token.text, remainTruncWidth - paddingH, font, style.ellipsis, { minChar: style.truncateMinChar });
+                        token.text = tmpTruncateOut.text;
+                        contentBlock.isTruncated = contentBlock.isTruncated || tmpTruncateOut.isTruncated;
                         token.width = token.contentWidth = getWidth(token.text, font);
                     }
                 }
@@ -28225,16 +29167,19 @@ function pushTokens(block, str, style, wrapInfo, styleName) {
         }
     }
 }
-function isLatin(ch) {
+function isAlphabeticLetter(ch) {
     var code = ch.charCodeAt(0);
-    return code >= 0x21 && code <= 0xFF;
+    return code >= 0x20 && code <= 0x24F
+        || code >= 0x370 && code <= 0x10FF
+        || code >= 0x1200 && code <= 0x13FF
+        || code >= 0x1E00 && code <= 0x206F;
 }
 var breakCharMap = reduce(',&?/;] '.split(''), function (obj, ch) {
     obj[ch] = true;
     return obj;
 }, {});
 function isWordBreakChar(ch) {
-    if (isLatin(ch)) {
+    if (isAlphabeticLetter(ch)) {
         if (breakCharMap[ch]) {
             return true;
         }
@@ -28299,7 +29244,6 @@ function wrapText(text, font, lineWidth, isBreakAll, lastAccumWidth) {
                 else {
                     if (currentWord) {
                         line += currentWord;
-                        accumWidth += currentWordWidth;
                         currentWord = '';
                         currentWordWidth = 0;
                     }
@@ -28347,135 +29291,24 @@ function wrapText(text, font, lineWidth, isBreakAll, lastAccumWidth) {
     };
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/vector.js
-function vector_create(x, y) {
-    if (x == null) {
-        x = 0;
-    }
-    if (y == null) {
-        y = 0;
-    }
-    return [x, y];
-}
-function vector_copy(out, v) {
-    out[0] = v[0];
-    out[1] = v[1];
-    return out;
-}
-function vector_clone(v) {
-    return [v[0], v[1]];
-}
-function set(out, a, b) {
-    out[0] = a;
-    out[1] = b;
-    return out;
-}
-function add(out, v1, v2) {
-    out[0] = v1[0] + v2[0];
-    out[1] = v1[1] + v2[1];
-    return out;
-}
-function scaleAndAdd(out, v1, v2, a) {
-    out[0] = v1[0] + v2[0] * a;
-    out[1] = v1[1] + v2[1] * a;
-    return out;
-}
-function sub(out, v1, v2) {
-    out[0] = v1[0] - v2[0];
-    out[1] = v1[1] - v2[1];
-    return out;
-}
-function len(v) {
-    return Math.sqrt(lenSquare(v));
-}
-var vector_length = len;
-function lenSquare(v) {
-    return v[0] * v[0] + v[1] * v[1];
-}
-var lengthSquare = lenSquare;
-function vector_mul(out, v1, v2) {
-    out[0] = v1[0] * v2[0];
-    out[1] = v1[1] * v2[1];
-    return out;
-}
-function div(out, v1, v2) {
-    out[0] = v1[0] / v2[0];
-    out[1] = v1[1] / v2[1];
-    return out;
-}
-function dot(v1, v2) {
-    return v1[0] * v2[0] + v1[1] * v2[1];
-}
-function vector_scale(out, v, s) {
-    out[0] = v[0] * s;
-    out[1] = v[1] * s;
-    return out;
-}
-function normalize(out, v) {
-    var d = len(v);
-    if (d === 0) {
-        out[0] = 0;
-        out[1] = 0;
-    }
-    else {
-        out[0] = v[0] / d;
-        out[1] = v[1] / d;
-    }
-    return out;
-}
-function vector_distance(v1, v2) {
-    return Math.sqrt((v1[0] - v2[0]) * (v1[0] - v2[0])
-        + (v1[1] - v2[1]) * (v1[1] - v2[1]));
-}
-var dist = vector_distance;
-function distanceSquare(v1, v2) {
-    return (v1[0] - v2[0]) * (v1[0] - v2[0])
-        + (v1[1] - v2[1]) * (v1[1] - v2[1]);
-}
-var distSquare = distanceSquare;
-function negate(out, v) {
-    out[0] = -v[0];
-    out[1] = -v[1];
-    return out;
-}
-function vector_lerp(out, v1, v2, t) {
-    out[0] = v1[0] + t * (v2[0] - v1[0]);
-    out[1] = v1[1] + t * (v2[1] - v1[1]);
-    return out;
-}
-function applyTransform(out, v, m) {
-    var x = v[0];
-    var y = v[1];
-    out[0] = m[0] * x + m[2] * y + m[4];
-    out[1] = m[1] * x + m[3] * y + m[5];
-    return out;
-}
-function vector_min(out, v1, v2) {
-    out[0] = Math.min(v1[0], v2[0]);
-    out[1] = Math.min(v1[1], v2[1]);
-    return out;
-}
-function vector_max(out, v1, v2) {
-    out[0] = Math.max(v1[0], v2[0]);
-    out[1] = Math.max(v1[1], v2[1]);
-    return out;
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/Transformable.js
+;// ./node_modules/zrender/lib/core/Transformable.js
 
 
 var mIdentity = identity;
 var Transformable_EPSILON = 5e-5;
-function isNotAroundZero(val) {
+function Transformable_isNotAroundZero(val) {
     return val > Transformable_EPSILON || val < -Transformable_EPSILON;
 }
 var scaleTmp = [];
 var tmpTransform = [];
-var originTransform = create();
+var originTransform = matrix_create();
 var Transformable_abs = Math.abs;
 var Transformable = (function () {
     function Transformable() {
     }
+    Transformable.prototype.getLocalTransform = function (m) {
+        return Transformable.getLocalTransform(this, m);
+    };
     Transformable.prototype.setPosition = function (arr) {
         this.x = arr[0];
         this.y = arr[1];
@@ -28493,34 +29326,38 @@ var Transformable = (function () {
         this.originY = arr[1];
     };
     Transformable.prototype.needLocalTransform = function () {
-        return isNotAroundZero(this.rotation)
-            || isNotAroundZero(this.x)
-            || isNotAroundZero(this.y)
-            || isNotAroundZero(this.scaleX - 1)
-            || isNotAroundZero(this.scaleY - 1);
+        return Transformable_isNotAroundZero(this.rotation)
+            || Transformable_isNotAroundZero(this.x)
+            || Transformable_isNotAroundZero(this.y)
+            || Transformable_isNotAroundZero(this.scaleX - 1)
+            || Transformable_isNotAroundZero(this.scaleY - 1)
+            || Transformable_isNotAroundZero(this.skewX)
+            || Transformable_isNotAroundZero(this.skewY);
     };
     Transformable.prototype.updateTransform = function () {
-        var parent = this.parent;
-        var parentHasTransform = parent && parent.transform;
+        var parentTransform = this.parent && this.parent.transform;
         var needLocalTransform = this.needLocalTransform();
         var m = this.transform;
-        if (!(needLocalTransform || parentHasTransform)) {
-            m && mIdentity(m);
+        if (!(needLocalTransform || parentTransform)) {
+            if (m) {
+                mIdentity(m);
+                this.invTransform = null;
+            }
             return;
         }
-        m = m || create();
+        m = m || matrix_create();
         if (needLocalTransform) {
             this.getLocalTransform(m);
         }
         else {
             mIdentity(m);
         }
-        if (parentHasTransform) {
+        if (parentTransform) {
             if (needLocalTransform) {
-                mul(m, parent.transform, m);
+                matrix_mul(m, parentTransform, m);
             }
             else {
-                copy(m, parent.transform);
+                matrix_copy(m, parentTransform);
             }
         }
         this.transform = m;
@@ -28539,11 +29376,8 @@ var Transformable = (function () {
             m[2] *= sy;
             m[3] *= sy;
         }
-        this.invTransform = this.invTransform || create();
-        matrix_invert(this.invTransform, m);
-    };
-    Transformable.prototype.getLocalTransform = function (m) {
-        return Transformable.getLocalTransform(this, m);
+        this.invTransform = this.invTransform || matrix_create();
+        invert(this.invTransform, m);
     };
     Transformable.prototype.getComputedTransform = function () {
         var transformNode = this;
@@ -28584,7 +29418,8 @@ var Transformable = (function () {
         var parent = this.parent;
         var m = this.transform;
         if (parent && parent.transform) {
-            mul(tmpTransform, parent.invTransform, m);
+            parent.invTransform = parent.invTransform || matrix_create();
+            matrix_mul(tmpTransform, parent.invTransform, m);
             m = tmpTransform;
         }
         var ox = this.originX;
@@ -28592,7 +29427,7 @@ var Transformable = (function () {
         if (ox || oy) {
             originTransform[4] = ox;
             originTransform[5] = oy;
-            mul(tmpTransform, m, originTransform);
+            matrix_mul(tmpTransform, m, originTransform);
             tmpTransform[4] -= ox;
             tmpTransform[5] -= oy;
             m = tmpTransform;
@@ -28639,20 +29474,27 @@ var Transformable = (function () {
             ? Math.sqrt(Transformable_abs(m[0] * m[3] - m[2] * m[1]))
             : 1;
     };
+    Transformable.prototype.copyTransform = function (source) {
+        copyTransform(this, source);
+    };
     Transformable.getLocalTransform = function (target, m) {
         m = m || [];
         var ox = target.originX || 0;
         var oy = target.originY || 0;
         var sx = target.scaleX;
         var sy = target.scaleY;
+        var ax = target.anchorX;
+        var ay = target.anchorY;
         var rotation = target.rotation || 0;
         var x = target.x;
         var y = target.y;
         var skewX = target.skewX ? Math.tan(target.skewX) : 0;
         var skewY = target.skewY ? Math.tan(-target.skewY) : 0;
-        if (ox || oy) {
-            m[4] = -ox * sx - skewX * oy * sy;
-            m[5] = -oy * sy - skewY * ox * sx;
+        if (ox || oy || ax || ay) {
+            var dx = ox + ax;
+            var dy = oy + ay;
+            m[4] = -dx * sx - skewX * dy * sy;
+            m[5] = -dy * sy - skewY * dx * sx;
         }
         else {
             m[4] = m[5] = 0;
@@ -28668,23 +29510,34 @@ var Transformable = (function () {
     };
     Transformable.initDefaultProps = (function () {
         var proto = Transformable.prototype;
-        proto.x = 0;
-        proto.y = 0;
-        proto.scaleX = 1;
-        proto.scaleY = 1;
-        proto.originX = 0;
-        proto.originY = 0;
-        proto.skewX = 0;
-        proto.skewY = 0;
-        proto.rotation = 0;
-        proto.globalScaleRatio = 1;
+        proto.scaleX =
+            proto.scaleY =
+                proto.globalScaleRatio = 1;
+        proto.x =
+            proto.y =
+                proto.originX =
+                    proto.originY =
+                        proto.skewX =
+                            proto.skewY =
+                                proto.rotation =
+                                    proto.anchorX =
+                                        proto.anchorY = 0;
     })();
     return Transformable;
 }());
 ;
+var TRANSFORMABLE_PROPS = [
+    'x', 'y', 'originX', 'originY', 'anchorX', 'anchorY', 'rotation', 'scaleX', 'scaleY', 'skewX', 'skewY'
+];
+function copyTransform(target, source) {
+    for (var i = 0; i < TRANSFORMABLE_PROPS.length; i++) {
+        var propName = TRANSFORMABLE_PROPS[i];
+        target[propName] = source[propName];
+    }
+}
 /* harmony default export */ const core_Transformable = (Transformable);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/Eventful.js
+;// ./node_modules/zrender/lib/core/Eventful.js
 var Eventful = (function () {
     function Eventful(eventProcessors) {
         if (eventProcessors) {
@@ -28803,13 +29656,16 @@ var Eventful = (function () {
         return this;
     };
     Eventful.prototype.triggerWithContext = function (type) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
         if (!this._$handlers) {
             return this;
         }
         var _h = this._$handlers[type];
         var eventProcessor = this._$eventProcessor;
         if (_h) {
-            var args = arguments;
             var argLen = args.length;
             var ctx = args[argLen - 1];
             var len = _h.length;
@@ -28845,9 +29701,10 @@ var Eventful = (function () {
 }());
 /* harmony default export */ const core_Eventful = (Eventful);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/config.js
+;// ./node_modules/zrender/lib/config.js
+
 var dpr = 1;
-if (typeof window !== 'undefined') {
+if (core_env.hasGlobalWindow) {
     dpr = Math.max(window.devicePixelRatio
         || (window.screen && window.screen.deviceXDPI / window.screen.logicalXDPI)
         || 1, 1);
@@ -28859,98 +29716,12 @@ var DARK_LABEL_COLOR = '#333';
 var LIGHT_LABEL_COLOR = '#ccc';
 var LIGHTER_LABEL_COLOR = '#eee';
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/env.js
-var Browser = (function () {
-    function Browser() {
-        this.firefox = false;
-        this.ie = false;
-        this.edge = false;
-        this.newEdge = false;
-        this.weChat = false;
-    }
-    return Browser;
-}());
-var Env = (function () {
-    function Env() {
-        this.browser = new Browser();
-        this.node = false;
-        this.wxa = false;
-        this.worker = false;
-        this.canvasSupported = false;
-        this.svgSupported = false;
-        this.touchEventsSupported = false;
-        this.pointerEventsSupported = false;
-        this.domSupported = false;
-        this.transformSupported = false;
-        this.transform3dSupported = false;
-    }
-    return Env;
-}());
-var env = new Env();
-if (typeof wx === 'object' && typeof wx.getSystemInfoSync === 'function') {
-    env.wxa = true;
-    env.canvasSupported = true;
-    env.touchEventsSupported = true;
-}
-else if (typeof document === 'undefined' && typeof self !== 'undefined') {
-    env.worker = true;
-    env.canvasSupported = true;
-}
-else if (typeof navigator === 'undefined') {
-    env.node = true;
-    env.canvasSupported = true;
-    env.svgSupported = true;
-}
-else {
-    detect(navigator.userAgent, env);
-}
-function detect(ua, env) {
-    var browser = env.browser;
-    var firefox = ua.match(/Firefox\/([\d.]+)/);
-    var ie = ua.match(/MSIE\s([\d.]+)/)
-        || ua.match(/Trident\/.+?rv:(([\d.]+))/);
-    var edge = ua.match(/Edge?\/([\d.]+)/);
-    var weChat = (/micromessenger/i).test(ua);
-    if (firefox) {
-        browser.firefox = true;
-        browser.version = firefox[1];
-    }
-    if (ie) {
-        browser.ie = true;
-        browser.version = ie[1];
-    }
-    if (edge) {
-        browser.edge = true;
-        browser.version = edge[1];
-        browser.newEdge = +edge[1].split('.')[0] > 18;
-    }
-    if (weChat) {
-        browser.weChat = true;
-    }
-    env.canvasSupported = !!document.createElement('canvas').getContext;
-    env.svgSupported = typeof SVGRect !== 'undefined';
-    env.touchEventsSupported = 'ontouchstart' in window && !browser.ie && !browser.edge;
-    env.pointerEventsSupported = 'onpointerdown' in window
-        && (browser.edge || (browser.ie && +browser.version >= 11));
-    env.domSupported = typeof document !== 'undefined';
-    var style = document.documentElement.style;
-    env.transform3dSupported = ((browser.ie && 'transition' in style)
-        || browser.edge
-        || (('WebKitCSSMatrix' in window) && ('m11' in new WebKitCSSMatrix()))
-        || 'MozPerspective' in style)
-        && !('OTransition' in style);
-    env.transformSupported = env.transform3dSupported
-        || (browser.ie && +browser.version >= 9);
-}
-/* harmony default export */ const core_env = (env);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/constants.js
-var REDARAW_BIT = 1;
+;// ./node_modules/zrender/lib/graphic/constants.js
+var REDRAW_BIT = 1;
 var STYLE_CHANGED_BIT = 2;
 var SHAPE_CHANGED_BIT = 4;
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/Element.js
-
+;// ./node_modules/zrender/lib/Element.js
 
 
 
@@ -28961,17 +29732,11 @@ var SHAPE_CHANGED_BIT = 4;
 
 
 var PRESERVED_NORMAL_STATE = '__zr_normal__';
-var PRIMARY_STATES_KEYS = ['x', 'y', 'scaleX', 'scaleY', 'originX', 'originY', 'rotation', 'ignore'];
-var DEFAULT_ANIMATABLE_MAP = {
-    x: true,
-    y: true,
-    scaleX: true,
-    scaleY: true,
-    originX: true,
-    originY: true,
-    rotation: true,
-    ignore: false
-};
+var PRIMARY_STATES_KEYS = TRANSFORMABLE_PROPS.concat(['ignore']);
+var DEFAULT_ANIMATABLE_MAP = reduce(TRANSFORMABLE_PROPS, function (obj, key) {
+    obj[key] = true;
+    return obj;
+}, { ignore: false });
 var tmpTextPosCalcRes = {};
 var tmpBoundingRect = new core_BoundingRect(0, 0, 0, 0);
 var Element = (function () {
@@ -29019,24 +29784,13 @@ var Element = (function () {
             }
             var textConfig = this.textConfig;
             var isLocal = textConfig.local;
-            var attachedTransform = textEl.attachedTransform;
+            var innerTransformable = textEl.innerTransformable;
             var textAlign = void 0;
             var textVerticalAlign = void 0;
             var textStyleChanged = false;
-            if (isLocal) {
-                attachedTransform.parent = this;
-            }
-            else {
-                attachedTransform.parent = null;
-            }
+            innerTransformable.parent = isLocal ? this : null;
             var innerOrigin = false;
-            attachedTransform.x = textEl.x;
-            attachedTransform.y = textEl.y;
-            attachedTransform.originX = textEl.originX;
-            attachedTransform.originY = textEl.originY;
-            attachedTransform.rotation = textEl.rotation;
-            attachedTransform.scaleX = textEl.scaleX;
-            attachedTransform.scaleY = textEl.scaleY;
+            innerTransformable.copyTransform(textEl);
             if (textConfig.position != null) {
                 var layoutRect = tmpBoundingRect;
                 if (textConfig.layoutRect) {
@@ -29054,8 +29808,8 @@ var Element = (function () {
                 else {
                     calculateTextPosition(tmpTextPosCalcRes, textConfig, layoutRect);
                 }
-                attachedTransform.x = tmpTextPosCalcRes.x;
-                attachedTransform.y = tmpTextPosCalcRes.y;
+                innerTransformable.x = tmpTextPosCalcRes.x;
+                innerTransformable.y = tmpTextPosCalcRes.y;
                 textAlign = tmpTextPosCalcRes.align;
                 textVerticalAlign = tmpTextPosCalcRes.verticalAlign;
                 var textOrigin = textConfig.origin;
@@ -29071,20 +29825,20 @@ var Element = (function () {
                         relOriginY = parsePercent(textOrigin[1], layoutRect.height);
                     }
                     innerOrigin = true;
-                    attachedTransform.originX = -attachedTransform.x + relOriginX + (isLocal ? 0 : layoutRect.x);
-                    attachedTransform.originY = -attachedTransform.y + relOriginY + (isLocal ? 0 : layoutRect.y);
+                    innerTransformable.originX = -innerTransformable.x + relOriginX + (isLocal ? 0 : layoutRect.x);
+                    innerTransformable.originY = -innerTransformable.y + relOriginY + (isLocal ? 0 : layoutRect.y);
                 }
             }
             if (textConfig.rotation != null) {
-                attachedTransform.rotation = textConfig.rotation;
+                innerTransformable.rotation = textConfig.rotation;
             }
             var textOffset = textConfig.offset;
             if (textOffset) {
-                attachedTransform.x += textOffset[0];
-                attachedTransform.y += textOffset[1];
+                innerTransformable.x += textOffset[0];
+                innerTransformable.y += textOffset[1];
                 if (!innerOrigin) {
-                    attachedTransform.originX = -textOffset[0];
-                    attachedTransform.originY = -textOffset[1];
+                    innerTransformable.originX = -textOffset[0];
+                    innerTransformable.originY = -textOffset[1];
                 }
             }
             var isInside = textConfig.inside == null
@@ -29130,7 +29884,7 @@ var Element = (function () {
                 innerTextDefaultStyle.verticalAlign = textVerticalAlign;
                 textEl.setDefaultTextStyle(innerTextDefaultStyle);
             }
-            textEl.__dirty |= REDARAW_BIT;
+            textEl.__dirty |= REDRAW_BIT;
             if (textStyleChanged) {
                 textEl.dirtyStyle(true);
             }
@@ -29210,13 +29964,13 @@ var Element = (function () {
         for (var i = 0; i < this.animators.length; i++) {
             var animator = this.animators[i];
             var fromStateTransition = animator.__fromStateTransition;
-            if (fromStateTransition && fromStateTransition !== PRESERVED_NORMAL_STATE) {
+            if (animator.getLoop() || fromStateTransition && fromStateTransition !== PRESERVED_NORMAL_STATE) {
                 continue;
             }
             var targetName = animator.targetName;
             var target = targetName
                 ? normalState[targetName] : normalState;
-            animator.saveFinalToTarget(target);
+            animator.saveTo(target);
         }
     };
     Element.prototype._innerSaveToNormal = function (toState) {
@@ -29307,7 +30061,7 @@ var Element = (function () {
         this.markRedraw();
         if (!useHoverLayer && this.__inHover) {
             this._toggleHoverLayerFlag(false);
-            this.__dirty &= ~REDARAW_BIT;
+            this.__dirty &= ~REDRAW_BIT;
         }
         return state;
     };
@@ -29366,9 +30120,21 @@ var Element = (function () {
             this.markRedraw();
             if (!useHoverLayer && this.__inHover) {
                 this._toggleHoverLayerFlag(false);
-                this.__dirty &= ~REDARAW_BIT;
+                this.__dirty &= ~REDRAW_BIT;
             }
         }
+    };
+    Element.prototype.isSilent = function () {
+        var isSilent = this.silent;
+        var ancestor = this.parent;
+        while (!isSilent && ancestor) {
+            if (ancestor.silent) {
+                isSilent = true;
+                break;
+            }
+            ancestor = ancestor.parent;
+        }
+        return isSilent;
     };
     Element.prototype._updateAnimationTargets = function () {
         for (var i = 0; i < this.animators.length; i++) {
@@ -29468,9 +30234,11 @@ var Element = (function () {
             for (var i = 0; i < this.animators.length; i++) {
                 var animator = this.animators[i];
                 var targetName = animator.targetName;
-                animator.__changeFinalValue(targetName
-                    ? (state || normalState)[targetName]
-                    : (state || normalState));
+                if (!animator.getLoop()) {
+                    animator.__changeFinalValue(targetName
+                        ? (state || normalState)[targetName]
+                        : (state || normalState));
+                }
             }
         }
         if (hasTransition) {
@@ -29479,10 +30247,16 @@ var Element = (function () {
     };
     Element.prototype._attachComponent = function (componentEl) {
         if (componentEl.__zr && !componentEl.__hostTarget) {
-            throw new Error('Text element has been added to zrender.');
+            if (true) {
+                throw new Error('Text element has been added to zrender.');
+            }
+            return;
         }
         if (componentEl === this) {
-            throw new Error('Recursive component attachment.');
+            if (true) {
+                throw new Error('Recursive component attachment.');
+            }
+            return;
         }
         var zr = this.__zr;
         if (zr) {
@@ -29528,10 +30302,12 @@ var Element = (function () {
         if (previousTextContent && previousTextContent !== textEl) {
             this.removeTextContent();
         }
-        if (textEl.__zr && !textEl.__hostTarget) {
-            throw new Error('Text element has been added to zrender.');
+        if (true) {
+            if (textEl.__zr && !textEl.__hostTarget) {
+                throw new Error('Text element has been added to zrender.');
+            }
         }
-        textEl.attachedTransform = new core_Transformable();
+        textEl.innerTransformable = new core_Transformable();
         this._attachComponent(textEl);
         this._textContent = textEl;
         this.markRedraw();
@@ -29550,7 +30326,7 @@ var Element = (function () {
     Element.prototype.removeTextContent = function () {
         var textEl = this._textContent;
         if (textEl) {
-            textEl.attachedTransform = null;
+            textEl.innerTransformable = null;
             this._detachComponent(textEl);
             this._textContent = null;
             this._innerTextDefaultStyle = null;
@@ -29577,7 +30353,7 @@ var Element = (function () {
         }
     };
     Element.prototype.markRedraw = function () {
-        this.__dirty |= REDARAW_BIT;
+        this.__dirty |= REDRAW_BIT;
         var zr = this.__zr;
         if (zr) {
             if (this.__inHover) {
@@ -29606,6 +30382,9 @@ var Element = (function () {
         }
     };
     Element.prototype.addSelfToZr = function (zr) {
+        if (this.__zr === zr) {
+            return;
+        }
         this.__zr = zr;
         var animators = this.animators;
         if (animators) {
@@ -29624,6 +30403,9 @@ var Element = (function () {
         }
     };
     Element.prototype.removeSelfFromZr = function (zr) {
+        if (!this.__zr) {
+            return;
+        }
         this.__zr = null;
         var animators = this.animators;
         if (animators) {
@@ -29641,16 +30423,19 @@ var Element = (function () {
             this._textGuide.removeSelfFromZr(zr);
         }
     };
-    Element.prototype.animate = function (key, loop) {
+    Element.prototype.animate = function (key, loop, allowDiscreteAnimation) {
         var target = key ? this[key] : this;
-        if (!target) {
-            logError('Property "'
-                + key
-                + '" is not existed in element '
-                + this.id);
-            return;
+        if (true) {
+            if (!target) {
+                logError('Property "'
+                    + key
+                    + '" is not existed in element '
+                    + this.id);
+                return;
+            }
         }
-        var animator = new animation_Animator(target, loop);
+        var animator = new animation_Animator(target, loop, allowDiscreteAnimation);
+        key && (animator.targetName = key);
         this.addAnimator(animator, key);
         return animator;
     };
@@ -29713,14 +30498,14 @@ var Element = (function () {
         var elProto = Element.prototype;
         elProto.type = 'element';
         elProto.name = '';
-        elProto.ignore = false;
-        elProto.silent = false;
-        elProto.isGroup = false;
-        elProto.draggable = false;
-        elProto.dragging = false;
-        elProto.ignoreClip = false;
-        elProto.__inHover = false;
-        elProto.__dirty = REDARAW_BIT;
+        elProto.ignore =
+            elProto.silent =
+                elProto.isGroup =
+                    elProto.draggable =
+                        elProto.dragging =
+                            elProto.ignoreClip =
+                                elProto.__inHover = false;
+        elProto.__dirty = REDRAW_BIT;
         var logs = {};
         function logDeprecatedError(key, xKey, yKey) {
             if (!logs[key + xKey + yKey]) {
@@ -29731,7 +30516,9 @@ var Element = (function () {
         function createLegacyProperty(key, privateKey, xKey, yKey) {
             Object.defineProperty(elProto, key, {
                 get: function () {
-                    logDeprecatedError(key, xKey, yKey);
+                    if (true) {
+                        logDeprecatedError(key, xKey, yKey);
+                    }
                     if (!this[privateKey]) {
                         var pos = this[privateKey] = [];
                         enhanceArray(this, pos);
@@ -29739,7 +30526,9 @@ var Element = (function () {
                     return this[privateKey];
                 },
                 set: function (pos) {
-                    logDeprecatedError(key, xKey, yKey);
+                    if (true) {
+                        logDeprecatedError(key, xKey, yKey);
+                    }
                     this[xKey] = pos[0];
                     this[yKey] = pos[1];
                     this[privateKey] = pos;
@@ -29765,7 +30554,7 @@ var Element = (function () {
                 });
             }
         }
-        if (Object.defineProperty && (!core_env.browser.ie || core_env.browser.version > 8)) {
+        if (Object.defineProperty) {
             createLegacyProperty('position', '_legacyPos', 'x', 'y');
             createLegacyProperty('scale', '_legacyScale', 'scaleX', 'scaleY');
             createLegacyProperty('origin', '_legacyOrigin', 'originX', 'originY');
@@ -29816,7 +30605,10 @@ function animateTo(animatable, target, cfg, animationProps, reverse) {
         if (abortedCb) {
             animator.aborted(abortedCb);
         }
-        animator.start(cfg.easing, cfg.force);
+        if (cfg.force) {
+            animator.duration(cfg.duration);
+        }
+        animator.start(cfg.easing);
     }
     return animators;
 }
@@ -29865,60 +30657,77 @@ function copyValue(target, source, key) {
         target[key] = source[key];
     }
 }
-function animateToShallow(animatable, topKey, source, target, cfg, animationProps, animators, reverse) {
-    var animatableKeys = [];
-    var changedKeys = [];
+function isValueSame(val1, val2) {
+    return val1 === val2
+        || isArrayLike(val1) && isArrayLike(val2) && is1DArraySame(val1, val2);
+}
+function is1DArraySame(arr0, arr1) {
+    var len = arr0.length;
+    if (len !== arr1.length) {
+        return false;
+    }
+    for (var i = 0; i < len; i++) {
+        if (arr0[i] !== arr1[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+function animateToShallow(animatable, topKey, animateObj, target, cfg, animationProps, animators, reverse) {
     var targetKeys = keys(target);
     var duration = cfg.duration;
     var delay = cfg.delay;
     var additive = cfg.additive;
     var setToFinal = cfg.setToFinal;
     var animateAll = !isObject(animationProps);
+    var existsAnimators = animatable.animators;
+    var animationKeys = [];
     for (var k = 0; k < targetKeys.length; k++) {
         var innerKey = targetKeys[k];
-        if (source[innerKey] != null
-            && target[innerKey] != null
+        var targetVal = target[innerKey];
+        if (targetVal != null && animateObj[innerKey] != null
             && (animateAll || animationProps[innerKey])) {
-            if (isObject(target[innerKey]) && !isArrayLike(target[innerKey])) {
+            if (isObject(targetVal)
+                && !isArrayLike(targetVal)
+                && !isGradientObject(targetVal)) {
                 if (topKey) {
                     if (!reverse) {
-                        source[innerKey] = target[innerKey];
+                        animateObj[innerKey] = targetVal;
                         animatable.updateDuringAnimation(topKey);
                     }
                     continue;
                 }
-                animateToShallow(animatable, innerKey, source[innerKey], target[innerKey], cfg, animationProps && animationProps[innerKey], animators, reverse);
+                animateToShallow(animatable, innerKey, animateObj[innerKey], targetVal, cfg, animationProps && animationProps[innerKey], animators, reverse);
             }
             else {
-                animatableKeys.push(innerKey);
-                changedKeys.push(innerKey);
+                animationKeys.push(innerKey);
             }
         }
         else if (!reverse) {
-            source[innerKey] = target[innerKey];
+            animateObj[innerKey] = targetVal;
             animatable.updateDuringAnimation(topKey);
-            changedKeys.push(innerKey);
+            animationKeys.push(innerKey);
         }
     }
-    var keyLen = animatableKeys.length;
-    if (keyLen > 0
-        || (cfg.force && !animators.length)) {
-        var existsAnimators = animatable.animators;
-        var existsAnimatorsOnSameTarget = [];
+    var keyLen = animationKeys.length;
+    if (!additive && keyLen) {
         for (var i = 0; i < existsAnimators.length; i++) {
-            if (existsAnimators[i].targetName === topKey) {
-                existsAnimatorsOnSameTarget.push(existsAnimators[i]);
-            }
-        }
-        if (!additive && existsAnimatorsOnSameTarget.length) {
-            for (var i = 0; i < existsAnimatorsOnSameTarget.length; i++) {
-                var allAborted = existsAnimatorsOnSameTarget[i].stopTracks(changedKeys);
+            var animator = existsAnimators[i];
+            if (animator.targetName === topKey) {
+                var allAborted = animator.stopTracks(animationKeys);
                 if (allAborted) {
-                    var idx = indexOf(existsAnimators, existsAnimatorsOnSameTarget[i]);
+                    var idx = indexOf(existsAnimators, animator);
                     existsAnimators.splice(idx, 1);
                 }
             }
         }
+    }
+    if (!cfg.force) {
+        animationKeys = filter(animationKeys, function (key) { return !isValueSame(target[key], animateObj[key]); });
+        keyLen = animationKeys.length;
+    }
+    if (keyLen > 0
+        || (cfg.force && !animators.length)) {
         var revertedSource = void 0;
         var reversedTarget = void 0;
         var sourceClone = void 0;
@@ -29928,43 +30737,43 @@ function animateToShallow(animatable, topKey, source, target, cfg, animationProp
                 revertedSource = {};
             }
             for (var i = 0; i < keyLen; i++) {
-                var innerKey = animatableKeys[i];
-                reversedTarget[innerKey] = source[innerKey];
+                var innerKey = animationKeys[i];
+                reversedTarget[innerKey] = animateObj[innerKey];
                 if (setToFinal) {
                     revertedSource[innerKey] = target[innerKey];
                 }
                 else {
-                    source[innerKey] = target[innerKey];
+                    animateObj[innerKey] = target[innerKey];
                 }
             }
         }
         else if (setToFinal) {
             sourceClone = {};
             for (var i = 0; i < keyLen; i++) {
-                var innerKey = animatableKeys[i];
-                sourceClone[innerKey] = cloneValue(source[innerKey]);
-                copyValue(source, target, innerKey);
+                var innerKey = animationKeys[i];
+                sourceClone[innerKey] = cloneValue(animateObj[innerKey]);
+                copyValue(animateObj, target, innerKey);
             }
         }
-        var animator = new animation_Animator(source, false, additive ? existsAnimatorsOnSameTarget : null);
+        var animator = new animation_Animator(animateObj, false, false, additive ? filter(existsAnimators, function (animator) { return animator.targetName === topKey; }) : null);
         animator.targetName = topKey;
         if (cfg.scope) {
             animator.scope = cfg.scope;
         }
         if (setToFinal && revertedSource) {
-            animator.whenWithKeys(0, revertedSource, animatableKeys);
+            animator.whenWithKeys(0, revertedSource, animationKeys);
         }
         if (sourceClone) {
-            animator.whenWithKeys(0, sourceClone, animatableKeys);
+            animator.whenWithKeys(0, sourceClone, animationKeys);
         }
-        animator.whenWithKeys(duration == null ? 500 : duration, reverse ? reversedTarget : target, animatableKeys).delay(delay || 0);
+        animator.whenWithKeys(duration == null ? 500 : duration, reverse ? reversedTarget : target, animationKeys).delay(delay || 0);
         animatable.addAnimator(animator, topKey);
         animators.push(animator);
     }
 }
 /* harmony default export */ const lib_Element = (Element);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/Displayable.js
+;// ./node_modules/zrender/lib/graphic/Displayable.js
 
 
 
@@ -30273,7 +31082,7 @@ var Displayable = (function (_super) {
         dispProto.incremental = false;
         dispProto._rect = null;
         dispProto.dirtyRectTolerance = 0;
-        dispProto.__dirty = REDARAW_BIT | STYLE_CHANGED_BIT;
+        dispProto.__dirty = REDRAW_BIT | STYLE_CHANGED_BIT;
     })();
     return Displayable;
 }(lib_Element));
@@ -30290,354 +31099,7 @@ function isDisplayableCulled(el, width, height) {
 }
 /* harmony default export */ const graphic_Displayable = (Displayable);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/curve.js
-
-var mathPow = Math.pow;
-var mathSqrt = Math.sqrt;
-var curve_EPSILON = 1e-8;
-var EPSILON_NUMERIC = 1e-4;
-var THREE_SQRT = mathSqrt(3);
-var ONE_THIRD = 1 / 3;
-var _v0 = vector_create();
-var _v1 = vector_create();
-var _v2 = vector_create();
-function isAroundZero(val) {
-    return val > -curve_EPSILON && val < curve_EPSILON;
-}
-function curve_isNotAroundZero(val) {
-    return val > curve_EPSILON || val < -curve_EPSILON;
-}
-function curve_cubicAt(p0, p1, p2, p3, t) {
-    var onet = 1 - t;
-    return onet * onet * (onet * p0 + 3 * t * p1)
-        + t * t * (t * p3 + 3 * onet * p2);
-}
-function cubicDerivativeAt(p0, p1, p2, p3, t) {
-    var onet = 1 - t;
-    return 3 * (((p1 - p0) * onet + 2 * (p2 - p1) * t) * onet
-        + (p3 - p2) * t * t);
-}
-function cubicRootAt(p0, p1, p2, p3, val, roots) {
-    var a = p3 + 3 * (p1 - p2) - p0;
-    var b = 3 * (p2 - p1 * 2 + p0);
-    var c = 3 * (p1 - p0);
-    var d = p0 - val;
-    var A = b * b - 3 * a * c;
-    var B = b * c - 9 * a * d;
-    var C = c * c - 3 * b * d;
-    var n = 0;
-    if (isAroundZero(A) && isAroundZero(B)) {
-        if (isAroundZero(b)) {
-            roots[0] = 0;
-        }
-        else {
-            var t1 = -c / b;
-            if (t1 >= 0 && t1 <= 1) {
-                roots[n++] = t1;
-            }
-        }
-    }
-    else {
-        var disc = B * B - 4 * A * C;
-        if (isAroundZero(disc)) {
-            var K = B / A;
-            var t1 = -b / a + K;
-            var t2 = -K / 2;
-            if (t1 >= 0 && t1 <= 1) {
-                roots[n++] = t1;
-            }
-            if (t2 >= 0 && t2 <= 1) {
-                roots[n++] = t2;
-            }
-        }
-        else if (disc > 0) {
-            var discSqrt = mathSqrt(disc);
-            var Y1 = A * b + 1.5 * a * (-B + discSqrt);
-            var Y2 = A * b + 1.5 * a * (-B - discSqrt);
-            if (Y1 < 0) {
-                Y1 = -mathPow(-Y1, ONE_THIRD);
-            }
-            else {
-                Y1 = mathPow(Y1, ONE_THIRD);
-            }
-            if (Y2 < 0) {
-                Y2 = -mathPow(-Y2, ONE_THIRD);
-            }
-            else {
-                Y2 = mathPow(Y2, ONE_THIRD);
-            }
-            var t1 = (-b - (Y1 + Y2)) / (3 * a);
-            if (t1 >= 0 && t1 <= 1) {
-                roots[n++] = t1;
-            }
-        }
-        else {
-            var T = (2 * A * b - 3 * a * B) / (2 * mathSqrt(A * A * A));
-            var theta = Math.acos(T) / 3;
-            var ASqrt = mathSqrt(A);
-            var tmp = Math.cos(theta);
-            var t1 = (-b - 2 * ASqrt * tmp) / (3 * a);
-            var t2 = (-b + ASqrt * (tmp + THREE_SQRT * Math.sin(theta))) / (3 * a);
-            var t3 = (-b + ASqrt * (tmp - THREE_SQRT * Math.sin(theta))) / (3 * a);
-            if (t1 >= 0 && t1 <= 1) {
-                roots[n++] = t1;
-            }
-            if (t2 >= 0 && t2 <= 1) {
-                roots[n++] = t2;
-            }
-            if (t3 >= 0 && t3 <= 1) {
-                roots[n++] = t3;
-            }
-        }
-    }
-    return n;
-}
-function curve_cubicExtrema(p0, p1, p2, p3, extrema) {
-    var b = 6 * p2 - 12 * p1 + 6 * p0;
-    var a = 9 * p1 + 3 * p3 - 3 * p0 - 9 * p2;
-    var c = 3 * p1 - 3 * p0;
-    var n = 0;
-    if (isAroundZero(a)) {
-        if (curve_isNotAroundZero(b)) {
-            var t1 = -c / b;
-            if (t1 >= 0 && t1 <= 1) {
-                extrema[n++] = t1;
-            }
-        }
-    }
-    else {
-        var disc = b * b - 4 * a * c;
-        if (isAroundZero(disc)) {
-            extrema[0] = -b / (2 * a);
-        }
-        else if (disc > 0) {
-            var discSqrt = mathSqrt(disc);
-            var t1 = (-b + discSqrt) / (2 * a);
-            var t2 = (-b - discSqrt) / (2 * a);
-            if (t1 >= 0 && t1 <= 1) {
-                extrema[n++] = t1;
-            }
-            if (t2 >= 0 && t2 <= 1) {
-                extrema[n++] = t2;
-            }
-        }
-    }
-    return n;
-}
-function cubicSubdivide(p0, p1, p2, p3, t, out) {
-    var p01 = (p1 - p0) * t + p0;
-    var p12 = (p2 - p1) * t + p1;
-    var p23 = (p3 - p2) * t + p2;
-    var p012 = (p12 - p01) * t + p01;
-    var p123 = (p23 - p12) * t + p12;
-    var p0123 = (p123 - p012) * t + p012;
-    out[0] = p0;
-    out[1] = p01;
-    out[2] = p012;
-    out[3] = p0123;
-    out[4] = p0123;
-    out[5] = p123;
-    out[6] = p23;
-    out[7] = p3;
-}
-function cubicProjectPoint(x0, y0, x1, y1, x2, y2, x3, y3, x, y, out) {
-    var t;
-    var interval = 0.005;
-    var d = Infinity;
-    var prev;
-    var next;
-    var d1;
-    var d2;
-    _v0[0] = x;
-    _v0[1] = y;
-    for (var _t = 0; _t < 1; _t += 0.05) {
-        _v1[0] = curve_cubicAt(x0, x1, x2, x3, _t);
-        _v1[1] = curve_cubicAt(y0, y1, y2, y3, _t);
-        d1 = distSquare(_v0, _v1);
-        if (d1 < d) {
-            t = _t;
-            d = d1;
-        }
-    }
-    d = Infinity;
-    for (var i = 0; i < 32; i++) {
-        if (interval < EPSILON_NUMERIC) {
-            break;
-        }
-        prev = t - interval;
-        next = t + interval;
-        _v1[0] = curve_cubicAt(x0, x1, x2, x3, prev);
-        _v1[1] = curve_cubicAt(y0, y1, y2, y3, prev);
-        d1 = distSquare(_v1, _v0);
-        if (prev >= 0 && d1 < d) {
-            t = prev;
-            d = d1;
-        }
-        else {
-            _v2[0] = curve_cubicAt(x0, x1, x2, x3, next);
-            _v2[1] = curve_cubicAt(y0, y1, y2, y3, next);
-            d2 = distSquare(_v2, _v0);
-            if (next <= 1 && d2 < d) {
-                t = next;
-                d = d2;
-            }
-            else {
-                interval *= 0.5;
-            }
-        }
-    }
-    if (out) {
-        out[0] = curve_cubicAt(x0, x1, x2, x3, t);
-        out[1] = curve_cubicAt(y0, y1, y2, y3, t);
-    }
-    return mathSqrt(d);
-}
-function cubicLength(x0, y0, x1, y1, x2, y2, x3, y3, iteration) {
-    var px = x0;
-    var py = y0;
-    var d = 0;
-    var step = 1 / iteration;
-    for (var i = 1; i <= iteration; i++) {
-        var t = i * step;
-        var x = curve_cubicAt(x0, x1, x2, x3, t);
-        var y = curve_cubicAt(y0, y1, y2, y3, t);
-        var dx = x - px;
-        var dy = y - py;
-        d += Math.sqrt(dx * dx + dy * dy);
-        px = x;
-        py = y;
-    }
-    return d;
-}
-function curve_quadraticAt(p0, p1, p2, t) {
-    var onet = 1 - t;
-    return onet * (onet * p0 + 2 * t * p1) + t * t * p2;
-}
-function quadraticDerivativeAt(p0, p1, p2, t) {
-    return 2 * ((1 - t) * (p1 - p0) + t * (p2 - p1));
-}
-function quadraticRootAt(p0, p1, p2, val, roots) {
-    var a = p0 - 2 * p1 + p2;
-    var b = 2 * (p1 - p0);
-    var c = p0 - val;
-    var n = 0;
-    if (isAroundZero(a)) {
-        if (curve_isNotAroundZero(b)) {
-            var t1 = -c / b;
-            if (t1 >= 0 && t1 <= 1) {
-                roots[n++] = t1;
-            }
-        }
-    }
-    else {
-        var disc = b * b - 4 * a * c;
-        if (isAroundZero(disc)) {
-            var t1 = -b / (2 * a);
-            if (t1 >= 0 && t1 <= 1) {
-                roots[n++] = t1;
-            }
-        }
-        else if (disc > 0) {
-            var discSqrt = mathSqrt(disc);
-            var t1 = (-b + discSqrt) / (2 * a);
-            var t2 = (-b - discSqrt) / (2 * a);
-            if (t1 >= 0 && t1 <= 1) {
-                roots[n++] = t1;
-            }
-            if (t2 >= 0 && t2 <= 1) {
-                roots[n++] = t2;
-            }
-        }
-    }
-    return n;
-}
-function curve_quadraticExtremum(p0, p1, p2) {
-    var divider = p0 + p2 - 2 * p1;
-    if (divider === 0) {
-        return 0.5;
-    }
-    else {
-        return (p0 - p1) / divider;
-    }
-}
-function quadraticSubdivide(p0, p1, p2, t, out) {
-    var p01 = (p1 - p0) * t + p0;
-    var p12 = (p2 - p1) * t + p1;
-    var p012 = (p12 - p01) * t + p01;
-    out[0] = p0;
-    out[1] = p01;
-    out[2] = p012;
-    out[3] = p012;
-    out[4] = p12;
-    out[5] = p2;
-}
-function quadraticProjectPoint(x0, y0, x1, y1, x2, y2, x, y, out) {
-    var t;
-    var interval = 0.005;
-    var d = Infinity;
-    _v0[0] = x;
-    _v0[1] = y;
-    for (var _t = 0; _t < 1; _t += 0.05) {
-        _v1[0] = curve_quadraticAt(x0, x1, x2, _t);
-        _v1[1] = curve_quadraticAt(y0, y1, y2, _t);
-        var d1 = distSquare(_v0, _v1);
-        if (d1 < d) {
-            t = _t;
-            d = d1;
-        }
-    }
-    d = Infinity;
-    for (var i = 0; i < 32; i++) {
-        if (interval < EPSILON_NUMERIC) {
-            break;
-        }
-        var prev = t - interval;
-        var next = t + interval;
-        _v1[0] = curve_quadraticAt(x0, x1, x2, prev);
-        _v1[1] = curve_quadraticAt(y0, y1, y2, prev);
-        var d1 = distSquare(_v1, _v0);
-        if (prev >= 0 && d1 < d) {
-            t = prev;
-            d = d1;
-        }
-        else {
-            _v2[0] = curve_quadraticAt(x0, x1, x2, next);
-            _v2[1] = curve_quadraticAt(y0, y1, y2, next);
-            var d2 = distSquare(_v2, _v0);
-            if (next <= 1 && d2 < d) {
-                t = next;
-                d = d2;
-            }
-            else {
-                interval *= 0.5;
-            }
-        }
-    }
-    if (out) {
-        out[0] = curve_quadraticAt(x0, x1, x2, t);
-        out[1] = curve_quadraticAt(y0, y1, y2, t);
-    }
-    return mathSqrt(d);
-}
-function quadraticLength(x0, y0, x1, y1, x2, y2, iteration) {
-    var px = x0;
-    var py = y0;
-    var d = 0;
-    var step = 1 / iteration;
-    for (var i = 1; i <= iteration; i++) {
-        var t = i * step;
-        var x = curve_quadraticAt(x0, x1, x2, t);
-        var y = curve_quadraticAt(y0, y1, y2, t);
-        var dx = x - px;
-        var dy = y - py;
-        d += Math.sqrt(dx * dx + dy * dy);
-        px = x;
-        py = y;
-    }
-    return d;
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/bbox.js
+;// ./node_modules/zrender/lib/core/bbox.js
 
 
 var bbox_mathMin = Math.min;
@@ -30645,9 +31107,9 @@ var bbox_mathMax = Math.max;
 var mathSin = Math.sin;
 var mathCos = Math.cos;
 var PI2 = Math.PI * 2;
-var start = vector_create();
-var end = vector_create();
-var extremity = vector_create();
+var start = create();
+var end = create();
+var extremity = create();
 function fromPoints(points, min, max) {
     if (points.length === 0) {
         return;
@@ -30763,7 +31225,7 @@ function fromArc(x, y, rx, ry, startAngle, endAngle, anticlockwise, min, max) {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/PathProxy.js
+;// ./node_modules/zrender/lib/core/PathProxy.js
 
 
 
@@ -30788,7 +31250,6 @@ var PathProxy_mathMin = Math.min;
 var PathProxy_mathMax = Math.max;
 var PathProxy_mathCos = Math.cos;
 var PathProxy_mathSin = Math.sin;
-var PathProxy_mathSqrt = Math.sqrt;
 var mathAbs = Math.abs;
 var PI = Math.PI;
 var PathProxy_PI2 = PI * 2;
@@ -30867,10 +31328,6 @@ var PathProxy = (function () {
         if (this._saveData) {
             this._len = 0;
         }
-        if (this._lineDash) {
-            this._lineDash = null;
-            this._dashOffset = 0;
-        }
         if (this._pathSegLen) {
             this._pathSegLen = null;
             this._pathLen = 0;
@@ -30893,8 +31350,7 @@ var PathProxy = (function () {
         var exceedUnit = dx > this._ux || dy > this._uy;
         this.addData(CMD.L, x, y);
         if (this._ctx && exceedUnit) {
-            this._needsDash ? this._dashedLineTo(x, y)
-                : this._ctx.lineTo(x, y);
+            this._ctx.lineTo(x, y);
         }
         if (exceedUnit) {
             this._xi = x;
@@ -30912,26 +31368,27 @@ var PathProxy = (function () {
         return this;
     };
     PathProxy.prototype.bezierCurveTo = function (x1, y1, x2, y2, x3, y3) {
+        this._drawPendingPt();
         this.addData(CMD.C, x1, y1, x2, y2, x3, y3);
         if (this._ctx) {
-            this._needsDash ? this._dashedBezierTo(x1, y1, x2, y2, x3, y3)
-                : this._ctx.bezierCurveTo(x1, y1, x2, y2, x3, y3);
+            this._ctx.bezierCurveTo(x1, y1, x2, y2, x3, y3);
         }
         this._xi = x3;
         this._yi = y3;
         return this;
     };
     PathProxy.prototype.quadraticCurveTo = function (x1, y1, x2, y2) {
+        this._drawPendingPt();
         this.addData(CMD.Q, x1, y1, x2, y2);
         if (this._ctx) {
-            this._needsDash ? this._dashedQuadraticTo(x1, y1, x2, y2)
-                : this._ctx.quadraticCurveTo(x1, y1, x2, y2);
+            this._ctx.quadraticCurveTo(x1, y1, x2, y2);
         }
         this._xi = x2;
         this._yi = y2;
         return this;
     };
     PathProxy.prototype.arc = function (cx, cy, r, startAngle, endAngle, anticlockwise) {
+        this._drawPendingPt();
         tmpAngles[0] = startAngle;
         tmpAngles[1] = endAngle;
         normalizeArcAngles(tmpAngles, anticlockwise);
@@ -30945,12 +31402,14 @@ var PathProxy = (function () {
         return this;
     };
     PathProxy.prototype.arcTo = function (x1, y1, x2, y2, radius) {
+        this._drawPendingPt();
         if (this._ctx) {
             this._ctx.arcTo(x1, y1, x2, y2, radius);
         }
         return this;
     };
     PathProxy.prototype.rect = function (x, y, w, h) {
+        this._drawPendingPt();
         this._ctx && this._ctx.rect(x, y, w, h);
         this.addData(CMD.R, x, y, w, h);
         return this;
@@ -30962,7 +31421,6 @@ var PathProxy = (function () {
         var x0 = this._x0;
         var y0 = this._y0;
         if (ctx) {
-            this._needsDash && this._dashedLineTo(x0, y0);
             ctx.closePath();
         }
         this._xi = x0;
@@ -30976,27 +31434,6 @@ var PathProxy = (function () {
     PathProxy.prototype.stroke = function (ctx) {
         ctx && ctx.stroke();
         this.toStatic();
-    };
-    PathProxy.prototype.setLineDash = function (lineDash) {
-        if (lineDash instanceof Array) {
-            this._lineDash = lineDash;
-            this._dashIdx = 0;
-            var lineDashSum = 0;
-            for (var i = 0; i < lineDash.length; i++) {
-                lineDashSum += lineDash[i];
-            }
-            this._dashSum = lineDashSum;
-            this._needsDash = true;
-        }
-        else {
-            this._lineDash = null;
-            this._needsDash = false;
-        }
-        return this;
-    };
-    PathProxy.prototype.setLineDashOffset = function (offset) {
-        this._dashOffset = offset;
-        return this;
     };
     PathProxy.prototype.len = function () {
         return this._len;
@@ -31059,101 +31496,6 @@ var PathProxy = (function () {
             }
             this.data = newData;
         }
-    };
-    PathProxy.prototype._dashedLineTo = function (x1, y1) {
-        var dashSum = this._dashSum;
-        var lineDash = this._lineDash;
-        var ctx = this._ctx;
-        var offset = this._dashOffset;
-        var x0 = this._xi;
-        var y0 = this._yi;
-        var dx = x1 - x0;
-        var dy = y1 - y0;
-        var dist = PathProxy_mathSqrt(dx * dx + dy * dy);
-        var x = x0;
-        var y = y0;
-        var nDash = lineDash.length;
-        var dash;
-        var idx;
-        dx /= dist;
-        dy /= dist;
-        if (offset < 0) {
-            offset = dashSum + offset;
-        }
-        offset %= dashSum;
-        x -= offset * dx;
-        y -= offset * dy;
-        while ((dx > 0 && x <= x1) || (dx < 0 && x >= x1)
-            || (dx === 0 && ((dy > 0 && y <= y1) || (dy < 0 && y >= y1)))) {
-            idx = this._dashIdx;
-            dash = lineDash[idx];
-            x += dx * dash;
-            y += dy * dash;
-            this._dashIdx = (idx + 1) % nDash;
-            if ((dx > 0 && x < x0) || (dx < 0 && x > x0) || (dy > 0 && y < y0) || (dy < 0 && y > y0)) {
-                continue;
-            }
-            ctx[idx % 2 ? 'moveTo' : 'lineTo'](dx >= 0 ? PathProxy_mathMin(x, x1) : PathProxy_mathMax(x, x1), dy >= 0 ? PathProxy_mathMin(y, y1) : PathProxy_mathMax(y, y1));
-        }
-        dx = x - x1;
-        dy = y - y1;
-        this._dashOffset = -PathProxy_mathSqrt(dx * dx + dy * dy);
-    };
-    PathProxy.prototype._dashedBezierTo = function (x1, y1, x2, y2, x3, y3) {
-        var ctx = this._ctx;
-        var dashSum = this._dashSum;
-        var offset = this._dashOffset;
-        var lineDash = this._lineDash;
-        var x0 = this._xi;
-        var y0 = this._yi;
-        var bezierLen = 0;
-        var idx = this._dashIdx;
-        var nDash = lineDash.length;
-        var t;
-        var dx;
-        var dy;
-        var x;
-        var y;
-        var tmpLen = 0;
-        if (offset < 0) {
-            offset = dashSum + offset;
-        }
-        offset %= dashSum;
-        for (t = 0; t < 1; t += 0.1) {
-            dx = curve_cubicAt(x0, x1, x2, x3, t + 0.1)
-                - curve_cubicAt(x0, x1, x2, x3, t);
-            dy = curve_cubicAt(y0, y1, y2, y3, t + 0.1)
-                - curve_cubicAt(y0, y1, y2, y3, t);
-            bezierLen += PathProxy_mathSqrt(dx * dx + dy * dy);
-        }
-        for (; idx < nDash; idx++) {
-            tmpLen += lineDash[idx];
-            if (tmpLen > offset) {
-                break;
-            }
-        }
-        t = (tmpLen - offset) / bezierLen;
-        while (t <= 1) {
-            x = curve_cubicAt(x0, x1, x2, x3, t);
-            y = curve_cubicAt(y0, y1, y2, y3, t);
-            idx % 2 ? ctx.moveTo(x, y)
-                : ctx.lineTo(x, y);
-            t += lineDash[idx] / bezierLen;
-            idx = (idx + 1) % nDash;
-        }
-        (idx % 2 !== 0) && ctx.lineTo(x3, y3);
-        dx = x3 - x;
-        dy = y3 - y;
-        this._dashOffset = -PathProxy_mathSqrt(dx * dx + dy * dy);
-    };
-    PathProxy.prototype._dashedQuadraticTo = function (x1, y1, x2, y2) {
-        var x3 = x2;
-        var y3 = y2;
-        x2 = (x2 + 2 * x1) / 3;
-        y2 = (y2 + 2 * y1) / 3;
-        x1 = (this._xi + 2 * x1) / 3;
-        y1 = (this._yi + 2 * y1) / 3;
-        this._dashedBezierTo(x1, y1, x2, y2, x3, y3);
     };
     PathProxy.prototype.toStatic = function () {
         if (!this._saveData) {
@@ -31320,7 +31662,6 @@ var PathProxy = (function () {
                     var delta = data[i++];
                     var endAngle = delta + startAngle;
                     i += 1;
-                    var anticlockwise = !data[i++];
                     if (isFirst) {
                         x0 = PathProxy_mathCos(startAngle) * rx + cx;
                         y0 = PathProxy_mathSin(startAngle) * ry + cy;
@@ -31394,12 +31735,12 @@ var PathProxy = (function () {
                 x0 = xi;
                 y0 = yi;
             }
+            if (cmd !== CMD.L && pendingPtDist > 0) {
+                ctx.lineTo(pendingPtX, pendingPtY);
+                pendingPtDist = 0;
+            }
             switch (cmd) {
                 case CMD.M:
-                    if (pendingPtDist > 0) {
-                        ctx.lineTo(pendingPtX, pendingPtY);
-                        pendingPtDist = 0;
-                    }
                     x0 = xi = d[i++];
                     y0 = yi = d[i++];
                     ctx.moveTo(xi, yi);
@@ -31488,8 +31829,6 @@ var PathProxy = (function () {
                     var psi = d[i++];
                     var anticlockwise = !d[i++];
                     var r = (rx > ry) ? rx : ry;
-                    var scaleX = (rx > ry) ? 1 : rx / ry;
-                    var scaleY = (rx > ry) ? ry / rx : 1;
                     var isEllipse = mathAbs(rx - ry) > 1e-3;
                     var endAngle = startAngle + delta;
                     var breakBuild = false;
@@ -31549,10 +31888,6 @@ var PathProxy = (function () {
                     ctx.rect(x, y, width, height);
                     break;
                 case CMD.Z:
-                    if (pendingPtDist > 0) {
-                        ctx.lineTo(pendingPtX, pendingPtY);
-                        pendingPtDist = 0;
-                    }
                     if (drawPart) {
                         var l = pathSegLen[segCount++];
                         if (accumLength + l > displayedLength) {
@@ -31568,14 +31903,18 @@ var PathProxy = (function () {
             }
         }
     };
+    PathProxy.prototype.clone = function () {
+        var newProxy = new PathProxy();
+        var data = this.data;
+        newProxy.data = data.slice ? data.slice()
+            : Array.prototype.slice.call(data);
+        newProxy._len = this._len;
+        return newProxy;
+    };
     PathProxy.CMD = CMD;
     PathProxy.initDefaultProps = (function () {
         var proto = PathProxy.prototype;
         proto._saveData = true;
-        proto._needsDash = false;
-        proto._dashOffset = 0;
-        proto._dashIdx = 0;
-        proto._dashSum = 0;
         proto._ux = 0;
         proto._uy = 0;
         proto._pendingPtDist = 0;
@@ -31585,7 +31924,7 @@ var PathProxy = (function () {
 }());
 /* harmony default export */ const core_PathProxy = (PathProxy);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/line.js
+;// ./node_modules/zrender/lib/contain/line.js
 function containStroke(x0, y0, x1, y1, lineWidth, x, y) {
     if (lineWidth === 0) {
         return false;
@@ -31611,7 +31950,7 @@ function containStroke(x0, y0, x1, y1, lineWidth, x, y) {
     return _s <= _l / 2 * _l / 2;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/cubic.js
+;// ./node_modules/zrender/lib/contain/cubic.js
 
 function cubic_containStroke(x0, y0, x1, y1, x2, y2, x3, y3, lineWidth, x, y) {
     if (lineWidth === 0) {
@@ -31628,7 +31967,7 @@ function cubic_containStroke(x0, y0, x1, y1, x2, y2, x3, y3, lineWidth, x, y) {
     return d <= _l / 2;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/quadratic.js
+;// ./node_modules/zrender/lib/contain/quadratic.js
 
 function quadratic_containStroke(x0, y0, x1, y1, x2, y2, lineWidth, x, y) {
     if (lineWidth === 0) {
@@ -31645,7 +31984,7 @@ function quadratic_containStroke(x0, y0, x1, y1, x2, y2, lineWidth, x, y) {
     return d <= _l / 2;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/util.js
+;// ./node_modules/zrender/lib/contain/util.js
 var util_PI2 = Math.PI * 2;
 function normalizeRadian(angle) {
     angle %= util_PI2;
@@ -31655,7 +31994,7 @@ function normalizeRadian(angle) {
     return angle;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/arc.js
+;// ./node_modules/zrender/lib/contain/arc.js
 
 var arc_PI2 = Math.PI * 2;
 function arc_containStroke(cx, cy, r, startAngle, endAngle, anticlockwise, lineWidth, x, y) {
@@ -31692,7 +32031,7 @@ function arc_containStroke(cx, cy, r, startAngle, endAngle, anticlockwise, lineW
         || (angle + arc_PI2 >= startAngle && angle + arc_PI2 <= endAngle);
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/windingLine.js
+;// ./node_modules/zrender/lib/contain/windingLine.js
 function windingLine(x0, y0, x1, y1, x, y) {
     if ((y > y0 && y > y1) || (y < y0 && y < y1)) {
         return 0;
@@ -31709,7 +32048,7 @@ function windingLine(x0, y0, x1, y1, x, y) {
     return x_ === x ? Infinity : x_ > x ? dir : 0;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/contain/path.js
+;// ./node_modules/zrender/lib/contain/path.js
 
 
 
@@ -32018,7 +32357,8 @@ function path_containStroke(pathProxy, lineWidth, x, y) {
     return containPath(pathProxy, lineWidth, true, x, y);
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/Path.js
+;// ./node_modules/zrender/lib/graphic/Path.js
+
 
 
 
@@ -32052,10 +32392,9 @@ var DEFAULT_PATH_ANIMATION_PROPS = {
         miterLimit: true
     }, DEFAULT_COMMON_ANIMATION_PROPS.style)
 };
-var pathCopyParams = [
-    'x', 'y', 'rotation', 'scaleX', 'scaleY', 'originX', 'originY', 'invisible',
+var pathCopyParams = TRANSFORMABLE_PROPS.concat(['invisible',
     'culling', 'z', 'z2', 'zlevel', 'parent'
-];
+]);
 var Path = (function (_super) {
     __extends(Path, _super);
     function Path(opts) {
@@ -32086,7 +32425,7 @@ var Path = (function (_super) {
             for (var i = 0; i < pathCopyParams.length; ++i) {
                 decalEl[pathCopyParams[i]] = this[pathCopyParams[i]];
             }
-            decalEl.__dirty |= REDARAW_BIT;
+            decalEl.__dirty |= REDRAW_BIT;
         }
         else if (this._decalEl) {
             this._decalEl = null;
@@ -32163,9 +32502,15 @@ var Path = (function (_super) {
             }
         }
     };
-    Path.prototype.buildPath = function (ctx, shapeCfg, inBundle) { };
+    Path.prototype.buildPath = function (ctx, shapeCfg, inBatch) { };
     Path.prototype.pathUpdated = function () {
         this.__dirty &= ~SHAPE_CHANGED_BIT;
+    };
+    Path.prototype.getUpdatedPathProxy = function (inBatch) {
+        !this.path && this.createPathProxy();
+        this.path.beginPath();
+        this.buildPath(this.path, this.shape, inBatch);
+        return this.path;
     };
     Path.prototype.createPathProxy = function () {
         this.path = new core_PathProxy(false);
@@ -32200,9 +32545,9 @@ var Path = (function (_super) {
         }
         this._rect = rect;
         if (this.hasStroke() && this.path && this.path.len() > 0) {
-            var rectWithStroke = this._rectWithStroke || (this._rectWithStroke = rect.clone());
+            var rectStroke = this._rectStroke || (this._rectStroke = rect.clone());
             if (this.__dirty || needsUpdateRect) {
-                rectWithStroke.copy(rect);
+                rectStroke.copy(rect);
                 var lineScale = style.strokeNoScale ? this.getLineScale() : 1;
                 var w = style.lineWidth;
                 if (!this.hasFill()) {
@@ -32210,13 +32555,13 @@ var Path = (function (_super) {
                     w = Math.max(w, strokeContainThreshold == null ? 4 : strokeContainThreshold);
                 }
                 if (lineScale > 1e-10) {
-                    rectWithStroke.width += w / lineScale;
-                    rectWithStroke.height += w / lineScale;
-                    rectWithStroke.x -= w / lineScale / 2;
-                    rectWithStroke.y -= w / lineScale / 2;
+                    rectStroke.width += w / lineScale;
+                    rectStroke.height += w / lineScale;
+                    rectStroke.x -= w / lineScale / 2;
+                    rectStroke.y -= w / lineScale / 2;
                 }
             }
-            return rectWithStroke;
+            return rectStroke;
         }
         return rect;
     };
@@ -32406,13 +32751,14 @@ var Path = (function (_super) {
         pathProto.segmentIgnoreThreshold = 0;
         pathProto.subPixelOptimize = false;
         pathProto.autoBatch = false;
-        pathProto.__dirty = REDARAW_BIT | STYLE_CHANGED_BIT | SHAPE_CHANGED_BIT;
+        pathProto.__dirty = REDRAW_BIT | STYLE_CHANGED_BIT | SHAPE_CHANGED_BIT;
     })();
     return Path;
 }(graphic_Displayable));
 /* harmony default export */ const graphic_Path = (Path);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/TSpan.js
+;// ./node_modules/zrender/lib/graphic/TSpan.js
+
 
 
 
@@ -32476,7 +32822,7 @@ var TSpan = (function (_super) {
 TSpan.prototype.type = 'tspan';
 /* harmony default export */ const graphic_TSpan = (TSpan);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/Image.js
+;// ./node_modules/zrender/lib/graphic/Image.js
 
 
 
@@ -32551,7 +32897,7 @@ var ZRImage = (function (_super) {
 ZRImage.prototype.type = 'image';
 /* harmony default export */ const graphic_Image = (ZRImage);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/roundRect.js
+;// ./node_modules/zrender/lib/graphic/helper/roundRect.js
 function buildPath(ctx, shape) {
     var x = shape.x;
     var y = shape.y;
@@ -32628,7 +32974,7 @@ function buildPath(ctx, shape) {
     r1 !== 0 && ctx.arc(x + r1, y + r1, r1, Math.PI, Math.PI * 1.5);
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/subPixelOptimize.js
+;// ./node_modules/zrender/lib/graphic/helper/subPixelOptimize.js
 var round = Math.round;
 function subPixelOptimizeLine(outputShape, inputShape, style) {
     if (!inputShape) {
@@ -32686,7 +33032,7 @@ function subPixelOptimize(position, lineWidth, positiveOrNegative) {
         : (doubledPosition + (positiveOrNegative ? 1 : -1)) / 2;
 }
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Rect.js
+;// ./node_modules/zrender/lib/graphic/shape/Rect.js
 
 
 
@@ -32745,7 +33091,7 @@ var Rect = (function (_super) {
 Rect.prototype.type = 'rect';
 /* harmony default export */ const shape_Rect = (Rect);
 
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/Text.js
+;// ./node_modules/zrender/lib/graphic/Text.js
 
 
 
@@ -32796,6 +33142,7 @@ var ZRText = (function (_super) {
         return this._children;
     };
     ZRText.prototype.update = function () {
+        _super.prototype.update.call(this);
         if (this.styleChanged()) {
             this._updateSubTexts();
         }
@@ -32808,29 +33155,31 @@ var ZRText = (function (_super) {
             child.cursor = this.cursor;
             child.invisible = this.invisible;
         }
-        var attachedTransform = this.attachedTransform;
-        if (attachedTransform) {
-            attachedTransform.updateTransform();
-            var m = attachedTransform.transform;
-            if (m) {
-                this.transform = this.transform || [];
-                copy(this.transform, m);
-            }
-            else {
-                this.transform = null;
+    };
+    ZRText.prototype.updateTransform = function () {
+        var innerTransformable = this.innerTransformable;
+        if (innerTransformable) {
+            innerTransformable.updateTransform();
+            if (innerTransformable.transform) {
+                this.transform = innerTransformable.transform;
             }
         }
         else {
-            _super.prototype.update.call(this);
+            _super.prototype.updateTransform.call(this);
         }
+    };
+    ZRText.prototype.getLocalTransform = function (m) {
+        var innerTransformable = this.innerTransformable;
+        return innerTransformable
+            ? innerTransformable.getLocalTransform(m)
+            : _super.prototype.getLocalTransform.call(this, m);
     };
     ZRText.prototype.getComputedTransform = function () {
         if (this.__hostTarget) {
             this.__hostTarget.getComputedTransform();
             this.__hostTarget.updateInnerText(true);
         }
-        return this.attachedTransform ? this.attachedTransform.getComputedTransform()
-            : _super.prototype.getComputedTransform.call(this);
+        return _super.prototype.getComputedTransform.call(this);
     };
     ZRText.prototype._updateSubTexts = function () {
         this._childCursor = 0;
@@ -32885,7 +33234,9 @@ var ZRText = (function (_super) {
         this._defaultStyle = defaultTextStyle || DEFAULT_RICH_TEXT_COLOR;
     };
     ZRText.prototype.setTextContent = function (textContent) {
-        throw new Error('Can\'t attach text on another text');
+        if (true) {
+            throw new Error('Can\'t attach text on another text');
+        }
     };
     ZRText.prototype._mergeStyle = function (targetStyle, sourceStyle) {
         if (!sourceStyle) {
@@ -32933,21 +33284,22 @@ var ZRText = (function (_super) {
         var needDrawBg = needDrawBackground(style);
         var bgColorDrawn = !!(style.backgroundColor);
         var outerHeight = contentBlock.outerHeight;
+        var outerWidth = contentBlock.outerWidth;
+        var contentWidth = contentBlock.contentWidth;
         var textLines = contentBlock.lines;
         var lineHeight = contentBlock.lineHeight;
         var defaultStyle = this._defaultStyle;
+        this.isTruncated = !!contentBlock.isTruncated;
         var baseX = style.x || 0;
         var baseY = style.y || 0;
         var textAlign = style.align || defaultStyle.align || 'left';
         var verticalAlign = style.verticalAlign || defaultStyle.verticalAlign || 'top';
         var textX = baseX;
-        var textY = adjustTextY(baseY, contentBlock.contentHeight, verticalAlign);
+        var textY = text_adjustTextY(baseY, contentBlock.contentHeight, verticalAlign);
         if (needDrawBg || textPadding) {
-            var outerWidth_1 = contentBlock.width;
-            textPadding && (outerWidth_1 += textPadding[1] + textPadding[3]);
-            var boxX = adjustTextX(baseX, outerWidth_1, textAlign);
-            var boxY = adjustTextY(baseY, outerHeight, verticalAlign);
-            needDrawBg && this._renderBackground(style, style, boxX, boxY, outerWidth_1, outerHeight);
+            var boxX = adjustTextX(baseX, outerWidth, textAlign);
+            var boxY = text_adjustTextY(baseY, outerHeight, verticalAlign);
+            needDrawBg && this._renderBackground(style, style, boxX, boxY, outerWidth, outerHeight);
         }
         textY += lineHeight / 2;
         if (textPadding) {
@@ -32993,19 +33345,18 @@ var ZRText = (function (_super) {
                 subElStyle.shadowOffsetX = style.textShadowOffsetX || 0;
                 subElStyle.shadowOffsetY = style.textShadowOffsetY || 0;
             }
+            subElStyle.stroke = textStroke;
+            subElStyle.fill = textFill;
             if (textStroke) {
-                subElStyle.stroke = textStroke;
                 subElStyle.lineWidth = style.lineWidth || defaultLineWidth;
                 subElStyle.lineDash = style.lineDash;
                 subElStyle.lineDashOffset = style.lineDashOffset || 0;
             }
-            if (textFill) {
-                subElStyle.fill = textFill;
-            }
             subElStyle.font = textFont;
+            setSeparateFont(subElStyle, style);
             textY += lineHeight;
             if (fixedBoundingRect) {
-                el.setBoundingRect(new core_BoundingRect(adjustTextX(subElStyle.x, style.width, subElStyle.textAlign), adjustTextY(subElStyle.y, calculatedLineHeight, subElStyle.textBaseline), style.width, calculatedLineHeight));
+                el.setBoundingRect(new core_BoundingRect(adjustTextX(subElStyle.x, contentWidth, subElStyle.textAlign), text_adjustTextY(subElStyle.y, calculatedLineHeight, subElStyle.textBaseline), contentWidth, calculatedLineHeight));
             }
         }
     };
@@ -33022,8 +33373,9 @@ var ZRText = (function (_super) {
         var defaultStyle = this._defaultStyle;
         var textAlign = style.align || defaultStyle.align;
         var verticalAlign = style.verticalAlign || defaultStyle.verticalAlign;
+        this.isTruncated = !!contentBlock.isTruncated;
         var boxX = adjustTextX(baseX, outerWidth, textAlign);
-        var boxY = adjustTextY(baseY, outerHeight, verticalAlign);
+        var boxY = text_adjustTextY(baseY, outerHeight, verticalAlign);
         var xLeft = boxX;
         var lineTop = boxY;
         if (textPadding) {
@@ -33099,7 +33451,7 @@ var ZRText = (function (_super) {
         var defaultStyle = this._defaultStyle;
         var useDefaultFill = false;
         var defaultLineWidth = 0;
-        var textFill = getStroke('fill' in tokenStyle ? tokenStyle.fill
+        var textFill = getFill('fill' in tokenStyle ? tokenStyle.fill
             : 'fill' in style ? style.fill
                 : (useDefaultFill = true, defaultStyle.fill));
         var textStroke = getStroke('stroke' in tokenStyle ? tokenStyle.stroke
@@ -33123,6 +33475,7 @@ var ZRText = (function (_super) {
         subElStyle.textBaseline = 'middle';
         subElStyle.font = token.font || DEFAULT_FONT;
         subElStyle.opacity = retrieve3(tokenStyle.opacity, style.opacity, 1);
+        setSeparateFont(subElStyle, tokenStyle);
         if (textStroke) {
             subElStyle.lineWidth = retrieve3(tokenStyle.lineWidth, style.lineWidth, defaultLineWidth);
             subElStyle.lineDash = retrieve2(tokenStyle.lineDash, style.lineDash);
@@ -33134,7 +33487,7 @@ var ZRText = (function (_super) {
         }
         var textWidth = token.contentWidth;
         var textHeight = token.contentHeight;
-        el.setBoundingRect(new core_BoundingRect(adjustTextX(subElStyle.x, textWidth, subElStyle.textAlign), adjustTextY(subElStyle.y, textHeight, subElStyle.textBaseline), textWidth, textHeight));
+        el.setBoundingRect(new core_BoundingRect(adjustTextX(subElStyle.x, textWidth, subElStyle.textAlign), text_adjustTextY(subElStyle.y, textHeight, subElStyle.textBaseline), textWidth, textHeight));
     };
     ZRText.prototype._renderBackground = function (style, topStyle, x, y, width, height) {
         var textBackgroundColor = style.backgroundColor;
@@ -33146,7 +33499,7 @@ var ZRText = (function (_super) {
         var self = this;
         var rectEl;
         var imgEl;
-        if (isPlainOrGradientBg || (textBorderWidth && textBorderColor)) {
+        if (isPlainOrGradientBg || style.lineHeight || (textBorderWidth && textBorderColor)) {
             rectEl = this._getOrCreateChild(shape_Rect);
             rectEl.useStyle(rectEl.createStyle());
             rectEl.style.fill = null;
@@ -33197,24 +33550,11 @@ var ZRText = (function (_super) {
     };
     ZRText.makeFont = function (style) {
         var font = '';
-        if (style.fontSize || style.fontFamily || style.fontWeight) {
-            var fontSize = '';
-            if (typeof style.fontSize === 'string'
-                && (style.fontSize.indexOf('px') !== -1
-                    || style.fontSize.indexOf('rem') !== -1
-                    || style.fontSize.indexOf('em') !== -1)) {
-                fontSize = style.fontSize;
-            }
-            else if (!isNaN(+style.fontSize)) {
-                fontSize = style.fontSize + 'px';
-            }
-            else {
-                fontSize = '12px';
-            }
+        if (hasSeparateFont(style)) {
             font = [
                 style.fontStyle,
                 style.fontWeight,
-                fontSize,
+                parseFontSize(style.fontSize),
                 style.fontFamily || 'sans-serif'
             ].join(' ');
         }
@@ -33224,6 +33564,33 @@ var ZRText = (function (_super) {
 }(graphic_Displayable));
 var VALID_TEXT_ALIGN = { left: true, right: 1, center: 1 };
 var VALID_TEXT_VERTICAL_ALIGN = { top: 1, bottom: 1, middle: 1 };
+var FONT_PARTS = ['fontStyle', 'fontWeight', 'fontSize', 'fontFamily'];
+function parseFontSize(fontSize) {
+    if (typeof fontSize === 'string'
+        && (fontSize.indexOf('px') !== -1
+            || fontSize.indexOf('rem') !== -1
+            || fontSize.indexOf('em') !== -1)) {
+        return fontSize;
+    }
+    else if (!isNaN(+fontSize)) {
+        return fontSize + 'px';
+    }
+    else {
+        return DEFAULT_FONT_SIZE + 'px';
+    }
+}
+function setSeparateFont(targetStyle, sourceStyle) {
+    for (var i = 0; i < FONT_PARTS.length; i++) {
+        var fontProp = FONT_PARTS[i];
+        var val = sourceStyle[fontProp];
+        if (val != null) {
+            targetStyle[fontProp] = val;
+        }
+    }
+}
+function hasSeparateFont(style) {
+    return style.fontSize != null || style.fontFamily || style.fontWeight;
+}
 function normalizeTextStyle(style) {
     normalizeStyle(style);
     each(style.rich, normalizeStyle);
@@ -33272,11 +33639,12 @@ function getStyleText(style) {
 }
 function needDrawBackground(style) {
     return !!(style.backgroundColor
+        || style.lineHeight
         || (style.borderWidth && style.borderColor));
 }
 /* harmony default export */ const Text = (ZRText);
 
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/number.js
+;// ./node_modules/echarts/lib/util/number.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -33320,9 +33688,8 @@ function needDrawBackground(style) {
 * specific language governing permissions and limitations
 * under the License.
 */
-
 /*
-* A third-party license is embeded for some of the code in this file:
+* A third-party license is embedded for some of the code in this file:
 * The method "quantile" was copied from "d3.js".
 * (See more details in the comment of the method below.)
 * The use of the source code of this file is also subject to the terms
@@ -33330,11 +33697,10 @@ function needDrawBackground(style) {
 * </licenses/LICENSE-d3>).
 */
 
-var RADIAN_EPSILON = 1e-4; // Although chrome already enlarge this number to 100 for `toFixed`, but
+var RADIAN_EPSILON = 1e-4;
+// Although chrome already enlarge this number to 100 for `toFixed`, but
 // we sill follow the spec for compatibility.
-
 var ROUND_SUPPORTED_PRECISION_MAX = 20;
-
 function _trim(str) {
   return str.replace(/^\s+|\s+$/g, '');
 }
@@ -33345,8 +33711,6 @@ function _trim(str) {
  * @param  range  Range extent range[0] can be bigger than range[1]
  * @param  clamp Default to be false
  */
-
-
 function linearMap(val, domain, range, clamp) {
   var d0 = domain[0];
   var d1 = domain[1];
@@ -33354,16 +33718,14 @@ function linearMap(val, domain, range, clamp) {
   var r1 = range[1];
   var subDomain = d1 - d0;
   var subRange = r1 - r0;
-
   if (subDomain === 0) {
     return subRange === 0 ? r0 : (r0 + r1) / 2;
-  } // Avoid accuracy problem in edge, such as
+  }
+  // Avoid accuracy problem in edge, such as
   // 146.39 - 62.83 === 83.55999999999999.
   // See echarts/test/ut/spec/util/number.js#linearMap#accuracyError
   // It is a little verbose for efficiency considering this method
   // is a hotspot.
-
-
   if (clamp) {
     if (subDomain > 0) {
       if (val <= d0) {
@@ -33382,55 +33744,46 @@ function linearMap(val, domain, range, clamp) {
     if (val === d0) {
       return r0;
     }
-
     if (val === d1) {
       return r1;
     }
   }
-
   return (val - d0) / subDomain * subRange + r0;
 }
 /**
  * Convert a percent string to absolute number.
  * Returns NaN if percent is not a valid string or number
  */
-
 function number_parsePercent(percent, all) {
   switch (percent) {
     case 'center':
     case 'middle':
       percent = '50%';
       break;
-
     case 'left':
     case 'top':
       percent = '0%';
       break;
-
     case 'right':
     case 'bottom':
       percent = '100%';
       break;
   }
-
-  if (typeof percent === 'string') {
+  if (isString(percent)) {
     if (_trim(percent).match(/%$/)) {
       return parseFloat(percent) / 100 * all;
     }
-
     return parseFloat(percent);
   }
-
   return percent == null ? NaN : +percent;
 }
 function number_round(x, precision, returnStr) {
   if (precision == null) {
     precision = 10;
-  } // Avoid range error
-
-
-  precision = Math.min(Math.max(0, precision), ROUND_SUPPORTED_PRECISION_MAX); // PENDING: 1.005.toFixed(2) is '1.00' rather than '1.01'
-
+  }
+  // Avoid range error
+  precision = Math.min(Math.max(0, precision), ROUND_SUPPORTED_PRECISION_MAX);
+  // PENDING: 1.005.toFixed(2) is '1.00' rather than '1.01'
   x = (+x).toFixed(precision);
   return returnStr ? x : +x;
 }
@@ -33438,7 +33791,6 @@ function number_round(x, precision, returnStr) {
  * Inplacd asc sort arr.
  * The input arr will be modified.
  */
-
 function asc(arr) {
   arr.sort(function (a, b) {
     return a - b;
@@ -33448,13 +33800,12 @@ function asc(arr) {
 /**
  * Get precision.
  */
-
 function getPrecision(val) {
   val = +val;
-
   if (isNaN(val)) {
     return 0;
-  } // It is much faster than methods converting number to string as follows
+  }
+  // It is much faster than methods converting number to string as follows
   //      let tmp = val.toString();
   //      return tmp.length - 1 - tmp.indexOf('.');
   // especially when precision is low
@@ -33463,28 +33814,23 @@ function getPrecision(val) {
   //     (see https://jsbench.me/2vkpcekkvw/1)
   // (2) If the val is less than for example 1e-15, the result may be incorrect.
   //     (see test/ut/spec/util/number.test.ts `getPrecision_equal_random`)
-
-
   if (val > 1e-14) {
     var e = 1;
-
     for (var i = 0; i < 15; i++, e *= 10) {
       if (Math.round(val * e) / e === val) {
         return i;
       }
     }
   }
-
   return getPrecisionSafe(val);
 }
 /**
  * Get precision with slow but safe method
  */
-
 function getPrecisionSafe(val) {
   // toLowerCase for: '3.4E-12'
-  var str = val.toString().toLowerCase(); // Consider scientific notation: '3.4e-12' '3.4e+12'
-
+  var str = val.toString().toLowerCase();
+  // Consider scientific notation: '3.4e-12' '3.4e+12'
   var eIndex = str.indexOf('e');
   var exp = eIndex > 0 ? +str.slice(eIndex + 1) : 0;
   var significandPartLen = eIndex > 0 ? eIndex : str.length;
@@ -33495,20 +33841,19 @@ function getPrecisionSafe(val) {
 /**
  * Minimal dicernible data precisioin according to a single pixel.
  */
-
 function getPixelPrecision(dataExtent, pixelExtent) {
   var log = Math.log;
   var LN10 = Math.LN10;
   var dataQuantity = Math.floor(log(dataExtent[1] - dataExtent[0]) / LN10);
-  var sizeQuantity = Math.round(log(Math.abs(pixelExtent[1] - pixelExtent[0])) / LN10); // toFixed() digits argument must be between 0 and 20.
-
+  var sizeQuantity = Math.round(log(Math.abs(pixelExtent[1] - pixelExtent[0])) / LN10);
+  // toFixed() digits argument must be between 0 and 20.
   var precision = Math.min(Math.max(-dataQuantity + sizeQuantity, 0), 20);
   return !isFinite(precision) ? 20 : precision;
 }
 /**
  * Get a data of given precision, assuring the sum of percentages
  * in valueList is 1.
- * The largest remainer method is used.
+ * The largest remainder method is used.
  * https://en.wikipedia.org/wiki/Largest_remainder_method
  *
  * @param valueList a list of all data
@@ -33516,20 +33861,30 @@ function getPixelPrecision(dataExtent, pixelExtent) {
  * @param precision integer number showing digits of precision
  * @return percent ranging from 0 to 100
  */
-
 function getPercentWithPrecision(valueList, idx, precision) {
   if (!valueList[idx]) {
     return 0;
   }
-
+  var seats = getPercentSeats(valueList, precision);
+  return seats[idx] || 0;
+}
+/**
+ * Get a data of given precision, assuring the sum of percentages
+ * in valueList is 1.
+ * The largest remainder method is used.
+ * https://en.wikipedia.org/wiki/Largest_remainder_method
+ *
+ * @param valueList a list of all data
+ * @param precision integer number showing digits of precision
+ * @return {Array<number>}
+ */
+function getPercentSeats(valueList, precision) {
   var sum = reduce(valueList, function (acc, val) {
     return acc + (isNaN(val) ? 0 : val);
   }, 0);
-
   if (sum === 0) {
-    return 0;
+    return [];
   }
-
   var digits = Math.pow(10, precision);
   var votesPerQuota = map(valueList, function (val) {
     return (isNaN(val) ? 0 : val) / sum * digits * 100;
@@ -33544,47 +33899,44 @@ function getPercentWithPrecision(valueList, idx, precision) {
   }, 0);
   var remainder = map(votesPerQuota, function (votes, idx) {
     return votes - seats[idx];
-  }); // Has remainding votes.
-
+  });
+  // Has remainding votes.
   while (currentSum < targetSeats) {
     // Find next largest remainder.
     var max = Number.NEGATIVE_INFINITY;
     var maxId = null;
-
     for (var i = 0, len = remainder.length; i < len; ++i) {
       if (remainder[i] > max) {
         max = remainder[i];
         maxId = i;
       }
-    } // Add a vote to max remainder.
-
-
+    }
+    // Add a vote to max remainder.
     ++seats[maxId];
     remainder[maxId] = 0;
     ++currentSum;
   }
-
-  return seats[idx] / digits;
+  return map(seats, function (seat) {
+    return seat / digits;
+  });
 }
 /**
  * Solve the floating point adding problem like 0.1 + 0.2 === 0.30000000000000004
  * See <http://0.30000000000000004.com/>
  */
-
 function addSafe(val0, val1) {
-  var maxPrecision = Math.max(getPrecision(val0), getPrecision(val1)); // const multiplier = Math.pow(10, maxPrecision);
+  var maxPrecision = Math.max(getPrecision(val0), getPrecision(val1));
+  // const multiplier = Math.pow(10, maxPrecision);
   // return (Math.round(val0 * multiplier) + Math.round(val1 * multiplier)) / multiplier;
-
-  var sum = val0 + val1; // // PENDING: support more?
-
+  var sum = val0 + val1;
+  // // PENDING: support more?
   return maxPrecision > ROUND_SUPPORTED_PRECISION_MAX ? sum : number_round(sum, maxPrecision);
-} // Number.MAX_SAFE_INTEGER, ie do not support.
-
+}
+// Number.MAX_SAFE_INTEGER, ie do not support.
 var MAX_SAFE_INTEGER = 9007199254740991;
 /**
  * To 0 - 2 * PI, considering negative radian.
  */
-
 function remRadian(radian) {
   var pi2 = Math.PI * 2;
   return (radian % pi2 + pi2) % pi2;
@@ -33593,13 +33945,11 @@ function remRadian(radian) {
  * @param {type} radian
  * @return {boolean}
  */
-
 function isRadianAroundZero(val) {
   return val > -RADIAN_EPSILON && val < RADIAN_EPSILON;
-} // eslint-disable-next-line
-
+}
+// eslint-disable-next-line
 var TIME_REG = /^(?:(\d{4})(?:[-\/](\d{1,2})(?:[-\/](\d{1,2})(?:[T ](\d{1,2})(?::(\d{1,2})(?::(\d{1,2})(?:[.,](\d+))?)?)?(Z|[\+\-]\d\d:?\d\d)?)?)?)?)?$/; // jshint ignore:line
-
 /**
  * @param value valid type: number | string | Date, otherwise return `new Date(NaN)`
  *   These values can be accepted:
@@ -33610,35 +33960,33 @@ var TIME_REG = /^(?:(\d{4})(?:[-\/](\d{1,2})(?:[-\/](\d{1,2})(?:[T ](\d{1,2})(?:
  *     + time zone: '2012-03-01T12:22:33Z', '2012-03-01T12:22:33+8000', '2012-03-01T12:22:33-05:00',
  *     all of which will be treated as local time if time zone is not specified
  *     (see <https://momentjs.com/>).
- *   + Or other string format, including (all of which will be treated as loacal time):
+ *   + Or other string format, including (all of which will be treated as local time):
  *     '2012', '2012-3-1', '2012/3/1', '2012/03/01',
  *     '2009/6/12 2:00', '2009/6/12 2:05:08', '2009/6/12 2:05:08.123'
  *   + a timestamp, which represent a time in UTC.
  * @return date Never be null/undefined. If invalid, return `new Date(NaN)`.
  */
-
 function parseDate(value) {
   if (value instanceof Date) {
     return value;
-  } else if (typeof value === 'string') {
+  } else if (isString(value)) {
     // Different browsers parse date in different way, so we parse it manually.
     // Some other issues:
     // new Date('1970-01-01') is UTC,
     // new Date('1970/01/01') and new Date('1970-1-01') is local.
     // See issue #3623
     var match = TIME_REG.exec(value);
-
     if (!match) {
       // return Invalid Date.
       return new Date(NaN);
-    } // Use local time when no timezone offset specifed.
-
-
+    }
+    // Use local time when no timezone offset is specified.
     if (!match[8]) {
       // match[n] can only be string or undefined.
       // But take care of '12' + 1 => '121'.
-      return new Date(+match[1], +(match[2] || 1) - 1, +match[3] || 1, +match[4] || 0, +(match[5] || 0), +match[6] || 0, +match[7] || 0);
-    } // Timezoneoffset of Javascript Date has considered DST (Daylight Saving Time,
+      return new Date(+match[1], +(match[2] || 1) - 1, +match[3] || 1, +match[4] || 0, +(match[5] || 0), +match[6] || 0, match[7] ? +match[7].substring(0, 3) : 0);
+    }
+    // Timezoneoffset of Javascript Date has considered DST (Daylight Saving Time,
     // https://tc39.github.io/ecma262/#sec-daylight-saving-time-adjustment).
     // For example, system timezone is set as "Time Zone: America/Toronto",
     // then these code will get different result:
@@ -33646,18 +33994,15 @@ function parseDate(value) {
     // `new Date(1478412000000).getTimezoneOffset();  // get 300`
     // So we should not use `new Date`, but use `Date.UTC`.
     else {
-        var hour = +match[4] || 0;
-
-        if (match[8].toUpperCase() !== 'Z') {
-          hour -= +match[8].slice(0, 3);
-        }
-
-        return new Date(Date.UTC(+match[1], +(match[2] || 1) - 1, +match[3] || 1, hour, +(match[5] || 0), +match[6] || 0, +match[7] || 0));
+      var hour = +match[4] || 0;
+      if (match[8].toUpperCase() !== 'Z') {
+        hour -= +match[8].slice(0, 3);
       }
+      return new Date(Date.UTC(+match[1], +(match[2] || 1) - 1, +match[3] || 1, hour, +(match[5] || 0), +match[6] || 0, match[7] ? +match[7].substring(0, 3) : 0));
+    }
   } else if (value == null) {
     return new Date(NaN);
   }
-
   return new Date(Math.round(value));
 }
 /**
@@ -33666,7 +34011,6 @@ function parseDate(value) {
  * @param val
  * @return
  */
-
 function quantity(val) {
   return Math.pow(10, quantityExponent(val));
 }
@@ -33677,23 +34021,19 @@ function quantity(val) {
  * @param val non-negative value
  * @return
  */
-
 function quantityExponent(val) {
   if (val === 0) {
     return 0;
   }
-
   var exp = Math.floor(Math.log(val) / Math.LN10);
   /**
    * exp is expected to be the rounded-down result of the base-10 log of val.
    * But due to the precision loss with Math.log(val), we need to restore it
    * using 10^exp to make sure we can get val back from exp. #11249
    */
-
   if (val / Math.pow(10, exp) >= 10) {
     exp++;
   }
-
   return exp;
 }
 /**
@@ -33707,14 +34047,11 @@ function quantityExponent(val) {
  * @param  round
  * @return Niced number
  */
-
 function nice(val, round) {
   var exponent = quantityExponent(val);
   var exp10 = Math.pow(10, exponent);
   var f = val / exp10; // 1 <= f < 10
-
   var nf;
-
   if (round) {
     if (f < 1.5) {
       nf = 1;
@@ -33740,10 +34077,9 @@ function nice(val, round) {
       nf = 10;
     }
   }
-
-  val = nf * exp10; // Fix 3 * 0.1 === 0.30000000000000004 issue (see IEEE 754).
+  val = nf * exp10;
+  // Fix 3 * 0.1 === 0.30000000000000004 issue (see IEEE 754).
   // 20 is the uppper bound of toFixed.
-
   return exponent >= -20 ? +val.toFixed(exponent < 0 ? -exponent : 0) : val;
 }
 /**
@@ -33752,7 +34088,6 @@ function nice(val, round) {
  * See the license statement at the head of this file.
  * @param ascArr
  */
-
 function quantile(ascArr, p) {
   var H = (ascArr.length - 1) * p + 1;
   var h = Math.floor(H);
@@ -33782,43 +34117,36 @@ function quantile(ascArr, p) {
  *        of the interval, and Infinity can be used.
  * @return The origin list, which has been reformed.
  */
-
 function reformIntervals(list) {
   list.sort(function (a, b) {
     return littleThan(a, b, 0) ? -1 : 1;
   });
   var curr = -Infinity;
   var currClose = 1;
-
   for (var i = 0; i < list.length;) {
     var interval = list[i].interval;
     var close_1 = list[i].close;
-
     for (var lg = 0; lg < 2; lg++) {
       if (interval[lg] <= curr) {
         interval[lg] = curr;
         close_1[lg] = !lg ? 1 - currClose : 1;
       }
-
       curr = interval[lg];
       currClose = close_1[lg];
     }
-
     if (interval[0] === interval[1] && close_1[0] * close_1[1] !== 1) {
       list.splice(i, 1);
     } else {
       i++;
     }
   }
-
   return list;
-
   function littleThan(a, b, lg) {
     return a.interval[lg] < b.interval[lg] || a.interval[lg] === b.interval[lg] && (a.close[lg] - b.close[lg] === (!lg ? 1 : -1) || !lg && littleThan(a, b, 1));
   }
 }
 /**
- * [Numberic is defined as]:
+ * [Numeric is defined as]:
  *     `parseFloat(val) == val`
  * For example:
  * numeric:
@@ -33833,17 +34161,15 @@ function reformIntervals(list) {
  * @test See full test cases in `test/ut/spec/util/number.js`.
  * @return Must be a typeof number. If not numeric, return NaN.
  */
-
 function numericToNumber(val) {
   var valFloat = parseFloat(val);
   return valFloat == val // eslint-disable-line eqeqeq
-  && (valFloat !== 0 || typeof val !== 'string' || val.indexOf('x') <= 0) // For case ' 0x0 '.
+  && (valFloat !== 0 || !isString(val) || val.indexOf('x') <= 0) // For case ' 0x0 '.
   ? valFloat : NaN;
 }
 /**
  * Definition of "numeric": see `numericToNumber`.
  */
-
 function isNumeric(val) {
   return !isNaN(numericToNumber(val));
 }
@@ -33852,43 +34178,37 @@ function isNumeric(val) {
  * this auto generated marker id.
  * @return An positive integer.
  */
-
 function getRandomIdBase() {
   return Math.round(Math.random() * 9);
 }
 /**
- * Get the greatest common dividor
+ * Get the greatest common divisor.
  *
  * @param {number} a one number
  * @param {number} b the other number
  */
-
 function getGreatestCommonDividor(a, b) {
   if (b === 0) {
     return a;
   }
-
   return getGreatestCommonDividor(b, a % b);
 }
 /**
- * Get the least common multiple
+ * Get the least common multiple.
  *
  * @param {number} a one number
  * @param {number} b the other number
  */
-
 function getLeastCommonMultiple(a, b) {
   if (a == null) {
     return b;
   }
-
   if (b == null) {
     return a;
   }
-
   return a * b / getGreatestCommonDividor(a, b);
 }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/log.js
+;// ./node_modules/echarts/lib/util/log.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -33935,35 +34255,34 @@ function getLeastCommonMultiple(a, b) {
 
 var ECHARTS_PREFIX = '[ECharts] ';
 var storedLogs = {};
-var hasConsole = typeof console !== 'undefined' // eslint-disable-next-line
+var hasConsole = typeof console !== 'undefined'
+// eslint-disable-next-line
 && console.warn && console.log;
-function log(str) {
+function outputLog(type, str, onlyOnce) {
   if (hasConsole) {
+    if (onlyOnce) {
+      if (storedLogs[str]) {
+        return;
+      }
+      storedLogs[str] = true;
+    }
     // eslint-disable-next-line
-    console.log(ECHARTS_PREFIX + str);
+    console[type](ECHARTS_PREFIX + str);
   }
 }
-function warn(str) {
-  if (hasConsole) {
-    console.warn(ECHARTS_PREFIX + str);
-  }
+function log(str, onlyOnce) {
+  outputLog('log', str, onlyOnce);
 }
-function error(str) {
-  if (hasConsole) {
-    console.error(ECHARTS_PREFIX + str);
-  }
+function warn(str, onlyOnce) {
+  outputLog('warn', str, onlyOnce);
+}
+function error(str, onlyOnce) {
+  outputLog('error', str, onlyOnce);
 }
 function deprecateLog(str) {
   if (true) {
-    if (storedLogs[str]) {
-      // Not display duplicate message.
-      return;
-    }
-
-    if (hasConsole) {
-      storedLogs[str] = true;
-      console.warn(ECHARTS_PREFIX + 'DEPRECATED: ' + str);
-    }
+    // Not display duplicate message.
+    outputLog('warn', 'DEPRECATED: ' + str, true);
   }
 }
 function deprecateReplaceLog(oldOpt, newOpt, scope) {
@@ -33971,55 +34290,33 @@ function deprecateReplaceLog(oldOpt, newOpt, scope) {
     deprecateLog((scope ? "[" + scope + "]" : '') + (oldOpt + " is deprecated, use " + newOpt + " instead."));
   }
 }
-function consoleLog() {
-  var args = [];
-
-  for (var _i = 0; _i < arguments.length; _i++) {
-    args[_i] = arguments[_i];
-  }
-
-  if (true) {
-    /* eslint-disable no-console */
-    if (typeof console !== 'undefined' && console.log) {
-      console.log.apply(console, args);
-    }
-    /* eslint-enable no-console */
-
-  }
-}
 /**
  * If in __DEV__ environment, get console printable message for users hint.
  * Parameters are separated by ' '.
- * @usuage
+ * @usage
  * makePrintable('This is an error on', someVar, someObj);
  *
  * @param hintInfo anything about the current execution context to hint users.
  * @throws Error
  */
-
 function makePrintable() {
   var hintInfo = [];
-
   for (var _i = 0; _i < arguments.length; _i++) {
     hintInfo[_i] = arguments[_i];
   }
-
   var msg = '';
-
   if (true) {
     // Fuzzy stringify for print.
     // This code only exist in dev environment.
     var makePrintableStringIfPossible_1 = function (val) {
       return val === void 0 ? 'undefined' : val === Infinity ? 'Infinity' : val === -Infinity ? '-Infinity' : eqNaN(val) ? 'NaN' : val instanceof Date ? 'Date(' + val.toISOString() + ')' : isFunction(val) ? 'function () { ... }' : isRegExp(val) ? val + '' : null;
     };
-
     msg = map(hintInfo, function (arg) {
       if (isString(arg)) {
         // Print without quotation mark for some statement.
         return arg;
       } else {
         var printableStr = makePrintableStringIfPossible_1(arg);
-
         if (printableStr != null) {
           return printableStr;
         } else if (typeof JSON !== 'undefined' && JSON.stringify) {
@@ -34027,7 +34324,8 @@ function makePrintable() {
             return JSON.stringify(arg, function (n, val) {
               var printableStr = makePrintableStringIfPossible_1(val);
               return printableStr == null ? val : printableStr;
-            }); // In most cases the info object is small, so do not line break.
+            });
+            // In most cases the info object is small, so do not line break.
           } catch (err) {
             return '?';
           }
@@ -34037,17 +34335,15 @@ function makePrintable() {
       }
     }).join(' ');
   }
-
   return msg;
 }
 /**
  * @throws Error
  */
-
 function throwError(msg) {
   throw new Error(msg);
 }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/model.js
+;// ./node_modules/echarts/lib/util/model.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -34095,13 +34391,14 @@ function throwError(msg) {
 
 
 
-
+function model_interpolateNumber(p0, p1, percent) {
+  return (p1 - p0) * percent + p0;
+}
 /**
  * Make the name displayable. But we should
  * make sure it is not duplicated with user
  * specified name, so use '\0';
  */
-
 var DUMMY_COMPONENT_NAME_PREFIX = 'series\0';
 var INTERNAL_COMPONENT_ID_PREFIX = '\0_ec_\0';
 /**
@@ -34109,7 +34406,6 @@ var INTERNAL_COMPONENT_ID_PREFIX = '\0_ec_\0';
  * @param  {*} value
  * @return {Array} [value] or value
  */
-
 function normalizeToArray(value) {
   return value instanceof Array ? value : value == null ? [] : [value];
 }
@@ -34125,36 +34421,33 @@ function normalizeToArray(value) {
  *          label: { show: true }
  *     }
  */
-
 function defaultEmphasis(opt, key, subOpts) {
   // Caution: performance sensitive.
   if (opt) {
     opt[key] = opt[key] || {};
     opt.emphasis = opt.emphasis || {};
-    opt.emphasis[key] = opt.emphasis[key] || {}; // Default emphasis option from normal
-
+    opt.emphasis[key] = opt.emphasis[key] || {};
+    // Default emphasis option from normal
     for (var i = 0, len = subOpts.length; i < len; i++) {
       var subOptName = subOpts[i];
-
       if (!opt.emphasis[key].hasOwnProperty(subOptName) && opt[key].hasOwnProperty(subOptName)) {
         opt.emphasis[key][subOptName] = opt[key][subOptName];
       }
     }
   }
 }
-var TEXT_STYLE_OPTIONS = ['fontStyle', 'fontWeight', 'fontSize', 'fontFamily', 'rich', 'tag', 'color', 'textBorderColor', 'textBorderWidth', 'width', 'height', 'lineHeight', 'align', 'verticalAlign', 'baseline', 'shadowColor', 'shadowBlur', 'shadowOffsetX', 'shadowOffsetY', 'textShadowColor', 'textShadowBlur', 'textShadowOffsetX', 'textShadowOffsetY', 'backgroundColor', 'borderColor', 'borderWidth', 'borderRadius', 'padding']; // modelUtil.LABEL_OPTIONS = modelUtil.TEXT_STYLE_OPTIONS.concat([
+var TEXT_STYLE_OPTIONS = ['fontStyle', 'fontWeight', 'fontSize', 'fontFamily', 'rich', 'tag', 'color', 'textBorderColor', 'textBorderWidth', 'width', 'height', 'lineHeight', 'align', 'verticalAlign', 'baseline', 'shadowColor', 'shadowBlur', 'shadowOffsetX', 'shadowOffsetY', 'textShadowColor', 'textShadowBlur', 'textShadowOffsetX', 'textShadowOffsetY', 'backgroundColor', 'borderColor', 'borderWidth', 'borderRadius', 'padding'];
+// modelUtil.LABEL_OPTIONS = modelUtil.TEXT_STYLE_OPTIONS.concat([
 //     'position', 'offset', 'rotate', 'origin', 'show', 'distance', 'formatter',
 //     'fontStyle', 'fontWeight', 'fontSize', 'fontFamily',
 //     // FIXME: deprecated, check and remove it.
 //     'textStyle'
 // ]);
-
 /**
- * The method do not ensure performance.
+ * The method does not ensure performance.
  * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
- * This helper method retieves value from data.
+ * This helper method retrieves value from data.
  */
-
 function getDataItemValue(dataItem) {
   return isObject(dataItem) && !isArray(dataItem) && !(dataItem instanceof Date) ? dataItem.value : dataItem;
 }
@@ -34162,9 +34455,9 @@ function getDataItemValue(dataItem) {
  * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
  * This helper method determine if dataItem has extra option besides value
  */
-
 function isDataItemOption(dataItem) {
-  return isObject(dataItem) && !(dataItem instanceof Array); // // markLine data can be array
+  return isObject(dataItem) && !(dataItem instanceof Array);
+  // // markLine data can be array
   // && !(dataItem[0] && isObject(dataItem[0]) && !(dataItem[0] instanceof Array));
 }
 ;
@@ -34180,93 +34473,82 @@ function isDataItemOption(dataItem) {
  *
  * Mode "replaceMege":
  *     (1) Only the id mapped components will be merged.
- *     (2) Other existing components (except internal compoonets) will be removed.
+ *     (2) Other existing components (except internal components) will be removed.
  *     (3) Other new options will be used to create new component.
- *     (4) The index of the existing compoents will not be modified.
+ *     (4) The index of the existing components will not be modified.
  *     That means their might be "hole" after the removal.
  *     The new components are created first at those available index.
  *
  * Mode "replaceAll":
  *     This mode try to support that reproduce an echarts instance from another
  *     echarts instance (via `getOption`) in some simple cases.
- *     In this senario, the `result` index are exactly the consistent with the `newCmptOptions`,
- *     which ensures the compoennt index referring (like `xAxisIndex: ?`) corrent. That is,
+ *     In this scenario, the `result` index are exactly the consistent with the `newCmptOptions`,
+ *     which ensures the component index referring (like `xAxisIndex: ?`) corrent. That is,
  *     the "hole" in `newCmptOptions` will also be kept.
  *     On the contrary, other modes try best to eliminate holes.
  *     PENDING: This is an experimental mode yet.
  *
  * @return See the comment of <MappingResult>.
  */
-
 function mappingToExists(existings, newCmptOptions, mode) {
   var isNormalMergeMode = mode === 'normalMerge';
   var isReplaceMergeMode = mode === 'replaceMerge';
   var isReplaceAllMode = mode === 'replaceAll';
   existings = existings || [];
   newCmptOptions = (newCmptOptions || []).slice();
-  var existingIdIdxMap = createHashMap(); // Validate id and name on user input option.
-
+  var existingIdIdxMap = createHashMap();
+  // Validate id and name on user input option.
   each(newCmptOptions, function (cmptOption, index) {
     if (!isObject(cmptOption)) {
       newCmptOptions[index] = null;
       return;
     }
-
     if (true) {
       // There is some legacy case that name is set as `false`.
       // But should work normally rather than throw error.
       if (cmptOption.id != null && !isValidIdOrName(cmptOption.id)) {
         warnInvalidateIdOrName(cmptOption.id);
       }
-
       if (cmptOption.name != null && !isValidIdOrName(cmptOption.name)) {
         warnInvalidateIdOrName(cmptOption.name);
       }
     }
   });
   var result = prepareResult(existings, existingIdIdxMap, mode);
-
   if (isNormalMergeMode || isReplaceMergeMode) {
     mappingById(result, existings, existingIdIdxMap, newCmptOptions);
   }
-
   if (isNormalMergeMode) {
     mappingByName(result, newCmptOptions);
   }
-
   if (isNormalMergeMode || isReplaceMergeMode) {
     mappingByIndex(result, newCmptOptions, isReplaceMergeMode);
   } else if (isReplaceAllMode) {
     mappingInReplaceAllMode(result, newCmptOptions);
   }
-
-  makeIdAndName(result); // The array `result` MUST NOT contain elided items, otherwise the
-  // forEach will ommit those items and result in incorrect result.
-
+  makeIdAndName(result);
+  // The array `result` MUST NOT contain elided items, otherwise the
+  // forEach will omit those items and result in incorrect result.
   return result;
 }
-
 function prepareResult(existings, existingIdIdxMap, mode) {
   var result = [];
-
   if (mode === 'replaceAll') {
     return result;
-  } // Do not use native `map` to in case that the array `existings`
-  // contains elided items, which will be ommited.
-
-
+  }
+  // Do not use native `map` to in case that the array `existings`
+  // contains elided items, which will be omitted.
   for (var index = 0; index < existings.length; index++) {
-    var existing = existings[index]; // Because of replaceMerge, `existing` may be null/undefined.
-
+    var existing = existings[index];
+    // Because of replaceMerge, `existing` may be null/undefined.
     if (existing && existing.id != null) {
       existingIdIdxMap.set(existing.id, index);
-    } // For non-internal-componnets:
+    }
+    // For non-internal-componnets:
     //     Mode "normalMerge": all existings kept.
     //     Mode "replaceMerge": all existing removed unless mapped by id.
     // For internal-components:
     //     go with "replaceMerge" approach in both mode.
-
-
     result.push({
       existing: mode === 'replaceMerge' || isComponentIdInternal(existing) ? null : existing,
       newOption: null,
@@ -34274,42 +34556,35 @@ function prepareResult(existings, existingIdIdxMap, mode) {
       brandNew: null
     });
   }
-
   return result;
 }
-
 function mappingById(result, existings, existingIdIdxMap, newCmptOptions) {
   // Mapping by id if specified.
   each(newCmptOptions, function (cmptOption, index) {
     if (!cmptOption || cmptOption.id == null) {
       return;
     }
-
     var optionId = makeComparableKey(cmptOption.id);
     var existingIdx = existingIdIdxMap.get(optionId);
-
     if (existingIdx != null) {
       var resultItem = result[existingIdx];
       assert(!resultItem.newOption, 'Duplicated option on id "' + optionId + '".');
-      resultItem.newOption = cmptOption; // In both mode, if id matched, new option will be merged to
+      resultItem.newOption = cmptOption;
+      // In both mode, if id matched, new option will be merged to
       // the existings rather than creating new component model.
-
       resultItem.existing = existings[existingIdx];
       newCmptOptions[index] = null;
     }
   });
 }
-
 function mappingByName(result, newCmptOptions) {
   // Mapping by name if specified.
   each(newCmptOptions, function (cmptOption, index) {
     if (!cmptOption || cmptOption.name == null) {
       return;
     }
-
     for (var i = 0; i < result.length; i++) {
       var existing = result[i].existing;
-
       if (!result[i].newOption // Consider name: two map to one.
       // Can not match when both ids existing but different.
       && existing && (existing.id == null || cmptOption.id == null) && !isComponentIdInternal(cmptOption) && !isComponentIdInternal(existing) && keyExistAndEqual('name', existing, cmptOption)) {
@@ -34320,29 +34595,28 @@ function mappingByName(result, newCmptOptions) {
     }
   });
 }
-
 function mappingByIndex(result, newCmptOptions, brandNew) {
   each(newCmptOptions, function (cmptOption) {
     if (!cmptOption) {
       return;
-    } // Find the first place that not mapped by id and not internal component (consider the "hole").
-
-
+    }
+    // Find the first place that not mapped by id and not internal component (consider the "hole").
     var resultItem;
     var nextIdx = 0;
-
-    while ( // Be `!resultItem` only when `nextIdx >= result.length`.
-    (resultItem = result[nextIdx]) && ( // (1) Existing models that already have id should be able to mapped to. Because
+    while (
+    // Be `!resultItem` only when `nextIdx >= result.length`.
+    (resultItem = result[nextIdx]
+    // (1) Existing models that already have id should be able to mapped to. Because
     // after mapping performed, model will always be assigned with an id if user not given.
     // After that all models have id.
     // (2) If new option has id, it can only set to a hole or append to the last. It should
     // not be merged to the existings with different id. Because id should not be overwritten.
     // (3) Name can be overwritten, because axis use name as 'show label text'.
-    resultItem.newOption || isComponentIdInternal(resultItem.existing) || // In mode "replaceMerge", here no not-mapped-non-internal-existing.
+    ) && (resultItem.newOption || isComponentIdInternal(resultItem.existing) ||
+    // In mode "replaceMerge", here no not-mapped-non-internal-existing.
     resultItem.existing && cmptOption.id != null && !keyExistAndEqual('id', cmptOption, resultItem.existing))) {
       nextIdx++;
     }
-
     if (resultItem) {
       resultItem.newOption = cmptOption;
       resultItem.brandNew = brandNew;
@@ -34354,15 +34628,13 @@ function mappingByIndex(result, newCmptOptions, brandNew) {
         keyInfo: null
       });
     }
-
     nextIdx++;
   });
 }
-
 function mappingInReplaceAllMode(result, newCmptOptions) {
   each(newCmptOptions, function (cmptOption) {
     // The feature "reproduce" requires "hole" will also reproduced
-    // in case that compoennt index referring are broken.
+    // in case that component index referring are broken.
     result.push({
       newOption: cmptOption,
       brandNew: true,
@@ -34375,8 +34647,6 @@ function mappingInReplaceAllMode(result, newCmptOptions) {
  * Make id and name for mapping result (result of mappingToExists)
  * into `keyInfo` field.
  */
-
-
 function makeIdAndName(mapResult) {
   // We use this id to hash component models and view instances
   // in echarts. id can be specified by user, or auto generated.
@@ -34393,30 +34663,28 @@ function makeIdAndName(mapResult) {
     existing && idMap.set(existing.id, item);
   });
   each(mapResult, function (item) {
-    var opt = item.newOption; // Force ensure id not duplicated.
-
+    var opt = item.newOption;
+    // Force ensure id not duplicated.
     assert(!opt || opt.id == null || !idMap.get(opt.id) || idMap.get(opt.id) === item, 'id duplicates: ' + (opt && opt.id));
     opt && opt.id != null && idMap.set(opt.id, item);
     !item.keyInfo && (item.keyInfo = {});
-  }); // Make name and id.
-
+  });
+  // Make name and id.
   each(mapResult, function (item, index) {
     var existing = item.existing;
     var opt = item.newOption;
     var keyInfo = item.keyInfo;
-
     if (!isObject(opt)) {
       return;
-    } // name can be overwitten. Consider case: axis.name = '20km'.
+    }
+    // Name can be overwritten. Consider case: axis.name = '20km'.
     // But id generated by name will not be changed, which affect
     // only in that case: setOption with 'not merge mode' and view
     // instance will be recreated, which can be accepted.
-
-
-    keyInfo.name = opt.name != null ? makeComparableKey(opt.name) : existing ? existing.name // Avoid diffferent series has the same name,
+    keyInfo.name = opt.name != null ? makeComparableKey(opt.name) : existing ? existing.name
+    // Avoid that different series has the same name,
     // because name may be used like in color pallet.
     : DUMMY_COMPONENT_NAME_PREFIX + index;
-
     if (existing) {
       keyInfo.id = makeComparableKey(existing.id);
     } else if (opt.id != null) {
@@ -34428,59 +34696,47 @@ function makeIdAndName(mapResult) {
       // Series with the same name between optionA and optionB
       // should be mapped.
       var idNum = 0;
-
       do {
         keyInfo.id = '\0' + keyInfo.name + '\0' + idNum++;
       } while (idMap.get(keyInfo.id));
     }
-
     idMap.set(keyInfo.id, item);
   });
 }
-
 function keyExistAndEqual(attr, obj1, obj2) {
   var key1 = convertOptionIdName(obj1[attr], null);
-  var key2 = convertOptionIdName(obj2[attr], null); // See `MappingExistingItem`. `id` and `name` trade string equals to number.
-
+  var key2 = convertOptionIdName(obj2[attr], null);
+  // See `MappingExistingItem`. `id` and `name` trade string equals to number.
   return key1 != null && key2 != null && key1 === key2;
 }
 /**
  * @return return null if not exist.
  */
-
-
 function makeComparableKey(val) {
   if (true) {
     if (val == null) {
       throw new Error();
     }
   }
-
   return convertOptionIdName(val, '');
 }
-
 function convertOptionIdName(idOrName, defaultValue) {
   if (idOrName == null) {
     return defaultValue;
   }
-
-  var type = typeof idOrName;
-  return type === 'string' ? idOrName : type === 'number' || isStringSafe(idOrName) ? idOrName + '' : defaultValue;
+  return isString(idOrName) ? idOrName : isNumber(idOrName) || isStringSafe(idOrName) ? idOrName + '' : defaultValue;
 }
-
 function warnInvalidateIdOrName(idOrName) {
   if (true) {
     warn('`' + idOrName + '` is invalid id or name. Must be a string or number.');
   }
 }
-
 function isValidIdOrName(idOrName) {
   return isStringSafe(idOrName) || isNumeric(idOrName);
 }
-
 function isNameSpecified(componentModel) {
-  var name = componentModel.name; // Is specified when `indexOf` get -1 or > 0.
-
+  var name = componentModel.name;
+  // Is specified when `indexOf` get -1 or > 0.
   return !!(name && name.indexOf(DUMMY_COMPONENT_NAME_PREFIX));
 }
 /**
@@ -34488,7 +34744,6 @@ function isNameSpecified(componentModel) {
  * @param {Object} cmptOption
  * @return {boolean}
  */
-
 function isComponentIdInternal(cmptOption) {
   return cmptOption && cmptOption.id != null && makeComparableKey(cmptOption.id).indexOf(INTERNAL_COMPONENT_ID_PREFIX) === 0;
 }
@@ -34499,18 +34754,17 @@ function setComponentTypeToKeyInfo(mappingResult, mainType, componentModelCtor) 
   // Set mainType and complete subType.
   each(mappingResult, function (item) {
     var newOption = item.newOption;
-
     if (isObject(newOption)) {
       item.keyInfo.mainType = mainType;
       item.keyInfo.subType = determineSubType(mainType, newOption, item.existing, componentModelCtor);
     }
   });
 }
-
 function determineSubType(mainType, newCmptOption, existComponent, componentModelCtor) {
-  var subType = newCmptOption.type ? newCmptOption.type : existComponent ? existComponent.subType // Use determineSubType only when there is no existComponent.
-  : componentModelCtor.determineSubType(mainType, newCmptOption); // tooltip, markline, markpoint may always has no subType
-
+  var subType = newCmptOption.type ? newCmptOption.type : existComponent ? existComponent.subType
+  // Use determineSubType only when there is no existComponent.
+  : componentModelCtor.determineSubType(mainType, newCmptOption);
+  // tooltip, markline, markpoint may always has no subType
   return subType;
 }
 /**
@@ -34521,29 +34775,22 @@ function determineSubType(mainType, newCmptOption, existComponent, componentMode
  * @param batchB Like: [{seriesId: 2, dataIndex: [32, 4, 5]}, ...]
  * @return result: [resultBatchA, resultBatchB]
  */
-
-
 function compressBatches(batchA, batchB) {
   var mapA = {};
   var mapB = {};
   makeMap(batchA || [], mapA);
   makeMap(batchB || [], mapB, mapA);
   return [mapToArray(mapA), mapToArray(mapB)];
-
   function makeMap(sourceBatch, map, otherMap) {
     for (var i = 0, len = sourceBatch.length; i < len; i++) {
       var seriesId = convertOptionIdName(sourceBatch[i].seriesId, null);
-
       if (seriesId == null) {
         return;
       }
-
       var dataIndices = normalizeToArray(sourceBatch[i].dataIndex);
       var otherDataIndices = otherMap && otherMap[seriesId];
-
       for (var j = 0, lenj = dataIndices.length; j < lenj; j++) {
         var dataIndex = dataIndices[j];
-
         if (otherDataIndices && otherDataIndices[dataIndex]) {
           otherDataIndices[dataIndex] = null;
         } else {
@@ -34552,10 +34799,8 @@ function compressBatches(batchA, batchB) {
       }
     }
   }
-
   function mapToArray(map, isData) {
     var result = [];
-
     for (var i in map) {
       if (map.hasOwnProperty(i) && map[i] != null) {
         if (isData) {
@@ -34569,7 +34814,6 @@ function compressBatches(batchA, batchB) {
         }
       }
     }
-
     return result;
   }
 }
@@ -34578,7 +34822,6 @@ function compressBatches(batchA, batchB) {
  *                         each of which can be Array or primary type.
  * @return dataIndex If not found, return undefined/null.
  */
-
 function queryDataIndex(data, payload) {
   if (payload.dataIndexInside != null) {
     return payload.dataIndexInside;
@@ -34612,7 +34855,6 @@ function queryDataIndex(data, payload) {
  *
  * @return {Function}
  */
-
 function makeInner() {
   var key = '__ec_inner_' + innerUniqueIndex++;
   return function (hostObj) {
@@ -34623,20 +34865,16 @@ var innerUniqueIndex = getRandomIdBase();
 /**
  * The same behavior as `component.getReferringComponents`.
  */
-
 function parseFinder(ecModel, finderInput, opt) {
   var _a = preParseFinder(finderInput, opt),
-      mainTypeSpecified = _a.mainTypeSpecified,
-      queryOptionMap = _a.queryOptionMap,
-      others = _a.others;
-
+    mainTypeSpecified = _a.mainTypeSpecified,
+    queryOptionMap = _a.queryOptionMap,
+    others = _a.others;
   var result = others;
   var defaultMainType = opt ? opt.defaultMainType : null;
-
   if (!mainTypeSpecified && defaultMainType) {
     queryOptionMap.set(defaultMainType, {});
   }
-
   queryOptionMap.each(function (queryOption, mainType) {
     var queryResult = queryReferringComponents(ecModel, mainType, queryOption, {
       useDefault: defaultMainType === mainType,
@@ -34650,7 +34888,6 @@ function parseFinder(ecModel, finderInput, opt) {
 }
 function preParseFinder(finderInput, opt) {
   var finder;
-
   if (isString(finderInput)) {
     var obj = {};
     obj[finderInput + 'Index'] = 0;
@@ -34658,7 +34895,6 @@ function preParseFinder(finderInput, opt) {
   } else {
     finder = finderInput;
   }
-
   var queryOptionMap = createHashMap();
   var others = {};
   var mainTypeSpecified = false;
@@ -34668,15 +34904,12 @@ function preParseFinder(finderInput, opt) {
       others[key] = value;
       return;
     }
-
     var parsedKey = key.match(/^(\w+)(Index|Id|Name)$/) || [];
     var mainType = parsedKey[1];
     var queryType = (parsedKey[2] || '').toLowerCase();
-
     if (!mainType || !queryType || opt && opt.includeMainTypes && indexOf(opt.includeMainTypes, mainType) < 0) {
       return;
     }
-
     mainTypeSpecified = mainTypeSpecified || !!mainType;
     var queryOption = queryOptionMap.get(mainType) || queryOptionMap.set(mainType, {});
     queryOption[queryType] = value;
@@ -34706,27 +34939,23 @@ function queryReferringComponents(ecModel, mainType, userOption, opt) {
     models: null,
     specified: indexOption != null || idOption != null || nameOption != null
   };
-
   if (!result.specified) {
     // Use the first as default if `useDefault`.
     var firstCmpt = void 0;
     result.models = opt.useDefault && (firstCmpt = ecModel.getComponent(mainType)) ? [firstCmpt] : [];
     return result;
   }
-
   if (indexOption === 'none' || indexOption === false) {
     assert(opt.enableNone, '`"none"` or `false` is not a valid value on index option.');
     result.models = [];
     return result;
-  } // `queryComponents` will return all components if
+  }
+  // `queryComponents` will return all components if
   // both all of index/id/name are null/undefined.
-
-
   if (indexOption === 'all') {
     assert(opt.enableAll, '`"all"` is not a valid value on index option.');
     indexOption = idOption = nameOption = null;
   }
-
   result.models = ecModel.queryComponents({
     mainType: mainType,
     index: indexOption,
@@ -34752,7 +34981,6 @@ function getTooltipRenderMode(renderModeOption) {
 /**
  * Group a list by key.
  */
-
 function groupData(array, getKey // return key
 ) {
   var buckets = createHashMap();
@@ -34780,43 +35008,38 @@ function groupData(array, getKey // return key
  *                     If `sourceValue` and `targetValue` are `(string | number)[]`, return `(string | number)[]`.
  *                     Other cases do not supported.
  */
-
 function interpolateRawValues(data, precision, sourceValue, targetValue, percent) {
   var isAutoPrecision = precision == null || precision === 'auto';
-
   if (targetValue == null) {
     return targetValue;
   }
-
-  if (typeof targetValue === 'number') {
-    var value = interpolateNumber(sourceValue || 0, targetValue, percent);
+  if (isNumber(targetValue)) {
+    var value = model_interpolateNumber(sourceValue || 0, targetValue, percent);
     return number_round(value, isAutoPrecision ? Math.max(getPrecision(sourceValue || 0), getPrecision(targetValue)) : precision);
-  } else if (typeof targetValue === 'string') {
+  } else if (isString(targetValue)) {
     return percent < 1 ? sourceValue : targetValue;
   } else {
     var interpolated = [];
     var leftArr = sourceValue;
     var rightArr = targetValue;
     var length_1 = Math.max(leftArr ? leftArr.length : 0, rightArr.length);
-
     for (var i = 0; i < length_1; ++i) {
-      var info = data.getDimensionInfo(i); // Don't interpolate ordinal dims
-
-      if (info.type === 'ordinal') {
+      var info = data.getDimensionInfo(i);
+      // Don't interpolate ordinal dims
+      if (info && info.type === 'ordinal') {
         // In init, there is no `sourceValue`, but should better not to get undefined result.
         interpolated[i] = (percent < 1 && leftArr ? leftArr : rightArr)[i];
       } else {
         var leftVal = leftArr && leftArr[i] ? leftArr[i] : 0;
         var rightVal = rightArr[i];
-        var value = interpolateNumber(leftVal, rightVal, percent);
+        var value = model_interpolateNumber(leftVal, rightVal, percent);
         interpolated[i] = number_round(value, isAutoPrecision ? Math.max(getPrecision(leftVal), getPrecision(rightVal)) : precision);
       }
     }
-
     return interpolated;
   }
 }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/innerStore.js
+;// ./node_modules/echarts/lib/util/innerStore.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -34862,7 +35085,28 @@ function interpolateRawValues(data, precision, sourceValue, targetValue, percent
 */
 
 var getECData = makeInner();
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/states.js
+var setCommonECData = function (seriesIndex, dataType, dataIdx, el) {
+  if (el) {
+    var ecData = getECData(el);
+    // Add data index and series index for indexing the data by element
+    // Useful in tooltip
+    ecData.dataIndex = dataIdx;
+    ecData.dataType = dataType;
+    ecData.seriesIndex = seriesIndex;
+    ecData.ssrType = 'chart';
+    // TODO: not store dataIndex on children.
+    if (el.type === 'group') {
+      el.traverse(function (child) {
+        var childECData = getECData(child);
+        childECData.seriesIndex = seriesIndex;
+        childECData.dataIndex = dataIdx;
+        childECData.dataType = dataType;
+        childECData.ssrType = 'chart';
+      });
+    }
+  }
+};
+;// ./node_modules/echarts/lib/util/states.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -34912,11 +35156,11 @@ var getECData = makeInner();
 
 
 
- // Reserve 0 as default.
-
+// Reserve 0 as default.
 var _highlightNextDigit = 1;
 var _highlightKeyMap = {};
 var getSavedStates = makeInner();
+var getComponentStates = makeInner();
 var HOVER_STATE_NORMAL = 0;
 var HOVER_STATE_BLUR = 1;
 var HOVER_STATE_EMPHASIS = 2;
@@ -34929,43 +35173,20 @@ var DOWNPLAY_ACTION_TYPE = 'downplay';
 var SELECT_ACTION_TYPE = 'select';
 var UNSELECT_ACTION_TYPE = 'unselect';
 var TOGGLE_SELECT_ACTION_TYPE = 'toggleSelect';
-
 function hasFillOrStroke(fillOrStroke) {
   return fillOrStroke != null && fillOrStroke !== 'none';
-} // Most lifted color are duplicated.
-
-
-var liftedColorCache = new lib_core_LRU(100);
-
-function liftColor(color) {
-  if (typeof color !== 'string') {
-    return color;
-  }
-
-  var liftedColor = liftedColorCache.get(color);
-
-  if (!liftedColor) {
-    liftedColor = lift(color, -0.1);
-    liftedColorCache.put(color, liftedColor);
-  }
-
-  return liftedColor;
 }
-
 function doChangeHoverState(el, stateName, hoverStateEnum) {
   if (el.onHoverStateChange && (el.hoverState || 0) !== hoverStateEnum) {
     el.onHoverStateChange(stateName);
   }
-
   el.hoverState = hoverStateEnum;
 }
-
 function singleEnterEmphasis(el) {
   // Only mark the flag.
   // States will be applied in the echarts.ts in next frame.
   doChangeHoverState(el, 'emphasis', HOVER_STATE_EMPHASIS);
 }
-
 function singleLeaveEmphasis(el) {
   // Only mark the flag.
   // States will be applied in the echarts.ts in next frame.
@@ -34973,60 +35194,49 @@ function singleLeaveEmphasis(el) {
     doChangeHoverState(el, 'normal', HOVER_STATE_NORMAL);
   }
 }
-
 function singleEnterBlur(el) {
   doChangeHoverState(el, 'blur', HOVER_STATE_BLUR);
 }
-
 function singleLeaveBlur(el) {
   if (el.hoverState === HOVER_STATE_BLUR) {
     doChangeHoverState(el, 'normal', HOVER_STATE_NORMAL);
   }
 }
-
 function singleEnterSelect(el) {
   el.selected = true;
 }
-
 function singleLeaveSelect(el) {
   el.selected = false;
 }
-
 function updateElementState(el, updater, commonParam) {
   updater(el, commonParam);
 }
-
 function traverseUpdateState(el, updater, commonParam) {
   updateElementState(el, updater, commonParam);
   el.isGroup && el.traverse(function (child) {
     updateElementState(child, updater, commonParam);
   });
 }
-
 function setStatesFlag(el, stateName) {
   switch (stateName) {
     case 'emphasis':
       el.hoverState = HOVER_STATE_EMPHASIS;
       break;
-
     case 'normal':
       el.hoverState = HOVER_STATE_NORMAL;
       break;
-
     case 'blur':
       el.hoverState = HOVER_STATE_BLUR;
       break;
-
     case 'select':
       el.selected = true;
   }
 }
 /**
  * If we reuse elements when rerender.
- * DONT forget to clearStates before we update the style and shape.
+ * DON'T forget to clearStates before we update the style and shape.
  * Or we may update on the wrong state instead of normal state.
  */
-
 function clearStates(el) {
   if (el.isGroup) {
     el.traverse(function (child) {
@@ -35036,79 +35246,73 @@ function clearStates(el) {
     el.clearStates();
   }
 }
-
 function getFromStateStyle(el, props, toStateName, defaultValue) {
   var style = el.style;
   var fromState = {};
-
   for (var i = 0; i < props.length; i++) {
     var propName = props[i];
     var val = style[propName];
     fromState[propName] = val == null ? defaultValue && defaultValue[propName] : val;
   }
-
   for (var i = 0; i < el.animators.length; i++) {
     var animator = el.animators[i];
-
-    if (animator.__fromStateTransition // Dont consider the animation to emphasis state.
+    if (animator.__fromStateTransition
+    // Don't consider the animation to emphasis state.
     && animator.__fromStateTransition.indexOf(toStateName) < 0 && animator.targetName === 'style') {
-      animator.saveFinalToTarget(fromState, props);
+      animator.saveTo(fromState, props);
     }
   }
-
   return fromState;
 }
-
 function createEmphasisDefaultState(el, stateName, targetStates, state) {
   var hasSelect = targetStates && indexOf(targetStates, 'select') >= 0;
   var cloned = false;
-
   if (el instanceof graphic_Path) {
     var store = getSavedStates(el);
     var fromFill = hasSelect ? store.selectFill || store.normalFill : store.normalFill;
     var fromStroke = hasSelect ? store.selectStroke || store.normalStroke : store.normalStroke;
-
     if (hasFillOrStroke(fromFill) || hasFillOrStroke(fromStroke)) {
-      state = state || {}; // Apply default color lift
-
+      state = state || {};
       var emphasisStyle = state.style || {};
-
-      if (!hasFillOrStroke(emphasisStyle.fill) && hasFillOrStroke(fromFill)) {
-        cloned = true; // Not modify the original value.
-
+      // inherit case
+      if (emphasisStyle.fill === 'inherit') {
+        cloned = true;
         state = util_extend({}, state);
-        emphasisStyle = util_extend({}, emphasisStyle); // Already being applied 'emphasis'. DON'T lift color multiple times.
-
+        emphasisStyle = util_extend({}, emphasisStyle);
+        emphasisStyle.fill = fromFill;
+      }
+      // Apply default color lift
+      else if (!hasFillOrStroke(emphasisStyle.fill) && hasFillOrStroke(fromFill)) {
+        cloned = true;
+        // Not modify the original value.
+        state = util_extend({}, state);
+        emphasisStyle = util_extend({}, emphasisStyle);
+        // Already being applied 'emphasis'. DON'T lift color multiple times.
         emphasisStyle.fill = liftColor(fromFill);
-      } // Not highlight stroke if fill has been highlighted.
+      }
+      // Not highlight stroke if fill has been highlighted.
       else if (!hasFillOrStroke(emphasisStyle.stroke) && hasFillOrStroke(fromStroke)) {
-          if (!cloned) {
-            state = util_extend({}, state);
-            emphasisStyle = util_extend({}, emphasisStyle);
-          }
-
-          emphasisStyle.stroke = liftColor(fromStroke);
+        if (!cloned) {
+          state = util_extend({}, state);
+          emphasisStyle = util_extend({}, emphasisStyle);
         }
-
+        emphasisStyle.stroke = liftColor(fromStroke);
+      }
       state.style = emphasisStyle;
     }
   }
-
   if (state) {
     // TODO Share with textContent?
     if (state.z2 == null) {
       if (!cloned) {
         state = util_extend({}, state);
       }
-
       var z2EmphasisLift = el.z2EmphasisLift;
       state.z2 = el.z2 + (z2EmphasisLift != null ? z2EmphasisLift : Z2_EMPHASIS_LIFT);
     }
   }
-
   return state;
 }
-
 function createSelectDefaultState(el, stateName, state) {
   // const hasSelect = indexOf(el.currentStates, stateName) >= 0;
   if (state) {
@@ -35119,10 +35323,8 @@ function createSelectDefaultState(el, stateName, state) {
       state.z2 = el.z2 + (z2SelectLift != null ? z2SelectLift : Z2_SELECT_LIFT);
     }
   }
-
   return state;
 }
-
 function createBlurDefaultState(el, stateName, state) {
   var hasBlur = indexOf(el.currentStates, stateName) >= 0;
   var currentOpacity = el.style.opacity;
@@ -35131,7 +35333,6 @@ function createBlurDefaultState(el, stateName, state) {
   }) : null;
   state = state || {};
   var blurStyle = state.style || {};
-
   if (blurStyle.opacity == null) {
     // clone state
     state = util_extend({}, state);
@@ -35141,13 +35342,10 @@ function createBlurDefaultState(el, stateName, state) {
     }, blurStyle);
     state.style = blurStyle;
   }
-
   return state;
 }
-
 function elementStateProxy(stateName, targetStates) {
   var state = this.states[stateName];
-
   if (this.style) {
     if (stateName === 'emphasis') {
       return createEmphasisDefaultState(this, stateName, targetStates, state);
@@ -35157,35 +35355,32 @@ function elementStateProxy(stateName, targetStates) {
       return createSelectDefaultState(this, stateName, state);
     }
   }
-
   return state;
 }
-/**FI
+/**
  * Set hover style (namely "emphasis style") of element.
  * @param el Should not be `zrender/graphic/Group`.
  * @param focus 'self' | 'selfInSeries' | 'series'
  */
-
-
 function setDefaultStateProxy(el) {
   el.stateProxy = elementStateProxy;
   var textContent = el.getTextContent();
   var textGuide = el.getTextGuideLine();
-
   if (textContent) {
     textContent.stateProxy = elementStateProxy;
   }
-
   if (textGuide) {
     textGuide.stateProxy = elementStateProxy;
   }
 }
 function enterEmphasisWhenMouseOver(el, e) {
-  !shouldSilent(el, e) // "emphasis" event highlight has higher priority than mouse highlight.
+  !shouldSilent(el, e)
+  // "emphasis" event highlight has higher priority than mouse highlight.
   && !el.__highByOuter && traverseUpdateState(el, singleEnterEmphasis);
 }
 function leaveEmphasisWhenMouseOut(el, e) {
-  !shouldSilent(el, e) // "emphasis" event highlight has higher priority than mouse highlight.
+  !shouldSilent(el, e)
+  // "emphasis" event highlight has higher priority than mouse highlight.
   && !el.__highByOuter && traverseUpdateState(el, singleLeaveEmphasis);
 }
 function enterEmphasis(el, highlightDigit) {
@@ -35207,90 +35402,100 @@ function enterSelect(el) {
 function leaveSelect(el) {
   traverseUpdateState(el, singleLeaveSelect);
 }
-
 function shouldSilent(el, e) {
   return el.__highDownSilentOnTouch && e.zrByTouch;
 }
-
 function allLeaveBlur(api) {
   var model = api.getModel();
+  var leaveBlurredSeries = [];
+  var allComponentViews = [];
   model.eachComponent(function (componentType, componentModel) {
-    var view = componentType === 'series' ? api.getViewOfSeriesModel(componentModel) : api.getViewOfComponentModel(componentModel); // Leave blur anyway
-
-    view.group.traverse(function (child) {
-      singleLeaveBlur(child);
-    });
+    var componentStates = getComponentStates(componentModel);
+    var isSeries = componentType === 'series';
+    var view = isSeries ? api.getViewOfSeriesModel(componentModel) : api.getViewOfComponentModel(componentModel);
+    !isSeries && allComponentViews.push(view);
+    if (componentStates.isBlured) {
+      // Leave blur anyway
+      view.group.traverse(function (child) {
+        singleLeaveBlur(child);
+      });
+      isSeries && leaveBlurredSeries.push(componentModel);
+    }
+    componentStates.isBlured = false;
+  });
+  each(allComponentViews, function (view) {
+    if (view && view.toggleBlurSeries) {
+      view.toggleBlurSeries(leaveBlurredSeries, false, model);
+    }
   });
 }
 function blurSeries(targetSeriesIndex, focus, blurScope, api) {
   var ecModel = api.getModel();
   blurScope = blurScope || 'coordinateSystem';
-
   function leaveBlurOfIndices(data, dataIndices) {
     for (var i = 0; i < dataIndices.length; i++) {
       var itemEl = data.getItemGraphicEl(dataIndices[i]);
       itemEl && leaveBlur(itemEl);
     }
   }
-
   if (targetSeriesIndex == null) {
     return;
   }
-
   if (!focus || focus === 'none') {
     return;
   }
-
   var targetSeriesModel = ecModel.getSeriesByIndex(targetSeriesIndex);
   var targetCoordSys = targetSeriesModel.coordinateSystem;
-
   if (targetCoordSys && targetCoordSys.master) {
     targetCoordSys = targetCoordSys.master;
   }
-
   var blurredSeries = [];
   ecModel.eachSeries(function (seriesModel) {
     var sameSeries = targetSeriesModel === seriesModel;
     var coordSys = seriesModel.coordinateSystem;
-
     if (coordSys && coordSys.master) {
       coordSys = coordSys.master;
     }
-
     var sameCoordSys = coordSys && targetCoordSys ? coordSys === targetCoordSys : sameSeries; // If there is no coordinate system. use sameSeries instead.
-
-    if (!( // Not blur other series if blurScope series
-    blurScope === 'series' && !sameSeries // Not blur other coordinate system if blurScope is coordinateSystem
-    || blurScope === 'coordinateSystem' && !sameCoordSys // Not blur self series if focus is series.
-    || focus === 'series' && sameSeries // TODO blurScope: coordinate system
+    if (!(
+    // Not blur other series if blurScope series
+    blurScope === 'series' && !sameSeries
+    // Not blur other coordinate system if blurScope is coordinateSystem
+    || blurScope === 'coordinateSystem' && !sameCoordSys
+    // Not blur self series if focus is series.
+    || focus === 'series' && sameSeries
+    // TODO blurScope: coordinate system
     )) {
       var view = api.getViewOfSeriesModel(seriesModel);
       view.group.traverse(function (child) {
+        // For the elements that have been triggered by other components,
+        // and are still required to be highlighted,
+        // because the current is directly forced to blur the element,
+        // it will cause the focus self to be unable to highlight, so skip the blur of this element.
+        if (child.__highByOuter && sameSeries && focus === 'self') {
+          return;
+        }
         singleEnterBlur(child);
       });
-
       if (isArrayLike(focus)) {
         leaveBlurOfIndices(seriesModel.getData(), focus);
       } else if (isObject(focus)) {
         var dataTypes = keys(focus);
-
         for (var d = 0; d < dataTypes.length; d++) {
           leaveBlurOfIndices(seriesModel.getData(dataTypes[d]), focus[dataTypes[d]]);
         }
       }
-
       blurredSeries.push(seriesModel);
+      getComponentStates(seriesModel).isBlured = true;
     }
   });
   ecModel.eachComponent(function (componentType, componentModel) {
     if (componentType === 'series') {
       return;
     }
-
     var view = api.getViewOfComponentModel(componentModel);
-
-    if (view && view.blurSeries) {
-      view.blurSeries(blurredSeries, ecModel);
+    if (view && view.toggleBlurSeries) {
+      view.toggleBlurSeries(blurredSeries, true, ecModel);
     }
   });
 }
@@ -35298,19 +35503,15 @@ function blurComponent(componentMainType, componentIndex, api) {
   if (componentMainType == null || componentIndex == null) {
     return;
   }
-
   var componentModel = api.getModel().getComponent(componentMainType, componentIndex);
-
   if (!componentModel) {
     return;
   }
-
+  getComponentStates(componentModel).isBlured = true;
   var view = api.getViewOfComponentModel(componentModel);
-
   if (!view || !view.focusBlurEnabled) {
     return;
   }
-
   view.group.traverse(function (child) {
     singleEnterBlur(child);
   });
@@ -35318,20 +35519,24 @@ function blurComponent(componentMainType, componentIndex, api) {
 function blurSeriesFromHighlightPayload(seriesModel, payload, api) {
   var seriesIndex = seriesModel.seriesIndex;
   var data = seriesModel.getData(payload.dataType);
-  var dataIndex = queryDataIndex(data, payload); // Pick the first one if there is multiple/none exists.
-
+  if (!data) {
+    if (true) {
+      error("Unknown dataType " + payload.dataType);
+    }
+    return;
+  }
+  var dataIndex = queryDataIndex(data, payload);
+  // Pick the first one if there is multiple/none exists.
   dataIndex = (isArray(dataIndex) ? dataIndex[0] : dataIndex) || 0;
   var el = data.getItemGraphicEl(dataIndex);
-
   if (!el) {
     var count = data.count();
-    var current = 0; // If data on dataIndex is NaN.
-
+    var current = 0;
+    // If data on dataIndex is NaN.
     while (!el && current < count) {
       el = data.getItemGraphicEl(current++);
     }
   }
-
   if (el) {
     var ecData = getECData(el);
     blurSeries(seriesIndex, ecData.focus, ecData.blurScope, api);
@@ -35340,7 +35545,6 @@ function blurSeriesFromHighlightPayload(seriesModel, payload, api) {
     // TODO Should put it on seriesModel?
     var focus_1 = seriesModel.get(['emphasis', 'focus']);
     var blurScope = seriesModel.get(['emphasis', 'blurScope']);
-
     if (focus_1 != null) {
       blurSeries(seriesIndex, focus_1, blurScope, api);
     }
@@ -35351,39 +35555,30 @@ function findComponentHighDownDispatchers(componentMainType, componentIndex, nam
     focusSelf: false,
     dispatchers: null
   };
-
   if (componentMainType == null || componentMainType === 'series' || componentIndex == null || name == null) {
     return ret;
   }
-
   var componentModel = api.getModel().getComponent(componentMainType, componentIndex);
-
   if (!componentModel) {
     return ret;
   }
-
   var view = api.getViewOfComponentModel(componentModel);
-
   if (!view || !view.findHighDownDispatchers) {
     return ret;
   }
-
-  var dispatchers = view.findHighDownDispatchers(name); // At presnet, the component (like Geo) only blur inside itself.
+  var dispatchers = view.findHighDownDispatchers(name);
+  // At presnet, the component (like Geo) only blur inside itself.
   // So we do not use `blurScope` in component.
-
   var focusSelf;
-
   for (var i = 0; i < dispatchers.length; i++) {
     if ( true && !isHighDownDispatcher(dispatchers[i])) {
       error('param should be highDownDispatcher');
     }
-
     if (getECData(dispatchers[i]).focus === 'self') {
       focusSelf = true;
       break;
     }
   }
-
   return {
     focusSelf: focusSelf,
     dispatchers: dispatchers
@@ -35393,20 +35588,16 @@ function handleGlobalMouseOverForHighDown(dispatcher, e, api) {
   if ( true && !isHighDownDispatcher(dispatcher)) {
     error('param should be highDownDispatcher');
   }
-
   var ecData = getECData(dispatcher);
-
   var _a = findComponentHighDownDispatchers(ecData.componentMainType, ecData.componentIndex, ecData.componentHighDownName, api),
-      dispatchers = _a.dispatchers,
-      focusSelf = _a.focusSelf; // If `findHighDownDispatchers` is supported on the component,
+    dispatchers = _a.dispatchers,
+    focusSelf = _a.focusSelf;
+  // If `findHighDownDispatchers` is supported on the component,
   // highlight/downplay elements with the same name.
-
-
   if (dispatchers) {
     if (focusSelf) {
       blurComponent(ecData.componentMainType, ecData.componentIndex, api);
     }
-
     each(dispatchers, function (dispatcher) {
       return enterEmphasisWhenMouseOver(dispatcher, e);
     });
@@ -35414,26 +35605,22 @@ function handleGlobalMouseOverForHighDown(dispatcher, e, api) {
     // Try blur all in the related series. Then emphasis the hoverred.
     // TODO. progressive mode.
     blurSeries(ecData.seriesIndex, ecData.focus, ecData.blurScope, api);
-
     if (ecData.focus === 'self') {
       blurComponent(ecData.componentMainType, ecData.componentIndex, api);
-    } // Other than series, component that not support `findHighDownDispatcher` will
+    }
+    // Other than series, component that not support `findHighDownDispatcher` will
     // also use it. But in this case, highlight/downplay are only supported in
     // mouse hover but not in dispatchAction.
-
-
     enterEmphasisWhenMouseOver(dispatcher, e);
   }
 }
-function handleGlboalMouseOutForHighDown(dispatcher, e, api) {
+function handleGlobalMouseOutForHighDown(dispatcher, e, api) {
   if ( true && !isHighDownDispatcher(dispatcher)) {
     error('param should be highDownDispatcher');
   }
-
   allLeaveBlur(api);
   var ecData = getECData(dispatcher);
   var dispatchers = findComponentHighDownDispatchers(ecData.componentMainType, ecData.componentIndex, ecData.componentHighDownName, api).dispatchers;
-
   if (dispatchers) {
     each(dispatchers, function (dispatcher) {
       return leaveEmphasisWhenMouseOut(dispatcher, e);
@@ -35446,22 +35633,19 @@ function toggleSelectionFromPayload(seriesModel, payload, api) {
   if (!isSelectChangePayload(payload)) {
     return;
   }
-
   var dataType = payload.dataType;
   var data = seriesModel.getData(dataType);
   var dataIndex = queryDataIndex(data, payload);
-
   if (!isArray(dataIndex)) {
     dataIndex = [dataIndex];
   }
-
   seriesModel[payload.type === TOGGLE_SELECT_ACTION_TYPE ? 'toggleSelect' : payload.type === SELECT_ACTION_TYPE ? 'select' : 'unselect'](dataIndex, dataType);
 }
 function updateSeriesElementSelection(seriesModel) {
   var allData = seriesModel.getAllData();
   each(allData, function (_a) {
     var data = _a.data,
-        type = _a.type;
+      type = _a.type;
     data.eachItemGraphicEl(function (el, idx) {
       seriesModel.isSelected(idx, type) ? enterSelect(el) : leaveSelect(el);
     });
@@ -35473,19 +35657,16 @@ function getAllSelectedIndices(ecModel) {
     var allData = seriesModel.getAllData();
     each(allData, function (_a) {
       var data = _a.data,
-          type = _a.type;
+        type = _a.type;
       var dataIndices = seriesModel.getSelectedDataIndices();
-
       if (dataIndices.length > 0) {
         var item = {
           dataIndex: dataIndices,
           seriesIndex: seriesModel.seriesIndex
         };
-
         if (type != null) {
           item.dataType = type;
         }
-
         ret.push(item);
       }
     });
@@ -35499,15 +35680,19 @@ function getAllSelectedIndices(ecModel) {
  * This function should be used on the element with dataIndex, seriesIndex.
  *
  */
-
 function enableHoverEmphasis(el, focus, blurScope) {
   setAsHighDownDispatcher(el, true);
   traverseUpdateState(el, setDefaultStateProxy);
   enableHoverFocus(el, focus, blurScope);
 }
+function disableHoverEmphasis(el) {
+  setAsHighDownDispatcher(el, false);
+}
+function toggleHoverEmphasis(el, focus, blurScope, isDisabled) {
+  isDisabled ? disableHoverEmphasis(el) : enableHoverEmphasis(el, focus, blurScope);
+}
 function enableHoverFocus(el, focus, blurScope) {
   var ecData = getECData(el);
-
   if (focus != null) {
     // TODO dataIndex may be set after this function. This check is not useful.
     // if (ecData.dataIndex == null) {
@@ -35517,7 +35702,8 @@ function enableHoverFocus(el, focus, blurScope) {
     // }
     // else {
     ecData.focus = focus;
-    ecData.blurScope = blurScope; // }
+    ecData.blurScope = blurScope;
+    // }
   } else if (ecData.focus) {
     ecData.focus = null;
   }
@@ -35531,21 +35717,25 @@ var defaultStyleGetterMap = {
 /**
  * Set emphasis/blur/selected states of element.
  */
-
-function setStatesStylesFromModel(el, itemModel, styleType, // default itemStyle
+function setStatesStylesFromModel(el, itemModel, styleType,
+// default itemStyle
 getter) {
   styleType = styleType || 'itemStyle';
-
   for (var i = 0; i < OTHER_STATES.length; i++) {
     var stateName = OTHER_STATES[i];
     var model = itemModel.getModel([stateName, styleType]);
-    var state = el.ensureState(stateName); // Let it throw error if getterType is not found.
-
+    var state = el.ensureState(stateName);
+    // Let it throw error if getterType is not found.
     state.style = getter ? getter(model) : model[defaultStyleGetterMap[styleType]]();
   }
 }
 /**
- * @parame el
+ *
+ * Set element as highlight / downplay dispatcher.
+ * It will be checked when element received mouseover event or from highlight action.
+ * It's in change of all highlight/downplay behavior of it's children.
+ *
+ * @param el
  * @param el.highDownSilentOnTouch
  *        In touch device, mouseover event will be trigger on touchstart event
  *        (see module:zrender/dom/HandlerProxy). By this mechanism, we can
@@ -35558,18 +35748,16 @@ getter) {
  *        hover-highlight on touch device.
  * @param asDispatcher If `false`, do not set as "highDownDispatcher".
  */
-
 function setAsHighDownDispatcher(el, asDispatcher) {
   var disable = asDispatcher === false;
-  var extendedEl = el; // Make `highDownSilentOnTouch` and `onStateChange` only work after
+  var extendedEl = el;
+  // Make `highDownSilentOnTouch` and `onStateChange` only work after
   // `setAsHighDownDispatcher` called. Avoid it is modified by user unexpectedly.
-
   if (el.highDownSilentOnTouch) {
     extendedEl.__highDownSilentOnTouch = el.highDownSilentOnTouch;
-  } // Simple optimize, since this method might be
+  }
+  // Simple optimize, since this method might be
   // called for each elements of a group in some cases.
-
-
   if (!disable || extendedEl.__highDownDispatcher) {
     // Emphasis, normal can be triggered manually by API or other components like hover link.
     // el[method]('emphasis', onElementEmphasisEvent)[method]('normal', onElementNormalEvent);
@@ -35586,7 +35774,6 @@ function isHighDownDispatcher(el) {
  * + hover link (within the same name)
  * + focus blur in component
  */
-
 function enableComponentHighDownFeatures(el, componentModel, componentHighDownName) {
   var ecData = getECData(el);
   ecData.componentMainType = componentModel.mainType;
@@ -35594,21 +35781,18 @@ function enableComponentHighDownFeatures(el, componentModel, componentHighDownNa
   ecData.componentHighDownName = componentHighDownName;
 }
 /**
- * Support hightlight/downplay record on each elements.
+ * Support highlight/downplay record on each elements.
  * For the case: hover highlight/downplay (legend, visualMap, ...) and
- * user triggerred hightlight/downplay should not conflict.
+ * user triggered highlight/downplay should not conflict.
  * Only all of the highlightDigit cleared, return to normal.
  * @param {string} highlightKey
  * @return {number} highlightDigit
  */
-
 function getHighlightDigit(highlightKey) {
   var highlightDigit = _highlightKeyMap[highlightKey];
-
   if (highlightDigit == null && _highlightNextDigit <= 32) {
     highlightDigit = _highlightKeyMap[highlightKey] = _highlightNextDigit++;
   }
-
   return highlightDigit;
 }
 function isSelectChangePayload(payload) {
@@ -35627,1712 +35811,7 @@ function savePathStates(el) {
   store.selectFill = selectState.style && selectState.style.fill || null;
   store.selectStroke = selectState.style && selectState.style.stroke || null;
 }
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/tool/transformPath.js
-
-
-var transformPath_CMD = core_PathProxy.CMD;
-var points = [[], [], []];
-var transformPath_mathSqrt = Math.sqrt;
-var mathAtan2 = Math.atan2;
-function transformPath(path, m) {
-    var data = path.data;
-    var len = path.len();
-    var cmd;
-    var nPoint;
-    var i;
-    var j;
-    var k;
-    var p;
-    var M = transformPath_CMD.M;
-    var C = transformPath_CMD.C;
-    var L = transformPath_CMD.L;
-    var R = transformPath_CMD.R;
-    var A = transformPath_CMD.A;
-    var Q = transformPath_CMD.Q;
-    for (i = 0, j = 0; i < len;) {
-        cmd = data[i++];
-        j = i;
-        nPoint = 0;
-        switch (cmd) {
-            case M:
-                nPoint = 1;
-                break;
-            case L:
-                nPoint = 1;
-                break;
-            case C:
-                nPoint = 3;
-                break;
-            case Q:
-                nPoint = 2;
-                break;
-            case A:
-                var x = m[4];
-                var y = m[5];
-                var sx = transformPath_mathSqrt(m[0] * m[0] + m[1] * m[1]);
-                var sy = transformPath_mathSqrt(m[2] * m[2] + m[3] * m[3]);
-                var angle = mathAtan2(-m[1] / sy, m[0] / sx);
-                data[i] *= sx;
-                data[i++] += x;
-                data[i] *= sy;
-                data[i++] += y;
-                data[i++] *= sx;
-                data[i++] *= sy;
-                data[i++] += angle;
-                data[i++] += angle;
-                i += 2;
-                j = i;
-                break;
-            case R:
-                p[0] = data[i++];
-                p[1] = data[i++];
-                applyTransform(p, p, m);
-                data[j++] = p[0];
-                data[j++] = p[1];
-                p[0] += data[i++];
-                p[1] += data[i++];
-                applyTransform(p, p, m);
-                data[j++] = p[0];
-                data[j++] = p[1];
-        }
-        for (k = 0; k < nPoint; k++) {
-            var p_1 = points[k];
-            p_1[0] = data[i++];
-            p_1[1] = data[i++];
-            applyTransform(p_1, p_1, m);
-            data[j++] = p_1[0];
-            data[j++] = p_1[1];
-        }
-    }
-    path.increaseVersion();
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/tool/path.js
-
-
-
-
-
-var path_mathSqrt = Math.sqrt;
-var path_mathSin = Math.sin;
-var path_mathCos = Math.cos;
-var path_PI = Math.PI;
-function vMag(v) {
-    return Math.sqrt(v[0] * v[0] + v[1] * v[1]);
-}
-;
-function vRatio(u, v) {
-    return (u[0] * v[0] + u[1] * v[1]) / (vMag(u) * vMag(v));
-}
-;
-function vAngle(u, v) {
-    return (u[0] * v[1] < u[1] * v[0] ? -1 : 1)
-        * Math.acos(vRatio(u, v));
-}
-;
-function processArc(x1, y1, x2, y2, fa, fs, rx, ry, psiDeg, cmd, path) {
-    var psi = psiDeg * (path_PI / 180.0);
-    var xp = path_mathCos(psi) * (x1 - x2) / 2.0
-        + path_mathSin(psi) * (y1 - y2) / 2.0;
-    var yp = -1 * path_mathSin(psi) * (x1 - x2) / 2.0
-        + path_mathCos(psi) * (y1 - y2) / 2.0;
-    var lambda = (xp * xp) / (rx * rx) + (yp * yp) / (ry * ry);
-    if (lambda > 1) {
-        rx *= path_mathSqrt(lambda);
-        ry *= path_mathSqrt(lambda);
-    }
-    var f = (fa === fs ? -1 : 1)
-        * path_mathSqrt((((rx * rx) * (ry * ry))
-            - ((rx * rx) * (yp * yp))
-            - ((ry * ry) * (xp * xp))) / ((rx * rx) * (yp * yp)
-            + (ry * ry) * (xp * xp))) || 0;
-    var cxp = f * rx * yp / ry;
-    var cyp = f * -ry * xp / rx;
-    var cx = (x1 + x2) / 2.0
-        + path_mathCos(psi) * cxp
-        - path_mathSin(psi) * cyp;
-    var cy = (y1 + y2) / 2.0
-        + path_mathSin(psi) * cxp
-        + path_mathCos(psi) * cyp;
-    var theta = vAngle([1, 0], [(xp - cxp) / rx, (yp - cyp) / ry]);
-    var u = [(xp - cxp) / rx, (yp - cyp) / ry];
-    var v = [(-1 * xp - cxp) / rx, (-1 * yp - cyp) / ry];
-    var dTheta = vAngle(u, v);
-    if (vRatio(u, v) <= -1) {
-        dTheta = path_PI;
-    }
-    if (vRatio(u, v) >= 1) {
-        dTheta = 0;
-    }
-    if (dTheta < 0) {
-        var n = Math.round(dTheta / path_PI * 1e6) / 1e6;
-        dTheta = path_PI * 2 + (n % 2) * path_PI;
-    }
-    path.addData(cmd, cx, cy, rx, ry, theta, dTheta, psi, fs);
-}
-var commandReg = /([mlvhzcqtsa])([^mlvhzcqtsa]*)/ig;
-var numberReg = /-?([0-9]*\.)?[0-9]+([eE]-?[0-9]+)?/g;
-function createPathProxyFromString(data) {
-    var path = new core_PathProxy();
-    if (!data) {
-        return path;
-    }
-    var cpx = 0;
-    var cpy = 0;
-    var subpathX = cpx;
-    var subpathY = cpy;
-    var prevCmd;
-    var CMD = core_PathProxy.CMD;
-    var cmdList = data.match(commandReg);
-    if (!cmdList) {
-        return path;
-    }
-    for (var l = 0; l < cmdList.length; l++) {
-        var cmdText = cmdList[l];
-        var cmdStr = cmdText.charAt(0);
-        var cmd = void 0;
-        var p = cmdText.match(numberReg) || [];
-        var pLen = p.length;
-        for (var i = 0; i < pLen; i++) {
-            p[i] = parseFloat(p[i]);
-        }
-        var off = 0;
-        while (off < pLen) {
-            var ctlPtx = void 0;
-            var ctlPty = void 0;
-            var rx = void 0;
-            var ry = void 0;
-            var psi = void 0;
-            var fa = void 0;
-            var fs = void 0;
-            var x1 = cpx;
-            var y1 = cpy;
-            var len = void 0;
-            var pathData = void 0;
-            switch (cmdStr) {
-                case 'l':
-                    cpx += p[off++];
-                    cpy += p[off++];
-                    cmd = CMD.L;
-                    path.addData(cmd, cpx, cpy);
-                    break;
-                case 'L':
-                    cpx = p[off++];
-                    cpy = p[off++];
-                    cmd = CMD.L;
-                    path.addData(cmd, cpx, cpy);
-                    break;
-                case 'm':
-                    cpx += p[off++];
-                    cpy += p[off++];
-                    cmd = CMD.M;
-                    path.addData(cmd, cpx, cpy);
-                    subpathX = cpx;
-                    subpathY = cpy;
-                    cmdStr = 'l';
-                    break;
-                case 'M':
-                    cpx = p[off++];
-                    cpy = p[off++];
-                    cmd = CMD.M;
-                    path.addData(cmd, cpx, cpy);
-                    subpathX = cpx;
-                    subpathY = cpy;
-                    cmdStr = 'L';
-                    break;
-                case 'h':
-                    cpx += p[off++];
-                    cmd = CMD.L;
-                    path.addData(cmd, cpx, cpy);
-                    break;
-                case 'H':
-                    cpx = p[off++];
-                    cmd = CMD.L;
-                    path.addData(cmd, cpx, cpy);
-                    break;
-                case 'v':
-                    cpy += p[off++];
-                    cmd = CMD.L;
-                    path.addData(cmd, cpx, cpy);
-                    break;
-                case 'V':
-                    cpy = p[off++];
-                    cmd = CMD.L;
-                    path.addData(cmd, cpx, cpy);
-                    break;
-                case 'C':
-                    cmd = CMD.C;
-                    path.addData(cmd, p[off++], p[off++], p[off++], p[off++], p[off++], p[off++]);
-                    cpx = p[off - 2];
-                    cpy = p[off - 1];
-                    break;
-                case 'c':
-                    cmd = CMD.C;
-                    path.addData(cmd, p[off++] + cpx, p[off++] + cpy, p[off++] + cpx, p[off++] + cpy, p[off++] + cpx, p[off++] + cpy);
-                    cpx += p[off - 2];
-                    cpy += p[off - 1];
-                    break;
-                case 'S':
-                    ctlPtx = cpx;
-                    ctlPty = cpy;
-                    len = path.len();
-                    pathData = path.data;
-                    if (prevCmd === CMD.C) {
-                        ctlPtx += cpx - pathData[len - 4];
-                        ctlPty += cpy - pathData[len - 3];
-                    }
-                    cmd = CMD.C;
-                    x1 = p[off++];
-                    y1 = p[off++];
-                    cpx = p[off++];
-                    cpy = p[off++];
-                    path.addData(cmd, ctlPtx, ctlPty, x1, y1, cpx, cpy);
-                    break;
-                case 's':
-                    ctlPtx = cpx;
-                    ctlPty = cpy;
-                    len = path.len();
-                    pathData = path.data;
-                    if (prevCmd === CMD.C) {
-                        ctlPtx += cpx - pathData[len - 4];
-                        ctlPty += cpy - pathData[len - 3];
-                    }
-                    cmd = CMD.C;
-                    x1 = cpx + p[off++];
-                    y1 = cpy + p[off++];
-                    cpx += p[off++];
-                    cpy += p[off++];
-                    path.addData(cmd, ctlPtx, ctlPty, x1, y1, cpx, cpy);
-                    break;
-                case 'Q':
-                    x1 = p[off++];
-                    y1 = p[off++];
-                    cpx = p[off++];
-                    cpy = p[off++];
-                    cmd = CMD.Q;
-                    path.addData(cmd, x1, y1, cpx, cpy);
-                    break;
-                case 'q':
-                    x1 = p[off++] + cpx;
-                    y1 = p[off++] + cpy;
-                    cpx += p[off++];
-                    cpy += p[off++];
-                    cmd = CMD.Q;
-                    path.addData(cmd, x1, y1, cpx, cpy);
-                    break;
-                case 'T':
-                    ctlPtx = cpx;
-                    ctlPty = cpy;
-                    len = path.len();
-                    pathData = path.data;
-                    if (prevCmd === CMD.Q) {
-                        ctlPtx += cpx - pathData[len - 4];
-                        ctlPty += cpy - pathData[len - 3];
-                    }
-                    cpx = p[off++];
-                    cpy = p[off++];
-                    cmd = CMD.Q;
-                    path.addData(cmd, ctlPtx, ctlPty, cpx, cpy);
-                    break;
-                case 't':
-                    ctlPtx = cpx;
-                    ctlPty = cpy;
-                    len = path.len();
-                    pathData = path.data;
-                    if (prevCmd === CMD.Q) {
-                        ctlPtx += cpx - pathData[len - 4];
-                        ctlPty += cpy - pathData[len - 3];
-                    }
-                    cpx += p[off++];
-                    cpy += p[off++];
-                    cmd = CMD.Q;
-                    path.addData(cmd, ctlPtx, ctlPty, cpx, cpy);
-                    break;
-                case 'A':
-                    rx = p[off++];
-                    ry = p[off++];
-                    psi = p[off++];
-                    fa = p[off++];
-                    fs = p[off++];
-                    x1 = cpx, y1 = cpy;
-                    cpx = p[off++];
-                    cpy = p[off++];
-                    cmd = CMD.A;
-                    processArc(x1, y1, cpx, cpy, fa, fs, rx, ry, psi, cmd, path);
-                    break;
-                case 'a':
-                    rx = p[off++];
-                    ry = p[off++];
-                    psi = p[off++];
-                    fa = p[off++];
-                    fs = p[off++];
-                    x1 = cpx, y1 = cpy;
-                    cpx += p[off++];
-                    cpy += p[off++];
-                    cmd = CMD.A;
-                    processArc(x1, y1, cpx, cpy, fa, fs, rx, ry, psi, cmd, path);
-                    break;
-            }
-        }
-        if (cmdStr === 'z' || cmdStr === 'Z') {
-            cmd = CMD.Z;
-            path.addData(cmd);
-            cpx = subpathX;
-            cpy = subpathY;
-        }
-        prevCmd = cmd;
-    }
-    path.toStatic();
-    return path;
-}
-var SVGPath = (function (_super) {
-    __extends(SVGPath, _super);
-    function SVGPath() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    SVGPath.prototype.applyTransform = function (m) { };
-    return SVGPath;
-}(graphic_Path));
-function isPathProxy(path) {
-    return path.setData != null;
-}
-function createPathOptions(str, opts) {
-    var pathProxy = createPathProxyFromString(str);
-    var innerOpts = util_extend({}, opts);
-    innerOpts.buildPath = function (path) {
-        if (isPathProxy(path)) {
-            path.setData(pathProxy.data);
-            var ctx = path.getContext();
-            if (ctx) {
-                path.rebuildPath(ctx, 1);
-            }
-        }
-        else {
-            var ctx = path;
-            pathProxy.rebuildPath(ctx, 1);
-        }
-    };
-    innerOpts.applyTransform = function (m) {
-        transformPath(pathProxy, m);
-        this.dirtyShape();
-    };
-    return innerOpts;
-}
-function createFromString(str, opts) {
-    return new SVGPath(createPathOptions(str, opts));
-}
-function extendFromString(str, defaultOpts) {
-    var innerOpts = createPathOptions(str, defaultOpts);
-    var Sub = (function (_super) {
-        __extends(Sub, _super);
-        function Sub(opts) {
-            var _this = _super.call(this, opts) || this;
-            _this.applyTransform = innerOpts.applyTransform;
-            _this.buildPath = innerOpts.buildPath;
-            return _this;
-        }
-        return Sub;
-    }(SVGPath));
-    return Sub;
-}
-function mergePath(pathEls, opts) {
-    var pathList = [];
-    var len = pathEls.length;
-    for (var i = 0; i < len; i++) {
-        var pathEl = pathEls[i];
-        if (!pathEl.path) {
-            pathEl.createPathProxy();
-        }
-        if (pathEl.shapeChanged()) {
-            pathEl.buildPath(pathEl.path, pathEl.shape, true);
-        }
-        pathList.push(pathEl.path);
-    }
-    var pathBundle = new graphic_Path(opts);
-    pathBundle.createPathProxy();
-    pathBundle.buildPath = function (path) {
-        if (isPathProxy(path)) {
-            path.appendPath(pathList);
-            var ctx = path.getContext();
-            if (ctx) {
-                path.rebuildPath(ctx, 1);
-            }
-        }
-    };
-    return pathBundle;
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/Group.js
-
-
-
-
-var Group = (function (_super) {
-    __extends(Group, _super);
-    function Group(opts) {
-        var _this = _super.call(this) || this;
-        _this.isGroup = true;
-        _this._children = [];
-        _this.attr(opts);
-        return _this;
-    }
-    Group.prototype.childrenRef = function () {
-        return this._children;
-    };
-    Group.prototype.children = function () {
-        return this._children.slice();
-    };
-    Group.prototype.childAt = function (idx) {
-        return this._children[idx];
-    };
-    Group.prototype.childOfName = function (name) {
-        var children = this._children;
-        for (var i = 0; i < children.length; i++) {
-            if (children[i].name === name) {
-                return children[i];
-            }
-        }
-    };
-    Group.prototype.childCount = function () {
-        return this._children.length;
-    };
-    Group.prototype.add = function (child) {
-        if (child) {
-            if (child !== this && child.parent !== this) {
-                this._children.push(child);
-                this._doAdd(child);
-            }
-            if (child.__hostTarget) {
-                throw 'This elemenet has been used as an attachment';
-            }
-        }
-        return this;
-    };
-    Group.prototype.addBefore = function (child, nextSibling) {
-        if (child && child !== this && child.parent !== this
-            && nextSibling && nextSibling.parent === this) {
-            var children = this._children;
-            var idx = children.indexOf(nextSibling);
-            if (idx >= 0) {
-                children.splice(idx, 0, child);
-                this._doAdd(child);
-            }
-        }
-        return this;
-    };
-    Group.prototype.replaceAt = function (child, index) {
-        var children = this._children;
-        var old = children[index];
-        if (child && child !== this && child.parent !== this && child !== old) {
-            children[index] = child;
-            old.parent = null;
-            var zr = this.__zr;
-            if (zr) {
-                old.removeSelfFromZr(zr);
-            }
-            this._doAdd(child);
-        }
-        return this;
-    };
-    Group.prototype._doAdd = function (child) {
-        if (child.parent) {
-            child.parent.remove(child);
-        }
-        child.parent = this;
-        var zr = this.__zr;
-        if (zr && zr !== child.__zr) {
-            child.addSelfToZr(zr);
-        }
-        zr && zr.refresh();
-    };
-    Group.prototype.remove = function (child) {
-        var zr = this.__zr;
-        var children = this._children;
-        var idx = indexOf(children, child);
-        if (idx < 0) {
-            return this;
-        }
-        children.splice(idx, 1);
-        child.parent = null;
-        if (zr) {
-            child.removeSelfFromZr(zr);
-        }
-        zr && zr.refresh();
-        return this;
-    };
-    Group.prototype.removeAll = function () {
-        var children = this._children;
-        var zr = this.__zr;
-        for (var i = 0; i < children.length; i++) {
-            var child = children[i];
-            if (zr) {
-                child.removeSelfFromZr(zr);
-            }
-            child.parent = null;
-        }
-        children.length = 0;
-        return this;
-    };
-    Group.prototype.eachChild = function (cb, context) {
-        var children = this._children;
-        for (var i = 0; i < children.length; i++) {
-            var child = children[i];
-            cb.call(context, child, i);
-        }
-        return this;
-    };
-    Group.prototype.traverse = function (cb, context) {
-        for (var i = 0; i < this._children.length; i++) {
-            var child = this._children[i];
-            var stopped = cb.call(context, child);
-            if (child.isGroup && !stopped) {
-                child.traverse(cb, context);
-            }
-        }
-        return this;
-    };
-    Group.prototype.addSelfToZr = function (zr) {
-        _super.prototype.addSelfToZr.call(this, zr);
-        for (var i = 0; i < this._children.length; i++) {
-            var child = this._children[i];
-            child.addSelfToZr(zr);
-        }
-    };
-    Group.prototype.removeSelfFromZr = function (zr) {
-        _super.prototype.removeSelfFromZr.call(this, zr);
-        for (var i = 0; i < this._children.length; i++) {
-            var child = this._children[i];
-            child.removeSelfFromZr(zr);
-        }
-    };
-    Group.prototype.getBoundingRect = function (includeChildren) {
-        var tmpRect = new core_BoundingRect(0, 0, 0, 0);
-        var children = includeChildren || this._children;
-        var tmpMat = [];
-        var rect = null;
-        for (var i = 0; i < children.length; i++) {
-            var child = children[i];
-            if (child.ignore || child.invisible) {
-                continue;
-            }
-            var childRect = child.getBoundingRect();
-            var transform = child.getLocalTransform(tmpMat);
-            if (transform) {
-                core_BoundingRect.applyTransform(tmpRect, childRect, transform);
-                rect = rect || tmpRect.clone();
-                rect.union(tmpRect);
-            }
-            else {
-                rect = rect || childRect.clone();
-                rect.union(childRect);
-            }
-        }
-        return rect || tmpRect;
-    };
-    return Group;
-}(lib_Element));
-Group.prototype.type = 'group';
-/* harmony default export */ const graphic_Group = (Group);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Circle.js
-
-
-var CircleShape = (function () {
-    function CircleShape() {
-        this.cx = 0;
-        this.cy = 0;
-        this.r = 0;
-    }
-    return CircleShape;
-}());
-
-var Circle = (function (_super) {
-    __extends(Circle, _super);
-    function Circle(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Circle.prototype.getDefaultShape = function () {
-        return new CircleShape();
-    };
-    Circle.prototype.buildPath = function (ctx, shape, inBundle) {
-        if (inBundle) {
-            ctx.moveTo(shape.cx + shape.r, shape.cy);
-        }
-        ctx.arc(shape.cx, shape.cy, shape.r, 0, Math.PI * 2);
-    };
-    return Circle;
-}(graphic_Path));
-;
-Circle.prototype.type = 'circle';
-/* harmony default export */ const shape_Circle = (Circle);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Ellipse.js
-
-
-var EllipseShape = (function () {
-    function EllipseShape() {
-        this.cx = 0;
-        this.cy = 0;
-        this.rx = 0;
-        this.ry = 0;
-    }
-    return EllipseShape;
-}());
-
-var Ellipse = (function (_super) {
-    __extends(Ellipse, _super);
-    function Ellipse(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Ellipse.prototype.getDefaultShape = function () {
-        return new EllipseShape();
-    };
-    Ellipse.prototype.buildPath = function (ctx, shape) {
-        var k = 0.5522848;
-        var x = shape.cx;
-        var y = shape.cy;
-        var a = shape.rx;
-        var b = shape.ry;
-        var ox = a * k;
-        var oy = b * k;
-        ctx.moveTo(x - a, y);
-        ctx.bezierCurveTo(x - a, y - oy, x - ox, y - b, x, y - b);
-        ctx.bezierCurveTo(x + ox, y - b, x + a, y - oy, x + a, y);
-        ctx.bezierCurveTo(x + a, y + oy, x + ox, y + b, x, y + b);
-        ctx.bezierCurveTo(x - ox, y + b, x - a, y + oy, x - a, y);
-        ctx.closePath();
-    };
-    return Ellipse;
-}(graphic_Path));
-Ellipse.prototype.type = 'ellipse';
-/* harmony default export */ const shape_Ellipse = (Ellipse);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/roundSector.js
-
-var roundSector_PI = Math.PI;
-var roundSector_PI2 = roundSector_PI * 2;
-var roundSector_mathSin = Math.sin;
-var roundSector_mathCos = Math.cos;
-var mathACos = Math.acos;
-var mathATan2 = Math.atan2;
-var roundSector_mathAbs = Math.abs;
-var roundSector_mathSqrt = Math.sqrt;
-var roundSector_mathMax = Math.max;
-var roundSector_mathMin = Math.min;
-var e = 1e-4;
-function intersect(x0, y0, x1, y1, x2, y2, x3, y3) {
-    var x10 = x1 - x0;
-    var y10 = y1 - y0;
-    var x32 = x3 - x2;
-    var y32 = y3 - y2;
-    var t = y32 * x10 - x32 * y10;
-    if (t * t < e) {
-        return;
-    }
-    t = (x32 * (y0 - y2) - y32 * (x0 - x2)) / t;
-    return [x0 + t * x10, y0 + t * y10];
-}
-function computeCornerTangents(x0, y0, x1, y1, radius, cr, clockwise) {
-    var x01 = x0 - x1;
-    var y01 = y0 - y1;
-    var lo = (clockwise ? cr : -cr) / roundSector_mathSqrt(x01 * x01 + y01 * y01);
-    var ox = lo * y01;
-    var oy = -lo * x01;
-    var x11 = x0 + ox;
-    var y11 = y0 + oy;
-    var x10 = x1 + ox;
-    var y10 = y1 + oy;
-    var x00 = (x11 + x10) / 2;
-    var y00 = (y11 + y10) / 2;
-    var dx = x10 - x11;
-    var dy = y10 - y11;
-    var d2 = dx * dx + dy * dy;
-    var r = radius - cr;
-    var s = x11 * y10 - x10 * y11;
-    var d = (dy < 0 ? -1 : 1) * roundSector_mathSqrt(roundSector_mathMax(0, r * r * d2 - s * s));
-    var cx0 = (s * dy - dx * d) / d2;
-    var cy0 = (-s * dx - dy * d) / d2;
-    var cx1 = (s * dy + dx * d) / d2;
-    var cy1 = (-s * dx + dy * d) / d2;
-    var dx0 = cx0 - x00;
-    var dy0 = cy0 - y00;
-    var dx1 = cx1 - x00;
-    var dy1 = cy1 - y00;
-    if (dx0 * dx0 + dy0 * dy0 > dx1 * dx1 + dy1 * dy1) {
-        cx0 = cx1;
-        cy0 = cy1;
-    }
-    return {
-        cx: cx0,
-        cy: cy0,
-        x01: -ox,
-        y01: -oy,
-        x11: cx0 * (radius / r - 1),
-        y11: cy0 * (radius / r - 1)
-    };
-}
-function roundSector_buildPath(ctx, shape) {
-    var radius = roundSector_mathMax(shape.r, 0);
-    var innerRadius = roundSector_mathMax(shape.r0 || 0, 0);
-    var hasRadius = radius > 0;
-    var hasInnerRadius = innerRadius > 0;
-    if (!hasRadius && !hasInnerRadius) {
-        return;
-    }
-    if (!hasRadius) {
-        radius = innerRadius;
-        innerRadius = 0;
-    }
-    if (innerRadius > radius) {
-        var tmp = radius;
-        radius = innerRadius;
-        innerRadius = tmp;
-    }
-    var clockwise = !!shape.clockwise;
-    var startAngle = shape.startAngle;
-    var endAngle = shape.endAngle;
-    var arc;
-    if (startAngle === endAngle) {
-        arc = 0;
-    }
-    else {
-        var tmpAngles = [startAngle, endAngle];
-        normalizeArcAngles(tmpAngles, !clockwise);
-        arc = roundSector_mathAbs(tmpAngles[0] - tmpAngles[1]);
-    }
-    var x = shape.cx;
-    var y = shape.cy;
-    var cornerRadius = shape.cornerRadius || 0;
-    var innerCornerRadius = shape.innerCornerRadius || 0;
-    if (!(radius > e)) {
-        ctx.moveTo(x, y);
-    }
-    else if (arc > roundSector_PI2 - e) {
-        ctx.moveTo(x + radius * roundSector_mathCos(startAngle), y + radius * roundSector_mathSin(startAngle));
-        ctx.arc(x, y, radius, startAngle, endAngle, !clockwise);
-        if (innerRadius > e) {
-            ctx.moveTo(x + innerRadius * roundSector_mathCos(endAngle), y + innerRadius * roundSector_mathSin(endAngle));
-            ctx.arc(x, y, innerRadius, endAngle, startAngle, clockwise);
-        }
-    }
-    else {
-        var halfRd = roundSector_mathAbs(radius - innerRadius) / 2;
-        var cr = roundSector_mathMin(halfRd, cornerRadius);
-        var icr = roundSector_mathMin(halfRd, innerCornerRadius);
-        var cr0 = icr;
-        var cr1 = cr;
-        var xrs = radius * roundSector_mathCos(startAngle);
-        var yrs = radius * roundSector_mathSin(startAngle);
-        var xire = innerRadius * roundSector_mathCos(endAngle);
-        var yire = innerRadius * roundSector_mathSin(endAngle);
-        var xre = void 0;
-        var yre = void 0;
-        var xirs = void 0;
-        var yirs = void 0;
-        if (cr > e || icr > e) {
-            xre = radius * roundSector_mathCos(endAngle);
-            yre = radius * roundSector_mathSin(endAngle);
-            xirs = innerRadius * roundSector_mathCos(startAngle);
-            yirs = innerRadius * roundSector_mathSin(startAngle);
-            if (arc < roundSector_PI) {
-                var it_1 = intersect(xrs, yrs, xirs, yirs, xre, yre, xire, yire);
-                if (it_1) {
-                    var x0 = xrs - it_1[0];
-                    var y0 = yrs - it_1[1];
-                    var x1 = xre - it_1[0];
-                    var y1 = yre - it_1[1];
-                    var a = 1 / roundSector_mathSin(mathACos((x0 * x1 + y0 * y1) / (roundSector_mathSqrt(x0 * x0 + y0 * y0) * roundSector_mathSqrt(x1 * x1 + y1 * y1))) / 2);
-                    var b = roundSector_mathSqrt(it_1[0] * it_1[0] + it_1[1] * it_1[1]);
-                    cr0 = roundSector_mathMin(icr, (innerRadius - b) / (a - 1));
-                    cr1 = roundSector_mathMin(cr, (radius - b) / (a + 1));
-                }
-            }
-        }
-        if (!(arc > e)) {
-            ctx.moveTo(x + xrs, y + yrs);
-        }
-        else if (cr1 > e) {
-            var ct0 = computeCornerTangents(xirs, yirs, xrs, yrs, radius, cr1, clockwise);
-            var ct1 = computeCornerTangents(xre, yre, xire, yire, radius, cr1, clockwise);
-            ctx.moveTo(x + ct0.cx + ct0.x01, y + ct0.cy + ct0.y01);
-            if (cr1 < cr) {
-                ctx.arc(x + ct0.cx, y + ct0.cy, cr1, mathATan2(ct0.y01, ct0.x01), mathATan2(ct1.y01, ct1.x01), !clockwise);
-            }
-            else {
-                ctx.arc(x + ct0.cx, y + ct0.cy, cr1, mathATan2(ct0.y01, ct0.x01), mathATan2(ct0.y11, ct0.x11), !clockwise);
-                ctx.arc(x, y, radius, mathATan2(ct0.cy + ct0.y11, ct0.cx + ct0.x11), mathATan2(ct1.cy + ct1.y11, ct1.cx + ct1.x11), !clockwise);
-                ctx.arc(x + ct1.cx, y + ct1.cy, cr1, mathATan2(ct1.y11, ct1.x11), mathATan2(ct1.y01, ct1.x01), !clockwise);
-            }
-        }
-        else {
-            ctx.moveTo(x + xrs, y + yrs);
-            ctx.arc(x, y, radius, startAngle, endAngle, !clockwise);
-        }
-        if (!(innerRadius > e) || !(arc > e)) {
-            ctx.lineTo(x + xire, y + yire);
-        }
-        else if (cr0 > e) {
-            var ct0 = computeCornerTangents(xire, yire, xre, yre, innerRadius, -cr0, clockwise);
-            var ct1 = computeCornerTangents(xrs, yrs, xirs, yirs, innerRadius, -cr0, clockwise);
-            ctx.lineTo(x + ct0.cx + ct0.x01, y + ct0.cy + ct0.y01);
-            if (cr0 < icr) {
-                ctx.arc(x + ct0.cx, y + ct0.cy, cr0, mathATan2(ct0.y01, ct0.x01), mathATan2(ct1.y01, ct1.x01), !clockwise);
-            }
-            else {
-                ctx.arc(x + ct0.cx, y + ct0.cy, cr0, mathATan2(ct0.y01, ct0.x01), mathATan2(ct0.y11, ct0.x11), !clockwise);
-                ctx.arc(x, y, innerRadius, mathATan2(ct0.cy + ct0.y11, ct0.cx + ct0.x11), mathATan2(ct1.cy + ct1.y11, ct1.cx + ct1.x11), clockwise);
-                ctx.arc(x + ct1.cx, y + ct1.cy, cr0, mathATan2(ct1.y11, ct1.x11), mathATan2(ct1.y01, ct1.x01), !clockwise);
-            }
-        }
-        else {
-            ctx.lineTo(x + xire, y + yire);
-            ctx.arc(x, y, innerRadius, endAngle, startAngle, clockwise);
-        }
-    }
-    ctx.closePath();
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Sector.js
-
-
-
-var SectorShape = (function () {
-    function SectorShape() {
-        this.cx = 0;
-        this.cy = 0;
-        this.r0 = 0;
-        this.r = 0;
-        this.startAngle = 0;
-        this.endAngle = Math.PI * 2;
-        this.clockwise = true;
-        this.cornerRadius = 0;
-        this.innerCornerRadius = 0;
-    }
-    return SectorShape;
-}());
-
-var Sector = (function (_super) {
-    __extends(Sector, _super);
-    function Sector(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Sector.prototype.getDefaultShape = function () {
-        return new SectorShape();
-    };
-    Sector.prototype.buildPath = function (ctx, shape) {
-        roundSector_buildPath(ctx, shape);
-    };
-    Sector.prototype.isZeroArea = function () {
-        return this.shape.startAngle === this.shape.endAngle
-            || this.shape.r === this.shape.r0;
-    };
-    return Sector;
-}(graphic_Path));
-Sector.prototype.type = 'sector';
-/* harmony default export */ const shape_Sector = (Sector);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Ring.js
-
-
-var RingShape = (function () {
-    function RingShape() {
-        this.cx = 0;
-        this.cy = 0;
-        this.r = 0;
-        this.r0 = 0;
-    }
-    return RingShape;
-}());
-
-var Ring = (function (_super) {
-    __extends(Ring, _super);
-    function Ring(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Ring.prototype.getDefaultShape = function () {
-        return new RingShape();
-    };
-    Ring.prototype.buildPath = function (ctx, shape) {
-        var x = shape.cx;
-        var y = shape.cy;
-        var PI2 = Math.PI * 2;
-        ctx.moveTo(x + shape.r, y);
-        ctx.arc(x, y, shape.r, 0, PI2, false);
-        ctx.moveTo(x + shape.r0, y);
-        ctx.arc(x, y, shape.r0, 0, PI2, true);
-    };
-    return Ring;
-}(graphic_Path));
-Ring.prototype.type = 'ring';
-/* harmony default export */ const shape_Ring = (Ring);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/smoothSpline.js
-
-function interpolate(p0, p1, p2, p3, t, t2, t3) {
-    var v0 = (p2 - p0) * 0.5;
-    var v1 = (p3 - p1) * 0.5;
-    return (2 * (p1 - p2) + v0 + v1) * t3
-        + (-3 * (p1 - p2) - 2 * v0 - v1) * t2
-        + v0 * t + p1;
-}
-function smoothSpline(points, isLoop) {
-    var len = points.length;
-    var ret = [];
-    var distance = 0;
-    for (var i = 1; i < len; i++) {
-        distance += vector_distance(points[i - 1], points[i]);
-    }
-    var segs = distance / 2;
-    segs = segs < len ? len : segs;
-    for (var i = 0; i < segs; i++) {
-        var pos = i / (segs - 1) * (isLoop ? len : len - 1);
-        var idx = Math.floor(pos);
-        var w = pos - idx;
-        var p0 = void 0;
-        var p1 = points[idx % len];
-        var p2 = void 0;
-        var p3 = void 0;
-        if (!isLoop) {
-            p0 = points[idx === 0 ? idx : idx - 1];
-            p2 = points[idx > len - 2 ? len - 1 : idx + 1];
-            p3 = points[idx > len - 3 ? len - 1 : idx + 2];
-        }
-        else {
-            p0 = points[(idx - 1 + len) % len];
-            p2 = points[(idx + 1) % len];
-            p3 = points[(idx + 2) % len];
-        }
-        var w2 = w * w;
-        var w3 = w * w2;
-        ret.push([
-            interpolate(p0[0], p1[0], p2[0], p3[0], w, w2, w3),
-            interpolate(p0[1], p1[1], p2[1], p3[1], w, w2, w3)
-        ]);
-    }
-    return ret;
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/smoothBezier.js
-
-function smoothBezier(points, smooth, isLoop, constraint) {
-    var cps = [];
-    var v = [];
-    var v1 = [];
-    var v2 = [];
-    var prevPoint;
-    var nextPoint;
-    var min;
-    var max;
-    if (constraint) {
-        min = [Infinity, Infinity];
-        max = [-Infinity, -Infinity];
-        for (var i = 0, len = points.length; i < len; i++) {
-            vector_min(min, min, points[i]);
-            vector_max(max, max, points[i]);
-        }
-        vector_min(min, min, constraint[0]);
-        vector_max(max, max, constraint[1]);
-    }
-    for (var i = 0, len = points.length; i < len; i++) {
-        var point = points[i];
-        if (isLoop) {
-            prevPoint = points[i ? i - 1 : len - 1];
-            nextPoint = points[(i + 1) % len];
-        }
-        else {
-            if (i === 0 || i === len - 1) {
-                cps.push(vector_clone(points[i]));
-                continue;
-            }
-            else {
-                prevPoint = points[i - 1];
-                nextPoint = points[i + 1];
-            }
-        }
-        sub(v, nextPoint, prevPoint);
-        vector_scale(v, v, smooth);
-        var d0 = vector_distance(point, prevPoint);
-        var d1 = vector_distance(point, nextPoint);
-        var sum = d0 + d1;
-        if (sum !== 0) {
-            d0 /= sum;
-            d1 /= sum;
-        }
-        vector_scale(v1, v, -d0);
-        vector_scale(v2, v, d1);
-        var cp0 = add([], point, v1);
-        var cp1 = add([], point, v2);
-        if (constraint) {
-            vector_max(cp0, cp0, min);
-            vector_min(cp0, cp0, max);
-            vector_max(cp1, cp1, min);
-            vector_min(cp1, cp1, max);
-        }
-        cps.push(cp0);
-        cps.push(cp1);
-    }
-    if (isLoop) {
-        cps.push(cps.shift());
-    }
-    return cps;
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/helper/poly.js
-
-
-function poly_buildPath(ctx, shape, closePath) {
-    var smooth = shape.smooth;
-    var points = shape.points;
-    if (points && points.length >= 2) {
-        if (smooth && smooth !== 'spline') {
-            var controlPoints = smoothBezier(points, smooth, closePath, shape.smoothConstraint);
-            ctx.moveTo(points[0][0], points[0][1]);
-            var len = points.length;
-            for (var i = 0; i < (closePath ? len : len - 1); i++) {
-                var cp1 = controlPoints[i * 2];
-                var cp2 = controlPoints[i * 2 + 1];
-                var p = points[(i + 1) % len];
-                ctx.bezierCurveTo(cp1[0], cp1[1], cp2[0], cp2[1], p[0], p[1]);
-            }
-        }
-        else {
-            if (smooth === 'spline') {
-                points = smoothSpline(points, closePath);
-            }
-            ctx.moveTo(points[0][0], points[0][1]);
-            for (var i = 1, l = points.length; i < l; i++) {
-                ctx.lineTo(points[i][0], points[i][1]);
-            }
-        }
-        closePath && ctx.closePath();
-    }
-}
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Polygon.js
-
-
-
-var PolygonShape = (function () {
-    function PolygonShape() {
-        this.points = null;
-        this.smooth = 0;
-        this.smoothConstraint = null;
-    }
-    return PolygonShape;
-}());
-
-var Polygon = (function (_super) {
-    __extends(Polygon, _super);
-    function Polygon(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Polygon.prototype.getDefaultShape = function () {
-        return new PolygonShape();
-    };
-    Polygon.prototype.buildPath = function (ctx, shape) {
-        poly_buildPath(ctx, shape, true);
-    };
-    return Polygon;
-}(graphic_Path));
-;
-Polygon.prototype.type = 'polygon';
-/* harmony default export */ const shape_Polygon = (Polygon);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Polyline.js
-
-
-
-var PolylineShape = (function () {
-    function PolylineShape() {
-        this.points = null;
-        this.percent = 1;
-        this.smooth = 0;
-        this.smoothConstraint = null;
-    }
-    return PolylineShape;
-}());
-
-var Polyline = (function (_super) {
-    __extends(Polyline, _super);
-    function Polyline(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Polyline.prototype.getDefaultStyle = function () {
-        return {
-            stroke: '#000',
-            fill: null
-        };
-    };
-    Polyline.prototype.getDefaultShape = function () {
-        return new PolylineShape();
-    };
-    Polyline.prototype.buildPath = function (ctx, shape) {
-        poly_buildPath(ctx, shape, false);
-    };
-    return Polyline;
-}(graphic_Path));
-Polyline.prototype.type = 'polyline';
-/* harmony default export */ const shape_Polyline = (Polyline);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Line.js
-
-
-
-var Line_subPixelOptimizeOutputShape = {};
-var LineShape = (function () {
-    function LineShape() {
-        this.x1 = 0;
-        this.y1 = 0;
-        this.x2 = 0;
-        this.y2 = 0;
-        this.percent = 1;
-    }
-    return LineShape;
-}());
-
-var Line = (function (_super) {
-    __extends(Line, _super);
-    function Line(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Line.prototype.getDefaultStyle = function () {
-        return {
-            stroke: '#000',
-            fill: null
-        };
-    };
-    Line.prototype.getDefaultShape = function () {
-        return new LineShape();
-    };
-    Line.prototype.buildPath = function (ctx, shape) {
-        var x1;
-        var y1;
-        var x2;
-        var y2;
-        if (this.subPixelOptimize) {
-            var optimizedShape = subPixelOptimizeLine(Line_subPixelOptimizeOutputShape, shape, this.style);
-            x1 = optimizedShape.x1;
-            y1 = optimizedShape.y1;
-            x2 = optimizedShape.x2;
-            y2 = optimizedShape.y2;
-        }
-        else {
-            x1 = shape.x1;
-            y1 = shape.y1;
-            x2 = shape.x2;
-            y2 = shape.y2;
-        }
-        var percent = shape.percent;
-        if (percent === 0) {
-            return;
-        }
-        ctx.moveTo(x1, y1);
-        if (percent < 1) {
-            x2 = x1 * (1 - percent) + x2 * percent;
-            y2 = y1 * (1 - percent) + y2 * percent;
-        }
-        ctx.lineTo(x2, y2);
-    };
-    Line.prototype.pointAt = function (p) {
-        var shape = this.shape;
-        return [
-            shape.x1 * (1 - p) + shape.x2 * p,
-            shape.y1 * (1 - p) + shape.y2 * p
-        ];
-    };
-    return Line;
-}(graphic_Path));
-Line.prototype.type = 'line';
-/* harmony default export */ const shape_Line = (Line);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/BezierCurve.js
-
-
-
-
-var out = [];
-var BezierCurveShape = (function () {
-    function BezierCurveShape() {
-        this.x1 = 0;
-        this.y1 = 0;
-        this.x2 = 0;
-        this.y2 = 0;
-        this.cpx1 = 0;
-        this.cpy1 = 0;
-        this.percent = 1;
-    }
-    return BezierCurveShape;
-}());
-
-function someVectorAt(shape, t, isTangent) {
-    var cpx2 = shape.cpx2;
-    var cpy2 = shape.cpy2;
-    if (cpx2 === null || cpy2 === null) {
-        return [
-            (isTangent ? cubicDerivativeAt : curve_cubicAt)(shape.x1, shape.cpx1, shape.cpx2, shape.x2, t),
-            (isTangent ? cubicDerivativeAt : curve_cubicAt)(shape.y1, shape.cpy1, shape.cpy2, shape.y2, t)
-        ];
-    }
-    else {
-        return [
-            (isTangent ? quadraticDerivativeAt : curve_quadraticAt)(shape.x1, shape.cpx1, shape.x2, t),
-            (isTangent ? quadraticDerivativeAt : curve_quadraticAt)(shape.y1, shape.cpy1, shape.y2, t)
-        ];
-    }
-}
-var BezierCurve = (function (_super) {
-    __extends(BezierCurve, _super);
-    function BezierCurve(opts) {
-        return _super.call(this, opts) || this;
-    }
-    BezierCurve.prototype.getDefaultStyle = function () {
-        return {
-            stroke: '#000',
-            fill: null
-        };
-    };
-    BezierCurve.prototype.getDefaultShape = function () {
-        return new BezierCurveShape();
-    };
-    BezierCurve.prototype.buildPath = function (ctx, shape) {
-        var x1 = shape.x1;
-        var y1 = shape.y1;
-        var x2 = shape.x2;
-        var y2 = shape.y2;
-        var cpx1 = shape.cpx1;
-        var cpy1 = shape.cpy1;
-        var cpx2 = shape.cpx2;
-        var cpy2 = shape.cpy2;
-        var percent = shape.percent;
-        if (percent === 0) {
-            return;
-        }
-        ctx.moveTo(x1, y1);
-        if (cpx2 == null || cpy2 == null) {
-            if (percent < 1) {
-                quadraticSubdivide(x1, cpx1, x2, percent, out);
-                cpx1 = out[1];
-                x2 = out[2];
-                quadraticSubdivide(y1, cpy1, y2, percent, out);
-                cpy1 = out[1];
-                y2 = out[2];
-            }
-            ctx.quadraticCurveTo(cpx1, cpy1, x2, y2);
-        }
-        else {
-            if (percent < 1) {
-                cubicSubdivide(x1, cpx1, cpx2, x2, percent, out);
-                cpx1 = out[1];
-                cpx2 = out[2];
-                x2 = out[3];
-                cubicSubdivide(y1, cpy1, cpy2, y2, percent, out);
-                cpy1 = out[1];
-                cpy2 = out[2];
-                y2 = out[3];
-            }
-            ctx.bezierCurveTo(cpx1, cpy1, cpx2, cpy2, x2, y2);
-        }
-    };
-    BezierCurve.prototype.pointAt = function (t) {
-        return someVectorAt(this.shape, t, false);
-    };
-    BezierCurve.prototype.tangentAt = function (t) {
-        var p = someVectorAt(this.shape, t, true);
-        return normalize(p, p);
-    };
-    return BezierCurve;
-}(graphic_Path));
-;
-BezierCurve.prototype.type = 'bezier-curve';
-/* harmony default export */ const shape_BezierCurve = (BezierCurve);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/shape/Arc.js
-
-
-var ArcShape = (function () {
-    function ArcShape() {
-        this.cx = 0;
-        this.cy = 0;
-        this.r = 0;
-        this.startAngle = 0;
-        this.endAngle = Math.PI * 2;
-        this.clockwise = true;
-    }
-    return ArcShape;
-}());
-
-var Arc = (function (_super) {
-    __extends(Arc, _super);
-    function Arc(opts) {
-        return _super.call(this, opts) || this;
-    }
-    Arc.prototype.getDefaultStyle = function () {
-        return {
-            stroke: '#000',
-            fill: null
-        };
-    };
-    Arc.prototype.getDefaultShape = function () {
-        return new ArcShape();
-    };
-    Arc.prototype.buildPath = function (ctx, shape) {
-        var x = shape.cx;
-        var y = shape.cy;
-        var r = Math.max(shape.r, 0);
-        var startAngle = shape.startAngle;
-        var endAngle = shape.endAngle;
-        var clockwise = shape.clockwise;
-        var unitX = Math.cos(startAngle);
-        var unitY = Math.sin(startAngle);
-        ctx.moveTo(unitX * r + x, unitY * r + y);
-        ctx.arc(x, y, r, startAngle, endAngle, !clockwise);
-    };
-    return Arc;
-}(graphic_Path));
-Arc.prototype.type = 'arc';
-/* harmony default export */ const shape_Arc = (Arc);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/CompoundPath.js
-
-
-var CompoundPath = (function (_super) {
-    __extends(CompoundPath, _super);
-    function CompoundPath() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.type = 'compound';
-        return _this;
-    }
-    CompoundPath.prototype._updatePathDirty = function () {
-        var paths = this.shape.paths;
-        var dirtyPath = this.shapeChanged();
-        for (var i = 0; i < paths.length; i++) {
-            dirtyPath = dirtyPath || paths[i].shapeChanged();
-        }
-        if (dirtyPath) {
-            this.dirtyShape();
-        }
-    };
-    CompoundPath.prototype.beforeBrush = function () {
-        this._updatePathDirty();
-        var paths = this.shape.paths || [];
-        var scale = this.getGlobalScale();
-        for (var i = 0; i < paths.length; i++) {
-            if (!paths[i].path) {
-                paths[i].createPathProxy();
-            }
-            paths[i].path.setScale(scale[0], scale[1], paths[i].segmentIgnoreThreshold);
-        }
-    };
-    CompoundPath.prototype.buildPath = function (ctx, shape) {
-        var paths = shape.paths || [];
-        for (var i = 0; i < paths.length; i++) {
-            paths[i].buildPath(ctx, paths[i].shape, true);
-        }
-    };
-    CompoundPath.prototype.afterBrush = function () {
-        var paths = this.shape.paths || [];
-        for (var i = 0; i < paths.length; i++) {
-            paths[i].pathUpdated();
-        }
-    };
-    CompoundPath.prototype.getBoundingRect = function () {
-        this._updatePathDirty.call(this);
-        return graphic_Path.prototype.getBoundingRect.call(this);
-    };
-    return CompoundPath;
-}(graphic_Path));
-/* harmony default export */ const graphic_CompoundPath = (CompoundPath);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/Gradient.js
-var Gradient = (function () {
-    function Gradient(colorStops) {
-        this.colorStops = colorStops || [];
-    }
-    Gradient.prototype.addColorStop = function (offset, color) {
-        this.colorStops.push({
-            offset: offset,
-            color: color
-        });
-    };
-    return Gradient;
-}());
-/* harmony default export */ const graphic_Gradient = (Gradient);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/LinearGradient.js
-
-
-var LinearGradient = (function (_super) {
-    __extends(LinearGradient, _super);
-    function LinearGradient(x, y, x2, y2, colorStops, globalCoord) {
-        var _this = _super.call(this, colorStops) || this;
-        _this.x = x == null ? 0 : x;
-        _this.y = y == null ? 0 : y;
-        _this.x2 = x2 == null ? 1 : x2;
-        _this.y2 = y2 == null ? 0 : y2;
-        _this.type = 'linear';
-        _this.global = globalCoord || false;
-        return _this;
-    }
-    return LinearGradient;
-}(graphic_Gradient));
-/* harmony default export */ const graphic_LinearGradient = (LinearGradient);
-;
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/RadialGradient.js
-
-
-var RadialGradient = (function (_super) {
-    __extends(RadialGradient, _super);
-    function RadialGradient(x, y, r, colorStops, globalCoord) {
-        var _this = _super.call(this, colorStops) || this;
-        _this.x = x == null ? 0.5 : x;
-        _this.y = y == null ? 0.5 : y;
-        _this.r = r == null ? 0.5 : r;
-        _this.type = 'radial';
-        _this.global = globalCoord || false;
-        return _this;
-    }
-    return RadialGradient;
-}(graphic_Gradient));
-/* harmony default export */ const graphic_RadialGradient = (RadialGradient);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/core/OrientedBoundingRect.js
-
-var extent = [0, 0];
-var extent2 = [0, 0];
-var OrientedBoundingRect_minTv = new core_Point();
-var OrientedBoundingRect_maxTv = new core_Point();
-var OrientedBoundingRect = (function () {
-    function OrientedBoundingRect(rect, transform) {
-        this._corners = [];
-        this._axes = [];
-        this._origin = [0, 0];
-        for (var i = 0; i < 4; i++) {
-            this._corners[i] = new core_Point();
-        }
-        for (var i = 0; i < 2; i++) {
-            this._axes[i] = new core_Point();
-        }
-        if (rect) {
-            this.fromBoundingRect(rect, transform);
-        }
-    }
-    OrientedBoundingRect.prototype.fromBoundingRect = function (rect, transform) {
-        var corners = this._corners;
-        var axes = this._axes;
-        var x = rect.x;
-        var y = rect.y;
-        var x2 = x + rect.width;
-        var y2 = y + rect.height;
-        corners[0].set(x, y);
-        corners[1].set(x2, y);
-        corners[2].set(x2, y2);
-        corners[3].set(x, y2);
-        if (transform) {
-            for (var i = 0; i < 4; i++) {
-                corners[i].transform(transform);
-            }
-        }
-        core_Point.sub(axes[0], corners[1], corners[0]);
-        core_Point.sub(axes[1], corners[3], corners[0]);
-        axes[0].normalize();
-        axes[1].normalize();
-        for (var i = 0; i < 2; i++) {
-            this._origin[i] = axes[i].dot(corners[0]);
-        }
-    };
-    OrientedBoundingRect.prototype.intersect = function (other, mtv) {
-        var overlapped = true;
-        var noMtv = !mtv;
-        OrientedBoundingRect_minTv.set(Infinity, Infinity);
-        OrientedBoundingRect_maxTv.set(0, 0);
-        if (!this._intersectCheckOneSide(this, other, OrientedBoundingRect_minTv, OrientedBoundingRect_maxTv, noMtv, 1)) {
-            overlapped = false;
-            if (noMtv) {
-                return overlapped;
-            }
-        }
-        if (!this._intersectCheckOneSide(other, this, OrientedBoundingRect_minTv, OrientedBoundingRect_maxTv, noMtv, -1)) {
-            overlapped = false;
-            if (noMtv) {
-                return overlapped;
-            }
-        }
-        if (!noMtv) {
-            core_Point.copy(mtv, overlapped ? OrientedBoundingRect_minTv : OrientedBoundingRect_maxTv);
-        }
-        return overlapped;
-    };
-    OrientedBoundingRect.prototype._intersectCheckOneSide = function (self, other, minTv, maxTv, noMtv, inverse) {
-        var overlapped = true;
-        for (var i = 0; i < 2; i++) {
-            var axis = this._axes[i];
-            this._getProjMinMaxOnAxis(i, self._corners, extent);
-            this._getProjMinMaxOnAxis(i, other._corners, extent2);
-            if (extent[1] < extent2[0] || extent[0] > extent2[1]) {
-                overlapped = false;
-                if (noMtv) {
-                    return overlapped;
-                }
-                var dist0 = Math.abs(extent2[0] - extent[1]);
-                var dist1 = Math.abs(extent[0] - extent2[1]);
-                if (Math.min(dist0, dist1) > maxTv.len()) {
-                    if (dist0 < dist1) {
-                        core_Point.scale(maxTv, axis, -dist0 * inverse);
-                    }
-                    else {
-                        core_Point.scale(maxTv, axis, dist1 * inverse);
-                    }
-                }
-            }
-            else if (minTv) {
-                var dist0 = Math.abs(extent2[0] - extent[1]);
-                var dist1 = Math.abs(extent[0] - extent2[1]);
-                if (Math.min(dist0, dist1) < minTv.len()) {
-                    if (dist0 < dist1) {
-                        core_Point.scale(minTv, axis, dist0 * inverse);
-                    }
-                    else {
-                        core_Point.scale(minTv, axis, -dist1 * inverse);
-                    }
-                }
-            }
-        }
-        return overlapped;
-    };
-    OrientedBoundingRect.prototype._getProjMinMaxOnAxis = function (dim, corners, out) {
-        var axis = this._axes[dim];
-        var origin = this._origin;
-        var proj = corners[0].dot(axis) + origin[dim];
-        var min = proj;
-        var max = proj;
-        for (var i = 1; i < corners.length; i++) {
-            var proj_1 = corners[i].dot(axis) + origin[dim];
-            min = Math.min(proj_1, min);
-            max = Math.max(proj_1, max);
-        }
-        out[0] = min;
-        out[1] = max;
-    };
-    return OrientedBoundingRect;
-}());
-/* harmony default export */ const core_OrientedBoundingRect = (OrientedBoundingRect);
-
-;// CONCATENATED MODULE: ./node_modules/zrender/lib/graphic/IncrementalDisplayable.js
-
-
-
-var m = [];
-var IncrementalDisplayable = (function (_super) {
-    __extends(IncrementalDisplayable, _super);
-    function IncrementalDisplayable() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.notClear = true;
-        _this.incremental = true;
-        _this._displayables = [];
-        _this._temporaryDisplayables = [];
-        _this._cursor = 0;
-        return _this;
-    }
-    IncrementalDisplayable.prototype.traverse = function (cb, context) {
-        cb.call(context, this);
-    };
-    IncrementalDisplayable.prototype.useStyle = function () {
-        this.style = {};
-    };
-    IncrementalDisplayable.prototype.getCursor = function () {
-        return this._cursor;
-    };
-    IncrementalDisplayable.prototype.innerAfterBrush = function () {
-        this._cursor = this._displayables.length;
-    };
-    IncrementalDisplayable.prototype.clearDisplaybles = function () {
-        this._displayables = [];
-        this._temporaryDisplayables = [];
-        this._cursor = 0;
-        this.markRedraw();
-        this.notClear = false;
-    };
-    IncrementalDisplayable.prototype.clearTemporalDisplayables = function () {
-        this._temporaryDisplayables = [];
-    };
-    IncrementalDisplayable.prototype.addDisplayable = function (displayable, notPersistent) {
-        if (notPersistent) {
-            this._temporaryDisplayables.push(displayable);
-        }
-        else {
-            this._displayables.push(displayable);
-        }
-        this.markRedraw();
-    };
-    IncrementalDisplayable.prototype.addDisplayables = function (displayables, notPersistent) {
-        notPersistent = notPersistent || false;
-        for (var i = 0; i < displayables.length; i++) {
-            this.addDisplayable(displayables[i], notPersistent);
-        }
-    };
-    IncrementalDisplayable.prototype.getDisplayables = function () {
-        return this._displayables;
-    };
-    IncrementalDisplayable.prototype.getTemporalDisplayables = function () {
-        return this._temporaryDisplayables;
-    };
-    IncrementalDisplayable.prototype.eachPendingDisplayable = function (cb) {
-        for (var i = this._cursor; i < this._displayables.length; i++) {
-            cb && cb(this._displayables[i]);
-        }
-        for (var i = 0; i < this._temporaryDisplayables.length; i++) {
-            cb && cb(this._temporaryDisplayables[i]);
-        }
-    };
-    IncrementalDisplayable.prototype.update = function () {
-        this.updateTransform();
-        for (var i = this._cursor; i < this._displayables.length; i++) {
-            var displayable = this._displayables[i];
-            displayable.parent = this;
-            displayable.update();
-            displayable.parent = null;
-        }
-        for (var i = 0; i < this._temporaryDisplayables.length; i++) {
-            var displayable = this._temporaryDisplayables[i];
-            displayable.parent = this;
-            displayable.update();
-            displayable.parent = null;
-        }
-    };
-    IncrementalDisplayable.prototype.getBoundingRect = function () {
-        if (!this._rect) {
-            var rect = new core_BoundingRect(Infinity, Infinity, -Infinity, -Infinity);
-            for (var i = 0; i < this._displayables.length; i++) {
-                var displayable = this._displayables[i];
-                var childRect = displayable.getBoundingRect().clone();
-                if (displayable.needLocalTransform()) {
-                    childRect.applyTransform(displayable.getLocalTransform(m));
-                }
-                rect.union(childRect);
-            }
-            this._rect = rect;
-        }
-        return this._rect;
-    };
-    IncrementalDisplayable.prototype.contain = function (x, y) {
-        var localPos = this.transformCoordToLocal(x, y);
-        var rect = this.getBoundingRect();
-        if (rect.contain(localPos[0], localPos[1])) {
-            for (var i = 0; i < this._displayables.length; i++) {
-                var displayable = this._displayables[i];
-                if (displayable.contain(x, y)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    };
-    return IncrementalDisplayable;
-}(graphic_Displayable));
-/* harmony default export */ const graphic_IncrementalDisplayable = (IncrementalDisplayable);
-
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/graphic.js
+;// ./node_modules/echarts/lib/animation/basicTransition.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -37378,227 +35857,65 @@ var IncrementalDisplayable = (function (_super) {
 */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var graphic_mathMax = Math.max;
-var graphic_mathMin = Math.min;
-var _customShapeMap = {};
+// Stored properties for further transition.
+var transitionStore = makeInner();
 /**
- * Extend shape with parameters
+ * Return null if animation is disabled.
  */
-
-function extendShape(opts) {
-  return graphic_Path.extend(opts);
-}
-var extendPathFromString = extendFromString;
-/**
- * Extend path
- */
-
-function extendPath(pathData, opts) {
-  return extendPathFromString(pathData, opts);
-}
-/**
- * Register a user defined shape.
- * The shape class can be fetched by `getShapeClass`
- * This method will overwrite the registered shapes, including
- * the registered built-in shapes, if using the same `name`.
- * The shape can be used in `custom series` and
- * `graphic component` by declaring `{type: name}`.
- *
- * @param name
- * @param ShapeClass Can be generated by `extendShape`.
- */
-
-function registerShape(name, ShapeClass) {
-  _customShapeMap[name] = ShapeClass;
-}
-/**
- * Find shape class registered by `registerShape`. Usually used in
- * fetching user defined shape.
- *
- * [Caution]:
- * (1) This method **MUST NOT be used inside echarts !!!**, unless it is prepared
- * to use user registered shapes.
- * Because the built-in shape (see `getBuiltInShape`) will be registered by
- * `registerShape` by default. That enables users to get both built-in
- * shapes as well as the shapes belonging to themsleves. But users can overwrite
- * the built-in shapes by using names like 'circle', 'rect' via calling
- * `registerShape`. So the echarts inner featrues should not fetch shapes from here
- * in case that it is overwritten by users, except that some features, like
- * `custom series`, `graphic component`, do it deliberately.
- *
- * (2) In the features like `custom series`, `graphic component`, the user input
- * `{tpye: 'xxx'}` does not only specify shapes but also specify other graphic
- * elements like `'group'`, `'text'`, `'image'` or event `'path'`. Those names
- * are reserved names, that is, if some user register a shape named `'image'`,
- * the shape will not be used. If we intending to add some more reserved names
- * in feature, that might bring break changes (disable some existing user shape
- * names). But that case probably rearly happen. So we dont make more mechanism
- * to resolve this issue here.
- *
- * @param name
- * @return The shape class. If not found, return nothing.
- */
-
-function getShapeClass(name) {
-  if (_customShapeMap.hasOwnProperty(name)) {
-    return _customShapeMap[name];
+function getAnimationConfig(animationType, animatableModel, dataIndex,
+// Extra opts can override the option in animatable model.
+extraOpts,
+// TODO It's only for pictorial bar now.
+extraDelayParams) {
+  var animationPayload;
+  // Check if there is global animation configuration from dataZoom/resize can override the config in option.
+  // If animation is enabled. Will use this animation config in payload.
+  // If animation is disabled. Just ignore it.
+  if (animatableModel && animatableModel.ecModel) {
+    var updatePayload = animatableModel.ecModel.getUpdatePayload();
+    animationPayload = updatePayload && updatePayload.animation;
   }
-}
-/**
- * Create a path element from path data string
- * @param pathData
- * @param opts
- * @param rect
- * @param layout 'center' or 'cover' default to be cover
- */
-
-function makePath(pathData, opts, rect, layout) {
-  var path = createFromString(pathData, opts);
-
-  if (rect) {
-    if (layout === 'center') {
-      rect = centerGraphic(rect, path.getBoundingRect());
+  var animationEnabled = animatableModel && animatableModel.isAnimationEnabled();
+  var isUpdate = animationType === 'update';
+  if (animationEnabled) {
+    var duration = void 0;
+    var easing = void 0;
+    var delay = void 0;
+    if (extraOpts) {
+      duration = retrieve2(extraOpts.duration, 200);
+      easing = retrieve2(extraOpts.easing, 'cubicOut');
+      delay = 0;
+    } else {
+      duration = animatableModel.getShallow(isUpdate ? 'animationDurationUpdate' : 'animationDuration');
+      easing = animatableModel.getShallow(isUpdate ? 'animationEasingUpdate' : 'animationEasing');
+      delay = animatableModel.getShallow(isUpdate ? 'animationDelayUpdate' : 'animationDelay');
     }
-
-    resizePath(path, rect);
-  }
-
-  return path;
-}
-/**
- * Create a image element from image url
- * @param imageUrl image url
- * @param opts options
- * @param rect constrain rect
- * @param layout 'center' or 'cover'. Default to be 'cover'
- */
-
-function makeImage(imageUrl, rect, layout) {
-  var zrImg = new graphic_Image({
-    style: {
-      image: imageUrl,
-      x: rect.x,
-      y: rect.y,
-      width: rect.width,
-      height: rect.height
-    },
-    onload: function (img) {
-      if (layout === 'center') {
-        var boundingRect = {
-          width: img.width,
-          height: img.height
-        };
-        zrImg.setStyle(centerGraphic(rect, boundingRect));
-      }
+    // animation from payload has highest priority.
+    if (animationPayload) {
+      animationPayload.duration != null && (duration = animationPayload.duration);
+      animationPayload.easing != null && (easing = animationPayload.easing);
+      animationPayload.delay != null && (delay = animationPayload.delay);
     }
-  });
-  return zrImg;
-}
-/**
- * Get position of centered element in bounding box.
- *
- * @param  rect         element local bounding box
- * @param  boundingRect constraint bounding box
- * @return element position containing x, y, width, and height
- */
-
-function centerGraphic(rect, boundingRect) {
-  // Set rect to center, keep width / height ratio.
-  var aspect = boundingRect.width / boundingRect.height;
-  var width = rect.height * aspect;
-  var height;
-
-  if (width <= rect.width) {
-    height = rect.height;
+    if (isFunction(delay)) {
+      delay = delay(dataIndex, extraDelayParams);
+    }
+    if (isFunction(duration)) {
+      duration = duration(dataIndex);
+    }
+    var config = {
+      duration: duration || 0,
+      delay: delay,
+      easing: easing
+    };
+    return config;
   } else {
-    width = rect.width;
-    height = width / aspect;
+    return null;
   }
-
-  var cx = rect.x + rect.width / 2;
-  var cy = rect.y + rect.height / 2;
-  return {
-    x: cx - width / 2,
-    y: cy - height / 2,
-    width: width,
-    height: height
-  };
 }
-
-var graphic_mergePath = mergePath;
-/**
- * Resize a path to fit the rect
- * @param path
- * @param rect
- */
-
-function resizePath(path, rect) {
-  if (!path.applyTransform) {
-    return;
-  }
-
-  var pathRect = path.getBoundingRect();
-  var m = pathRect.calculateTransform(rect);
-  path.applyTransform(m);
-}
-/**
- * Sub pixel optimize line for canvas
- */
-
-function graphic_subPixelOptimizeLine(param) {
-  subPixelOptimizeLine(param.shape, param.shape, param.style);
-  return param;
-}
-/**
- * Sub pixel optimize rect for canvas
- */
-
-function graphic_subPixelOptimizeRect(param) {
-  subPixelOptimizeRect(param.shape, param.shape, param.style);
-  return param;
-}
-/**
- * Sub pixel optimize for canvas
- *
- * @param position Coordinate, such as x, y
- * @param lineWidth Should be nonnegative integer.
- * @param positiveOrNegative Default false (negative).
- * @return Optimized position.
- */
-
-var graphic_subPixelOptimize = subPixelOptimize;
-
 function animateOrSetProps(animationType, el, props, animatableModel, dataIndex, cb, during) {
   var isFrom = false;
   var removeOpt;
-
-  if (typeof dataIndex === 'function') {
+  if (isFunction(dataIndex)) {
     during = cb;
     cb = dataIndex;
     dataIndex = null;
@@ -37609,81 +35926,34 @@ function animateOrSetProps(animationType, el, props, animatableModel, dataIndex,
     removeOpt = dataIndex.removeOpt;
     dataIndex = dataIndex.dataIndex;
   }
-
-  var isUpdate = animationType === 'update';
-  var isRemove = animationType === 'remove';
-  var animationPayload; // Check if there is global animation configuration from dataZoom/resize can override the config in option.
-  // If animation is enabled. Will use this animation config in payload.
-  // If animation is disabled. Just ignore it.
-
-  if (animatableModel && animatableModel.ecModel) {
-    var updatePayload = animatableModel.ecModel.getUpdatePayload();
-    animationPayload = updatePayload && updatePayload.animation;
-  }
-
-  var animationEnabled = animatableModel && animatableModel.isAnimationEnabled();
-
+  var isRemove = animationType === 'leave';
   if (!isRemove) {
     // Must stop the remove animation.
-    el.stopAnimation('remove');
+    el.stopAnimation('leave');
   }
-
-  if (animationEnabled) {
-    var duration = void 0;
-    var animationEasing = void 0;
-    var animationDelay = void 0;
-
-    if (animationPayload) {
-      duration = animationPayload.duration || 0;
-      animationEasing = animationPayload.easing || 'cubicOut';
-      animationDelay = animationPayload.delay || 0;
-    } else if (isRemove) {
-      removeOpt = removeOpt || {};
-      duration = retrieve2(removeOpt.duration, 200);
-      animationEasing = retrieve2(removeOpt.easing, 'cubicOut');
-      animationDelay = 0;
-    } else {
-      duration = animatableModel.getShallow(isUpdate ? 'animationDurationUpdate' : 'animationDuration');
-      animationEasing = animatableModel.getShallow(isUpdate ? 'animationEasingUpdate' : 'animationEasing');
-      animationDelay = animatableModel.getShallow(isUpdate ? 'animationDelayUpdate' : 'animationDelay');
-    }
-
-    if (typeof animationDelay === 'function') {
-      animationDelay = animationDelay(dataIndex, animatableModel.getAnimationDelayParams ? animatableModel.getAnimationDelayParams(el, dataIndex) : null);
-    }
-
-    if (typeof duration === 'function') {
-      duration = duration(dataIndex);
-    }
-
-    duration > 0 ? isFrom ? el.animateFrom(props, {
+  var animationConfig = getAnimationConfig(animationType, animatableModel, dataIndex, isRemove ? removeOpt || {} : null, animatableModel && animatableModel.getAnimationDelayParams ? animatableModel.getAnimationDelayParams(el, dataIndex) : null);
+  if (animationConfig && animationConfig.duration > 0) {
+    var duration = animationConfig.duration;
+    var animationDelay = animationConfig.delay;
+    var animationEasing = animationConfig.easing;
+    var animateConfig = {
       duration: duration,
       delay: animationDelay || 0,
       easing: animationEasing,
       done: cb,
       force: !!cb || !!during,
+      // Set to final state in update/init animation.
+      // So the post processing based on the path shape can be done correctly.
+      setToFinal: !isRemove,
       scope: animationType,
       during: during
-    }) : el.animateTo(props, {
-      duration: duration,
-      delay: animationDelay || 0,
-      easing: animationEasing,
-      done: cb,
-      force: !!cb || !!during,
-      setToFinal: true,
-      scope: animationType,
-      during: during
-    }) : ( // FIXME:
-    // If `duration` is 0, only the animation on props
-    // can be stoped, other animation should be continued?
-    // But at present using duration 0 in `animateTo`, `animateFrom`
-    // might cause unexpected behavior.
-    el.stopAnimation(), // If `isFrom`, the props is the "from" props.
-    !isFrom && el.attr(props), cb && cb());
+    };
+    isFrom ? el.animateFrom(props, animateConfig) : el.animateTo(props, animateConfig);
   } else {
     el.stopAnimation();
-    !isFrom && el.attr(props); // Call during once.
-
+    // If `isFrom`, the props is the "from" props.
+    !isFrom && el.attr(props);
+    // Call during at least once.
     during && during(1);
     cb && cb();
   }
@@ -37704,13 +35974,11 @@ function animateOrSetProps(animationType, el, props, animatableModel, dataIndex,
  *         position: [100, 100]
  *     }, seriesModel, function () { console.log('Animation done!'); });
  */
-
-
-function updateProps(el, props, // TODO: TYPE AnimatableModel
+function updateProps(el, props,
+// TODO: TYPE AnimatableModel
 animatableModel, dataIndex, cb, during) {
   animateOrSetProps('update', el, props, animatableModel, dataIndex, cb, during);
 }
-
 
 /**
  * Init graphic element properties with or without animation according to the
@@ -37720,23 +35988,35 @@ animatableModel, dataIndex, cb, during) {
  * So do not use this method to one element twice before
  * animation starts, unless you know what you are doing.
  */
-
 function initProps(el, props, animatableModel, dataIndex, cb, during) {
-  animateOrSetProps('init', el, props, animatableModel, dataIndex, cb, during);
+  animateOrSetProps('enter', el, props, animatableModel, dataIndex, cb, during);
+}
+/**
+ * If element is removed.
+ * It can determine if element is having remove animation.
+ */
+function isElementRemoved(el) {
+  if (!el.__zr) {
+    return true;
+  }
+  for (var i = 0; i < el.animators.length; i++) {
+    var animator = el.animators[i];
+    if (animator.scope === 'leave') {
+      return true;
+    }
+  }
+  return false;
 }
 /**
  * Remove graphic element
  */
-
 function removeElement(el, props, animatableModel, dataIndex, cb, during) {
   // Don't do remove animation twice.
   if (isElementRemoved(el)) {
     return;
   }
-
-  animateOrSetProps('remove', el, props, animatableModel, dataIndex, cb, during);
+  animateOrSetProps('leave', el, props, animatableModel, dataIndex, cb, during);
 }
-
 function fadeOutDisplayable(el, animatableModel, dataIndex, done) {
   el.removeTextContent();
   el.removeTextGuideLine();
@@ -37746,14 +36026,12 @@ function fadeOutDisplayable(el, animatableModel, dataIndex, done) {
     }
   }, animatableModel, dataIndex, done);
 }
-
 function removeElementWithFadeOut(el, animatableModel, dataIndex) {
   function doRemove() {
     el.parent && el.parent.remove(el);
-  } // Hide label and labelLine first
+  }
+  // Hide label and labelLine first
   // TODO Also use fade out animation?
-
-
   if (!el.isGroup) {
     fadeOutDisplayable(el, animatableModel, dataIndex, doRemove);
   } else {
@@ -37766,309 +36044,18 @@ function removeElementWithFadeOut(el, animatableModel, dataIndex) {
   }
 }
 /**
- * If element is removed.
- * It can determine if element is having remove animation.
+ * Save old style for style transition in universalTransition module.
+ * It's used when element will be reused in each render.
+ * For chart like map, heatmap, which will always create new element.
+ * We don't need to save this because universalTransition can get old style from the old element
  */
-
-function isElementRemoved(el) {
-  if (!el.__zr) {
-    return true;
-  }
-
-  for (var i = 0; i < el.animators.length; i++) {
-    var animator = el.animators[i];
-
-    if (animator.scope === 'remove') {
-      return true;
-    }
-  }
-
-  return false;
+function saveOldStyle(el) {
+  transitionStore(el).oldStyle = el.style;
 }
-/**
- * Get transform matrix of target (param target),
- * in coordinate of its ancestor (param ancestor)
- *
- * @param target
- * @param [ancestor]
- */
-
-function getTransform(target, ancestor) {
-  var mat = identity([]);
-
-  while (target && target !== ancestor) {
-    mul(mat, target.getLocalTransform(), mat);
-    target = target.parent;
-  }
-
-  return mat;
+function getOldStyle(el) {
+  return transitionStore(el).oldStyle;
 }
-/**
- * Apply transform to an vertex.
- * @param target [x, y]
- * @param transform Can be:
- *      + Transform matrix: like [1, 0, 0, 1, 0, 0]
- *      + {position, rotation, scale}, the same as `zrender/Transformable`.
- * @param invert Whether use invert matrix.
- * @return [x, y]
- */
-
-function graphic_applyTransform(target, transform, invert) {
-  if (transform && !isArrayLike(transform)) {
-    transform = core_Transformable.getLocalTransform(transform);
-  }
-
-  if (invert) {
-    transform = matrix_invert([], transform);
-  }
-
-  return applyTransform([], target, transform);
-}
-/**
- * @param direction 'left' 'right' 'top' 'bottom'
- * @param transform Transform matrix: like [1, 0, 0, 1, 0, 0]
- * @param invert Whether use invert matrix.
- * @return Transformed direction. 'left' 'right' 'top' 'bottom'
- */
-
-function transformDirection(direction, transform, invert) {
-  // Pick a base, ensure that transform result will not be (0, 0).
-  var hBase = transform[4] === 0 || transform[5] === 0 || transform[0] === 0 ? 1 : Math.abs(2 * transform[4] / transform[0]);
-  var vBase = transform[4] === 0 || transform[5] === 0 || transform[2] === 0 ? 1 : Math.abs(2 * transform[4] / transform[2]);
-  var vertex = [direction === 'left' ? -hBase : direction === 'right' ? hBase : 0, direction === 'top' ? -vBase : direction === 'bottom' ? vBase : 0];
-  vertex = graphic_applyTransform(vertex, transform, invert);
-  return Math.abs(vertex[0]) > Math.abs(vertex[1]) ? vertex[0] > 0 ? 'right' : 'left' : vertex[1] > 0 ? 'bottom' : 'top';
-}
-
-function isNotGroup(el) {
-  return !el.isGroup;
-}
-
-function isPath(el) {
-  return el.shape != null;
-}
-/**
- * Apply group transition animation from g1 to g2.
- * If no animatableModel, no animation.
- */
-
-
-function groupTransition(g1, g2, animatableModel) {
-  if (!g1 || !g2) {
-    return;
-  }
-
-  function getElMap(g) {
-    var elMap = {};
-    g.traverse(function (el) {
-      if (isNotGroup(el) && el.anid) {
-        elMap[el.anid] = el;
-      }
-    });
-    return elMap;
-  }
-
-  function getAnimatableProps(el) {
-    var obj = {
-      x: el.x,
-      y: el.y,
-      rotation: el.rotation
-    };
-
-    if (isPath(el)) {
-      obj.shape = util_extend({}, el.shape);
-    }
-
-    return obj;
-  }
-
-  var elMap1 = getElMap(g1);
-  g2.traverse(function (el) {
-    if (isNotGroup(el) && el.anid) {
-      var oldEl = elMap1[el.anid];
-
-      if (oldEl) {
-        var newProp = getAnimatableProps(el);
-        el.attr(getAnimatableProps(oldEl));
-        updateProps(el, newProp, animatableModel, getECData(el).dataIndex);
-      }
-    }
-  });
-}
-function clipPointsByRect(points, rect) {
-  // FIXME: this way migth be incorrect when grpahic clipped by a corner.
-  // and when element have border.
-  return map(points, function (point) {
-    var x = point[0];
-    x = graphic_mathMax(x, rect.x);
-    x = graphic_mathMin(x, rect.x + rect.width);
-    var y = point[1];
-    y = graphic_mathMax(y, rect.y);
-    y = graphic_mathMin(y, rect.y + rect.height);
-    return [x, y];
-  });
-}
-/**
- * Return a new clipped rect. If rect size are negative, return undefined.
- */
-
-function clipRectByRect(targetRect, rect) {
-  var x = graphic_mathMax(targetRect.x, rect.x);
-  var x2 = graphic_mathMin(targetRect.x + targetRect.width, rect.x + rect.width);
-  var y = graphic_mathMax(targetRect.y, rect.y);
-  var y2 = graphic_mathMin(targetRect.y + targetRect.height, rect.y + rect.height); // If the total rect is cliped, nothing, including the border,
-  // should be painted. So return undefined.
-
-  if (x2 >= x && y2 >= y) {
-    return {
-      x: x,
-      y: y,
-      width: x2 - x,
-      height: y2 - y
-    };
-  }
-}
-function createIcon(iconStr, // Support 'image://' or 'path://' or direct svg path.
-opt, rect) {
-  var innerOpts = util_extend({
-    rectHover: true
-  }, opt);
-  var style = innerOpts.style = {
-    strokeNoScale: true
-  };
-  rect = rect || {
-    x: -1,
-    y: -1,
-    width: 2,
-    height: 2
-  };
-
-  if (iconStr) {
-    return iconStr.indexOf('image://') === 0 ? (style.image = iconStr.slice(8), util_defaults(style, rect), new graphic_Image(innerOpts)) : makePath(iconStr.replace('path://', ''), innerOpts, rect, 'center');
-  }
-}
-/**
- * Return `true` if the given line (line `a`) and the given polygon
- * are intersect.
- * Note that we do not count colinear as intersect here because no
- * requirement for that. We could do that if required in future.
- */
-
-function linePolygonIntersect(a1x, a1y, a2x, a2y, points) {
-  for (var i = 0, p2 = points[points.length - 1]; i < points.length; i++) {
-    var p = points[i];
-
-    if (lineLineIntersect(a1x, a1y, a2x, a2y, p[0], p[1], p2[0], p2[1])) {
-      return true;
-    }
-
-    p2 = p;
-  }
-}
-/**
- * Return `true` if the given two lines (line `a` and line `b`)
- * are intersect.
- * Note that we do not count colinear as intersect here because no
- * requirement for that. We could do that if required in future.
- */
-
-function lineLineIntersect(a1x, a1y, a2x, a2y, b1x, b1y, b2x, b2y) {
-  // let `vec_m` to be `vec_a2 - vec_a1` and `vec_n` to be `vec_b2 - vec_b1`.
-  var mx = a2x - a1x;
-  var my = a2y - a1y;
-  var nx = b2x - b1x;
-  var ny = b2y - b1y; // `vec_m` and `vec_n` are parallel iff
-  //     exising `k` such that `vec_m = k · vec_n`, equivalent to `vec_m X vec_n = 0`.
-
-  var nmCrossProduct = crossProduct2d(nx, ny, mx, my);
-
-  if (nearZero(nmCrossProduct)) {
-    return false;
-  } // `vec_m` and `vec_n` are intersect iff
-  //     existing `p` and `q` in [0, 1] such that `vec_a1 + p * vec_m = vec_b1 + q * vec_n`,
-  //     such that `q = ((vec_a1 - vec_b1) X vec_m) / (vec_n X vec_m)`
-  //           and `p = ((vec_a1 - vec_b1) X vec_n) / (vec_n X vec_m)`.
-
-
-  var b1a1x = a1x - b1x;
-  var b1a1y = a1y - b1y;
-  var q = crossProduct2d(b1a1x, b1a1y, mx, my) / nmCrossProduct;
-
-  if (q < 0 || q > 1) {
-    return false;
-  }
-
-  var p = crossProduct2d(b1a1x, b1a1y, nx, ny) / nmCrossProduct;
-
-  if (p < 0 || p > 1) {
-    return false;
-  }
-
-  return true;
-}
-/**
- * Cross product of 2-dimension vector.
- */
-
-function crossProduct2d(x1, y1, x2, y2) {
-  return x1 * y2 - x2 * y1;
-}
-
-function nearZero(val) {
-  return val <= 1e-6 && val >= -1e-6;
-}
-
-function setTooltipConfig(opt) {
-  var itemTooltipOption = opt.itemTooltipOption;
-  var componentModel = opt.componentModel;
-  var itemName = opt.itemName;
-  var itemTooltipOptionObj = isString(itemTooltipOption) ? {
-    formatter: itemTooltipOption
-  } : itemTooltipOption;
-  var mainType = componentModel.mainType;
-  var componentIndex = componentModel.componentIndex;
-  var formatterParams = {
-    componentType: mainType,
-    name: itemName,
-    $vars: ['name']
-  };
-  formatterParams[mainType + 'Index'] = componentIndex;
-  var formatterParamsExtra = opt.formatterParamsExtra;
-
-  if (formatterParamsExtra) {
-    each(keys(formatterParamsExtra), function (key) {
-      if (!hasOwn(formatterParams, key)) {
-        formatterParams[key] = formatterParamsExtra[key];
-        formatterParams.$vars.push(key);
-      }
-    });
-  }
-
-  var ecData = getECData(opt.el);
-  ecData.componentMainType = mainType;
-  ecData.componentIndex = componentIndex;
-  ecData.tooltipConfig = {
-    name: itemName,
-    option: util_defaults({
-      content: itemName,
-      formatterParams: formatterParams
-    }, itemTooltipOptionObj)
-  };
-} // Register built-in shapes. These shapes might be overwirtten
-// by users, although we do not recommend that.
-
-registerShape('circle', shape_Circle);
-registerShape('ellipse', shape_Ellipse);
-registerShape('sector', shape_Sector);
-registerShape('ring', shape_Ring);
-registerShape('polygon', shape_Polygon);
-registerShape('polyline', shape_Polyline);
-registerShape('rect', shape_Rect);
-registerShape('line', shape_Line);
-registerShape('bezierCurve', shape_BezierCurve);
-registerShape('arc', shape_Arc);
-
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/label/labelStyle.js
+;// ./node_modules/echarts/lib/label/labelStyle.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -38127,7 +36114,6 @@ function setLabelText(label, labelTexts) {
     state.style = state.style || {};
     state.style.text = text;
   }
-
   var oldStates = label.currentStates.slice();
   label.clearStates(true);
   label.setStyle({
@@ -38135,119 +36121,97 @@ function setLabelText(label, labelTexts) {
   });
   label.useStates(oldStates, true);
 }
-
 function getLabelText(opt, stateModels, interpolatedValue) {
   var labelFetcher = opt.labelFetcher;
   var labelDataIndex = opt.labelDataIndex;
   var labelDimIndex = opt.labelDimIndex;
   var normalModel = stateModels.normal;
   var baseText;
-
   if (labelFetcher) {
     baseText = labelFetcher.getFormattedLabel(labelDataIndex, 'normal', null, labelDimIndex, normalModel && normalModel.get('formatter'), interpolatedValue != null ? {
       interpolatedValue: interpolatedValue
     } : null);
   }
-
   if (baseText == null) {
     baseText = isFunction(opt.defaultText) ? opt.defaultText(labelDataIndex, opt, interpolatedValue) : opt.defaultText;
   }
-
   var statesText = {
     normal: baseText
   };
-
   for (var i = 0; i < SPECIAL_STATES.length; i++) {
     var stateName = SPECIAL_STATES[i];
     var stateModel = stateModels[stateName];
     statesText[stateName] = retrieve2(labelFetcher ? labelFetcher.getFormattedLabel(labelDataIndex, stateName, null, labelDimIndex, stateModel && stateModel.get('formatter')) : null, baseText);
   }
-
   return statesText;
 }
-
-function setLabelStyle(targetEl, labelStatesModels, opt, stateSpecified // TODO specified position?
+function setLabelStyle(targetEl, labelStatesModels, opt, stateSpecified
+// TODO specified position?
 ) {
   opt = opt || EMPTY_OBJ;
   var isSetOnText = targetEl instanceof Text;
   var needsCreateText = false;
-
   for (var i = 0; i < DISPLAY_STATES.length; i++) {
     var stateModel = labelStatesModels[DISPLAY_STATES[i]];
-
     if (stateModel && stateModel.getShallow('show')) {
       needsCreateText = true;
       break;
     }
   }
-
   var textContent = isSetOnText ? targetEl : targetEl.getTextContent();
-
   if (needsCreateText) {
     if (!isSetOnText) {
       // Reuse the previous
       if (!textContent) {
         textContent = new Text();
         targetEl.setTextContent(textContent);
-      } // Use same state proxy
-
-
+      }
+      // Use same state proxy
       if (targetEl.stateProxy) {
         textContent.stateProxy = targetEl.stateProxy;
       }
     }
-
     var labelStatesTexts = getLabelText(opt, labelStatesModels);
     var normalModel = labelStatesModels.normal;
     var showNormal = !!normalModel.getShallow('show');
     var normalStyle = createTextStyle(normalModel, stateSpecified && stateSpecified.normal, opt, false, !isSetOnText);
     normalStyle.text = labelStatesTexts.normal;
-
     if (!isSetOnText) {
       // Always create new
       targetEl.setTextConfig(createTextConfig(normalModel, opt, false));
     }
-
     for (var i = 0; i < SPECIAL_STATES.length; i++) {
       var stateName = SPECIAL_STATES[i];
       var stateModel = labelStatesModels[stateName];
-
       if (stateModel) {
         var stateObj = textContent.ensureState(stateName);
         var stateShow = !!retrieve2(stateModel.getShallow('show'), showNormal);
-
         if (stateShow !== showNormal) {
           stateObj.ignore = !stateShow;
         }
-
         stateObj.style = createTextStyle(stateModel, stateSpecified && stateSpecified[stateName], opt, true, !isSetOnText);
         stateObj.style.text = labelStatesTexts[stateName];
-
         if (!isSetOnText) {
           var targetElEmphasisState = targetEl.ensureState(stateName);
           targetElEmphasisState.textConfig = createTextConfig(stateModel, opt, true);
         }
       }
-    } // PENDING: if there is many requirements that emphasis position
+    }
+    // PENDING: if there is many requirements that emphasis position
     // need to be different from normal position, we might consider
-    // auto slient is those cases.
-
-
-    textContent.silent = !!normalModel.getShallow('silent'); // Keep x and y
-
+    // auto silent is those cases.
+    textContent.silent = !!normalModel.getShallow('silent');
+    // Keep x and y
     if (textContent.style.x != null) {
       normalStyle.x = textContent.style.x;
     }
-
     if (textContent.style.y != null) {
       normalStyle.y = textContent.style.y;
     }
-
-    textContent.ignore = !showNormal; // Always create new style.
-
+    textContent.ignore = !showNormal;
+    // Always create new style.
     textContent.useStyle(normalStyle);
     textContent.dirty();
-
     if (opt.enableTextSetter) {
       labelInner(textContent).setLabelText = function (interpolatedValue) {
         var labelStatesTexts = getLabelText(opt, labelStatesModels, interpolatedValue);
@@ -38258,35 +36222,31 @@ function setLabelStyle(targetEl, labelStatesModels, opt, stateSpecified // TODO 
     // Not display rich text.
     textContent.ignore = true;
   }
-
   targetEl.dirty();
 }
-
 
 function getLabelStatesModels(itemModel, labelName) {
   labelName = labelName || 'label';
   var statesModels = {
     normal: itemModel.getModel(labelName)
   };
-
   for (var i = 0; i < SPECIAL_STATES.length; i++) {
     var stateName = SPECIAL_STATES[i];
     statesModels[stateName] = itemModel.getModel([stateName, labelName]);
   }
-
   return statesModels;
 }
 /**
  * Set basic textStyle properties.
  */
-
-function createTextStyle(textStyleModel, specifiedTextStyle, // Fixed style in the code. Can't be set by model.
+function createTextStyle(textStyleModel, specifiedTextStyle,
+// Fixed style in the code. Can't be set by model.
 opt, isNotNormal, isAttached // If text is attached on an element. If so, auto color will handling in zrender.
 ) {
   var textStyle = {};
   setTextStyleCommon(textStyle, textStyleModel, opt, isNotNormal, isAttached);
-  specifiedTextStyle && util_extend(textStyle, specifiedTextStyle); // textStyle.host && textStyle.host.dirty && textStyle.host.dirty(false);
-
+  specifiedTextStyle && util_extend(textStyle, specifiedTextStyle);
+  // textStyle.host && textStyle.host.dirty && textStyle.host.dirty(false);
   return textStyle;
 }
 function createTextConfig(textStyleModel, opt, isNotNormal) {
@@ -38296,29 +36256,24 @@ function createTextConfig(textStyleModel, opt, isNotNormal) {
   var labelRotate = textStyleModel.getShallow('rotate');
   var labelDistance = retrieve2(textStyleModel.getShallow('distance'), isNotNormal ? null : 5);
   var labelOffset = textStyleModel.getShallow('offset');
-  labelPosition = textStyleModel.getShallow('position') || (isNotNormal ? null : 'inside'); // 'outside' is not a valid zr textPostion value, but used
+  labelPosition = textStyleModel.getShallow('position') || (isNotNormal ? null : 'inside');
+  // 'outside' is not a valid zr textPostion value, but used
   // in bar series, and magric type should be considered.
-
   labelPosition === 'outside' && (labelPosition = opt.defaultOutsidePosition || 'top');
-
   if (labelPosition != null) {
     textConfig.position = labelPosition;
   }
-
   if (labelOffset != null) {
     textConfig.offset = labelOffset;
   }
-
   if (labelRotate != null) {
     labelRotate *= Math.PI / 180;
     textConfig.rotation = labelRotate;
   }
-
   if (labelDistance != null) {
     textConfig.distance = labelDistance;
-  } // fill and auto is determined by the color of path fill if it's not specified by developers.
-
-
+  }
+  // fill and auto is determined by the color of path fill if it's not specified by developers.
   textConfig.outsideFill = textStyleModel.get('color') === 'inherit' ? opt.inheritColor || null : 'auto';
   return textConfig;
 }
@@ -38331,12 +36286,12 @@ function createTextConfig(textStyleModel, opt, isNotNormal) {
  * default value can be adopted, merge would make the logic too complicated
  * to manage.)
  */
-
 function setTextStyleCommon(textStyle, textStyleModel, opt, isNotNormal, isAttached) {
   // Consider there will be abnormal when merge hover style to normal style if given default value.
   opt = opt || EMPTY_OBJ;
   var ecModel = textStyleModel.ecModel;
-  var globalTextStyle = ecModel && ecModel.option.textStyle; // Consider case:
+  var globalTextStyle = ecModel && ecModel.option.textStyle;
+  // Consider case:
   // {
   //     data: [{
   //         value: 12,
@@ -38350,45 +36305,37 @@ function setTextStyleCommon(textStyle, textStyleModel, opt, isNotNormal, isAttac
   //         a: { ... }
   //     }
   // }
-
   var richItemNames = getRichItemNames(textStyleModel);
   var richResult;
-
   if (richItemNames) {
     richResult = {};
-
     for (var name_1 in richItemNames) {
       if (richItemNames.hasOwnProperty(name_1)) {
         // Cascade is supported in rich.
-        var richTextStyle = textStyleModel.getModel(['rich', name_1]); // In rich, never `disableBox`.
+        var richTextStyle = textStyleModel.getModel(['rich', name_1]);
+        // In rich, never `disableBox`.
         // FIXME: consider `label: {formatter: '{a|xx}', color: 'blue', rich: {a: {}}}`,
         // the default color `'blue'` will not be adopted if no color declared in `rich`.
         // That might confuses users. So probably we should put `textStyleModel` as the
         // root ancestor of the `richTextStyle`. But that would be a break change.
-
         setTokenTextStyle(richResult[name_1] = {}, richTextStyle, globalTextStyle, opt, isNotNormal, isAttached, false, true);
       }
     }
   }
-
   if (richResult) {
     textStyle.rich = richResult;
   }
-
   var overflow = textStyleModel.get('overflow');
-
   if (overflow) {
     textStyle.overflow = overflow;
   }
-
   var margin = textStyleModel.get('minMargin');
-
   if (margin != null) {
     textStyle.margin = margin;
   }
-
   setTokenTextStyle(textStyle, textStyleModel, globalTextStyle, opt, isNotNormal, isAttached, true, false);
-} // Consider case:
+}
+// Consider case:
 // {
 //     data: [{
 //         value: 12,
@@ -38403,35 +36350,26 @@ function setTextStyleCommon(textStyle, textStyleModel, opt, isNotNormal, isAttac
 //     }
 // }
 // TODO TextStyleModel
-
-
 function getRichItemNames(textStyleModel) {
   // Use object to remove duplicated names.
   var richItemNameMap;
-
   while (textStyleModel && textStyleModel !== textStyleModel.ecModel) {
     var rich = (textStyleModel.option || EMPTY_OBJ).rich;
-
     if (rich) {
       richItemNameMap = richItemNameMap || {};
       var richKeys = keys(rich);
-
       for (var i = 0; i < richKeys.length; i++) {
         var richKey = richKeys[i];
         richItemNameMap[richKey] = 1;
       }
     }
-
     textStyleModel = textStyleModel.parentModel;
   }
-
   return richItemNameMap;
 }
-
 var TEXT_PROPS_WITH_GLOBAL = ['fontStyle', 'fontWeight', 'fontSize', 'fontFamily', 'textShadowColor', 'textShadowBlur', 'textShadowOffsetX', 'textShadowOffsetY'];
-var TEXT_PROPS_SELF = ['align', 'lineHeight', 'width', 'height', 'tag', 'verticalAlign'];
+var TEXT_PROPS_SELF = ['align', 'lineHeight', 'width', 'height', 'tag', 'verticalAlign', 'ellipsis'];
 var TEXT_PROPS_BOX = ['padding', 'borderWidth', 'borderRadius', 'borderDashOffset', 'backgroundColor', 'borderColor', 'shadowColor', 'shadowBlur', 'shadowOffsetX', 'shadowOffsetY'];
-
 function setTokenTextStyle(textStyle, textStyleModel, globalTextStyle, opt, isNotNormal, isAttached, isBlock, inRich) {
   // In merge mode, default value should not be given.
   globalTextStyle = !isNotNormal && globalTextStyle || EMPTY_OBJ;
@@ -38439,154 +36377,124 @@ function setTokenTextStyle(textStyle, textStyleModel, globalTextStyle, opt, isNo
   var fillColor = textStyleModel.getShallow('color');
   var strokeColor = textStyleModel.getShallow('textBorderColor');
   var opacity = retrieve2(textStyleModel.getShallow('opacity'), globalTextStyle.opacity);
-
   if (fillColor === 'inherit' || fillColor === 'auto') {
     if (true) {
       if (fillColor === 'auto') {
         deprecateReplaceLog('color: \'auto\'', 'color: \'inherit\'');
       }
     }
-
     if (inheritColor) {
       fillColor = inheritColor;
     } else {
       fillColor = null;
     }
   }
-
   if (strokeColor === 'inherit' || strokeColor === 'auto') {
     if (true) {
       if (strokeColor === 'auto') {
         deprecateReplaceLog('color: \'auto\'', 'color: \'inherit\'');
       }
     }
-
     if (inheritColor) {
       strokeColor = inheritColor;
     } else {
       strokeColor = null;
     }
   }
-
   if (!isAttached) {
     // Only use default global textStyle.color if text is individual.
     // Otherwise it will use the strategy of attached text color because text may be on a path.
     fillColor = fillColor || globalTextStyle.color;
     strokeColor = strokeColor || globalTextStyle.textBorderColor;
   }
-
   if (fillColor != null) {
     textStyle.fill = fillColor;
   }
-
   if (strokeColor != null) {
     textStyle.stroke = strokeColor;
   }
-
   var textBorderWidth = retrieve2(textStyleModel.getShallow('textBorderWidth'), globalTextStyle.textBorderWidth);
-
   if (textBorderWidth != null) {
     textStyle.lineWidth = textBorderWidth;
   }
-
   var textBorderType = retrieve2(textStyleModel.getShallow('textBorderType'), globalTextStyle.textBorderType);
-
   if (textBorderType != null) {
     textStyle.lineDash = textBorderType;
   }
-
   var textBorderDashOffset = retrieve2(textStyleModel.getShallow('textBorderDashOffset'), globalTextStyle.textBorderDashOffset);
-
   if (textBorderDashOffset != null) {
     textStyle.lineDashOffset = textBorderDashOffset;
   }
-
   if (!isNotNormal && opacity == null && !inRich) {
     opacity = opt && opt.defaultOpacity;
   }
-
   if (opacity != null) {
     textStyle.opacity = opacity;
-  } // TODO
-
-
+  }
+  // TODO
   if (!isNotNormal && !isAttached) {
     // Set default finally.
     if (textStyle.fill == null && opt.inheritColor) {
       textStyle.fill = opt.inheritColor;
     }
-  } // Do not use `getFont` here, because merge should be supported, where
+  }
+  // Do not use `getFont` here, because merge should be supported, where
   // part of these properties may be changed in emphasis style, and the
   // others should remain their original value got from normal style.
-
-
   for (var i = 0; i < TEXT_PROPS_WITH_GLOBAL.length; i++) {
     var key = TEXT_PROPS_WITH_GLOBAL[i];
     var val = retrieve2(textStyleModel.getShallow(key), globalTextStyle[key]);
-
     if (val != null) {
       textStyle[key] = val;
     }
   }
-
   for (var i = 0; i < TEXT_PROPS_SELF.length; i++) {
     var key = TEXT_PROPS_SELF[i];
     var val = textStyleModel.getShallow(key);
-
     if (val != null) {
       textStyle[key] = val;
     }
   }
-
   if (textStyle.verticalAlign == null) {
     var baseline = textStyleModel.getShallow('baseline');
-
     if (baseline != null) {
       textStyle.verticalAlign = baseline;
     }
   }
-
   if (!isBlock || !opt.disableBox) {
     for (var i = 0; i < TEXT_PROPS_BOX.length; i++) {
       var key = TEXT_PROPS_BOX[i];
       var val = textStyleModel.getShallow(key);
-
       if (val != null) {
         textStyle[key] = val;
       }
     }
-
     var borderType = textStyleModel.getShallow('borderType');
-
     if (borderType != null) {
       textStyle.borderDash = borderType;
     }
-
     if ((textStyle.backgroundColor === 'auto' || textStyle.backgroundColor === 'inherit') && inheritColor) {
       if (true) {
         if (textStyle.backgroundColor === 'auto') {
           deprecateReplaceLog('backgroundColor: \'auto\'', 'backgroundColor: \'inherit\'');
         }
       }
-
       textStyle.backgroundColor = inheritColor;
     }
-
     if ((textStyle.borderColor === 'auto' || textStyle.borderColor === 'inherit') && inheritColor) {
       if (true) {
         if (textStyle.borderColor === 'auto') {
           deprecateReplaceLog('borderColor: \'auto\'', 'borderColor: \'inherit\'');
         }
       }
-
       textStyle.borderColor = inheritColor;
     }
   }
 }
-
 function getFont(opt, ecModel) {
   var gTextStyleModel = ecModel && ecModel.getModel('textStyle');
-  return trim([// FIXME in node-canvas fontWeight is before fontStyle
+  return trim([
+  // FIXME in node-canvas fontWeight is before fontStyle
   opt.fontStyle || gTextStyleModel && gTextStyleModel.getShallow('fontStyle') || '', opt.fontWeight || gTextStyleModel && gTextStyleModel.getShallow('fontWeight') || '', (opt.fontSize || gTextStyleModel && gTextStyleModel.getShallow('fontSize') || 12) + 'px', opt.fontFamily || gTextStyleModel && gTextStyleModel.getShallow('fontFamily') || 'sans-serif'].join(' '));
 }
 var labelInner = makeInner();
@@ -38594,13 +36502,11 @@ function setLabelValueAnimation(label, labelStatesModels, value, getDefaultText)
   if (!label) {
     return;
   }
-
   var obj = labelInner(label);
   obj.prevValue = obj.value;
   obj.value = value;
   var normalLabelModel = labelStatesModels.normal;
   obj.valueAnimation = normalLabelModel.get('valueAnimation');
-
   if (obj.valueAnimation) {
     obj.precision = normalLabelModel.get('precision');
     obj.defaultInterpolatedText = getDefaultText;
@@ -38609,17 +36515,15 @@ function setLabelValueAnimation(label, labelStatesModels, value, getDefaultText)
 }
 function animateLabelValue(textEl, dataIndex, data, animatableModel, labelFetcher) {
   var labelInnerStore = labelInner(textEl);
-
-  if (!labelInnerStore.valueAnimation) {
+  if (!labelInnerStore.valueAnimation || labelInnerStore.prevValue === labelInnerStore.value) {
+    // Value not changed, no new label animation
     return;
   }
-
-  var defaultInterpolatedText = labelInnerStore.defaultInterpolatedText; // Consider the case that being animating, do not use the `obj.value`,
+  var defaultInterpolatedText = labelInnerStore.defaultInterpolatedText;
+  // Consider the case that being animating, do not use the `obj.value`,
   // Otherwise it will jump to the `obj.value` when this new animation started.
-
   var currValue = retrieve2(labelInnerStore.interpolatedValue, labelInnerStore.prevValue);
   var targetValue = labelInnerStore.value;
-
   function during(percent) {
     var interpolated = interpolateRawValues(data, labelInnerStore.precision, currValue, targetValue, percent);
     labelInnerStore.interpolatedValue = percent === 1 ? null : interpolated;
@@ -38630,10 +36534,13 @@ function animateLabelValue(textEl, dataIndex, data, animatableModel, labelFetche
     }, labelInnerStore.statesModels, interpolated);
     setLabelText(textEl, labelText);
   }
-
-  (currValue == null ? initProps : updateProps)(textEl, {}, animatableModel, dataIndex, null, during);
+  textEl.percent = 0;
+  (labelInnerStore.prevValue == null ? initProps : updateProps)(textEl, {
+    // percent is used to prevent animation from being aborted #15916
+    percent: 1
+  }, animatableModel, dataIndex, null, during);
 }
-;// CONCATENATED MODULE: ./src/util/OrbitControl.js
+;// ./src/util/OrbitControl.js
 /**
  * Provide orbit control for 3D objects
  *
@@ -39469,7 +37376,7 @@ Object.defineProperty(OrbitControl.prototype, 'autoRotate', {
 
 
 /* harmony default export */ const util_OrbitControl = (OrbitControl);
-;// CONCATENATED MODULE: ./src/util/geometry/dynamicConvertMixin.js
+;// ./src/util/geometry/dynamicConvertMixin.js
 /* harmony default export */ const dynamicConvertMixin = ({
     convertToDynamicArray: function (clear) {
         if (clear) {
@@ -39509,7 +37416,7 @@ Object.defineProperty(OrbitControl.prototype, 'autoRotate', {
         this.dirty();
     }
 });
-;// CONCATENATED MODULE: ./node_modules/claygl/src/glmatrix/index.js
+;// ./node_modules/claygl/src/glmatrix/index.js
 /**
  * @fileoverview gl-matrix - High performance matrix and vector operations
  * @author Brandon Jones
@@ -39559,13 +37466,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
     quat: glmatrix_quat
 });
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/dep/glmatrix.js
+;// ./node_modules/claygl/src/dep/glmatrix.js
 // DEPRECATED
 
 
 /* harmony default export */ const dep_glmatrix = (glmatrix);
 
-;// CONCATENATED MODULE: ./src/util/geometry/Lines3D.js
+;// ./src/util/geometry/Lines3D.js
 /**
  * Lines geometry
  * Use screen space projected lines lineWidth > MAX_LINE_WIDTH
@@ -40030,7 +37937,7 @@ var LinesGeometry = src_Geometry.extend(function () {
 external_echarts_.util.defaults(LinesGeometry.prototype, dynamicConvertMixin);
 
 /* harmony default export */ const Lines3D = (LinesGeometry);
-;// CONCATENATED MODULE: ./src/util/ZRTextureAtlasSurface.js
+;// ./src/util/ZRTextureAtlasSurface.js
 /**
  * Texture Atlas for the sprites.
  * It uses zrender for 2d element management and rendering
@@ -40397,7 +38304,7 @@ ZRTextureAtlasSurface.prototype = {
 };
 
 /* harmony default export */ const util_ZRTextureAtlasSurface = (ZRTextureAtlasSurface);
-;// CONCATENATED MODULE: ./src/component/common/SceneHelper.js
+;// ./src/component/common/SceneHelper.js
 
 
 
@@ -40581,7 +38488,7 @@ SceneHelper.prototype = {
 };
 
 /* harmony default export */ const common_SceneHelper = (SceneHelper);
-;// CONCATENATED MODULE: ./src/util/geometry/Quads.js
+;// ./src/util/geometry/Quads.js
 /**
  * @module echarts-gl/util/geometry/QuadsGeometry
  * @author Yi Shen(http://github.com/pissang)
@@ -40690,7 +38597,7 @@ var QuadsGeometry = src_Geometry.extend(function () {
 external_echarts_.util.defaults(QuadsGeometry.prototype, dynamicConvertMixin);
 
 /* harmony default export */ const Quads = (QuadsGeometry);
-;// CONCATENATED MODULE: ./src/component/grid3D/Grid3DFace.js
+;// ./src/component/grid3D/Grid3DFace.js
 
 
 
@@ -40885,7 +38792,7 @@ Grid3DFace.prototype._udpateSplitAreas = function (geometry, axes, grid3DModel, 
 };
 
 /* harmony default export */ const grid3D_Grid3DFace = (Grid3DFace);
-;// CONCATENATED MODULE: ./src/util/geometry/Sprites.js
+;// ./src/util/geometry/Sprites.js
 /**
  * Geometry collecting sprites
  *
@@ -41024,10 +38931,10 @@ var SpritesGeometry = src_Geometry.extend(function () {
 external_echarts_.util.defaults(SpritesGeometry.prototype, dynamicConvertMixin);
 
 /* harmony default export */ const Sprites = (SpritesGeometry);
-;// CONCATENATED MODULE: ./src/util/shader/labels.glsl.js
+;// ./src/util/shader/labels.glsl.js
 /* harmony default export */ const labels_glsl = ("@export ecgl.labels.vertex\n\nattribute vec3 position: POSITION;\nattribute vec2 texcoord: TEXCOORD_0;\nattribute vec2 offset;\n#ifdef VERTEX_COLOR\nattribute vec4 a_Color : COLOR;\nvarying vec4 v_Color;\n#endif\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform vec4 viewport : VIEWPORT;\n\nvarying vec2 v_Texcoord;\n\nvoid main()\n{\n vec4 proj = worldViewProjection * vec4(position, 1.0);\n\n vec2 screen = (proj.xy / abs(proj.w) + 1.0) * 0.5 * viewport.zw;\n\n screen += offset;\n\n proj.xy = (screen / viewport.zw - 0.5) * 2.0 * abs(proj.w);\n gl_Position = proj;\n#ifdef VERTEX_COLOR\n v_Color = a_Color;\n#endif\n v_Texcoord = texcoord;\n}\n@end\n\n\n@export ecgl.labels.fragment\n\nuniform vec3 color : [1.0, 1.0, 1.0];\nuniform float alpha : 1.0;\nuniform sampler2D textureAtlas;\nuniform vec2 uvScale: [1.0, 1.0];\n\n#ifdef VERTEX_COLOR\nvarying vec4 v_Color;\n#endif\nvarying float v_Miter;\n\nvarying vec2 v_Texcoord;\n\nvoid main()\n{\n gl_FragColor = vec4(color, alpha) * texture2D(textureAtlas, v_Texcoord * uvScale);\n#ifdef VERTEX_COLOR\n gl_FragColor *= v_Color;\n#endif\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/util/mesh/LabelsMesh.js
+;// ./src/util/mesh/LabelsMesh.js
 
 
 
@@ -41052,7 +38959,7 @@ util_graphicGL.Shader.import(labels_glsl);
         ignorePicking: true
     };
 }));
-;// CONCATENATED MODULE: ./src/component/grid3D/Grid3DAxis.js
+;// ./src/component/grid3D/Grid3DAxis.js
 
 
 
@@ -41276,10 +39183,10 @@ Grid3DAxis.prototype.setSpriteAlign = function (textAlign, textVerticalAlign, ap
 };
 
 /* harmony default export */ const grid3D_Grid3DAxis = (Grid3DAxis);
-;// CONCATENATED MODULE: ./src/util/shader/lines3D.glsl.js
+;// ./src/util/shader/lines3D.glsl.js
 /* harmony default export */ const lines3D_glsl = ("@export ecgl.lines3D.vertex\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\n\nattribute vec3 position: POSITION;\nattribute vec4 a_Color : COLOR;\nvarying vec4 v_Color;\n\nvoid main()\n{\n gl_Position = worldViewProjection * vec4(position, 1.0);\n v_Color = a_Color;\n}\n\n@end\n\n@export ecgl.lines3D.fragment\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\n\nvarying vec4 v_Color;\n\n@import clay.util.srgb\n\nvoid main()\n{\n#ifdef SRGB_DECODE\n gl_FragColor = sRGBToLinear(color * v_Color);\n#else\n gl_FragColor = color * v_Color;\n#endif\n}\n@end\n\n\n\n@export ecgl.lines3D.clipNear\n\nvec4 clipNear(vec4 p1, vec4 p2) {\n float n = (p1.w - near) / (p1.w - p2.w);\n return vec4(mix(p1.xy, p2.xy, n), -near, near);\n}\n\n@end\n\n@export ecgl.lines3D.expandLine\n#ifdef VERTEX_ANIMATION\n vec4 prevProj = worldViewProjection * vec4(mix(prevPositionPrev, positionPrev, percent), 1.0);\n vec4 currProj = worldViewProjection * vec4(mix(prevPosition, position, percent), 1.0);\n vec4 nextProj = worldViewProjection * vec4(mix(prevPositionNext, positionNext, percent), 1.0);\n#else\n vec4 prevProj = worldViewProjection * vec4(positionPrev, 1.0);\n vec4 currProj = worldViewProjection * vec4(position, 1.0);\n vec4 nextProj = worldViewProjection * vec4(positionNext, 1.0);\n#endif\n\n if (currProj.w < 0.0) {\n if (nextProj.w > 0.0) {\n currProj = clipNear(currProj, nextProj);\n }\n else if (prevProj.w > 0.0) {\n currProj = clipNear(currProj, prevProj);\n }\n }\n\n vec2 prevScreen = (prevProj.xy / abs(prevProj.w) + 1.0) * 0.5 * viewport.zw;\n vec2 currScreen = (currProj.xy / abs(currProj.w) + 1.0) * 0.5 * viewport.zw;\n vec2 nextScreen = (nextProj.xy / abs(nextProj.w) + 1.0) * 0.5 * viewport.zw;\n\n vec2 dir;\n float len = offset;\n if (position == positionPrev) {\n dir = normalize(nextScreen - currScreen);\n }\n else if (position == positionNext) {\n dir = normalize(currScreen - prevScreen);\n }\n else {\n vec2 dirA = normalize(currScreen - prevScreen);\n vec2 dirB = normalize(nextScreen - currScreen);\n\n vec2 tanget = normalize(dirA + dirB);\n\n float miter = 1.0 / max(dot(tanget, dirA), 0.5);\n len *= miter;\n dir = tanget;\n }\n\n dir = vec2(-dir.y, dir.x) * len;\n currScreen += dir;\n\n currProj.xy = (currScreen / viewport.zw - 0.5) * 2.0 * abs(currProj.w);\n@end\n\n\n@export ecgl.meshLines3D.vertex\n\nattribute vec3 position: POSITION;\nattribute vec3 positionPrev;\nattribute vec3 positionNext;\nattribute float offset;\nattribute vec4 a_Color : COLOR;\n\n#ifdef VERTEX_ANIMATION\nattribute vec3 prevPosition;\nattribute vec3 prevPositionPrev;\nattribute vec3 prevPositionNext;\nuniform float percent : 1.0;\n#endif\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform vec4 viewport : VIEWPORT;\nuniform float near : NEAR;\n\nvarying vec4 v_Color;\n\n@import ecgl.common.wireframe.vertexHeader\n\n@import ecgl.lines3D.clipNear\n\nvoid main()\n{\n @import ecgl.lines3D.expandLine\n\n gl_Position = currProj;\n\n v_Color = a_Color;\n\n @import ecgl.common.wireframe.vertexMain\n}\n@end\n\n\n@export ecgl.meshLines3D.fragment\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\n\nvarying vec4 v_Color;\n\n@import ecgl.common.wireframe.fragmentHeader\n\n@import clay.util.srgb\n\nvoid main()\n{\n#ifdef SRGB_DECODE\n gl_FragColor = sRGBToLinear(color * v_Color);\n#else\n gl_FragColor = color * v_Color;\n#endif\n\n @import ecgl.common.wireframe.fragmentMain\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/component/grid3D/Grid3DView.js
+;// ./src/component/grid3D/Grid3DView.js
 // TODO orthographic camera
 
 
@@ -41867,7 +39774,7 @@ var Grid3DView_dimIndicesMap = {
         this._axisPointerLabelsSurface.dispose();
     }
 }));
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/coord/cartesian/Cartesian.js
+;// ./node_modules/echarts/lib/coord/cartesian/Cartesian.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -41912,47 +39819,37 @@ var Grid3DView_dimIndicesMap = {
 * under the License.
 */
 
-
-var Cartesian =
-/** @class */
-function () {
+var Cartesian = /** @class */function () {
   function Cartesian(name) {
     this.type = 'cartesian';
     this._dimList = [];
     this._axes = {};
     this.name = name || '';
   }
-
   Cartesian.prototype.getAxis = function (dim) {
     return this._axes[dim];
   };
-
   Cartesian.prototype.getAxes = function () {
     return map(this._dimList, function (dim) {
       return this._axes[dim];
     }, this);
   };
-
   Cartesian.prototype.getAxesByScale = function (scaleType) {
     scaleType = scaleType.toLowerCase();
     return filter(this.getAxes(), function (axis) {
       return axis.scale.type === scaleType;
     });
   };
-
   Cartesian.prototype.addAxis = function (axis) {
     var dim = axis.dim;
     this._axes[dim] = axis;
-
     this._dimList.push(dim);
   };
-
   return Cartesian;
 }();
-
 ;
 /* harmony default export */ const cartesian_Cartesian = (Cartesian);
-;// CONCATENATED MODULE: ./src/coord/grid3D/Cartesian3D.js
+;// ./src/coord/grid3D/Cartesian3D.js
 
 
 
@@ -42006,7 +39903,7 @@ Cartesian3D.prototype = {
 external_echarts_.util.inherits(Cartesian3D, cartesian_Cartesian);
 
 /* harmony default export */ const grid3D_Cartesian3D = (Cartesian3D);
-;// CONCATENATED MODULE: ./src/coord/grid3D/Axis3D.js
+;// ./src/coord/grid3D/Axis3D.js
 
 
 function Axis3D(dim, scale, extent) {
@@ -42036,236 +39933,164 @@ Axis3D.prototype = {
 external_echarts_.util.inherits(Axis3D, external_echarts_.Axis);
 
 /* harmony default export */ const grid3D_Axis3D = (Axis3D);
-;// CONCATENATED MODULE: ./node_modules/echarts/node_modules/tslib/tslib.es6.js
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise */
-
-var tslib_es6_extendStatics = function(d, b) {
-    tslib_es6_extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-    return tslib_es6_extendStatics(d, b);
-};
-
-function tslib_es6_extends(d, b) {
-    tslib_es6_extendStatics(d, b);
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
-var tslib_es6_assign = function() {
-    tslib_es6_assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
+;// ./node_modules/zrender/lib/core/fourPointsTransform.js
+var LN2 = Math.log(2);
+function determinant(rows, rank, rowStart, rowMask, colMask, detCache) {
+    var cacheKey = rowMask + '-' + colMask;
+    var fullRank = rows.length;
+    if (detCache.hasOwnProperty(cacheKey)) {
+        return detCache[cacheKey];
     }
-    return tslib_es6_assign.apply(this, arguments);
-}
-
-function tslib_es6_rest(s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-}
-
-function tslib_es6_decorate(decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-}
-
-function tslib_es6_param(paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-}
-
-function tslib_es6_metadata(metadataKey, metadataValue) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
-}
-
-function tslib_es6_awaiter(thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
-
-function tslib_es6_generator(thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    if (rank === 1) {
+        var colStart = Math.round(Math.log(((1 << fullRank) - 1) & ~colMask) / LN2);
+        return rows[rowStart][colStart];
     }
-}
-
-var tslib_es6_createBinding = Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-});
-
-function tslib_es6_exportStar(m, o) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) tslib_es6_createBinding(o, m, p);
-}
-
-function tslib_es6_values(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
+    var subRowMask = rowMask | (1 << rowStart);
+    var subRowStart = rowStart + 1;
+    while (rowMask & (1 << subRowStart)) {
+        subRowStart++;
+    }
+    var sum = 0;
+    for (var j = 0, colLocalIdx = 0; j < fullRank; j++) {
+        var colTag = 1 << j;
+        if (!(colTag & colMask)) {
+            sum += (colLocalIdx % 2 ? -1 : 1) * rows[rowStart][j]
+                * determinant(rows, rank - 1, subRowStart, subRowMask, colMask | colTag, detCache);
+            colLocalIdx++;
         }
+    }
+    detCache[cacheKey] = sum;
+    return sum;
+}
+function buildTransformer(src, dest) {
+    var mA = [
+        [src[0], src[1], 1, 0, 0, 0, -dest[0] * src[0], -dest[0] * src[1]],
+        [0, 0, 0, src[0], src[1], 1, -dest[1] * src[0], -dest[1] * src[1]],
+        [src[2], src[3], 1, 0, 0, 0, -dest[2] * src[2], -dest[2] * src[3]],
+        [0, 0, 0, src[2], src[3], 1, -dest[3] * src[2], -dest[3] * src[3]],
+        [src[4], src[5], 1, 0, 0, 0, -dest[4] * src[4], -dest[4] * src[5]],
+        [0, 0, 0, src[4], src[5], 1, -dest[5] * src[4], -dest[5] * src[5]],
+        [src[6], src[7], 1, 0, 0, 0, -dest[6] * src[6], -dest[6] * src[7]],
+        [0, 0, 0, src[6], src[7], 1, -dest[7] * src[6], -dest[7] * src[7]]
+    ];
+    var detCache = {};
+    var det = determinant(mA, 8, 0, 0, 0, detCache);
+    if (det === 0) {
+        return;
+    }
+    var vh = [];
+    for (var i = 0; i < 8; i++) {
+        for (var j = 0; j < 8; j++) {
+            vh[j] == null && (vh[j] = 0);
+            vh[j] += ((i + j) % 2 ? -1 : 1)
+                * determinant(mA, 7, i === 0 ? 1 : 0, 1 << i, 1 << j, detCache)
+                / det * dest[i];
+        }
+    }
+    return function (out, srcPointX, srcPointY) {
+        var pk = srcPointX * vh[6] + srcPointY * vh[7] + 1;
+        out[0] = (srcPointX * vh[0] + srcPointY * vh[1] + vh[2]) / pk;
+        out[1] = (srcPointX * vh[3] + srcPointY * vh[4] + vh[5]) / pk;
     };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 
-function tslib_es6_read(o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
+;// ./node_modules/zrender/lib/core/dom.js
+
+
+var EVENT_SAVED_PROP = '___zrEVENTSAVED';
+var _calcOut = [];
+function transformLocalCoord(out, elFrom, elTarget, inX, inY) {
+    return transformCoordWithViewport(_calcOut, elFrom, inX, inY, true)
+        && transformCoordWithViewport(out, elTarget, _calcOut[0], _calcOut[1]);
+}
+function transformCoordWithViewport(out, el, inX, inY, inverse) {
+    if (el.getBoundingClientRect && core_env.domSupported && !isCanvasEl(el)) {
+        var saved = el[EVENT_SAVED_PROP] || (el[EVENT_SAVED_PROP] = {});
+        var markers = prepareCoordMarkers(el, saved);
+        var transformer = preparePointerTransformer(markers, saved, inverse);
+        if (transformer) {
+            transformer(out, inX, inY);
+            return true;
         }
-        finally { if (e) throw e.error; }
     }
-    return ar;
+    return false;
 }
-
-function tslib_es6_spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(tslib_es6_read(arguments[i]));
-    return ar;
-}
-
-function tslib_es6_spreadArrays() {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
-
-function tslib_es6_await(v) {
-    return this instanceof tslib_es6_await ? (this.v = v, this) : new tslib_es6_await(v);
-}
-
-function tslib_es6_asyncGenerator(thisArg, _arguments, generator) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var g = generator.apply(thisArg, _arguments || []), i, q = [];
-    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-    function step(r) { r.value instanceof tslib_es6_await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
-    function fulfill(value) { resume("next", value); }
-    function reject(value) { resume("throw", value); }
-    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
-}
-
-function tslib_es6_asyncDelegator(o) {
-    var i, p;
-    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: tslib_es6_await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
-}
-
-function tslib_es6_asyncValues(o) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var m = o[Symbol.asyncIterator], i;
-    return m ? m.call(o) : (o = typeof tslib_es6_values === "function" ? tslib_es6_values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
-}
-
-function tslib_es6_makeTemplateObject(cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-
-var tslib_es6_setModuleDefault = Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-};
-
-function tslib_es6_importStar(mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) tslib_es6_createBinding(result, mod, k);
-    tslib_es6_setModuleDefault(result, mod);
-    return result;
-}
-
-function tslib_es6_importDefault(mod) {
-    return (mod && mod.__esModule) ? mod : { default: mod };
-}
-
-function tslib_es6_classPrivateFieldGet(receiver, privateMap) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to get private field on non-instance");
+function prepareCoordMarkers(el, saved) {
+    var markers = saved.markers;
+    if (markers) {
+        return markers;
     }
-    return privateMap.get(receiver);
-}
-
-function tslib_es6_classPrivateFieldSet(receiver, privateMap, value) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to set private field on non-instance");
+    markers = saved.markers = [];
+    var propLR = ['left', 'right'];
+    var propTB = ['top', 'bottom'];
+    for (var i = 0; i < 4; i++) {
+        var marker = document.createElement('div');
+        var stl = marker.style;
+        var idxLR = i % 2;
+        var idxTB = (i >> 1) % 2;
+        stl.cssText = [
+            'position: absolute',
+            'visibility: hidden',
+            'padding: 0',
+            'margin: 0',
+            'border-width: 0',
+            'user-select: none',
+            'width:0',
+            'height:0',
+            propLR[idxLR] + ':0',
+            propTB[idxTB] + ':0',
+            propLR[1 - idxLR] + ':auto',
+            propTB[1 - idxTB] + ':auto',
+            ''
+        ].join('!important;');
+        el.appendChild(marker);
+        markers.push(marker);
     }
-    privateMap.set(receiver, value);
-    return value;
+    return markers;
+}
+function preparePointerTransformer(markers, saved, inverse) {
+    var transformerName = inverse ? 'invTrans' : 'trans';
+    var transformer = saved[transformerName];
+    var oldSrcCoords = saved.srcCoords;
+    var srcCoords = [];
+    var destCoords = [];
+    var oldCoordTheSame = true;
+    for (var i = 0; i < 4; i++) {
+        var rect = markers[i].getBoundingClientRect();
+        var ii = 2 * i;
+        var x = rect.left;
+        var y = rect.top;
+        srcCoords.push(x, y);
+        oldCoordTheSame = oldCoordTheSame && oldSrcCoords && x === oldSrcCoords[ii] && y === oldSrcCoords[ii + 1];
+        destCoords.push(markers[i].offsetLeft, markers[i].offsetTop);
+    }
+    return (oldCoordTheSame && transformer)
+        ? transformer
+        : (saved.srcCoords = srcCoords,
+            saved[transformerName] = inverse
+                ? buildTransformer(destCoords, srcCoords)
+                : buildTransformer(srcCoords, destCoords));
+}
+function isCanvasEl(el) {
+    return el.nodeName.toUpperCase() === 'CANVAS';
+}
+var replaceReg = /([&<>"'])/g;
+var replaceMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    '\'': '&#39;'
+};
+function encodeHTML(source) {
+    return source == null
+        ? ''
+        : (source + '').replace(replaceReg, function (str, c) {
+            return replaceMap[c];
+        });
 }
 
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/clazz.js
+;// ./node_modules/echarts/lib/util/clazz.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42318,29 +40143,24 @@ var IS_EXTENDED_CLASS = '___EC__EXTENDED_CLASS___';
  * Notice, parseClassType('') should returns {main: '', sub: ''}
  * @public
  */
-
 function parseClassType(componentType) {
   var ret = {
     main: '',
     sub: ''
   };
-
   if (componentType) {
     var typeArr = componentType.split(TYPE_DELIMITER);
     ret.main = typeArr[0] || '';
     ret.sub = typeArr[1] || '';
   }
-
   return ret;
 }
 /**
  * @public
  */
-
 function checkClassType(componentType) {
   assert(/^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)?$/.test(componentType), 'componentType "' + componentType + '" illegal');
 }
-
 function isExtendedClass(clz) {
   return !!(clz && clz[IS_EXTENDED_CLASS]);
 }
@@ -42354,10 +40174,8 @@ function isExtendedClass(clz) {
  * enableClassExtend(Xxx as XxxConstructor);
  * ```
  */
-
 function enableClassExtend(rootClz, mandatoryMethods) {
   rootClz.$constructor = rootClz; // FIXME: not necessary?
-
   rootClz.extend = function (proto) {
     if (true) {
       each(mandatoryMethods, function (method) {
@@ -42366,49 +40184,40 @@ function enableClassExtend(rootClz, mandatoryMethods) {
         }
       });
     }
-
-    var superClass = this; // For backward compat, we both support ts class inheritance and this
-    // "extend" approach.
-    // The constructor should keep the same behavior as ts class inheritance:
-    // If this constructor/$constructor is not declared, auto invoke the super
-    // constructor.
-    // If this constructor/$constructor is declared, it is responsible for
-    // calling the super constructor.
-
-    function ExtendedClass() {
-      var args = [];
-
-      for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-      }
-
-      if (!proto.$constructor) {
-        if (!isESClass(superClass)) {
-          // Will throw error if superClass is an es6 native class.
-          superClass.apply(this, arguments);
-        } else {
-          var ins = createObject( // @ts-ignore
-          ExtendedClass.prototype, new (superClass.bind.apply(superClass, tslib_es6_spreadArrays([void 0], args)))());
-          return ins;
+    var superClass = this;
+    var ExtendedClass;
+    if (isESClass(superClass)) {
+      ExtendedClass = /** @class */function (_super) {
+        __extends(class_1, _super);
+        function class_1() {
+          return _super.apply(this, arguments) || this;
         }
-      } else {
-        proto.$constructor.apply(this, arguments);
-      }
+        return class_1;
+      }(superClass);
+    } else {
+      // For backward compat, we both support ts class inheritance and this
+      // "extend" approach.
+      // The constructor should keep the same behavior as ts class inheritance:
+      // If this constructor/$constructor is not declared, auto invoke the super
+      // constructor.
+      // If this constructor/$constructor is declared, it is responsible for
+      // calling the super constructor.
+      ExtendedClass = function () {
+        (proto.$constructor || superClass).apply(this, arguments);
+      };
+      inherits(ExtendedClass, this);
     }
-
-    ExtendedClass[IS_EXTENDED_CLASS] = true;
     util_extend(ExtendedClass.prototype, proto);
+    ExtendedClass[IS_EXTENDED_CLASS] = true;
     ExtendedClass.extend = this.extend;
     ExtendedClass.superCall = superCall;
     ExtendedClass.superApply = superApply;
-    inherits(ExtendedClass, this);
     ExtendedClass.superClass = superClass;
     return ExtendedClass;
   };
 }
-
 function isESClass(fn) {
-  return typeof fn === 'function' && /^class\s/.test(Function.prototype.toString.call(fn));
+  return isFunction(fn) && /^class\s/.test(Function.prototype.toString.call(fn));
 }
 /**
  * A work around to both support ts extend and this extend mechanism.
@@ -42424,12 +40233,10 @@ function isESClass(fn) {
  * Component.markExtend(Series);
  * ```
  */
-
-
 function mountExtend(SubClz, SupperClz) {
   SubClz.extend = SupperClz.extend;
-} // A random offset.
-
+}
+// A random offset.
 var classBase = Math.round(Math.random() * 10);
 /**
  * Implements `CheckableConstructor` for `target`.
@@ -42444,35 +40251,29 @@ var classBase = Math.round(Math.random() * 10);
  * enableClassCheck(Xxx as XxxConstructor)
  * ```
  */
-
 function enableClassCheck(target) {
   var classAttr = ['__\0is_clz', classBase++].join('_');
   target.prototype[classAttr] = true;
-
   if (true) {
     assert(!target.isInstance, 'The method "is" can not be defined.');
   }
-
   target.isInstance = function (obj) {
     return !!(obj && obj[classAttr]);
   };
-} // superCall should have class info, which can not be fetch from 'this'.
+}
+// superCall should have class info, which can not be fetched from 'this'.
 // Consider this case:
 // class A has method f,
 // class B inherits class A, overrides method f, f call superApply('f'),
-// class C inherits class B, do not overrides method f,
-// then when method of class C is called, dead loop occured.
-
+// class C inherits class B, does not override method f,
+// then when method of class C is called, dead loop occurred.
 function superCall(context, methodName) {
   var args = [];
-
   for (var _i = 2; _i < arguments.length; _i++) {
     args[_i - 2] = arguments[_i];
   }
-
   return this.superClass.prototype[methodName].apply(context, args);
 }
-
 function superApply(context, methodName, args) {
   return this.superClass.prototype[methodName].apply(context, args);
 }
@@ -42486,68 +40287,55 @@ function superApply(context, methodName, args) {
  * enableClassManagement(Xxx as XxxConstructor);
  * ```
  */
-
-
 function enableClassManagement(target) {
   /**
    * Component model classes
    * key: componentType,
    * value:
-   *     componentClass, when componentType is 'xxx'
-   *     or Object.<subKey, componentClass>, when componentType is 'xxx.yy'
+   *     componentClass, when componentType is 'a'
+   *     or Object.<subKey, componentClass>, when componentType is 'a.b'
    */
   var storage = {};
-
   target.registerClass = function (clz) {
-    // `type` should not be a "instance memeber".
+    // `type` should not be a "instance member".
     // If using TS class, should better declared as `static type = 'series.pie'`.
     // otherwise users have to mount `type` on prototype manually.
     // For backward compat and enable instance visit type via `this.type`,
-    // we stil support fetch `type` from prototype.
+    // we still support fetch `type` from prototype.
     var componentFullType = clz.type || clz.prototype.type;
-
     if (componentFullType) {
-      checkClassType(componentFullType); // If only static type declared, we assign it to prototype mandatorily.
-
+      checkClassType(componentFullType);
+      // If only static type declared, we assign it to prototype mandatorily.
       clz.prototype.type = componentFullType;
       var componentTypeInfo = parseClassType(componentFullType);
-
       if (!componentTypeInfo.sub) {
         if (true) {
           if (storage[componentTypeInfo.main]) {
             console.warn(componentTypeInfo.main + ' exists.');
           }
         }
-
         storage[componentTypeInfo.main] = clz;
       } else if (componentTypeInfo.sub !== IS_CONTAINER) {
         var container = makeContainer(componentTypeInfo);
         container[componentTypeInfo.sub] = clz;
       }
     }
-
     return clz;
   };
-
   target.getClass = function (mainType, subType, throwWhenNotFound) {
     var clz = storage[mainType];
-
     if (clz && clz[IS_CONTAINER]) {
       clz = subType ? clz[subType] : null;
     }
-
     if (throwWhenNotFound && !clz) {
       throw new Error(!subType ? mainType + '.' + 'type should be specified.' : 'Component ' + mainType + '.' + (subType || '') + ' is used but not imported.');
     }
-
     return clz;
   };
-
   target.getClassesByMainType = function (componentType) {
     var componentTypeInfo = parseClassType(componentType);
     var result = [];
     var obj = storage[componentTypeInfo.main];
-
     if (obj && obj[IS_CONTAINER]) {
       each(obj, function (o, type) {
         type !== IS_CONTAINER && result.push(o);
@@ -42555,10 +40343,8 @@ function enableClassManagement(target) {
     } else {
       result.push(obj);
     }
-
     return result;
   };
-
   target.hasClass = function (componentType) {
     // Just consider componentType.main.
     var componentTypeInfo = parseClassType(componentType);
@@ -42567,8 +40353,6 @@ function enableClassManagement(target) {
   /**
    * @return Like ['aa', 'bb'], but can not be ['aa.xx']
    */
-
-
   target.getAllClassMainTypes = function () {
     var types = [];
     each(storage, function (obj, type) {
@@ -42579,25 +40363,21 @@ function enableClassManagement(target) {
   /**
    * If a main type is container and has sub types
    */
-
-
   target.hasSubTypes = function (componentType) {
     var componentTypeInfo = parseClassType(componentType);
     var obj = storage[componentTypeInfo.main];
     return obj && obj[IS_CONTAINER];
   };
-
   function makeContainer(componentTypeInfo) {
     var container = storage[componentTypeInfo.main];
-
     if (!container || !container[IS_CONTAINER]) {
       container = storage[componentTypeInfo.main] = {};
       container[IS_CONTAINER] = true;
     }
-
     return container;
   }
-} // /**
+}
+// /**
 //  * @param {string|Array.<string>} properties
 //  */
 // export function setReadOnly(obj, properties) {
@@ -42616,7 +40396,7 @@ function enableClassManagement(target) {
 //         && Object.freeze(obj[prop]);
 // });
 // }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/model/mixin/makeStyleMapper.js
+;// ./node_modules/echarts/lib/model/mixin/makeStyleMapper.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42670,30 +40450,24 @@ function makeStyleMapper(properties, ignoreParent) {
       properties[i][1] = properties[i][0];
     }
   }
-
   ignoreParent = ignoreParent || false;
   return function (model, excludes, includes) {
     var style = {};
-
     for (var i = 0; i < properties.length; i++) {
       var propName = properties[i][1];
-
       if (excludes && indexOf(excludes, propName) >= 0 || includes && indexOf(includes, propName) < 0) {
         continue;
       }
-
       var val = model.getShallow(propName, ignoreParent);
-
       if (val != null) {
         style[properties[i][0]] = val;
       }
-    } // TODO Text or image?
-
-
+    }
+    // TODO Text or image?
     return style;
   };
 }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/model/mixin/areaStyle.js
+;// ./node_modules/echarts/lib/model/mixin/areaStyle.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42738,26 +40512,21 @@ function makeStyleMapper(properties, ignoreParent) {
 * under the License.
 */
 
-var AREA_STYLE_KEY_MAP = [['fill', 'color'], ['shadowBlur'], ['shadowOffsetX'], ['shadowOffsetY'], ['opacity'], ['shadowColor'] // Option decal is in `DecalObject` but style.decal is in `PatternObject`.
+var AREA_STYLE_KEY_MAP = [['fill', 'color'], ['shadowBlur'], ['shadowOffsetX'], ['shadowOffsetY'], ['opacity'], ['shadowColor']
+// Option decal is in `DecalObject` but style.decal is in `PatternObject`.
 // So do not transfer decal directly.
 ];
 var getAreaStyle = makeStyleMapper(AREA_STYLE_KEY_MAP);
-
-var AreaStyleMixin =
-/** @class */
-function () {
+var AreaStyleMixin = /** @class */function () {
   function AreaStyleMixin() {}
-
   AreaStyleMixin.prototype.getAreaStyle = function (excludes, includes) {
     return getAreaStyle(this, excludes, includes);
   };
-
   return AreaStyleMixin;
 }();
-
 ;
 
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/model/mixin/textStyle.js
+;// ./node_modules/echarts/lib/model/mixin/textStyle.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42803,20 +40572,16 @@ function () {
 */
 
 
-var PATH_COLOR = ['textStyle', 'color']; // TODO Performance improvement?
-
-var tmpRichText = new Text();
-
-var TextStyleMixin =
-/** @class */
-function () {
+var PATH_COLOR = ['textStyle', 'color'];
+var textStyleParams = ['fontStyle', 'fontWeight', 'fontSize', 'fontFamily', 'padding', 'lineHeight', 'rich', 'width', 'height', 'overflow'];
+// TODO Performance improvement?
+var tmpText = new Text();
+var TextStyleMixin = /** @class */function () {
   function TextStyleMixin() {}
   /**
    * Get color property or get color from option.textStyle.color
    */
   // TODO Callback
-
-
   TextStyleMixin.prototype.getTextColor = function (isEmphasis) {
     var ecModel = this.ecModel;
     return this.getShallow('color') || (!isEmphasis && ecModel ? ecModel.get(PATH_COLOR) : null);
@@ -42825,8 +40590,6 @@ function () {
    * Create font string from fontStyle, fontWeight, fontSize, fontFamily
    * @return {string}
    */
-
-
   TextStyleMixin.prototype.getFont = function () {
     return getFont({
       fontStyle: this.getShallow('fontStyle'),
@@ -42835,29 +40598,23 @@ function () {
       fontFamily: this.getShallow('fontFamily')
     }, this.ecModel);
   };
-
   TextStyleMixin.prototype.getTextRect = function (text) {
-    tmpRichText.useStyle({
+    var style = {
       text: text,
-      fontStyle: this.getShallow('fontStyle'),
-      fontWeight: this.getShallow('fontWeight'),
-      fontSize: this.getShallow('fontSize'),
-      fontFamily: this.getShallow('fontFamily'),
-      verticalAlign: this.getShallow('verticalAlign') || this.getShallow('baseline'),
-      padding: this.getShallow('padding'),
-      lineHeight: this.getShallow('lineHeight'),
-      rich: this.getShallow('rich')
-    });
-    tmpRichText.update();
-    return tmpRichText.getBoundingRect();
+      verticalAlign: this.getShallow('verticalAlign') || this.getShallow('baseline')
+    };
+    for (var i = 0; i < textStyleParams.length; i++) {
+      style[textStyleParams[i]] = this.getShallow(textStyleParams[i]);
+    }
+    tmpText.useStyle(style);
+    tmpText.update();
+    return tmpText.getBoundingRect();
   };
-
   return TextStyleMixin;
 }();
-
 ;
 /* harmony default export */ const textStyle = (TextStyleMixin);
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/model/mixin/lineStyle.js
+;// ./node_modules/echarts/lib/model/mixin/lineStyle.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42902,26 +40659,21 @@ function () {
 * under the License.
 */
 
-var LINE_STYLE_KEY_MAP = [['lineWidth', 'width'], ['stroke', 'color'], ['opacity'], ['shadowBlur'], ['shadowOffsetX'], ['shadowOffsetY'], ['shadowColor'], ['lineDash', 'type'], ['lineDashOffset', 'dashOffset'], ['lineCap', 'cap'], ['lineJoin', 'join'], ['miterLimit'] // Option decal is in `DecalObject` but style.decal is in `PatternObject`.
+var LINE_STYLE_KEY_MAP = [['lineWidth', 'width'], ['stroke', 'color'], ['opacity'], ['shadowBlur'], ['shadowOffsetX'], ['shadowOffsetY'], ['shadowColor'], ['lineDash', 'type'], ['lineDashOffset', 'dashOffset'], ['lineCap', 'cap'], ['lineJoin', 'join'], ['miterLimit']
+// Option decal is in `DecalObject` but style.decal is in `PatternObject`.
 // So do not transfer decal directly.
 ];
 var getLineStyle = makeStyleMapper(LINE_STYLE_KEY_MAP);
-
-var LineStyleMixin =
-/** @class */
-function () {
+var LineStyleMixin = /** @class */function () {
   function LineStyleMixin() {}
-
   LineStyleMixin.prototype.getLineStyle = function (excludes) {
     return getLineStyle(this, excludes);
   };
-
   return LineStyleMixin;
 }();
-
 ;
 
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/model/mixin/itemStyle.js
+;// ./node_modules/echarts/lib/model/mixin/itemStyle.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -42966,25 +40718,20 @@ function () {
 * under the License.
 */
 
-var ITEM_STYLE_KEY_MAP = [['fill', 'color'], ['stroke', 'borderColor'], ['lineWidth', 'borderWidth'], ['opacity'], ['shadowBlur'], ['shadowOffsetX'], ['shadowOffsetY'], ['shadowColor'], ['lineDash', 'borderType'], ['lineDashOffset', 'borderDashOffset'], ['lineCap', 'borderCap'], ['lineJoin', 'borderJoin'], ['miterLimit', 'borderMiterLimit'] // Option decal is in `DecalObject` but style.decal is in `PatternObject`.
+var ITEM_STYLE_KEY_MAP = [['fill', 'color'], ['stroke', 'borderColor'], ['lineWidth', 'borderWidth'], ['opacity'], ['shadowBlur'], ['shadowOffsetX'], ['shadowOffsetY'], ['shadowColor'], ['lineDash', 'borderType'], ['lineDashOffset', 'borderDashOffset'], ['lineCap', 'borderCap'], ['lineJoin', 'borderJoin'], ['miterLimit', 'borderMiterLimit']
+// Option decal is in `DecalObject` but style.decal is in `PatternObject`.
 // So do not transfer decal directly.
 ];
 var getItemStyle = makeStyleMapper(ITEM_STYLE_KEY_MAP);
-
-var ItemStyleMixin =
-/** @class */
-function () {
+var ItemStyleMixin = /** @class */function () {
   function ItemStyleMixin() {}
-
   ItemStyleMixin.prototype.getItemStyle = function (excludes, includes) {
     return getItemStyle(this, excludes, includes);
   };
-
   return ItemStyleMixin;
 }();
 
-
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/model/Model.js
+;// ./node_modules/echarts/lib/model/Model.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43035,14 +40782,12 @@ function () {
 
 
 
-
-var Model =
-/** @class */
-function () {
+var Model = /** @class */function () {
   function Model(option, parentModel, ecModel) {
     this.parentModel = parentModel;
     this.ecModel = ecModel;
-    this.option = option; // Simple optimization
+    this.option = option;
+    // Simple optimization
     // if (this.init) {
     //     if (arguments.length <= 4) {
     //         this.init(option, parentModel, ecModel, extraOpt);
@@ -43052,10 +40797,8 @@ function () {
     //     }
     // }
   }
-
   Model.prototype.init = function (option, parentModel, ecModel) {
     var rest = [];
-
     for (var _i = 3; _i < arguments.length; _i++) {
       rest[_i - 3] = arguments[_i];
     }
@@ -43063,42 +40806,33 @@ function () {
   /**
    * Merge the input option to me.
    */
-
-
   Model.prototype.mergeOption = function (option, ecModel) {
     merge(this.option, option, true);
-  }; // `path` can be 'xxx.yyy.zzz', so the return value type have to be `ModelOption`
+  };
+  // `path` can be 'a.b.c', so the return value type have to be `ModelOption`
   // TODO: TYPE strict key check?
   // get(path: string | string[], ignoreParent?: boolean): ModelOption;
-
-
   Model.prototype.get = function (path, ignoreParent) {
     if (path == null) {
       return this.option;
     }
-
     return this._doGet(this.parsePath(path), !ignoreParent && this.parentModel);
   };
-
   Model.prototype.getShallow = function (key, ignoreParent) {
     var option = this.option;
     var val = option == null ? option : option[key];
-
     if (val == null && !ignoreParent) {
       var parentModel = this.parentModel;
-
       if (parentModel) {
         // FIXME:TS do not know how to make it works
         val = parentModel.getShallow(key);
       }
     }
-
     return val;
-  }; // `path` can be 'xxx.yyy.zzz', so the return value type have to be `Model<ModelOption>`
+  };
+  // `path` can be 'a.b.c', so the return value type have to be `Model<ModelOption>`
   // getModel(path: string | string[], parentModel?: Model): Model;
-  // TODO 'xxx.yyy.zzz' is deprecated
-
-
+  // TODO 'a.b.c' is deprecated
   Model.prototype.getModel = function (path, parentModel) {
     var hasPath = path != null;
     var pathFinal = hasPath ? this.parsePath(path) : null;
@@ -43107,81 +40841,34 @@ function () {
     return new Model(obj, parentModel, this.ecModel);
   };
   /**
-   * Squash option stack into one.
-   * parentModel will be removed after squashed.
-   *
-   * NOTE: resolveParentPath will not be applied here for simplicity. DON'T use this function
-   * if resolveParentPath is modified.
-   *
-   * @param deepMerge If do deep merge. Default to be false.
-   */
-  // squash(
-  //     deepMerge?: boolean,
-  //     handleCallback?: (func: () => object) => object
-  // ) {
-  //     const optionStack = [];
-  //     let model: Model = this;
-  //     while (model) {
-  //         if (model.option) {
-  //             optionStack.push(model.option);
-  //         }
-  //         model = model.parentModel;
-  //     }
-  //     const newOption = {} as Opt;
-  //     let option;
-  //     while (option = optionStack.pop()) {    // Top down merge
-  //         if (isFunction(option) && handleCallback) {
-  //             option = handleCallback(option);
-  //         }
-  //         if (deepMerge) {
-  //             merge(newOption, option);
-  //         }
-  //         else {
-  //             extend(newOption, option);
-  //         }
-  //     }
-  //     // Remove parentModel
-  //     this.option = newOption;
-  //     this.parentModel = null;
-  // }
-
-  /**
    * If model has option
    */
-
-
   Model.prototype.isEmpty = function () {
     return this.option == null;
   };
-
-  Model.prototype.restoreData = function () {}; // Pending
-
-
+  Model.prototype.restoreData = function () {};
+  // Pending
   Model.prototype.clone = function () {
     var Ctor = this.constructor;
     return new Ctor(clone(this.option));
-  }; // setReadOnly(properties): void {
+  };
+  // setReadOnly(properties): void {
   // clazzUtil.setReadOnly(this, properties);
   // }
   // If path is null/undefined, return null/undefined.
-
-
   Model.prototype.parsePath = function (path) {
     if (typeof path === 'string') {
       return path.split('.');
     }
-
     return path;
-  }; // Resolve path for parent. Perhaps useful when parent use a different property.
+  };
+  // Resolve path for parent. Perhaps useful when parent use a different property.
   // Default to be a identity resolver.
   // Can be modified to a different resolver.
-
-
   Model.prototype.resolveParentPath = function (path) {
     return path;
-  }; // FIXME:TS check whether put this method here
-
-
+  };
+  // FIXME:TS check whether put this method here
   Model.prototype.isAnimationEnabled = function () {
     if (!core_env.node && this.option) {
       if (this.option.animation != null) {
@@ -43191,40 +40878,31 @@ function () {
       }
     }
   };
-
   Model.prototype._doGet = function (pathArr, parentModel) {
     var obj = this.option;
-
     if (!pathArr) {
       return obj;
     }
-
     for (var i = 0; i < pathArr.length; i++) {
       // Ignore empty
       if (!pathArr[i]) {
         continue;
-      } // obj could be number/string/... (like 0)
-
-
+      }
+      // obj could be number/string/... (like 0)
       obj = obj && typeof obj === 'object' ? obj[pathArr[i]] : null;
-
       if (obj == null) {
         break;
       }
     }
-
     if (obj == null && parentModel) {
       obj = parentModel._doGet(this.resolveParentPath(pathArr), parentModel.parentModel);
     }
-
     return obj;
   };
-
   return Model;
 }();
-
-; // Enable Model.extend.
-
+;
+// Enable Model.extend.
 enableClassExtend(Model);
 enableClassCheck(Model);
 mixin(Model, LineStyleMixin);
@@ -43232,7 +40910,7 @@ mixin(Model, ItemStyleMixin);
 mixin(Model, AreaStyleMixin);
 mixin(Model, textStyle);
 /* harmony default export */ const model_Model = (Model);
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/i18n/langEN.js
+;// ./node_modules/echarts/lib/i18n/langEN.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43259,24 +40937,23 @@ mixin(Model, textStyle);
  */
 
 /*
-* Licensed to the Apache Software Foundation (ASF) under one
-* or more contributor license agreements.  See the NOTICE file
-* distributed with this work for additional information
-* regarding copyright ownership.  The ASF licenses this file
-* to you under the Apache License, Version 2.0 (the
-* "License"); you may not use this file except in compliance
-* with the License.  You may obtain a copy of the License at
-*
-*   http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing,
-* software distributed under the License is distributed on an
-* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-* KIND, either express or implied.  See the License for the
-* specific language governing permissions and limitations
-* under the License.
-*/
-
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 /**
  * Language: English.
  */
@@ -43353,7 +41030,9 @@ mixin(Model, textStyle);
       gauge: 'Gauge',
       pictorialBar: 'Pictorial bar',
       themeRiver: 'Theme River Map',
-      sunburst: 'Sunburst'
+      sunburst: 'Sunburst',
+      custom: 'Custom chart',
+      chart: 'Chart'
     }
   },
   aria: {
@@ -43389,7 +41068,7 @@ mixin(Model, textStyle);
     }
   }
 });
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/i18n/langZH.js
+;// ./node_modules/echarts/lib/i18n/langZH.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43506,7 +41185,9 @@ mixin(Model, textStyle);
       gauge: '仪表盘图',
       pictorialBar: '象形柱图',
       themeRiver: '主题河流图',
-      sunburst: '旭日图'
+      sunburst: '旭日图',
+      custom: '自定义图表',
+      chart: '图表'
     }
   },
   aria: {
@@ -43542,7 +41223,7 @@ mixin(Model, textStyle);
     }
   }
 });
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/core/locale.js
+;// ./node_modules/echarts/lib/core/locale.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43587,8 +41268,8 @@ mixin(Model, textStyle);
 * under the License.
 */
 
- // default import ZH and EN lang
 
+// default import ZH and EN lang
 
 
 
@@ -43598,23 +41279,21 @@ var DEFAULT_LOCALE = LOCALE_EN;
 var localeStorage = {};
 var localeModels = {};
 var SYSTEM_LANG = !core_env.domSupported ? DEFAULT_LOCALE : function () {
-  var langStr = (
-  /* eslint-disable-next-line */
-  document.documentElement.lang || navigator.language || navigator.browserLanguage).toUpperCase();
+  var langStr = (/* eslint-disable-next-line */
+  document.documentElement.lang || navigator.language || navigator.browserLanguage || DEFAULT_LOCALE).toUpperCase();
   return langStr.indexOf(LOCALE_ZH) > -1 ? LOCALE_ZH : DEFAULT_LOCALE;
 }();
 function registerLocale(locale, localeObj) {
   locale = locale.toUpperCase();
   localeModels[locale] = new model_Model(localeObj);
   localeStorage[locale] = localeObj;
-} // export function getLocale(locale: string) {
+}
+// export function getLocale(locale: string) {
 //     return localeStorage[locale];
 // }
-
 function createLocaleObject(locale) {
   if (isString(locale)) {
     var localeObj = localeStorage[locale.toUpperCase()] || {};
-
     if (locale === LOCALE_ZH || locale === LOCALE_EN) {
       return clone(localeObj);
     } else {
@@ -43629,11 +41308,11 @@ function getLocaleModel(lang) {
 }
 function getDefaultLocaleModel() {
   return localeModels[DEFAULT_LOCALE];
-} // Default locale
-
+}
+// Default locale
 registerLocale(LOCALE_EN, langEN);
 registerLocale(LOCALE_ZH, langZH);
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/time.js
+;// ./node_modules/echarts/lib/util/time.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43693,8 +41372,8 @@ var defaultLeveledFormatter = {
   hour: '{HH}:{mm}',
   minute: '{HH}:{mm}',
   second: '{HH}:{mm}:{ss}',
-  millisecond: '{hh}:{mm}:{ss} {SSS}',
-  none: '{yyyy}-{MM}-{dd} {hh}:{mm}:{ss} {SSS}'
+  millisecond: '{HH}:{mm}:{ss} {SSS}',
+  none: '{yyyy}-{MM}-{dd} {HH}:{mm}:{ss} {SSS}'
 };
 var fullDayFormatter = '{yyyy}-{MM}-{dd}';
 var fullLeveledFormatter = {
@@ -43717,15 +41396,12 @@ function getPrimaryTimeUnit(timeUnit) {
     case 'half-year':
     case 'quarter':
       return 'month';
-
     case 'week':
     case 'half-week':
       return 'day';
-
     case 'half-day':
     case 'quarter-day':
       return 'hour';
-
     default:
       // year, minutes, second, milliseconds
       return timeUnit;
@@ -43739,22 +41415,21 @@ function getDefaultFormatPrecisionOfInterval(timeUnit) {
     case 'year':
     case 'month':
       return 'day';
-
     case 'millisecond':
       return 'millisecond';
-
     default:
       // Also for day, hour, minute, second
       return 'second';
   }
 }
-function format( // Note: The result based on `isUTC` are totally different, which can not be just simply
+function format(
+// Note: The result based on `isUTC` are totally different, which can not be just simply
 // substituted by the result without `isUTC`. So we make the param `isUTC` mandatory.
 time, template, isUTC, lang) {
   var date = parseDate(time);
   var y = date[fullYearGetterName(isUTC)]();
   var M = date[monthGetterName(isUTC)]() + 1;
-  var q = Math.floor((M - 1) / 4) + 1;
+  var q = Math.floor((M - 1) / 3) + 1;
   var d = date[dateGetterName(isUTC)]();
   var e = date['get' + (isUTC ? 'UTC' : '') + 'Day']();
   var H = date[hoursGetterName(isUTC)]();
@@ -43762,61 +41437,55 @@ time, template, isUTC, lang) {
   var m = date[minutesGetterName(isUTC)]();
   var s = date[secondsGetterName(isUTC)]();
   var S = date[millisecondsGetterName(isUTC)]();
+  var a = H >= 12 ? 'pm' : 'am';
+  var A = a.toUpperCase();
   var localeModel = lang instanceof model_Model ? lang : getLocaleModel(lang || SYSTEM_LANG) || getDefaultLocaleModel();
   var timeModel = localeModel.getModel('time');
   var month = timeModel.get('month');
   var monthAbbr = timeModel.get('monthAbbr');
   var dayOfWeek = timeModel.get('dayOfWeek');
   var dayOfWeekAbbr = timeModel.get('dayOfWeekAbbr');
-  return (template || '').replace(/{yyyy}/g, y + '').replace(/{yy}/g, y % 100 + '').replace(/{Q}/g, q + '').replace(/{MMMM}/g, month[M - 1]).replace(/{MMM}/g, monthAbbr[M - 1]).replace(/{MM}/g, pad(M, 2)).replace(/{M}/g, M + '').replace(/{dd}/g, pad(d, 2)).replace(/{d}/g, d + '').replace(/{eeee}/g, dayOfWeek[e]).replace(/{ee}/g, dayOfWeekAbbr[e]).replace(/{e}/g, e + '').replace(/{HH}/g, pad(H, 2)).replace(/{H}/g, H + '').replace(/{hh}/g, pad(h + '', 2)).replace(/{h}/g, h + '').replace(/{mm}/g, pad(m, 2)).replace(/{m}/g, m + '').replace(/{ss}/g, pad(s, 2)).replace(/{s}/g, s + '').replace(/{SSS}/g, pad(S, 3)).replace(/{S}/g, S + '');
+  return (template || '').replace(/{a}/g, a + '').replace(/{A}/g, A + '').replace(/{yyyy}/g, y + '').replace(/{yy}/g, pad(y % 100 + '', 2)).replace(/{Q}/g, q + '').replace(/{MMMM}/g, month[M - 1]).replace(/{MMM}/g, monthAbbr[M - 1]).replace(/{MM}/g, pad(M, 2)).replace(/{M}/g, M + '').replace(/{dd}/g, pad(d, 2)).replace(/{d}/g, d + '').replace(/{eeee}/g, dayOfWeek[e]).replace(/{ee}/g, dayOfWeekAbbr[e]).replace(/{e}/g, e + '').replace(/{HH}/g, pad(H, 2)).replace(/{H}/g, H + '').replace(/{hh}/g, pad(h + '', 2)).replace(/{h}/g, h + '').replace(/{mm}/g, pad(m, 2)).replace(/{m}/g, m + '').replace(/{ss}/g, pad(s, 2)).replace(/{s}/g, s + '').replace(/{SSS}/g, pad(S, 3)).replace(/{S}/g, S + '');
 }
 function leveledFormat(tick, idx, formatter, lang, isUTC) {
   var template = null;
-
-  if (typeof formatter === 'string') {
+  if (isString(formatter)) {
     // Single formatter for all units at all levels
     template = formatter;
-  } else if (typeof formatter === 'function') {
+  } else if (isFunction(formatter)) {
     // Callback formatter
     template = formatter(tick.value, idx, {
       level: tick.level
     });
   } else {
     var defaults = util_extend({}, defaultLeveledFormatter);
-
     if (tick.level > 0) {
       for (var i = 0; i < primaryTimeUnits.length; ++i) {
         defaults[primaryTimeUnits[i]] = "{primary|" + defaults[primaryTimeUnits[i]] + "}";
       }
     }
-
     var mergedFormatter = formatter ? formatter.inherit === false ? formatter // Use formatter with bigger units
     : util_defaults(formatter, defaults) : defaults;
     var unit = getUnitFromValue(tick.value, isUTC);
-
     if (mergedFormatter[unit]) {
       template = mergedFormatter[unit];
     } else if (mergedFormatter.inherit) {
       // Unit formatter is not defined and should inherit from bigger units
       var targetId = timeUnits.indexOf(unit);
-
       for (var i = targetId - 1; i >= 0; --i) {
         if (mergedFormatter[unit]) {
           template = mergedFormatter[unit];
           break;
         }
       }
-
       template = template || defaults.none;
     }
-
     if (isArray(template)) {
       var levelId = tick.level == null ? 0 : tick.level >= 0 ? tick.level : template.length + tick.level;
       levelId = Math.min(levelId, template.length - 1);
       template = template[levelId];
     }
   }
-
   return format(new Date(tick.value), template, isUTC, lang);
 }
 function getUnitFromValue(value, isUTC) {
@@ -43833,7 +41502,6 @@ function getUnitFromValue(value, isUTC) {
   var isDay = isHour && h === 0;
   var isMonth = isDay && d === 1;
   var isYear = isMonth && M === 1;
-
   if (isYear) {
     return 'year';
   } else if (isMonth) {
@@ -43851,37 +41519,27 @@ function getUnitFromValue(value, isUTC) {
   }
 }
 function getUnitValue(value, unit, isUTC) {
-  var date = typeof value === 'number' ? parseDate(value) : value;
+  var date = isNumber(value) ? parseDate(value) : value;
   unit = unit || getUnitFromValue(value, isUTC);
-
   switch (unit) {
     case 'year':
       return date[fullYearGetterName(isUTC)]();
-
     case 'half-year':
       return date[monthGetterName(isUTC)]() >= 6 ? 1 : 0;
-
     case 'quarter':
       return Math.floor((date[monthGetterName(isUTC)]() + 1) / 4);
-
     case 'month':
       return date[monthGetterName(isUTC)]();
-
     case 'day':
       return date[dateGetterName(isUTC)]();
-
     case 'half-day':
       return date[hoursGetterName(isUTC)]() / 24;
-
     case 'hour':
       return date[hoursGetterName(isUTC)]();
-
     case 'minute':
       return date[minutesGetterName(isUTC)]();
-
     case 'second':
       return date[secondsGetterName(isUTC)]();
-
     case 'millisecond':
       return date[millisecondsGetterName(isUTC)]();
   }
@@ -43905,7 +41563,7 @@ function secondsGetterName(isUTC) {
   return isUTC ? 'getUTCSeconds' : 'getSeconds';
 }
 function millisecondsGetterName(isUTC) {
-  return isUTC ? 'getUTCSeconds' : 'getSeconds';
+  return isUTC ? 'getUTCMilliseconds' : 'getMilliseconds';
 }
 function fullYearSetterName(isUTC) {
   return isUTC ? 'setUTCFullYear' : 'setFullYear';
@@ -43926,9 +41584,9 @@ function secondsSetterName(isUTC) {
   return isUTC ? 'setUTCSeconds' : 'setSeconds';
 }
 function millisecondsSetterName(isUTC) {
-  return isUTC ? 'setUTCSeconds' : 'setSeconds';
+  return isUTC ? 'setUTCMilliseconds' : 'setMilliseconds';
 }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/legacy/getTextRect.js
+;// ./node_modules/echarts/lib/legacy/getTextRect.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -43973,9 +41631,7 @@ function millisecondsSetterName(isUTC) {
 * under the License.
 */
 
-
 function getTextRect(text, font, align, verticalAlign, padding, rich, truncate, lineHeight) {
-  deprecateLog('getTextRect is deprecated.');
   var textEl = new Text({
     style: {
       text: text,
@@ -43990,7 +41646,7 @@ function getTextRect(text, font, align, verticalAlign, padding, rich, truncate, 
   });
   return textEl.getBoundingRect();
 }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/format.js
+;// ./node_modules/echarts/lib/util/format.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44038,15 +41694,14 @@ function getTextRect(text, font, align, verticalAlign, padding, rich, truncate, 
 
 
 
+
 /**
  * Add a comma each three digit.
  */
-
 function addCommas(x) {
   if (!isNumeric(x)) {
     return isString(x) ? x : '-';
   }
-
   var parts = (x + '').split('.');
   return parts[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,') + (parts.length > 1 ? '.' + parts[1] : '');
 }
@@ -44054,27 +41709,13 @@ function toCamelCase(str, upperCaseFirst) {
   str = (str || '').toLowerCase().replace(/-(.)/g, function (match, group1) {
     return group1.toUpperCase();
   });
-
   if (upperCaseFirst && str) {
     str = str.charAt(0).toUpperCase() + str.slice(1);
   }
-
   return str;
 }
 var format_normalizeCssArray = normalizeCssArray;
-var replaceReg = /([&<>"'])/g;
-var replaceMap = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '"': '&quot;',
-  '\'': '&#39;'
-};
-function encodeHTML(source) {
-  return source == null ? '' : (source + '').replace(replaceReg, function (str, c) {
-    return replaceMap[c];
-  });
-}
+
 /**
  * Make value user readable for tooltip and label.
  * "User readable":
@@ -44082,42 +41723,33 @@ function encodeHTML(source) {
  *     Avoid to display an empty string, which users can not recognize there is
  *     a value and it might look like a bug.
  */
-
 function makeValueReadable(value, valueType, useUTC) {
-  var USER_READABLE_DEFUALT_TIME_PATTERN = '{yyyy}-{MM}-{dd} {hh}:{mm}:{ss}';
-
+  var USER_READABLE_DEFUALT_TIME_PATTERN = '{yyyy}-{MM}-{dd} {HH}:{mm}:{ss}';
   function stringToUserReadable(str) {
     return str && trim(str) ? str : '-';
   }
-
   function isNumberUserReadable(num) {
     return !!(num != null && !isNaN(num) && isFinite(num));
   }
-
   var isTypeTime = valueType === 'time';
   var isValueDate = value instanceof Date;
-
   if (isTypeTime || isValueDate) {
     var date = isTypeTime ? parseDate(value) : value;
-
     if (!isNaN(+date)) {
       return format(date, USER_READABLE_DEFUALT_TIME_PATTERN, useUTC);
     } else if (isValueDate) {
       return '-';
-    } // In other cases, continue to try to display the value in the following code.
-
+    }
+    // In other cases, continue to try to display the value in the following code.
   }
-
   if (valueType === 'ordinal') {
     return isStringSafe(value) ? stringToUserReadable(value) : isNumber(value) ? isNumberUserReadable(value) ? value + '' : '-' : '-';
-  } // By default.
-
-
+  }
+  // By default.
   var numericResult = numericToNumber(value);
-  return isNumberUserReadable(numericResult) ? addCommas(numericResult) : isStringSafe(value) ? stringToUserReadable(value) : '-';
+  return isNumberUserReadable(numericResult) ? addCommas(numericResult) : isStringSafe(value) ? stringToUserReadable(value) : typeof value === 'boolean' ? value + '' : '-';
 }
 var TPL_VAR_ALIAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
-
 var wrapVar = function (varName, seriesIdx) {
   return '{' + varName + (seriesIdx == null ? '' : seriesIdx) + '}';
 };
@@ -44125,39 +41757,30 @@ var wrapVar = function (varName, seriesIdx) {
  * Template formatter
  * @param {Array.<Object>|Object} paramsList
  */
-
-
 function formatTpl(tpl, paramsList, encode) {
   if (!isArray(paramsList)) {
     paramsList = [paramsList];
   }
-
   var seriesLen = paramsList.length;
-
   if (!seriesLen) {
     return '';
   }
-
   var $vars = paramsList[0].$vars || [];
-
   for (var i = 0; i < $vars.length; i++) {
     var alias = TPL_VAR_ALIAS[i];
     tpl = tpl.replace(wrapVar(alias), wrapVar(alias, 0));
   }
-
   for (var seriesIdx = 0; seriesIdx < seriesLen; seriesIdx++) {
     for (var k = 0; k < $vars.length; k++) {
       var val = paramsList[seriesIdx][$vars[k]];
       tpl = tpl.replace(wrapVar(TPL_VAR_ALIAS[k], seriesIdx), encode ? encodeHTML(val) : val);
     }
   }
-
   return tpl;
 }
 /**
  * simple Template formatter
  */
-
 function formatTplSimple(tpl, param, encode) {
   each(param, function (value, key) {
     tpl = tpl.replace('{' + key + '}', encode ? encodeHTML(value) : value);
@@ -44173,18 +41796,17 @@ function getTooltipMarker(inOpt, extraCssText) {
   var type = opt.type;
   extraCssText = opt.extraCssText;
   var renderMode = opt.renderMode || 'html';
-
   if (!color) {
     return '';
   }
-
   if (renderMode === 'html') {
-    return type === 'subItem' ? '<span style="display:inline-block;vertical-align:middle;margin-right:8px;margin-left:3px;' + 'border-radius:4px;width:4px;height:4px;background-color:' // Only support string
+    return type === 'subItem' ? '<span style="display:inline-block;vertical-align:middle;margin-right:8px;margin-left:3px;' + 'border-radius:4px;width:4px;height:4px;background-color:'
+    // Only support string
     + encodeHTML(color) + ';' + (extraCssText || '') + '"></span>' : '<span style="display:inline-block;margin-right:4px;' + 'border-radius:10px;width:10px;height:10px;background-color:' + encodeHTML(color) + ';' + (extraCssText || '') + '"></span>';
   } else {
     // Should better not to auto generate style name by auto-increment number here.
     // Because this util is usually called in tooltip formatter, which is probably
-    // called repeatly when mouse move and the auto-increment number increases fast.
+    // called repeatedly when mouse move and the auto-increment number increases fast.
     // Users can make their own style name by theirselves, make it unique and readable.
     var markerId = opt.markerId || 'markerX';
     return {
@@ -44214,26 +41836,23 @@ function getTooltipMarker(inOpt, extraCssText) {
  *           and `module:echarts/util/number#parseDate`.
  * @inner
  */
-
 function formatTime(tpl, value, isUTC) {
   if (true) {
     deprecateReplaceLog('echarts.format.formatTime', 'echarts.time.format');
   }
-
   if (tpl === 'week' || tpl === 'month' || tpl === 'quarter' || tpl === 'half-year' || tpl === 'year') {
     tpl = 'MM-dd\nyyyy';
   }
-
   var date = parseDate(value);
-  var utc = isUTC ? 'UTC' : '';
-  var y = date['get' + utc + 'FullYear']();
-  var M = date['get' + utc + 'Month']() + 1;
-  var d = date['get' + utc + 'Date']();
-  var h = date['get' + utc + 'Hours']();
-  var m = date['get' + utc + 'Minutes']();
-  var s = date['get' + utc + 'Seconds']();
-  var S = date['get' + utc + 'Milliseconds']();
-  tpl = tpl.replace('MM', pad(M, 2)).replace('M', M).replace('yyyy', y).replace('yy', y % 100 + '').replace('dd', pad(d, 2)).replace('d', d).replace('hh', pad(h, 2)).replace('h', h).replace('mm', pad(m, 2)).replace('m', m).replace('ss', pad(s, 2)).replace('s', s).replace('SSS', pad(S, 3));
+  var getUTC = isUTC ? 'getUTC' : 'get';
+  var y = date[getUTC + 'FullYear']();
+  var M = date[getUTC + 'Month']() + 1;
+  var d = date[getUTC + 'Date']();
+  var h = date[getUTC + 'Hours']();
+  var m = date[getUTC + 'Minutes']();
+  var s = date[getUTC + 'Seconds']();
+  var S = date[getUTC + 'Milliseconds']();
+  tpl = tpl.replace('MM', pad(M, 2)).replace('M', M).replace('yyyy', y).replace('yy', pad(y % 100 + '', 2)).replace('dd', pad(d, 2)).replace('d', d).replace('hh', pad(h, 2)).replace('h', h).replace('mm', pad(m, 2)).replace('m', m).replace('ss', pad(s, 2)).replace('s', s).replace('SSS', pad(S, 3));
   return tpl;
 }
 /**
@@ -44241,14 +41860,12 @@ function formatTime(tpl, value, isUTC) {
  * @param {string} str
  * @return {string}
  */
-
 function capitalFirst(str) {
   return str ? str.charAt(0).toUpperCase() + str.substr(1) : str;
 }
 /**
  * @return Never be null/undefined.
  */
-
 function convertToColorString(color, defaultColor) {
   defaultColor = defaultColor || 'transparent';
   return isString(color) ? color : isObject(color) ? color.colorStops && (color.colorStops[0] || {}).color || defaultColor : defaultColor;
@@ -44259,7 +41876,6 @@ function convertToColorString(color, defaultColor) {
  * @param link url
  * @param target blank or self
  */
-
 function windowOpen(link, target) {
   /* global window */
   if (target === '_blank' || target === 'blank') {
@@ -44271,7 +41887,7 @@ function windowOpen(link, target) {
   }
 }
 
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/util/layout.js
+;// ./node_modules/echarts/lib/util/layout.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -44324,26 +41940,20 @@ var layout_each = each;
 /**
  * @public
  */
-
 var LOCATION_PARAMS = ['left', 'right', 'top', 'bottom', 'width', 'height'];
 /**
  * @public
  */
-
 var HV_NAMES = [['width', 'left', 'right'], ['height', 'top', 'bottom']];
-
 function boxLayout(orient, group, gap, maxWidth, maxHeight) {
   var x = 0;
   var y = 0;
-
   if (maxWidth == null) {
     maxWidth = Infinity;
   }
-
   if (maxHeight == null) {
     maxHeight = Infinity;
   }
-
   var currentLineMaxSize = 0;
   group.eachChild(function (child, idx) {
     var rect = child.getBoundingRect();
@@ -44351,12 +41961,11 @@ function boxLayout(orient, group, gap, maxWidth, maxHeight) {
     var nextChildRect = nextChild && nextChild.getBoundingRect();
     var nextX;
     var nextY;
-
     if (orient === 'horizontal') {
       var moveX = rect.width + (nextChildRect ? -nextChildRect.x + rect.x : 0);
-      nextX = x + moveX; // Wrap when width exceeds maxWidth or meet a `newline` group
+      nextX = x + moveX;
+      // Wrap when width exceeds maxWidth or meet a `newline` group
       // FIXME compare before adding gap?
-
       if (nextX > maxWidth || child.newline) {
         x = 0;
         nextX = moveX;
@@ -44368,8 +41977,8 @@ function boxLayout(orient, group, gap, maxWidth, maxHeight) {
       }
     } else {
       var moveY = rect.height + (nextChildRect ? -nextChildRect.y + rect.y : 0);
-      nextY = y + moveY; // Wrap when width exceeds maxHeight or meet a `newline` group
-
+      nextY = y + moveY;
+      // Wrap when width exceeds maxHeight or meet a `newline` group
       if (nextY > maxHeight || child.newline) {
         x += currentLineMaxSize + gap;
         y = 0;
@@ -44379,11 +41988,9 @@ function boxLayout(orient, group, gap, maxWidth, maxHeight) {
         currentLineMaxSize = Math.max(currentLineMaxSize, rect.width);
       }
     }
-
     if (child.newline) {
       return;
     }
-
     child.x = x;
     child.y = y;
     child.markRedraw();
@@ -44398,8 +42005,6 @@ function boxLayout(orient, group, gap, maxWidth, maxHeight) {
  * @param {number} [width=Infinity]
  * @param {number} [height=Infinity]
  */
-
-
 var box = boxLayout;
 /**
  * VBox layouting
@@ -44408,7 +42013,6 @@ var box = boxLayout;
  * @param {number} [width=Infinity]
  * @param {number} [height=Infinity]
  */
-
 var vbox = curry(boxLayout, 'vertical');
 /**
  * HBox layouting
@@ -44417,7 +42021,6 @@ var vbox = curry(boxLayout, 'vertical');
  * @param {number} [width=Infinity]
  * @param {number} [height=Infinity]
  */
-
 var hbox = curry(boxLayout, 'horizontal');
 /**
  * If x or x2 is not specified or 'center' 'left' 'right',
@@ -44425,7 +42028,6 @@ var hbox = curry(boxLayout, 'horizontal');
  * If y or y2 is not specified or 'middle' 'top' 'bottom',
  * the height would be as long as possible.
  */
-
 function getAvailableSize(positionInfo, containerRect, margin) {
   var containerWidth = containerRect.width;
   var containerHeight = containerRect.height;
@@ -44446,7 +42048,6 @@ function getAvailableSize(positionInfo, containerRect, margin) {
 /**
  * Parse position info.
  */
-
 function getLayoutRect(positionInfo, containerRect, margin) {
   margin = format_normalizeCssArray(margin || 0);
   var containerWidth = containerRect.width;
@@ -44459,16 +42060,14 @@ function getLayoutRect(positionInfo, containerRect, margin) {
   var height = number_parsePercent(positionInfo.height, containerHeight);
   var verticalMargin = margin[2] + margin[0];
   var horizontalMargin = margin[1] + margin[3];
-  var aspect = positionInfo.aspect; // If width is not specified, calculate width from left and right
-
+  var aspect = positionInfo.aspect;
+  // If width is not specified, calculate width from left and right
   if (isNaN(width)) {
     width = containerWidth - right - horizontalMargin - left;
   }
-
   if (isNaN(height)) {
     height = containerHeight - bottom - verticalMargin - top;
   }
-
   if (aspect != null) {
     // If width and height are not given
     // 1. Graph should not exceeds the container
@@ -44483,63 +42082,51 @@ function getLayoutRect(positionInfo, containerRect, margin) {
       } else {
         height = containerHeight * 0.8;
       }
-    } // Calculate width or height with given aspect
-
-
+    }
+    // Calculate width or height with given aspect
     if (isNaN(width)) {
       width = aspect * height;
     }
-
     if (isNaN(height)) {
       height = width / aspect;
     }
-  } // If left is not specified, calculate left from right and width
-
-
+  }
+  // If left is not specified, calculate left from right and width
   if (isNaN(left)) {
     left = containerWidth - right - width - horizontalMargin;
   }
-
   if (isNaN(top)) {
     top = containerHeight - bottom - height - verticalMargin;
-  } // Align left and top
-
-
+  }
+  // Align left and top
   switch (positionInfo.left || positionInfo.right) {
     case 'center':
       left = containerWidth / 2 - width / 2 - margin[3];
       break;
-
     case 'right':
       left = containerWidth - width - horizontalMargin;
       break;
   }
-
   switch (positionInfo.top || positionInfo.bottom) {
     case 'middle':
     case 'center':
       top = containerHeight / 2 - height / 2 - margin[0];
       break;
-
     case 'bottom':
       top = containerHeight - height - verticalMargin;
       break;
-  } // If something is wrong and left, top, width, height are calculated as NaN
-
-
+  }
+  // If something is wrong and left, top, width, height are calculated as NaN
   left = left || 0;
   top = top || 0;
-
   if (isNaN(width)) {
     // Width may be NaN if only one value is given except width
     width = containerWidth - horizontalMargin - left - (right || 0);
   }
-
   if (isNaN(height)) {
     // Height may be NaN if only one value is given except height
     height = containerHeight - verticalMargin - top - (bottom || 0);
   }
-
   var rect = new core_BoundingRect(left + margin[3], top + margin[0], width, height);
   rect.margin = margin;
   return rect;
@@ -44553,11 +42140,13 @@ function getLayoutRect(positionInfo, containerRect, margin) {
  * Logic:
  *     1. Scale (against origin point in parent coord)
  *     2. Rotate (against origin point in parent coord)
- *     3. Traslate (with el.position by this method)
- * So this method only fixes the last step 'Traslate', which does not affect
+ *     3. Translate (with el.position by this method)
+ * So this method only fixes the last step 'Translate', which does not affect
  * scaling and rotating.
  *
- * If be called repeatly with the same input el, the same result will be gotten.
+ * If be called repeatedly with the same input el, the same result will be gotten.
+ *
+ * Return true if the layout happened.
  *
  * @param el Should have `getBoundingRect` method.
  * @param positionInfo
@@ -44582,58 +42171,55 @@ function getLayoutRect(positionInfo, containerRect, margin) {
  *               container. (Consider a rotated circle needs to be located in a corner.)
  *               In this mode positionInfo.width/height can only be number.
  */
-
-function positionElement(el, positionInfo, containerRect, margin, opt) {
+function positionElement(el, positionInfo, containerRect, margin, opt, out) {
   var h = !opt || !opt.hv || opt.hv[0];
   var v = !opt || !opt.hv || opt.hv[1];
   var boundingMode = opt && opt.boundingMode || 'all';
-
+  out = out || el;
+  out.x = el.x;
+  out.y = el.y;
   if (!h && !v) {
-    return;
+    return false;
   }
-
   var rect;
-
   if (boundingMode === 'raw') {
     rect = el.type === 'group' ? new core_BoundingRect(0, 0, +positionInfo.width || 0, +positionInfo.height || 0) : el.getBoundingRect();
   } else {
     rect = el.getBoundingRect();
-
     if (el.needLocalTransform()) {
-      var transform = el.getLocalTransform(); // Notice: raw rect may be inner object of el,
+      var transform = el.getLocalTransform();
+      // Notice: raw rect may be inner object of el,
       // which should not be modified.
-
       rect = rect.clone();
       rect.applyTransform(transform);
     }
-  } // The real width and height can not be specified but calculated by the given el.
-
-
+  }
+  // The real width and height can not be specified but calculated by the given el.
   var layoutRect = getLayoutRect(util_defaults({
     width: rect.width,
     height: rect.height
-  }, positionInfo), containerRect, margin); // Because 'tranlate' is the last step in transform
+  }, positionInfo), containerRect, margin);
+  // Because 'tranlate' is the last step in transform
   // (see zrender/core/Transformable#getLocalTransform),
   // we can just only modify el.position to get final result.
-
   var dx = h ? layoutRect.x - rect.x : 0;
   var dy = v ? layoutRect.y - rect.y : 0;
-
   if (boundingMode === 'raw') {
-    el.x = dx;
-    el.y = dy;
+    out.x = dx;
+    out.y = dy;
   } else {
-    el.x += dx;
-    el.y += dy;
+    out.x += dx;
+    out.y += dy;
   }
-
-  el.markRedraw();
+  if (out === el) {
+    el.markRedraw();
+  }
+  return true;
 }
 /**
  * @param option Contains some of the properties in HV_NAMES.
  * @param hvIdx 0: horizontal; 1: vertical.
  */
-
 function sizeCalculable(option, hvIdx) {
   return option[HV_NAMES[hvIdx][0]] != null || option[HV_NAMES[hvIdx][1]] != null && option[HV_NAMES[hvIdx][2]] != null;
 }
@@ -44666,7 +42252,6 @@ function fetchLayoutMode(ins) {
  * @param newOption
  * @param opt
  */
-
 function mergeLayoutParam(targetOption, newOption, opt) {
   var ignoreSize = opt && opt.ignoreSize;
   !isArray(ignoreSize) && (ignoreSize = [ignoreSize, ignoreSize]);
@@ -44674,7 +42259,6 @@ function mergeLayoutParam(targetOption, newOption, opt) {
   var vResult = merge(HV_NAMES[1], 1);
   copy(HV_NAMES[0], targetOption, hResult);
   copy(HV_NAMES[1], targetOption, vResult);
-
   function merge(names, hvIdx) {
     var newParams = {};
     var newValueCount = 0;
@@ -44691,7 +42275,6 @@ function mergeLayoutParam(targetOption, newOption, opt) {
       hasValue(newParams, name) && newValueCount++;
       hasValue(merged, name) && mergedValueCount++;
     });
-
     if (ignoreSize[hvIdx]) {
       // Only one of left/right is premitted to exist.
       if (hasValue(newOption, names[1])) {
@@ -44699,44 +42282,38 @@ function mergeLayoutParam(targetOption, newOption, opt) {
       } else if (hasValue(newOption, names[2])) {
         merged[names[1]] = null;
       }
-
       return merged;
-    } // Case: newOption: {width: ..., right: ...},
+    }
+    // Case: newOption: {width: ..., right: ...},
     // or targetOption: {right: ...} and newOption: {width: ...},
     // There is no conflict when merged only has params count
     // little than enoughParamNumber.
-
-
     if (mergedValueCount === enoughParamNumber || !newValueCount) {
       return merged;
-    } // Case: newOption: {width: ..., right: ...},
+    }
+    // Case: newOption: {width: ..., right: ...},
     // Than we can make sure user only want those two, and ignore
     // all origin params in targetOption.
     else if (newValueCount >= enoughParamNumber) {
-        return newParams;
-      } else {
-        // Chose another param from targetOption by priority.
-        for (var i = 0; i < names.length; i++) {
-          var name_1 = names[i];
-
-          if (!hasProp(newParams, name_1) && hasProp(targetOption, name_1)) {
-            newParams[name_1] = targetOption[name_1];
-            break;
-          }
+      return newParams;
+    } else {
+      // Chose another param from targetOption by priority.
+      for (var i = 0; i < names.length; i++) {
+        var name_1 = names[i];
+        if (!hasProp(newParams, name_1) && hasProp(targetOption, name_1)) {
+          newParams[name_1] = targetOption[name_1];
+          break;
         }
-
-        return newParams;
       }
+      return newParams;
+    }
   }
-
   function hasProp(obj, name) {
     return obj.hasOwnProperty(name);
   }
-
   function hasValue(obj, name) {
     return obj[name] != null && obj[name] !== 'auto';
   }
-
   function copy(names, target, source) {
     layout_each(names, function (name) {
       target[name] = source[name];
@@ -44746,7 +42323,6 @@ function mergeLayoutParam(targetOption, newOption, opt) {
 /**
  * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
  */
-
 function getLayoutParams(source) {
   return copyLayoutParams({}, source);
 }
@@ -44755,14 +42331,13 @@ function getLayoutParams(source) {
  * @param {Object} source
  * @return {Object} Result contains those props.
  */
-
 function copyLayoutParams(target, source) {
   source && target && layout_each(LOCATION_PARAMS, function (name) {
     source.hasOwnProperty(name) && (target[name] = source[name]);
   });
   return target;
 }
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/TexturePool.js
+;// ./node_modules/claygl/src/compositor/TexturePool.js
 
 
 
@@ -44873,10 +42448,10 @@ function TexturePool_isPowerOfTwo(width, height) {
 
 /* harmony default export */ const compositor_TexturePool = (TexturePool);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/shadowmap.glsl.js
+;// ./node_modules/claygl/src/shader/source/shadowmap.glsl.js
 /* harmony default export */ const shadowmap_glsl = ("@export clay.sm.depth.vertex\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nattribute vec3 position : POSITION;\nattribute vec2 texcoord : TEXCOORD_0;\nuniform vec2 uvRepeat = vec2(1.0, 1.0);\nuniform vec2 uvOffset = vec2(0.0, 0.0);\n@import clay.chunk.skinning_header\n@import clay.chunk.instancing_header\nvarying vec4 v_ViewPosition;\nvarying vec2 v_Texcoord;\nvoid main(){\n vec4 P = vec4(position, 1.0);\n#ifdef SKINNING\n @import clay.chunk.skin_matrix\n P = skinMatrixWS * P;\n#endif\n#ifdef INSTANCING\n @import clay.chunk.instancing_matrix\n P = instanceMat * P;\n#endif\n v_ViewPosition = worldViewProjection * P;\n gl_Position = v_ViewPosition;\n v_Texcoord = texcoord * uvRepeat + uvOffset;\n}\n@end\n@export clay.sm.depth.fragment\nvarying vec4 v_ViewPosition;\nvarying vec2 v_Texcoord;\nuniform float bias : 0.001;\nuniform float slopeScale : 1.0;\nuniform sampler2D alphaMap;\nuniform float alphaCutoff: 0.0;\n@import clay.util.encode_float\nvoid main(){\n float depth = v_ViewPosition.z / v_ViewPosition.w;\n if (alphaCutoff > 0.0) {\n if (texture2D(alphaMap, v_Texcoord).a <= alphaCutoff) {\n discard;\n }\n }\n#ifdef USE_VSM\n depth = depth * 0.5 + 0.5;\n float moment1 = depth;\n float moment2 = depth * depth;\n #ifdef SUPPORT_STANDARD_DERIVATIVES\n float dx = dFdx(depth);\n float dy = dFdy(depth);\n moment2 += 0.25*(dx*dx+dy*dy);\n #endif\n gl_FragColor = vec4(moment1, moment2, 0.0, 1.0);\n#else\n #ifdef SUPPORT_STANDARD_DERIVATIVES\n float dx = dFdx(depth);\n float dy = dFdy(depth);\n depth += sqrt(dx*dx + dy*dy) * slopeScale + bias;\n #else\n depth += bias;\n #endif\n gl_FragColor = encodeFloat(depth * 0.5 + 0.5);\n#endif\n}\n@end\n@export clay.sm.debug_depth\nuniform sampler2D depthMap;\nvarying vec2 v_Texcoord;\n@import clay.util.decode_float\nvoid main() {\n vec4 tex = texture2D(depthMap, v_Texcoord);\n#ifdef USE_VSM\n gl_FragColor = vec4(tex.rgb, 1.0);\n#else\n float depth = decodeFloat(tex);\n gl_FragColor = vec4(depth, depth, depth, 1.0);\n#endif\n}\n@end\n@export clay.sm.distance.vertex\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform mat4 world : WORLD;\nattribute vec3 position : POSITION;\n@import clay.chunk.skinning_header\nvarying vec3 v_WorldPosition;\nvoid main (){\n vec4 P = vec4(position, 1.0);\n#ifdef SKINNING\n @import clay.chunk.skin_matrix\n P = skinMatrixWS * P;\n#endif\n#ifdef INSTANCING\n @import clay.chunk.instancing_matrix\n P = instanceMat * P;\n#endif\n gl_Position = worldViewProjection * P;\n v_WorldPosition = (world * P).xyz;\n}\n@end\n@export clay.sm.distance.fragment\nuniform vec3 lightPosition;\nuniform float range : 100;\nvarying vec3 v_WorldPosition;\n@import clay.util.encode_float\nvoid main(){\n float dist = distance(lightPosition, v_WorldPosition);\n#ifdef USE_VSM\n gl_FragColor = vec4(dist, dist * dist, 0.0, 0.0);\n#else\n dist = dist / range;\n gl_FragColor = encodeFloat(dist);\n#endif\n}\n@end\n@export clay.plugin.shadow_map_common\n@import clay.util.decode_float\nfloat tapShadowMap(sampler2D map, vec2 uv, float z){\n vec4 tex = texture2D(map, uv);\n return step(z, decodeFloat(tex) * 2.0 - 1.0);\n}\nfloat pcf(sampler2D map, vec2 uv, float z, float textureSize, vec2 scale) {\n float shadowContrib = tapShadowMap(map, uv, z);\n vec2 offset = vec2(1.0 / textureSize) * scale;\n#ifdef PCF_KERNEL_SIZE\n for (int _idx_ = 0; _idx_ < PCF_KERNEL_SIZE; _idx_++) {{\n shadowContrib += tapShadowMap(map, uv + offset * pcfKernel[_idx_], z);\n }}\n return shadowContrib / float(PCF_KERNEL_SIZE + 1);\n#else\n shadowContrib += tapShadowMap(map, uv+vec2(offset.x, 0.0), z);\n shadowContrib += tapShadowMap(map, uv+vec2(offset.x, offset.y), z);\n shadowContrib += tapShadowMap(map, uv+vec2(-offset.x, offset.y), z);\n shadowContrib += tapShadowMap(map, uv+vec2(0.0, offset.y), z);\n shadowContrib += tapShadowMap(map, uv+vec2(-offset.x, 0.0), z);\n shadowContrib += tapShadowMap(map, uv+vec2(-offset.x, -offset.y), z);\n shadowContrib += tapShadowMap(map, uv+vec2(offset.x, -offset.y), z);\n shadowContrib += tapShadowMap(map, uv+vec2(0.0, -offset.y), z);\n return shadowContrib / 9.0;\n#endif\n}\nfloat pcf(sampler2D map, vec2 uv, float z, float textureSize) {\n return pcf(map, uv, z, textureSize, vec2(1.0));\n}\nfloat chebyshevUpperBound(vec2 moments, float z){\n float p = 0.0;\n z = z * 0.5 + 0.5;\n if (z <= moments.x) {\n p = 1.0;\n }\n float variance = moments.y - moments.x * moments.x;\n variance = max(variance, 0.0000001);\n float mD = moments.x - z;\n float pMax = variance / (variance + mD * mD);\n pMax = clamp((pMax-0.4)/(1.0-0.4), 0.0, 1.0);\n return max(p, pMax);\n}\nfloat computeShadowContrib(\n sampler2D map, mat4 lightVPM, vec3 position, float textureSize, vec2 scale, vec2 offset\n) {\n vec4 posInLightSpace = lightVPM * vec4(position, 1.0);\n posInLightSpace.xyz /= posInLightSpace.w;\n float z = posInLightSpace.z;\n if(all(greaterThan(posInLightSpace.xyz, vec3(-0.99, -0.99, -1.0))) &&\n all(lessThan(posInLightSpace.xyz, vec3(0.99, 0.99, 1.0)))){\n vec2 uv = (posInLightSpace.xy+1.0) / 2.0;\n #ifdef USE_VSM\n vec2 moments = texture2D(map, uv * scale + offset).xy;\n return chebyshevUpperBound(moments, z);\n #else\n return pcf(map, uv * scale + offset, z, textureSize, scale);\n #endif\n }\n return 1.0;\n}\nfloat computeShadowContrib(sampler2D map, mat4 lightVPM, vec3 position, float textureSize) {\n return computeShadowContrib(map, lightVPM, position, textureSize, vec2(1.0), vec2(0.0));\n}\nfloat computeShadowContribOmni(samplerCube map, vec3 direction, float range)\n{\n float dist = length(direction);\n vec4 shadowTex = textureCube(map, direction);\n#ifdef USE_VSM\n vec2 moments = shadowTex.xy;\n float variance = moments.y - moments.x * moments.x;\n float mD = moments.x - dist;\n float p = variance / (variance + mD * mD);\n if(moments.x + 0.001 < dist){\n return clamp(p, 0.0, 1.0);\n }else{\n return 1.0;\n }\n#else\n return step(dist, (decodeFloat(shadowTex) + 0.0002) * range);\n#endif\n}\n@end\n@export clay.plugin.compute_shadow_map\n#if defined(SPOT_LIGHT_SHADOWMAP_COUNT) || defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT) || defined(POINT_LIGHT_SHADOWMAP_COUNT)\n#ifdef SPOT_LIGHT_SHADOWMAP_COUNT\nuniform sampler2D spotLightShadowMaps[SPOT_LIGHT_SHADOWMAP_COUNT]:unconfigurable;\nuniform mat4 spotLightMatrices[SPOT_LIGHT_SHADOWMAP_COUNT]:unconfigurable;\nuniform float spotLightShadowMapSizes[SPOT_LIGHT_SHADOWMAP_COUNT]:unconfigurable;\n#endif\n#ifdef DIRECTIONAL_LIGHT_SHADOWMAP_COUNT\n#if defined(SHADOW_CASCADE)\nuniform sampler2D directionalLightShadowMaps[1]:unconfigurable;\nuniform mat4 directionalLightMatrices[SHADOW_CASCADE]:unconfigurable;\nuniform float directionalLightShadowMapSizes[1]:unconfigurable;\nuniform float shadowCascadeClipsNear[SHADOW_CASCADE]:unconfigurable;\nuniform float shadowCascadeClipsFar[SHADOW_CASCADE]:unconfigurable;\n#else\nuniform sampler2D directionalLightShadowMaps[DIRECTIONAL_LIGHT_SHADOWMAP_COUNT]:unconfigurable;\nuniform mat4 directionalLightMatrices[DIRECTIONAL_LIGHT_SHADOWMAP_COUNT]:unconfigurable;\nuniform float directionalLightShadowMapSizes[DIRECTIONAL_LIGHT_SHADOWMAP_COUNT]:unconfigurable;\n#endif\n#endif\n#ifdef POINT_LIGHT_SHADOWMAP_COUNT\nuniform samplerCube pointLightShadowMaps[POINT_LIGHT_SHADOWMAP_COUNT]:unconfigurable;\n#endif\nuniform bool shadowEnabled : true;\n#ifdef PCF_KERNEL_SIZE\nuniform vec2 pcfKernel[PCF_KERNEL_SIZE];\n#endif\n@import clay.plugin.shadow_map_common\n#if defined(SPOT_LIGHT_SHADOWMAP_COUNT)\nvoid computeShadowOfSpotLights(vec3 position, inout float shadowContribs[SPOT_LIGHT_COUNT] ) {\n float shadowContrib;\n for(int _idx_ = 0; _idx_ < SPOT_LIGHT_SHADOWMAP_COUNT; _idx_++) {{\n shadowContrib = computeShadowContrib(\n spotLightShadowMaps[_idx_], spotLightMatrices[_idx_], position,\n spotLightShadowMapSizes[_idx_]\n );\n shadowContribs[_idx_] = shadowContrib;\n }}\n for(int _idx_ = SPOT_LIGHT_SHADOWMAP_COUNT; _idx_ < SPOT_LIGHT_COUNT; _idx_++){{\n shadowContribs[_idx_] = 1.0;\n }}\n}\n#endif\n#if defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n#ifdef SHADOW_CASCADE\nvoid computeShadowOfDirectionalLights(vec3 position, inout float shadowContribs[DIRECTIONAL_LIGHT_COUNT]){\n float depth = (2.0 * gl_FragCoord.z - gl_DepthRange.near - gl_DepthRange.far)\n / (gl_DepthRange.far - gl_DepthRange.near);\n float shadowContrib;\n shadowContribs[0] = 1.0;\n for (int _idx_ = 0; _idx_ < SHADOW_CASCADE; _idx_++) {{\n if (\n depth >= shadowCascadeClipsNear[_idx_] &&\n depth <= shadowCascadeClipsFar[_idx_]\n ) {\n shadowContrib = computeShadowContrib(\n directionalLightShadowMaps[0], directionalLightMatrices[_idx_], position,\n directionalLightShadowMapSizes[0],\n vec2(1.0 / float(SHADOW_CASCADE), 1.0),\n vec2(float(_idx_) / float(SHADOW_CASCADE), 0.0)\n );\n shadowContribs[0] = shadowContrib;\n }\n }}\n for(int _idx_ = DIRECTIONAL_LIGHT_SHADOWMAP_COUNT; _idx_ < DIRECTIONAL_LIGHT_COUNT; _idx_++) {{\n shadowContribs[_idx_] = 1.0;\n }}\n}\n#else\nvoid computeShadowOfDirectionalLights(vec3 position, inout float shadowContribs[DIRECTIONAL_LIGHT_COUNT]){\n float shadowContrib;\n for(int _idx_ = 0; _idx_ < DIRECTIONAL_LIGHT_SHADOWMAP_COUNT; _idx_++) {{\n shadowContrib = computeShadowContrib(\n directionalLightShadowMaps[_idx_], directionalLightMatrices[_idx_], position,\n directionalLightShadowMapSizes[_idx_]\n );\n shadowContribs[_idx_] = shadowContrib;\n }}\n for(int _idx_ = DIRECTIONAL_LIGHT_SHADOWMAP_COUNT; _idx_ < DIRECTIONAL_LIGHT_COUNT; _idx_++) {{\n shadowContribs[_idx_] = 1.0;\n }}\n}\n#endif\n#endif\n#if defined(POINT_LIGHT_SHADOWMAP_COUNT)\nvoid computeShadowOfPointLights(vec3 position, inout float shadowContribs[POINT_LIGHT_COUNT] ){\n vec3 lightPosition;\n vec3 direction;\n for(int _idx_ = 0; _idx_ < POINT_LIGHT_SHADOWMAP_COUNT; _idx_++) {{\n lightPosition = pointLightPosition[_idx_];\n direction = position - lightPosition;\n shadowContribs[_idx_] = computeShadowContribOmni(pointLightShadowMaps[_idx_], direction, pointLightRange[_idx_]);\n }}\n for(int _idx_ = POINT_LIGHT_SHADOWMAP_COUNT; _idx_ < POINT_LIGHT_COUNT; _idx_++) {{\n shadowContribs[_idx_] = 1.0;\n }}\n}\n#endif\n#endif\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/prePass/ShadowMap.js
+;// ./node_modules/claygl/src/prePass/ShadowMap.js
 
 
 
@@ -44901,7 +42476,7 @@ function TexturePool_isPowerOfTwo(width, height) {
 var ShadowMap_targets = ['px', 'nx', 'py', 'ny', 'pz', 'nz'];
 
 
-src_Shader.import(shadowmap_glsl);
+src_Shader['import'](shadowmap_glsl);
 
 function getDepthMaterialUniform(renderable, depthMaterial, symbol) {
     if (symbol === 'alphaMap') {
@@ -45781,7 +43356,7 @@ ShadowMapPass.PCF = 2;
 
 /* harmony default export */ const ShadowMap = (ShadowMapPass);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/CompositorNode.js
+;// ./node_modules/claygl/src/compositor/CompositorNode.js
 
 
 // PENDING
@@ -46029,7 +43604,7 @@ var CompositorNode = core_Base.extend(function () {
 
 /* harmony default export */ const compositor_CompositorNode = (CompositorNode);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/Graph.js
+;// ./node_modules/claygl/src/compositor/Graph.js
 
 
 
@@ -46171,7 +43746,7 @@ var Graph = core_Base.extend(function () {
 
 /* harmony default export */ const compositor_Graph = (Graph);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/Compositor.js
+;// ./node_modules/claygl/src/compositor/Compositor.js
 
 
 
@@ -46259,7 +43834,7 @@ var Compositor = compositor_Graph.extend(function() {
 
 /* harmony default export */ const compositor_Compositor = (Compositor);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/SceneNode.js
+;// ./node_modules/claygl/src/compositor/SceneNode.js
 
 
 
@@ -46356,7 +43931,7 @@ var SceneNode = compositor_CompositorNode.extend(
 
 /* harmony default export */ const compositor_SceneNode = (SceneNode);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/TextureNode.js
+;// ./node_modules/claygl/src/compositor/TextureNode.js
 
 
 /**
@@ -46389,7 +43964,7 @@ var TextureNode = compositor_CompositorNode.extend(function() {
 
 /* harmony default export */ const compositor_TextureNode = (TextureNode);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/FilterNode.js
+;// ./node_modules/claygl/src/compositor/FilterNode.js
 // TODO Shader library
 
 
@@ -46696,46 +44271,46 @@ var FilterNode = compositor_CompositorNode.extend(function () {
 
 /* harmony default export */ const compositor_FilterNode = (FilterNode);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/coloradjust.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/coloradjust.glsl.js
 /* harmony default export */ const coloradjust_glsl = ("@export clay.compositor.coloradjust\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform float brightness : 0.0;\nuniform float contrast : 1.0;\nuniform float exposure : 0.0;\nuniform float gamma : 1.0;\nuniform float saturation : 1.0;\nconst vec3 w = vec3(0.2125, 0.7154, 0.0721);\nvoid main()\n{\n vec4 tex = texture2D( texture, v_Texcoord);\n vec3 color = clamp(tex.rgb + vec3(brightness), 0.0, 1.0);\n color = clamp( (color-vec3(0.5))*contrast+vec3(0.5), 0.0, 1.0);\n color = clamp( color * pow(2.0, exposure), 0.0, 1.0);\n color = clamp( pow(color, vec3(gamma)), 0.0, 1.0);\n float luminance = dot( color, w );\n color = mix(vec3(luminance), color, saturation);\n gl_FragColor = vec4(color, tex.a);\n}\n@end\n@export clay.compositor.brightness\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform float brightness : 0.0;\nvoid main()\n{\n vec4 tex = texture2D( texture, v_Texcoord);\n vec3 color = tex.rgb + vec3(brightness);\n gl_FragColor = vec4(color, tex.a);\n}\n@end\n@export clay.compositor.contrast\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform float contrast : 1.0;\nvoid main()\n{\n vec4 tex = texture2D( texture, v_Texcoord);\n vec3 color = (tex.rgb-vec3(0.5))*contrast+vec3(0.5);\n gl_FragColor = vec4(color, tex.a);\n}\n@end\n@export clay.compositor.exposure\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform float exposure : 0.0;\nvoid main()\n{\n vec4 tex = texture2D(texture, v_Texcoord);\n vec3 color = tex.rgb * pow(2.0, exposure);\n gl_FragColor = vec4(color, tex.a);\n}\n@end\n@export clay.compositor.gamma\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform float gamma : 1.0;\nvoid main()\n{\n vec4 tex = texture2D(texture, v_Texcoord);\n vec3 color = pow(tex.rgb, vec3(gamma));\n gl_FragColor = vec4(color, tex.a);\n}\n@end\n@export clay.compositor.saturation\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform float saturation : 1.0;\nconst vec3 w = vec3(0.2125, 0.7154, 0.0721);\nvoid main()\n{\n vec4 tex = texture2D(texture, v_Texcoord);\n vec3 color = tex.rgb;\n float luminance = dot(color, w);\n color = mix(vec3(luminance), color, saturation);\n gl_FragColor = vec4(color, tex.a);\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/blur.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/blur.glsl.js
 /* harmony default export */ const blur_glsl = ("@export clay.compositor.kernel.gaussian_9\nfloat gaussianKernel[9];\ngaussianKernel[0] = 0.07;\ngaussianKernel[1] = 0.09;\ngaussianKernel[2] = 0.12;\ngaussianKernel[3] = 0.14;\ngaussianKernel[4] = 0.16;\ngaussianKernel[5] = 0.14;\ngaussianKernel[6] = 0.12;\ngaussianKernel[7] = 0.09;\ngaussianKernel[8] = 0.07;\n@end\n@export clay.compositor.kernel.gaussian_13\nfloat gaussianKernel[13];\ngaussianKernel[0] = 0.02;\ngaussianKernel[1] = 0.03;\ngaussianKernel[2] = 0.06;\ngaussianKernel[3] = 0.08;\ngaussianKernel[4] = 0.11;\ngaussianKernel[5] = 0.13;\ngaussianKernel[6] = 0.14;\ngaussianKernel[7] = 0.13;\ngaussianKernel[8] = 0.11;\ngaussianKernel[9] = 0.08;\ngaussianKernel[10] = 0.06;\ngaussianKernel[11] = 0.03;\ngaussianKernel[12] = 0.02;\n@end\n@export clay.compositor.gaussian_blur\n#define SHADER_NAME gaussian_blur\nuniform sampler2D texture;varying vec2 v_Texcoord;\nuniform float blurSize : 2.0;\nuniform vec2 textureSize : [512.0, 512.0];\nuniform float blurDir : 0.0;\n@import clay.util.rgbm\n@import clay.util.clamp_sample\nvoid main (void)\n{\n @import clay.compositor.kernel.gaussian_9\n vec2 off = blurSize / textureSize;\n off *= vec2(1.0 - blurDir, blurDir);\n vec4 sum = vec4(0.0);\n float weightAll = 0.0;\n for (int i = 0; i < 9; i++) {\n float w = gaussianKernel[i];\n vec4 texel = decodeHDR(clampSample(texture, v_Texcoord + float(i - 4) * off));\n sum += texel * w;\n weightAll += w;\n }\n gl_FragColor = encodeHDR(sum / max(weightAll, 0.01));\n}\n@end\n");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/lum.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/lum.glsl.js
 /* harmony default export */ const lum_glsl = ("@export clay.compositor.hdr.log_lum\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nconst vec3 w = vec3(0.2125, 0.7154, 0.0721);\n@import clay.util.rgbm\nvoid main()\n{\n vec4 tex = decodeHDR(texture2D(texture, v_Texcoord));\n float luminance = dot(tex.rgb, w);\n luminance = log(luminance + 0.001);\n gl_FragColor = encodeHDR(vec4(vec3(luminance), 1.0));\n}\n@end\n@export clay.compositor.hdr.lum_adaption\nvarying vec2 v_Texcoord;\nuniform sampler2D adaptedLum;\nuniform sampler2D currentLum;\nuniform float frameTime : 0.02;\n@import clay.util.rgbm\nvoid main()\n{\n float fAdaptedLum = decodeHDR(texture2D(adaptedLum, vec2(0.5, 0.5))).r;\n float fCurrentLum = exp(encodeHDR(texture2D(currentLum, vec2(0.5, 0.5))).r);\n fAdaptedLum += (fCurrentLum - fAdaptedLum) * (1.0 - pow(0.98, 30.0 * frameTime));\n gl_FragColor = encodeHDR(vec4(vec3(fAdaptedLum), 1.0));\n}\n@end\n@export clay.compositor.lum\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nconst vec3 w = vec3(0.2125, 0.7154, 0.0721);\nvoid main()\n{\n vec4 tex = texture2D( texture, v_Texcoord );\n float luminance = dot(tex.rgb, w);\n gl_FragColor = vec4(vec3(luminance), 1.0);\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/lut.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/lut.glsl.js
 /* harmony default export */ const lut_glsl = ("\n@export clay.compositor.lut\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform sampler2D lookup;\nvoid main()\n{\n vec4 tex = texture2D(texture, v_Texcoord);\n float blueColor = tex.b * 63.0;\n vec2 quad1;\n quad1.y = floor(floor(blueColor) / 8.0);\n quad1.x = floor(blueColor) - (quad1.y * 8.0);\n vec2 quad2;\n quad2.y = floor(ceil(blueColor) / 8.0);\n quad2.x = ceil(blueColor) - (quad2.y * 8.0);\n vec2 texPos1;\n texPos1.x = (quad1.x * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * tex.r);\n texPos1.y = (quad1.y * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * tex.g);\n vec2 texPos2;\n texPos2.x = (quad2.x * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * tex.r);\n texPos2.y = (quad2.y * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * tex.g);\n vec4 newColor1 = texture2D(lookup, texPos1);\n vec4 newColor2 = texture2D(lookup, texPos2);\n vec4 newColor = mix(newColor1, newColor2, fract(blueColor));\n gl_FragColor = vec4(newColor.rgb, tex.w);\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/vignette.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/vignette.glsl.js
 /* harmony default export */ const vignette_glsl = ("@export clay.compositor.vignette\n#define OUTPUT_ALPHA\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\nuniform float darkness: 1;\nuniform float offset: 1;\n@import clay.util.rgbm\nvoid main()\n{\n vec4 texel = decodeHDR(texture2D(texture, v_Texcoord));\n gl_FragColor.rgb = texel.rgb;\n vec2 uv = (v_Texcoord - vec2(0.5)) * vec2(offset);\n gl_FragColor = encodeHDR(vec4(mix(texel.rgb, vec3(1.0 - darkness), dot(uv, uv)), texel.a));\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/output.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/output.glsl.js
 /* harmony default export */ const output_glsl = ("@export clay.compositor.output\n#define OUTPUT_ALPHA\nvarying vec2 v_Texcoord;\nuniform sampler2D texture;\n@import clay.util.rgbm\nvoid main()\n{\n vec4 tex = decodeHDR(texture2D(texture, v_Texcoord));\n gl_FragColor.rgb = tex.rgb;\n#ifdef OUTPUT_ALPHA\n gl_FragColor.a = tex.a;\n#else\n gl_FragColor.a = 1.0;\n#endif\n gl_FragColor = encodeHDR(gl_FragColor);\n#ifdef PREMULTIPLY_ALPHA\n gl_FragColor.rgb *= gl_FragColor.a;\n#endif\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/bright.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/bright.glsl.js
 /* harmony default export */ const bright_glsl = ("@export clay.compositor.bright\nuniform sampler2D texture;\nuniform float threshold : 1;\nuniform float scale : 1.0;\nuniform vec2 textureSize: [512, 512];\nvarying vec2 v_Texcoord;\nconst vec3 lumWeight = vec3(0.2125, 0.7154, 0.0721);\n@import clay.util.rgbm\nvec4 median(vec4 a, vec4 b, vec4 c)\n{\n return a + b + c - min(min(a, b), c) - max(max(a, b), c);\n}\nvoid main()\n{\n vec4 texel = decodeHDR(texture2D(texture, v_Texcoord));\n#ifdef ANTI_FLICKER\n vec3 d = 1.0 / textureSize.xyx * vec3(1.0, 1.0, 0.0);\n vec4 s1 = decodeHDR(texture2D(texture, v_Texcoord - d.xz));\n vec4 s2 = decodeHDR(texture2D(texture, v_Texcoord + d.xz));\n vec4 s3 = decodeHDR(texture2D(texture, v_Texcoord - d.zy));\n vec4 s4 = decodeHDR(texture2D(texture, v_Texcoord + d.zy));\n texel = median(median(texel, s1, s2), s3, s4);\n#endif\n float lum = dot(texel.rgb , lumWeight);\n vec4 color;\n if (lum > threshold && texel.a > 0.0)\n {\n color = vec4(texel.rgb * scale, texel.a * scale);\n }\n else\n {\n color = vec4(0.0);\n }\n gl_FragColor = encodeHDR(color);\n}\n@end\n");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/downsample.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/downsample.glsl.js
 /* harmony default export */ const downsample_glsl = ("@export clay.compositor.downsample\nuniform sampler2D texture;\nuniform vec2 textureSize : [512, 512];\nvarying vec2 v_Texcoord;\n@import clay.util.rgbm\nfloat brightness(vec3 c)\n{\n return max(max(c.r, c.g), c.b);\n}\n@import clay.util.clamp_sample\nvoid main()\n{\n vec4 d = vec4(-1.0, -1.0, 1.0, 1.0) / textureSize.xyxy;\n#ifdef ANTI_FLICKER\n vec3 s1 = decodeHDR(clampSample(texture, v_Texcoord + d.xy)).rgb;\n vec3 s2 = decodeHDR(clampSample(texture, v_Texcoord + d.zy)).rgb;\n vec3 s3 = decodeHDR(clampSample(texture, v_Texcoord + d.xw)).rgb;\n vec3 s4 = decodeHDR(clampSample(texture, v_Texcoord + d.zw)).rgb;\n float s1w = 1.0 / (brightness(s1) + 1.0);\n float s2w = 1.0 / (brightness(s2) + 1.0);\n float s3w = 1.0 / (brightness(s3) + 1.0);\n float s4w = 1.0 / (brightness(s4) + 1.0);\n float oneDivideSum = 1.0 / (s1w + s2w + s3w + s4w);\n vec4 color = vec4(\n (s1 * s1w + s2 * s2w + s3 * s3w + s4 * s4w) * oneDivideSum,\n 1.0\n );\n#else\n vec4 color = decodeHDR(clampSample(texture, v_Texcoord + d.xy));\n color += decodeHDR(clampSample(texture, v_Texcoord + d.zy));\n color += decodeHDR(clampSample(texture, v_Texcoord + d.xw));\n color += decodeHDR(clampSample(texture, v_Texcoord + d.zw));\n color *= 0.25;\n#endif\n gl_FragColor = encodeHDR(color);\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/upsample.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/upsample.glsl.js
 /* harmony default export */ const upsample_glsl = ("\n@export clay.compositor.upsample\n#define HIGH_QUALITY\nuniform sampler2D texture;\nuniform vec2 textureSize : [512, 512];\nuniform float sampleScale: 0.5;\nvarying vec2 v_Texcoord;\n@import clay.util.rgbm\n@import clay.util.clamp_sample\nvoid main()\n{\n#ifdef HIGH_QUALITY\n vec4 d = vec4(1.0, 1.0, -1.0, 0.0) / textureSize.xyxy * sampleScale;\n vec4 s;\n s = decodeHDR(clampSample(texture, v_Texcoord - d.xy));\n s += decodeHDR(clampSample(texture, v_Texcoord - d.wy)) * 2.0;\n s += decodeHDR(clampSample(texture, v_Texcoord - d.zy));\n s += decodeHDR(clampSample(texture, v_Texcoord + d.zw)) * 2.0;\n s += decodeHDR(clampSample(texture, v_Texcoord )) * 4.0;\n s += decodeHDR(clampSample(texture, v_Texcoord + d.xw)) * 2.0;\n s += decodeHDR(clampSample(texture, v_Texcoord + d.zy));\n s += decodeHDR(clampSample(texture, v_Texcoord + d.wy)) * 2.0;\n s += decodeHDR(clampSample(texture, v_Texcoord + d.xy));\n gl_FragColor = encodeHDR(s / 16.0);\n#else\n vec4 d = vec4(-1.0, -1.0, +1.0, +1.0) / textureSize.xyxy;\n vec4 s;\n s = decodeHDR(clampSample(texture, v_Texcoord + d.xy));\n s += decodeHDR(clampSample(texture, v_Texcoord + d.zy));\n s += decodeHDR(clampSample(texture, v_Texcoord + d.xw));\n s += decodeHDR(clampSample(texture, v_Texcoord + d.zw));\n gl_FragColor = encodeHDR(s / 4.0);\n#endif\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/hdr.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/hdr.glsl.js
 /* harmony default export */ const hdr_glsl = ("@export clay.compositor.hdr.composite\n#define TONEMAPPING\nuniform sampler2D texture;\n#ifdef BLOOM_ENABLED\nuniform sampler2D bloom;\n#endif\n#ifdef LENSFLARE_ENABLED\nuniform sampler2D lensflare;\nuniform sampler2D lensdirt;\n#endif\n#ifdef LUM_ENABLED\nuniform sampler2D lum;\n#endif\n#ifdef LUT_ENABLED\nuniform sampler2D lut;\n#endif\n#ifdef COLOR_CORRECTION\nuniform float brightness : 0.0;\nuniform float contrast : 1.0;\nuniform float saturation : 1.0;\n#endif\n#ifdef VIGNETTE\nuniform float vignetteDarkness: 1.0;\nuniform float vignetteOffset: 1.0;\n#endif\nuniform float exposure : 1.0;\nuniform float bloomIntensity : 0.25;\nuniform float lensflareIntensity : 1;\nvarying vec2 v_Texcoord;\n@import clay.util.srgb\nvec3 ACESToneMapping(vec3 color)\n{\n const float A = 2.51;\n const float B = 0.03;\n const float C = 2.43;\n const float D = 0.59;\n const float E = 0.14;\n return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nfloat eyeAdaption(float fLum)\n{\n return mix(0.2, fLum, 0.5);\n}\n#ifdef LUT_ENABLED\nvec3 lutTransform(vec3 color) {\n float blueColor = color.b * 63.0;\n vec2 quad1;\n quad1.y = floor(floor(blueColor) / 8.0);\n quad1.x = floor(blueColor) - (quad1.y * 8.0);\n vec2 quad2;\n quad2.y = floor(ceil(blueColor) / 8.0);\n quad2.x = ceil(blueColor) - (quad2.y * 8.0);\n vec2 texPos1;\n texPos1.x = (quad1.x * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * color.r);\n texPos1.y = (quad1.y * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * color.g);\n vec2 texPos2;\n texPos2.x = (quad2.x * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * color.r);\n texPos2.y = (quad2.y * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * color.g);\n vec4 newColor1 = texture2D(lut, texPos1);\n vec4 newColor2 = texture2D(lut, texPos2);\n vec4 newColor = mix(newColor1, newColor2, fract(blueColor));\n return newColor.rgb;\n}\n#endif\n@import clay.util.rgbm\nvoid main()\n{\n vec4 texel = vec4(0.0);\n vec4 originalTexel = vec4(0.0);\n#ifdef TEXTURE_ENABLED\n texel = decodeHDR(texture2D(texture, v_Texcoord));\n originalTexel = texel;\n#endif\n#ifdef BLOOM_ENABLED\n vec4 bloomTexel = decodeHDR(texture2D(bloom, v_Texcoord));\n texel.rgb += bloomTexel.rgb * bloomIntensity;\n texel.a += bloomTexel.a * bloomIntensity;\n#endif\n#ifdef LENSFLARE_ENABLED\n texel += decodeHDR(texture2D(lensflare, v_Texcoord)) * texture2D(lensdirt, v_Texcoord) * lensflareIntensity;\n#endif\n texel.a = min(texel.a, 1.0);\n#ifdef LUM_ENABLED\n float fLum = texture2D(lum, vec2(0.5, 0.5)).r;\n float adaptedLumDest = 3.0 / (max(0.1, 1.0 + 10.0*eyeAdaption(fLum)));\n float exposureBias = adaptedLumDest * exposure;\n#else\n float exposureBias = exposure;\n#endif\n#ifdef TONEMAPPING\n texel.rgb *= exposureBias;\n texel.rgb = ACESToneMapping(texel.rgb);\n#endif\n texel = linearTosRGB(texel);\n#ifdef LUT_ENABLED\n texel.rgb = lutTransform(clamp(texel.rgb,vec3(0.0),vec3(1.0)));\n#endif\n#ifdef COLOR_CORRECTION\n texel.rgb = clamp(texel.rgb + vec3(brightness), 0.0, 1.0);\n texel.rgb = clamp((texel.rgb - vec3(0.5))*contrast+vec3(0.5), 0.0, 1.0);\n float lum = dot(texel.rgb, vec3(0.2125, 0.7154, 0.0721));\n texel.rgb = mix(vec3(lum), texel.rgb, saturation);\n#endif\n#ifdef VIGNETTE\n vec2 uv = (v_Texcoord - vec2(0.5)) * vec2(vignetteOffset);\n texel.rgb = mix(texel.rgb, vec3(1.0 - vignetteDarkness), dot(uv, uv));\n#endif\n gl_FragColor = encodeHDR(texel);\n#ifdef DEBUG\n #if DEBUG == 1\n gl_FragColor = encodeHDR(decodeHDR(texture2D(texture, v_Texcoord)));\n #elif DEBUG == 2\n gl_FragColor = encodeHDR(decodeHDR(texture2D(bloom, v_Texcoord)) * bloomIntensity);\n #elif DEBUG == 3\n gl_FragColor = encodeHDR(decodeHDR(texture2D(lensflare, v_Texcoord) * lensflareIntensity));\n #endif\n#endif\n if (originalTexel.a <= 0.01 && gl_FragColor.a > 1e-5) {\n gl_FragColor.a = dot(gl_FragColor.rgb, vec3(0.2125, 0.7154, 0.0721));\n }\n#ifdef PREMULTIPLY_ALPHA\n gl_FragColor.rgb *= gl_FragColor.a;\n#endif\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/lensflare.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/lensflare.glsl.js
 /* harmony default export */ const lensflare_glsl = ("@export clay.compositor.lensflare\n#define SAMPLE_NUMBER 8\nuniform sampler2D texture;\nuniform sampler2D lenscolor;\nuniform vec2 textureSize : [512, 512];\nuniform float dispersal : 0.3;\nuniform float haloWidth : 0.4;\nuniform float distortion : 1.0;\nvarying vec2 v_Texcoord;\n@import clay.util.rgbm\nvec4 textureDistorted(\n in vec2 texcoord,\n in vec2 direction,\n in vec3 distortion\n) {\n return vec4(\n decodeHDR(texture2D(texture, texcoord + direction * distortion.r)).r,\n decodeHDR(texture2D(texture, texcoord + direction * distortion.g)).g,\n decodeHDR(texture2D(texture, texcoord + direction * distortion.b)).b,\n 1.0\n );\n}\nvoid main()\n{\n vec2 texcoord = -v_Texcoord + vec2(1.0); vec2 textureOffset = 1.0 / textureSize;\n vec2 ghostVec = (vec2(0.5) - texcoord) * dispersal;\n vec2 haloVec = normalize(ghostVec) * haloWidth;\n vec3 distortion = vec3(-textureOffset.x * distortion, 0.0, textureOffset.x * distortion);\n vec4 result = vec4(0.0);\n for (int i = 0; i < SAMPLE_NUMBER; i++)\n {\n vec2 offset = fract(texcoord + ghostVec * float(i));\n float weight = length(vec2(0.5) - offset) / length(vec2(0.5));\n weight = pow(1.0 - weight, 10.0);\n result += textureDistorted(offset, normalize(ghostVec), distortion) * weight;\n }\n result *= texture2D(lenscolor, vec2(length(vec2(0.5) - texcoord)) / length(vec2(0.5)));\n float weight = length(vec2(0.5) - fract(texcoord + haloVec)) / length(vec2(0.5));\n weight = pow(1.0 - weight, 10.0);\n vec2 offset = fract(texcoord + haloVec);\n result += textureDistorted(offset, normalize(ghostVec), distortion) * weight;\n gl_FragColor = result;\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/blend.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/blend.glsl.js
 /* harmony default export */ const blend_glsl = ("@export clay.compositor.blend\n#define SHADER_NAME blend\n#ifdef TEXTURE1_ENABLED\nuniform sampler2D texture1;\nuniform float weight1 : 1.0;\n#endif\n#ifdef TEXTURE2_ENABLED\nuniform sampler2D texture2;\nuniform float weight2 : 1.0;\n#endif\n#ifdef TEXTURE3_ENABLED\nuniform sampler2D texture3;\nuniform float weight3 : 1.0;\n#endif\n#ifdef TEXTURE4_ENABLED\nuniform sampler2D texture4;\nuniform float weight4 : 1.0;\n#endif\n#ifdef TEXTURE5_ENABLED\nuniform sampler2D texture5;\nuniform float weight5 : 1.0;\n#endif\n#ifdef TEXTURE6_ENABLED\nuniform sampler2D texture6;\nuniform float weight6 : 1.0;\n#endif\nvarying vec2 v_Texcoord;\n@import clay.util.rgbm\nvoid main()\n{\n vec4 tex = vec4(0.0);\n#ifdef TEXTURE1_ENABLED\n tex += decodeHDR(texture2D(texture1, v_Texcoord)) * weight1;\n#endif\n#ifdef TEXTURE2_ENABLED\n tex += decodeHDR(texture2D(texture2, v_Texcoord)) * weight2;\n#endif\n#ifdef TEXTURE3_ENABLED\n tex += decodeHDR(texture2D(texture3, v_Texcoord)) * weight3;\n#endif\n#ifdef TEXTURE4_ENABLED\n tex += decodeHDR(texture2D(texture4, v_Texcoord)) * weight4;\n#endif\n#ifdef TEXTURE5_ENABLED\n tex += decodeHDR(texture2D(texture5, v_Texcoord)) * weight5;\n#endif\n#ifdef TEXTURE6_ENABLED\n tex += decodeHDR(texture2D(texture6, v_Texcoord)) * weight6;\n#endif\n gl_FragColor = encodeHDR(tex);\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/source/compositor/fxaa.glsl.js
+;// ./node_modules/claygl/src/shader/source/compositor/fxaa.glsl.js
 /* harmony default export */ const fxaa_glsl = ("@export clay.compositor.fxaa\nuniform sampler2D texture;\nuniform vec4 viewport : VIEWPORT;\nvarying vec2 v_Texcoord;\n#define FXAA_REDUCE_MIN (1.0/128.0)\n#define FXAA_REDUCE_MUL (1.0/8.0)\n#define FXAA_SPAN_MAX 8.0\n@import clay.util.rgbm\nvoid main()\n{\n vec2 resolution = 1.0 / viewport.zw;\n vec3 rgbNW = decodeHDR( texture2D( texture, ( gl_FragCoord.xy + vec2( -1.0, -1.0 ) ) * resolution ) ).xyz;\n vec3 rgbNE = decodeHDR( texture2D( texture, ( gl_FragCoord.xy + vec2( 1.0, -1.0 ) ) * resolution ) ).xyz;\n vec3 rgbSW = decodeHDR( texture2D( texture, ( gl_FragCoord.xy + vec2( -1.0, 1.0 ) ) * resolution ) ).xyz;\n vec3 rgbSE = decodeHDR( texture2D( texture, ( gl_FragCoord.xy + vec2( 1.0, 1.0 ) ) * resolution ) ).xyz;\n vec4 rgbaM = decodeHDR( texture2D( texture, gl_FragCoord.xy * resolution ) );\n vec3 rgbM = rgbaM.xyz;\n float opacity = rgbaM.w;\n vec3 luma = vec3( 0.299, 0.587, 0.114 );\n float lumaNW = dot( rgbNW, luma );\n float lumaNE = dot( rgbNE, luma );\n float lumaSW = dot( rgbSW, luma );\n float lumaSE = dot( rgbSE, luma );\n float lumaM = dot( rgbM, luma );\n float lumaMin = min( lumaM, min( min( lumaNW, lumaNE ), min( lumaSW, lumaSE ) ) );\n float lumaMax = max( lumaM, max( max( lumaNW, lumaNE) , max( lumaSW, lumaSE ) ) );\n vec2 dir;\n dir.x = -((lumaNW + lumaNE) - (lumaSW + lumaSE));\n dir.y = ((lumaNW + lumaSW) - (lumaNE + lumaSE));\n float dirReduce = max( ( lumaNW + lumaNE + lumaSW + lumaSE ) * ( 0.25 * FXAA_REDUCE_MUL ), FXAA_REDUCE_MIN );\n float rcpDirMin = 1.0 / ( min( abs( dir.x ), abs( dir.y ) ) + dirReduce );\n dir = min( vec2( FXAA_SPAN_MAX, FXAA_SPAN_MAX),\n max( vec2(-FXAA_SPAN_MAX, -FXAA_SPAN_MAX),\n dir * rcpDirMin)) * resolution;\n vec3 rgbA = decodeHDR( texture2D( texture, gl_FragCoord.xy * resolution + dir * ( 1.0 / 3.0 - 0.5 ) ) ).xyz;\n rgbA += decodeHDR( texture2D( texture, gl_FragCoord.xy * resolution + dir * ( 2.0 / 3.0 - 0.5 ) ) ).xyz;\n rgbA *= 0.5;\n vec3 rgbB = decodeHDR( texture2D( texture, gl_FragCoord.xy * resolution + dir * -0.5 ) ).xyz;\n rgbB += decodeHDR( texture2D( texture, gl_FragCoord.xy * resolution + dir * 0.5 ) ).xyz;\n rgbB *= 0.25;\n rgbB += rgbA * 0.5;\n float lumaB = dot( rgbB, luma );\n if ( ( lumaB < lumaMin ) || ( lumaB > lumaMax ) )\n {\n gl_FragColor = vec4( rgbA, opacity );\n }\n else {\n gl_FragColor = vec4( rgbB, opacity );\n }\n}\n@end");
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/shader/registerBuiltinCompositor.js
+;// ./node_modules/claygl/src/shader/registerBuiltinCompositor.js
 
 
 
@@ -46770,7 +44345,7 @@ function register(Shader) {
     Shader['import'](fxaa_glsl);
 
 }
-;// CONCATENATED MODULE: ./node_modules/claygl/src/createCompositor.js
+;// ./node_modules/claygl/src/createCompositor.js
 
 
 
@@ -47081,11 +44656,11 @@ function tryConvertExpr(string) {
 
 /* harmony default export */ const src_createCompositor = (createCompositor);
 
-;// CONCATENATED MODULE: ./node_modules/claygl/src/compositor/createCompositor.js
+;// ./node_modules/claygl/src/compositor/createCompositor.js
 // DEPRECATED
 
 /* harmony default export */ const compositor_createCompositor = (src_createCompositor);
-;// CONCATENATED MODULE: ./src/effect/halton.js
+;// ./src/effect/halton.js
 
 // Generate halton sequence
 // https://en.wikipedia.org/wiki/Halton_sequence
@@ -47104,10 +44679,10 @@ function halton(index, base) {
 
 
 /* harmony default export */ const effect_halton = (halton);
-;// CONCATENATED MODULE: ./src/effect/SSAO.glsl.js
+;// ./src/effect/SSAO.glsl.js
 /* harmony default export */ const SSAO_glsl = ("@export ecgl.ssao.estimate\n\nuniform sampler2D depthTex;\n\nuniform sampler2D normalTex;\n\nuniform sampler2D noiseTex;\n\nuniform vec2 depthTexSize;\n\nuniform vec2 noiseTexSize;\n\nuniform mat4 projection;\n\nuniform mat4 projectionInv;\n\nuniform mat4 viewInverseTranspose;\n\nuniform vec3 kernel[KERNEL_SIZE];\n\nuniform float radius : 1;\n\nuniform float power : 1;\n\nuniform float bias: 1e-2;\n\nuniform float intensity: 1.0;\n\nvarying vec2 v_Texcoord;\n\nfloat ssaoEstimator(in vec3 originPos, in mat3 kernelBasis) {\n float occlusion = 0.0;\n\n for (int i = 0; i < KERNEL_SIZE; i++) {\n vec3 samplePos = kernel[i];\n#ifdef NORMALTEX_ENABLED\n samplePos = kernelBasis * samplePos;\n#endif\n samplePos = samplePos * radius + originPos;\n\n vec4 texCoord = projection * vec4(samplePos, 1.0);\n texCoord.xy /= texCoord.w;\n\n vec4 depthTexel = texture2D(depthTex, texCoord.xy * 0.5 + 0.5);\n\n float sampleDepth = depthTexel.r * 2.0 - 1.0;\n if (projection[3][3] == 0.0) {\n sampleDepth = projection[3][2] / (sampleDepth * projection[2][3] - projection[2][2]);\n }\n else {\n sampleDepth = (sampleDepth - projection[3][2]) / projection[2][2];\n }\n \n float rangeCheck = smoothstep(0.0, 1.0, radius / abs(originPos.z - sampleDepth));\n occlusion += rangeCheck * step(samplePos.z, sampleDepth - bias);\n }\n#ifdef NORMALTEX_ENABLED\n occlusion = 1.0 - occlusion / float(KERNEL_SIZE);\n#else\n occlusion = 1.0 - clamp((occlusion / float(KERNEL_SIZE) - 0.6) * 2.5, 0.0, 1.0);\n#endif\n return pow(occlusion, power);\n}\n\nvoid main()\n{\n\n vec4 depthTexel = texture2D(depthTex, v_Texcoord);\n\n#ifdef NORMALTEX_ENABLED\n vec4 tex = texture2D(normalTex, v_Texcoord);\n if (dot(tex.rgb, tex.rgb) == 0.0) {\n gl_FragColor = vec4(1.0);\n return;\n }\n vec3 N = tex.rgb * 2.0 - 1.0;\n N = (viewInverseTranspose * vec4(N, 0.0)).xyz;\n\n vec2 noiseTexCoord = depthTexSize / vec2(noiseTexSize) * v_Texcoord;\n vec3 rvec = texture2D(noiseTex, noiseTexCoord).rgb * 2.0 - 1.0;\n vec3 T = normalize(rvec - N * dot(rvec, N));\n vec3 BT = normalize(cross(N, T));\n mat3 kernelBasis = mat3(T, BT, N);\n#else\n if (depthTexel.r > 0.99999) {\n gl_FragColor = vec4(1.0);\n return;\n }\n mat3 kernelBasis;\n#endif\n\n float z = depthTexel.r * 2.0 - 1.0;\n\n vec4 projectedPos = vec4(v_Texcoord * 2.0 - 1.0, z, 1.0);\n vec4 p4 = projectionInv * projectedPos;\n\n vec3 position = p4.xyz / p4.w;\n\n float ao = ssaoEstimator(position, kernelBasis);\n ao = clamp(1.0 - (1.0 - ao) * intensity, 0.0, 1.0);\n gl_FragColor = vec4(vec3(ao), 1.0);\n}\n\n@end\n\n\n@export ecgl.ssao.blur\n#define SHADER_NAME SSAO_BLUR\n\nuniform sampler2D ssaoTexture;\n\n#ifdef NORMALTEX_ENABLED\nuniform sampler2D normalTex;\n#endif\n\nvarying vec2 v_Texcoord;\n\nuniform vec2 textureSize;\nuniform float blurSize : 1.0;\n\nuniform int direction: 0.0;\n\n#ifdef DEPTHTEX_ENABLED\nuniform sampler2D depthTex;\nuniform mat4 projection;\nuniform float depthRange : 0.5;\n\nfloat getLinearDepth(vec2 coord)\n{\n float depth = texture2D(depthTex, coord).r * 2.0 - 1.0;\n return projection[3][2] / (depth * projection[2][3] - projection[2][2]);\n}\n#endif\n\nvoid main()\n{\n float kernel[5];\n kernel[0] = 0.122581;\n kernel[1] = 0.233062;\n kernel[2] = 0.288713;\n kernel[3] = 0.233062;\n kernel[4] = 0.122581;\n\n vec2 off = vec2(0.0);\n if (direction == 0) {\n off[0] = blurSize / textureSize.x;\n }\n else {\n off[1] = blurSize / textureSize.y;\n }\n\n vec2 coord = v_Texcoord;\n\n float sum = 0.0;\n float weightAll = 0.0;\n\n#ifdef NORMALTEX_ENABLED\n vec3 centerNormal = texture2D(normalTex, v_Texcoord).rgb * 2.0 - 1.0;\n#endif\n#if defined(DEPTHTEX_ENABLED)\n float centerDepth = getLinearDepth(v_Texcoord);\n#endif\n\n for (int i = 0; i < 5; i++) {\n vec2 coord = clamp(v_Texcoord + vec2(float(i) - 2.0) * off, vec2(0.0), vec2(1.0));\n\n float w = kernel[i];\n#ifdef NORMALTEX_ENABLED\n vec3 normal = texture2D(normalTex, coord).rgb * 2.0 - 1.0;\n w *= clamp(dot(normal, centerNormal), 0.0, 1.0);\n#endif\n#ifdef DEPTHTEX_ENABLED\n float d = getLinearDepth(coord);\n w *= (1.0 - smoothstep(abs(centerDepth - d) / depthRange, 0.0, 1.0));\n#endif\n\n weightAll += w;\n sum += texture2D(ssaoTexture, coord).r * w;\n }\n\n gl_FragColor = vec4(vec3(sum / weightAll), 1.0);\n}\n\n@end\n");
 
-;// CONCATENATED MODULE: ./src/effect/SSAOPass.js
+;// ./src/effect/SSAOPass.js
 
 
 
@@ -47336,10 +44911,10 @@ SSAOPass.prototype.dispose = function (renderer) {
 };
 
 /* harmony default export */ const effect_SSAOPass = (SSAOPass);
-;// CONCATENATED MODULE: ./src/effect/SSR.glsl.js
+;// ./src/effect/SSR.glsl.js
 /* harmony default export */ const SSR_glsl = ("@export ecgl.ssr.main\n\n#define SHADER_NAME SSR\n#define MAX_ITERATION 20;\n#define SAMPLE_PER_FRAME 5;\n#define TOTAL_SAMPLES 128;\n\nuniform sampler2D sourceTexture;\nuniform sampler2D gBufferTexture1;\nuniform sampler2D gBufferTexture2;\nuniform sampler2D gBufferTexture3;\nuniform samplerCube specularCubemap;\nuniform float specularIntensity: 1;\n\nuniform mat4 projection;\nuniform mat4 projectionInv;\nuniform mat4 toViewSpace;\nuniform mat4 toWorldSpace;\n\nuniform float maxRayDistance: 200;\n\nuniform float pixelStride: 16;\nuniform float pixelStrideZCutoff: 50; \nuniform float screenEdgeFadeStart: 0.9; \nuniform float eyeFadeStart : 0.2; uniform float eyeFadeEnd: 0.8; \nuniform float minGlossiness: 0.2; uniform float zThicknessThreshold: 1;\n\nuniform float nearZ;\nuniform vec2 viewportSize : VIEWPORT_SIZE;\n\nuniform float jitterOffset: 0;\n\nvarying vec2 v_Texcoord;\n\n#ifdef DEPTH_DECODE\n@import clay.util.decode_float\n#endif\n\n#ifdef PHYSICALLY_CORRECT\nuniform sampler2D normalDistribution;\nuniform float sampleOffset: 0;\nuniform vec2 normalDistributionSize;\n\nvec3 transformNormal(vec3 H, vec3 N) {\n vec3 upVector = N.y > 0.999 ? vec3(1.0, 0.0, 0.0) : vec3(0.0, 1.0, 0.0);\n vec3 tangentX = normalize(cross(N, upVector));\n vec3 tangentZ = cross(N, tangentX);\n return normalize(tangentX * H.x + N * H.y + tangentZ * H.z);\n}\nvec3 importanceSampleNormalGGX(float i, float roughness, vec3 N) {\n float p = fract((i + sampleOffset) / float(TOTAL_SAMPLES));\n vec3 H = texture2D(normalDistribution,vec2(roughness, p)).rgb;\n return transformNormal(H, N);\n}\nfloat G_Smith(float g, float ndv, float ndl) {\n float roughness = 1.0 - g;\n float k = roughness * roughness / 2.0;\n float G1V = ndv / (ndv * (1.0 - k) + k);\n float G1L = ndl / (ndl * (1.0 - k) + k);\n return G1L * G1V;\n}\nvec3 F_Schlick(float ndv, vec3 spec) {\n return spec + (1.0 - spec) * pow(1.0 - ndv, 5.0);\n}\n#endif\n\nfloat fetchDepth(sampler2D depthTexture, vec2 uv)\n{\n vec4 depthTexel = texture2D(depthTexture, uv);\n return depthTexel.r * 2.0 - 1.0;\n}\n\nfloat linearDepth(float depth)\n{\n if (projection[3][3] == 0.0) {\n return projection[3][2] / (depth * projection[2][3] - projection[2][2]);\n }\n else {\n return (depth - projection[3][2]) / projection[2][2];\n }\n}\n\nbool rayIntersectDepth(float rayZNear, float rayZFar, vec2 hitPixel)\n{\n if (rayZFar > rayZNear)\n {\n float t = rayZFar; rayZFar = rayZNear; rayZNear = t;\n }\n float cameraZ = linearDepth(fetchDepth(gBufferTexture2, hitPixel));\n return rayZFar <= cameraZ && rayZNear >= cameraZ - zThicknessThreshold;\n}\n\n\nbool traceScreenSpaceRay(\n vec3 rayOrigin, vec3 rayDir, float jitter,\n out vec2 hitPixel, out vec3 hitPoint, out float iterationCount\n)\n{\n float rayLength = ((rayOrigin.z + rayDir.z * maxRayDistance) > -nearZ)\n ? (-nearZ - rayOrigin.z) / rayDir.z : maxRayDistance;\n\n vec3 rayEnd = rayOrigin + rayDir * rayLength;\n\n vec4 H0 = projection * vec4(rayOrigin, 1.0);\n vec4 H1 = projection * vec4(rayEnd, 1.0);\n\n float k0 = 1.0 / H0.w, k1 = 1.0 / H1.w;\n\n vec3 Q0 = rayOrigin * k0, Q1 = rayEnd * k1;\n\n vec2 P0 = (H0.xy * k0 * 0.5 + 0.5) * viewportSize;\n vec2 P1 = (H1.xy * k1 * 0.5 + 0.5) * viewportSize;\n\n P1 += dot(P1 - P0, P1 - P0) < 0.0001 ? 0.01 : 0.0;\n vec2 delta = P1 - P0;\n\n bool permute = false;\n if (abs(delta.x) < abs(delta.y)) {\n permute = true;\n delta = delta.yx;\n P0 = P0.yx;\n P1 = P1.yx;\n }\n float stepDir = sign(delta.x);\n float invdx = stepDir / delta.x;\n\n vec3 dQ = (Q1 - Q0) * invdx;\n float dk = (k1 - k0) * invdx;\n\n vec2 dP = vec2(stepDir, delta.y * invdx);\n\n float strideScaler = 1.0 - min(1.0, -rayOrigin.z / pixelStrideZCutoff);\n float pixStride = 1.0 + strideScaler * pixelStride;\n\n dP *= pixStride; dQ *= pixStride; dk *= pixStride;\n\n vec4 pqk = vec4(P0, Q0.z, k0);\n vec4 dPQK = vec4(dP, dQ.z, dk);\n\n pqk += dPQK * jitter;\n float rayZFar = (dPQK.z * 0.5 + pqk.z) / (dPQK.w * 0.5 + pqk.w);\n float rayZNear;\n\n bool intersect = false;\n\n vec2 texelSize = 1.0 / viewportSize;\n\n iterationCount = 0.0;\n\n for (int i = 0; i < MAX_ITERATION; i++)\n {\n pqk += dPQK;\n\n rayZNear = rayZFar;\n rayZFar = (dPQK.z * 0.5 + pqk.z) / (dPQK.w * 0.5 + pqk.w);\n\n hitPixel = permute ? pqk.yx : pqk.xy;\n hitPixel *= texelSize;\n\n intersect = rayIntersectDepth(rayZNear, rayZFar, hitPixel);\n\n iterationCount += 1.0;\n\n dPQK *= 1.2;\n\n if (intersect) {\n break;\n }\n }\n\n Q0.xy += dQ.xy * iterationCount;\n Q0.z = pqk.z;\n hitPoint = Q0 / pqk.w;\n\n return intersect;\n}\n\nfloat calculateAlpha(\n float iterationCount, float reflectivity,\n vec2 hitPixel, vec3 hitPoint, float dist, vec3 rayDir\n)\n{\n float alpha = clamp(reflectivity, 0.0, 1.0);\n alpha *= 1.0 - (iterationCount / float(MAX_ITERATION));\n vec2 hitPixelNDC = hitPixel * 2.0 - 1.0;\n float maxDimension = min(1.0, max(abs(hitPixelNDC.x), abs(hitPixelNDC.y)));\n alpha *= 1.0 - max(0.0, maxDimension - screenEdgeFadeStart) / (1.0 - screenEdgeFadeStart);\n\n float _eyeFadeStart = eyeFadeStart;\n float _eyeFadeEnd = eyeFadeEnd;\n if (_eyeFadeStart > _eyeFadeEnd) {\n float tmp = _eyeFadeEnd;\n _eyeFadeEnd = _eyeFadeStart;\n _eyeFadeStart = tmp;\n }\n\n float eyeDir = clamp(rayDir.z, _eyeFadeStart, _eyeFadeEnd);\n alpha *= 1.0 - (eyeDir - _eyeFadeStart) / (_eyeFadeEnd - _eyeFadeStart);\n\n alpha *= 1.0 - clamp(dist / maxRayDistance, 0.0, 1.0);\n\n return alpha;\n}\n\n@import clay.util.rand\n\n@import clay.util.rgbm\n\nvoid main()\n{\n vec4 normalAndGloss = texture2D(gBufferTexture1, v_Texcoord);\n\n if (dot(normalAndGloss.rgb, vec3(1.0)) == 0.0) {\n discard;\n }\n\n float g = normalAndGloss.a;\n#if !defined(PHYSICALLY_CORRECT)\n if (g <= minGlossiness) {\n discard;\n }\n#endif\n\n float reflectivity = (g - minGlossiness) / (1.0 - minGlossiness);\n\n vec3 N = normalize(normalAndGloss.rgb * 2.0 - 1.0);\n N = normalize((toViewSpace * vec4(N, 0.0)).xyz);\n\n vec4 projectedPos = vec4(v_Texcoord * 2.0 - 1.0, fetchDepth(gBufferTexture2, v_Texcoord), 1.0);\n vec4 pos = projectionInv * projectedPos;\n vec3 rayOrigin = pos.xyz / pos.w;\n vec3 V = -normalize(rayOrigin);\n\n float ndv = clamp(dot(N, V), 0.0, 1.0);\n float iterationCount;\n float jitter = rand(fract(v_Texcoord + jitterOffset));\n\n#ifdef PHYSICALLY_CORRECT\n vec4 color = vec4(vec3(0.0), 1.0);\n vec4 albedoMetalness = texture2D(gBufferTexture3, v_Texcoord);\n vec3 albedo = albedoMetalness.rgb;\n float m = albedoMetalness.a;\n vec3 diffuseColor = albedo * (1.0 - m);\n vec3 spec = mix(vec3(0.04), albedo, m);\n\n float jitter2 = rand(fract(v_Texcoord)) * float(TOTAL_SAMPLES);\n\n for (int i = 0; i < SAMPLE_PER_FRAME; i++) {\n vec3 H = importanceSampleNormalGGX(float(i) + jitter2, 1.0 - g, N);\n vec3 rayDir = normalize(reflect(-V, H));\n#else\n vec3 rayDir = normalize(reflect(-V, N));\n#endif\n vec2 hitPixel;\n vec3 hitPoint;\n\n bool intersect = traceScreenSpaceRay(rayOrigin, rayDir, jitter, hitPixel, hitPoint, iterationCount);\n\n float dist = distance(rayOrigin, hitPoint);\n\n vec3 hitNormal = texture2D(gBufferTexture1, hitPixel).rgb * 2.0 - 1.0;\n hitNormal = normalize((toViewSpace * vec4(hitNormal, 0.0)).xyz);\n#ifdef PHYSICALLY_CORRECT\n float ndl = clamp(dot(N, rayDir), 0.0, 1.0);\n float vdh = clamp(dot(V, H), 0.0, 1.0);\n float ndh = clamp(dot(N, H), 0.0, 1.0);\n vec3 litTexel = vec3(0.0);\n if (dot(hitNormal, rayDir) < 0.0 && intersect) {\n litTexel = texture2D(sourceTexture, hitPixel).rgb;\n litTexel *= pow(clamp(1.0 - dist / 200.0, 0.0, 1.0), 3.0);\n\n }\n else {\n #ifdef SPECULARCUBEMAP_ENABLED\n vec3 rayDirW = normalize(toWorldSpace * vec4(rayDir, 0.0)).rgb;\n litTexel = RGBMDecode(textureCubeLodEXT(specularCubemap, rayDirW, 0.0), 8.12).rgb * specularIntensity;\n#endif\n }\n color.rgb += ndl * litTexel * (\n F_Schlick(ndl, spec) * G_Smith(g, ndv, ndl) * vdh / (ndh * ndv + 0.001)\n );\n }\n color.rgb /= float(SAMPLE_PER_FRAME);\n#else\n #if !defined(SPECULARCUBEMAP_ENABLED)\n if (dot(hitNormal, rayDir) >= 0.0) {\n discard;\n }\n if (!intersect) {\n discard;\n }\n#endif\n float alpha = clamp(calculateAlpha(iterationCount, reflectivity, hitPixel, hitPoint, dist, rayDir), 0.0, 1.0);\n vec4 color = texture2D(sourceTexture, hitPixel);\n color.rgb *= alpha;\n\n#ifdef SPECULARCUBEMAP_ENABLED\n vec3 rayDirW = normalize(toWorldSpace * vec4(rayDir, 0.0)).rgb;\n alpha = alpha * (intersect ? 1.0 : 0.0);\n float bias = (1.0 -g) * 5.0;\n color.rgb += (1.0 - alpha)\n * RGBMDecode(textureCubeLodEXT(specularCubemap, rayDirW, bias), 8.12).rgb\n * specularIntensity;\n#endif\n\n#endif\n\n gl_FragColor = encodeHDR(color);\n}\n@end\n\n@export ecgl.ssr.blur\n\nuniform sampler2D texture;\nuniform sampler2D gBufferTexture1;\nuniform sampler2D gBufferTexture2;\nuniform mat4 projection;\nuniform float depthRange : 0.05;\n\nvarying vec2 v_Texcoord;\n\nuniform vec2 textureSize;\nuniform float blurSize : 1.0;\n\n#ifdef BLEND\n #ifdef SSAOTEX_ENABLED\nuniform sampler2D ssaoTex;\n #endif\nuniform sampler2D sourceTexture;\n#endif\n\nfloat getLinearDepth(vec2 coord)\n{\n float depth = texture2D(gBufferTexture2, coord).r * 2.0 - 1.0;\n return projection[3][2] / (depth * projection[2][3] - projection[2][2]);\n}\n\n@import clay.util.rgbm\n\n\nvoid main()\n{\n @import clay.compositor.kernel.gaussian_9\n\n vec4 centerNTexel = texture2D(gBufferTexture1, v_Texcoord);\n float g = centerNTexel.a;\n float maxBlurSize = clamp(1.0 - g, 0.0, 1.0) * blurSize;\n#ifdef VERTICAL\n vec2 off = vec2(0.0, maxBlurSize / textureSize.y);\n#else\n vec2 off = vec2(maxBlurSize / textureSize.x, 0.0);\n#endif\n\n vec2 coord = v_Texcoord;\n\n vec4 sum = vec4(0.0);\n float weightAll = 0.0;\n\n vec3 cN = centerNTexel.rgb * 2.0 - 1.0;\n float cD = getLinearDepth(v_Texcoord);\n for (int i = 0; i < 9; i++) {\n vec2 coord = clamp((float(i) - 4.0) * off + v_Texcoord, vec2(0.0), vec2(1.0));\n float w = gaussianKernel[i]\n * clamp(dot(cN, texture2D(gBufferTexture1, coord).rgb * 2.0 - 1.0), 0.0, 1.0);\n float d = getLinearDepth(coord);\n w *= (1.0 - smoothstep(abs(cD - d) / depthRange, 0.0, 1.0));\n\n weightAll += w;\n sum += decodeHDR(texture2D(texture, coord)) * w;\n }\n\n#ifdef BLEND\n float aoFactor = 1.0;\n #ifdef SSAOTEX_ENABLED\n aoFactor = texture2D(ssaoTex, v_Texcoord).r;\n #endif\n gl_FragColor = encodeHDR(\n sum / weightAll * aoFactor + decodeHDR(texture2D(sourceTexture, v_Texcoord))\n );\n#else\n gl_FragColor = encodeHDR(sum / weightAll);\n#endif\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/effect/SSRPass.js
+;// ./src/effect/SSRPass.js
 
 
 
@@ -47561,7 +45136,7 @@ SSRPass.prototype.dispose = function (renderer) {
 };
 
 /* harmony default export */ const effect_SSRPass = (SSRPass);
-;// CONCATENATED MODULE: ./src/effect/poissonKernel.js
+;// ./src/effect/poissonKernel.js
 // Based on https://bl.ocks.org/mbostock/19168c663618b707158
 
 /* harmony default export */ const poissonKernel = ([
@@ -47598,10 +45173,10 @@ SSRPass.prototype.dispose = function (renderer) {
 -0.634888119007, -0.302301223431,
 0.617074219636, 0.779817204925
 ]);
-;// CONCATENATED MODULE: ./src/util/shader/normal.glsl.js
+;// ./src/util/shader/normal.glsl.js
 /* harmony default export */ const normal_glsl = ("@export ecgl.normal.vertex\n\n@import ecgl.common.transformUniforms\n\n@import ecgl.common.uv.header\n\n@import ecgl.common.attributes\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\n@import ecgl.common.normalMap.vertexHeader\n\n@import ecgl.common.vertexAnimation.header\n\nvoid main()\n{\n\n @import ecgl.common.vertexAnimation.main\n\n @import ecgl.common.uv.main\n\n v_Normal = normalize((worldInverseTranspose * vec4(normal, 0.0)).xyz);\n v_WorldPosition = (world * vec4(pos, 1.0)).xyz;\n\n @import ecgl.common.normalMap.vertexMain\n\n gl_Position = worldViewProjection * vec4(pos, 1.0);\n\n}\n\n\n@end\n\n\n@export ecgl.normal.fragment\n\n#define ROUGHNESS_CHANEL 0\n\nuniform bool useBumpMap;\nuniform bool useRoughnessMap;\nuniform bool doubleSide;\nuniform float roughness;\n\n@import ecgl.common.uv.fragmentHeader\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\nuniform mat4 viewInverse : VIEWINVERSE;\n\n@import ecgl.common.normalMap.fragmentHeader\n@import ecgl.common.bumpMap.header\n\nuniform sampler2D roughnessMap;\n\nvoid main()\n{\n vec3 N = v_Normal;\n \n bool flipNormal = false;\n if (doubleSide) {\n vec3 eyePos = viewInverse[3].xyz;\n vec3 V = normalize(eyePos - v_WorldPosition);\n\n if (dot(N, V) < 0.0) {\n flipNormal = true;\n }\n }\n\n @import ecgl.common.normalMap.fragmentMain\n\n if (useBumpMap) {\n N = bumpNormal(v_WorldPosition, v_Normal, N);\n }\n\n float g = 1.0 - roughness;\n\n if (useRoughnessMap) {\n float g2 = 1.0 - texture2D(roughnessMap, v_DetailTexcoord)[ROUGHNESS_CHANEL];\n g = clamp(g2 + (g - 0.5) * 2.0, 0.0, 1.0);\n }\n\n if (flipNormal) {\n N = -N;\n }\n\n gl_FragColor.rgb = (N.xyz + 1.0) * 0.5;\n gl_FragColor.a = g;\n}\n@end");
 
-;// CONCATENATED MODULE: ./src/effect/NormalPass.js
+;// ./src/effect/NormalPass.js
 // NormalPass will generate normal and depth data.
 
 // TODO Animation
@@ -47809,7 +45384,7 @@ NormalPass.prototype.dispose = function (renderer) {
 }
 
 /* harmony default export */ const effect_NormalPass = (NormalPass);
-;// CONCATENATED MODULE: ./src/effect/EdgePass.js
+;// ./src/effect/EdgePass.js
 
 
 
@@ -47867,7 +45442,7 @@ EdgePass.prototype.dispose = function (renderer) {
 };
 
 /* harmony default export */ const effect_EdgePass = (EdgePass);
-;// CONCATENATED MODULE: ./src/effect/composite.js
+;// ./src/effect/composite.js
 /* harmony default export */ const composite = ({
     'type' : 'compositor',
     'nodes' : [
@@ -48446,13 +46021,13 @@ EdgePass.prototype.dispose = function (renderer) {
         }
     ]
 });
-;// CONCATENATED MODULE: ./src/effect/DOF.glsl.js
+;// ./src/effect/DOF.glsl.js
 /* harmony default export */ const DOF_glsl = ("@export ecgl.dof.coc\n\nuniform sampler2D depth;\n\nuniform float zNear: 0.1;\nuniform float zFar: 2000;\n\nuniform float focalDistance: 3;\nuniform float focalRange: 1;\nuniform float focalLength: 30;\nuniform float fstop: 2.8;\n\nvarying vec2 v_Texcoord;\n\n@import clay.util.encode_float\n\nvoid main()\n{\n float z = texture2D(depth, v_Texcoord).r * 2.0 - 1.0;\n\n float dist = 2.0 * zNear * zFar / (zFar + zNear - z * (zFar - zNear));\n\n float aperture = focalLength / fstop;\n\n float coc;\n\n float uppper = focalDistance + focalRange;\n float lower = focalDistance - focalRange;\n if (dist <= uppper && dist >= lower) {\n coc = 0.5;\n }\n else {\n float focalAdjusted = dist > uppper ? uppper : lower;\n\n coc = abs(aperture * (focalLength * (dist - focalAdjusted)) / (dist * (focalAdjusted - focalLength)));\n coc = clamp(coc, 0.0, 2.0) / 2.00001;\n\n if (dist < lower) {\n coc = -coc;\n }\n coc = coc * 0.5 + 0.5;\n }\n\n gl_FragColor = encodeFloat(coc);\n}\n@end\n\n\n@export ecgl.dof.composite\n\n#define DEBUG 0\n\nuniform sampler2D original;\nuniform sampler2D blurred;\nuniform sampler2D nearfield;\nuniform sampler2D coc;\nuniform sampler2D nearcoc;\nvarying vec2 v_Texcoord;\n\n@import clay.util.rgbm\n@import clay.util.float\n\nvoid main()\n{\n vec4 blurredColor = texture2D(blurred, v_Texcoord);\n vec4 originalColor = texture2D(original, v_Texcoord);\n\n float fCoc = decodeFloat(texture2D(coc, v_Texcoord));\n\n fCoc = abs(fCoc * 2.0 - 1.0);\n\n float weight = smoothstep(0.0, 1.0, fCoc);\n \n#ifdef NEARFIELD_ENABLED\n vec4 nearfieldColor = texture2D(nearfield, v_Texcoord);\n float fNearCoc = decodeFloat(texture2D(nearcoc, v_Texcoord));\n fNearCoc = abs(fNearCoc * 2.0 - 1.0);\n\n gl_FragColor = encodeHDR(\n mix(\n nearfieldColor, mix(originalColor, blurredColor, weight),\n pow(1.0 - fNearCoc, 4.0)\n )\n );\n#else\n gl_FragColor = encodeHDR(mix(originalColor, blurredColor, weight));\n#endif\n\n}\n\n@end\n\n\n\n@export ecgl.dof.diskBlur\n\n#define POISSON_KERNEL_SIZE 16;\n\nuniform sampler2D texture;\nuniform sampler2D coc;\nvarying vec2 v_Texcoord;\n\nuniform float blurRadius : 10.0;\nuniform vec2 textureSize : [512.0, 512.0];\n\nuniform vec2 poissonKernel[POISSON_KERNEL_SIZE];\n\nuniform float percent;\n\nfloat nrand(const in vec2 n) {\n return fract(sin(dot(n.xy ,vec2(12.9898,78.233))) * 43758.5453);\n}\n\n@import clay.util.rgbm\n@import clay.util.float\n\n\nvoid main()\n{\n vec2 offset = blurRadius / textureSize;\n\n float rnd = 6.28318 * nrand(v_Texcoord + 0.07 * percent );\n float cosa = cos(rnd);\n float sina = sin(rnd);\n vec4 basis = vec4(cosa, -sina, sina, cosa);\n\n#if !defined(BLUR_NEARFIELD) && !defined(BLUR_COC)\n offset *= abs(decodeFloat(texture2D(coc, v_Texcoord)) * 2.0 - 1.0);\n#endif\n\n#ifdef BLUR_COC\n float cocSum = 0.0;\n#else\n vec4 color = vec4(0.0);\n#endif\n\n\n float weightSum = 0.0;\n\n for (int i = 0; i < POISSON_KERNEL_SIZE; i++) {\n vec2 ofs = poissonKernel[i];\n\n ofs = vec2(dot(ofs, basis.xy), dot(ofs, basis.zw));\n\n vec2 uv = v_Texcoord + ofs * offset;\n vec4 texel = texture2D(texture, uv);\n\n float w = 1.0;\n#ifdef BLUR_COC\n float fCoc = decodeFloat(texel) * 2.0 - 1.0;\n cocSum += clamp(fCoc, -1.0, 0.0) * w;\n#else\n texel = texel;\n #if !defined(BLUR_NEARFIELD)\n float fCoc = decodeFloat(texture2D(coc, uv)) * 2.0 - 1.0;\n w *= abs(fCoc);\n #endif\n texel.rgb *= texel.a;\n color += texel * w;\n#endif\n\n weightSum += w;\n }\n\n#ifdef BLUR_COC\n gl_FragColor = encodeFloat(clamp(cocSum / weightSum, -1.0, 0.0) * 0.5 + 0.5);\n#else\n color /= weightSum;\n color.rgb /= (color.a + 0.0001);\n gl_FragColor = color;\n#endif\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/effect/edge.glsl.js
+;// ./src/effect/edge.glsl.js
 /* harmony default export */ const edge_glsl = ("@export ecgl.edge\n\nuniform sampler2D texture;\n\nuniform sampler2D normalTexture;\nuniform sampler2D depthTexture;\n\nuniform mat4 projectionInv;\n\nuniform vec2 textureSize;\n\nuniform vec4 edgeColor: [0,0,0,0.8];\n\nvarying vec2 v_Texcoord;\n\nvec3 packColor(vec2 coord) {\n float z = texture2D(depthTexture, coord).r * 2.0 - 1.0;\n vec4 p = vec4(v_Texcoord * 2.0 - 1.0, z, 1.0);\n vec4 p4 = projectionInv * p;\n\n return vec3(\n texture2D(normalTexture, coord).rg,\n -p4.z / p4.w / 5.0\n );\n}\n\nvoid main() {\n vec2 cc = v_Texcoord;\n vec3 center = packColor(cc);\n\n float size = clamp(1.0 - (center.z - 10.0) / 100.0, 0.0, 1.0) * 0.5;\n float dx = size / textureSize.x;\n float dy = size / textureSize.y;\n\n vec2 coord;\n vec3 topLeft = packColor(cc+vec2(-dx, -dy));\n vec3 top = packColor(cc+vec2(0.0, -dy));\n vec3 topRight = packColor(cc+vec2(dx, -dy));\n vec3 left = packColor(cc+vec2(-dx, 0.0));\n vec3 right = packColor(cc+vec2(dx, 0.0));\n vec3 bottomLeft = packColor(cc+vec2(-dx, dy));\n vec3 bottom = packColor(cc+vec2(0.0, dy));\n vec3 bottomRight = packColor(cc+vec2(dx, dy));\n\n vec3 v = -topLeft-2.0*top-topRight+bottomLeft+2.0*bottom+bottomRight;\n vec3 h = -bottomLeft-2.0*left-topLeft+bottomRight+2.0*right+topRight;\n\n float edge = sqrt(dot(h, h) + dot(v, v));\n\n edge = smoothstep(0.8, 1.0, edge);\n\n gl_FragColor = mix(texture2D(texture, v_Texcoord), vec4(edgeColor.rgb, 1.0), edgeColor.a * edge);\n}\n@end");
 
-;// CONCATENATED MODULE: ./src/effect/EffectCompositor.js
+;// ./src/effect/EffectCompositor.js
 
 
 
@@ -48479,17 +46054,17 @@ EdgePass.prototype.dispose = function (renderer) {
 
 
 
-src_Shader.import(blur_glsl);
-src_Shader.import(lut_glsl);
-src_Shader.import(output_glsl);
-src_Shader.import(bright_glsl);
-src_Shader.import(downsample_glsl);
-src_Shader.import(upsample_glsl);
-src_Shader.import(hdr_glsl);
-src_Shader.import(blend_glsl);
-src_Shader.import(fxaa_glsl);
-src_Shader.import(DOF_glsl);
-src_Shader.import(edge_glsl);
+src_Shader['import'](blur_glsl);
+src_Shader['import'](lut_glsl);
+src_Shader['import'](output_glsl);
+src_Shader['import'](bright_glsl);
+src_Shader['import'](downsample_glsl);
+src_Shader['import'](upsample_glsl);
+src_Shader['import'](hdr_glsl);
+src_Shader['import'](blend_glsl);
+src_Shader['import'](fxaa_glsl);
+src_Shader['import'](DOF_glsl);
+src_Shader['import'](edge_glsl);
 
 
 function makeCommonOutputs(getWidth, getHeight) {
@@ -48993,7 +46568,7 @@ EffectCompositor.prototype.dispose = function (renderer) {
 };
 
 /* harmony default export */ const effect_EffectCompositor = (EffectCompositor);
-;// CONCATENATED MODULE: ./src/effect/TemporalSuperSampling.js
+;// ./src/effect/TemporalSuperSampling.js
 // Temporal Super Sample for static Scene
 
 
@@ -49160,7 +46735,7 @@ TemporalSuperSampling.prototype = {
 };
 
 /* harmony default export */ const effect_TemporalSuperSampling = (TemporalSuperSampling);
-;// CONCATENATED MODULE: ./src/core/ViewGL.js
+;// ./src/core/ViewGL.js
 /*
  * @module echarts-gl/core/ViewGL
  * @author Yi Shen(http://github.com/pissang)
@@ -49614,7 +47189,7 @@ ViewGL.prototype.removeAll = function (node3D) {
 Object.assign(ViewGL.prototype, mixin_notifier);
 
 /* harmony default export */ const core_ViewGL = (ViewGL);
-;// CONCATENATED MODULE: ./src/coord/grid3DCreator.js
+;// ./src/coord/grid3DCreator.js
 
 
 
@@ -49804,7 +47379,7 @@ var grid3DCreator = {
 };
 
 /* harmony default export */ const coord_grid3DCreator = (grid3DCreator);
-;// CONCATENATED MODULE: ./src/component/grid3D/Axis3DModel.js
+;// ./src/component/grid3D/Axis3DModel.js
 
 
 var Axis3DModel = external_echarts_.ComponentModel.extend({
@@ -49828,7 +47403,7 @@ var Axis3DModel = external_echarts_.ComponentModel.extend({
 external_echarts_.helper.mixinAxisModelCommonMethods(Axis3DModel);
 
 /* harmony default export */ const grid3D_Axis3DModel = (Axis3DModel);
-;// CONCATENATED MODULE: ./src/component/grid3D/axis3DDefault.js
+;// ./src/component/grid3D/axis3DDefault.js
 
 
 var defaultOption = {
@@ -49920,7 +47495,7 @@ logAxis.scale = true;
     timeAxis3D: timeAxis,
     logAxis3D: logAxis
 });
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/data/OrdinalMeta.js
+;// ./node_modules/echarts/lib/data/OrdinalMeta.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -49965,16 +47540,14 @@ logAxis.scale = true;
 * under the License.
 */
 
-
-var OrdinalMeta =
-/** @class */
-function () {
+var uidBase = 0;
+var OrdinalMeta = /** @class */function () {
   function OrdinalMeta(opt) {
     this.categories = opt.categories || [];
     this._needCollect = opt.needCollect;
     this._deduplication = opt.deduplication;
+    this.uid = ++uidBase;
   }
-
   OrdinalMeta.createByAxisModel = function (axisModel) {
     var option = axisModel.option;
     var data = option.data;
@@ -49986,9 +47559,7 @@ function () {
       deduplication: option.dedplication !== false
     });
   };
-
   ;
-
   OrdinalMeta.prototype.getOrdinal = function (category) {
     // @ts-ignore
     return this._getOrCreateMap().get(category);
@@ -49996,19 +47567,18 @@ function () {
   /**
    * @return The ordinal. If not found, return NaN.
    */
-
-
   OrdinalMeta.prototype.parseAndCollect = function (category) {
     var index;
-    var needCollect = this._needCollect; // The value of category dim can be the index of the given category set.
+    var needCollect = this._needCollect;
+    // The value of category dim can be the index of the given category set.
     // This feature is only supported when !needCollect, because we should
     // consider a common case: a value is 2017, which is a number but is
     // expected to be tread as a category. This case usually happen in dataset,
     // where it happent to be no need of the index feature.
-
-    if (typeof category !== 'string' && !needCollect) {
+    if (!isString(category) && !needCollect) {
       return category;
-    } // Optimize for the scenario:
+    }
+    // Optimize for the scenario:
     // category is ['2012-01-01', '2012-01-02', ...], where the input
     // data has been ensured not duplicate and is large data.
     // Notice, if a dataset dimension provide categroies, usually echarts
@@ -50016,41 +47586,32 @@ function () {
     // (set axis.deduplication = false), because echarts do not know whether
     // the values in the category dimension has duplication (consider the
     // parallel-aqi example)
-
-
     if (needCollect && !this._deduplication) {
       index = this.categories.length;
       this.categories[index] = category;
       return index;
     }
-
-    var map = this._getOrCreateMap(); // @ts-ignore
-
-
+    var map = this._getOrCreateMap();
+    // @ts-ignore
     index = map.get(category);
-
     if (index == null) {
       if (needCollect) {
         index = this.categories.length;
-        this.categories[index] = category; // @ts-ignore
-
+        this.categories[index] = category;
+        // @ts-ignore
         map.set(category, index);
       } else {
         index = NaN;
       }
     }
-
     return index;
-  }; // Consider big data, do not create map until needed.
-
-
+  };
+  // Consider big data, do not create map until needed.
   OrdinalMeta.prototype._getOrCreateMap = function () {
     return this._map || (this._map = createHashMap(this.categories));
   };
-
   return OrdinalMeta;
 }();
-
 function getName(obj) {
   if (isObject(obj) && obj.value != null) {
     return obj.value;
@@ -50058,9 +47619,8 @@ function getName(obj) {
     return obj + '';
   }
 }
-
 /* harmony default export */ const data_OrdinalMeta = (OrdinalMeta);
-;// CONCATENATED MODULE: ./src/component/grid3D/createAxis3DModel.js
+;// ./src/component/grid3D/createAxis3DModel.js
 
 
 
@@ -50134,7 +47694,7 @@ var AXIS_TYPES = ['value', 'category', 'time', 'log'];
         external_echarts_.util.curry(axisTypeDefaulter, dim)
     );
 };
-;// CONCATENATED MODULE: ./src/component/grid3D/install.js
+;// ./src/component/grid3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -50195,11 +47755,11 @@ function install(registers) {
 }
 
 
-;// CONCATENATED MODULE: ./src/component/grid3D.js
+;// ./src/component/grid3D.js
 
 
 (0,external_echarts_.use)(install);
-;// CONCATENATED MODULE: ./src/component/common/componentShadingMixin.js
+;// ./src/component/common/componentShadingMixin.js
 /* harmony default export */ const componentShadingMixin = ({
     defaultOption: {
         shading: null,
@@ -50233,7 +47793,7 @@ function install(registers) {
         }
     }
 });
-;// CONCATENATED MODULE: ./src/coord/geo3D/geo3DModelMixin.js
+;// ./src/coord/geo3D/geo3DModelMixin.js
 
 
 /* harmony default export */ const geo3DModelMixin = ({
@@ -50372,7 +47932,7 @@ function install(registers) {
         }
     }
 });
-;// CONCATENATED MODULE: ./src/component/geo3D/Geo3DModel.js
+;// ./src/component/geo3D/Geo3DModel.js
 
 
 
@@ -50476,7 +48036,7 @@ external_echarts_.util.merge(Geo3DModel.prototype, componentLightMixin);
 external_echarts_.util.merge(Geo3DModel.prototype, componentShadingMixin);
 
 /* harmony default export */ const geo3D_Geo3DModel = (Geo3DModel);
-;// CONCATENATED MODULE: ./src/util/earcut.js
+;// ./src/util/earcut.js
 // https://github.com/mapbox/earcut/blob/master/src/earcut.js
 
 /* harmony default export */ const earcut = (earcut_earcut);
@@ -51095,7 +48655,7 @@ function signedArea(data, start, end, dim) {
     }
     return sum;
 }
-;// CONCATENATED MODULE: ./src/util/ProgressiveQuickSort.js
+;// ./src/util/ProgressiveQuickSort.js
 
 function swap(arr, a, b) {
     var tmp = arr[a];
@@ -51225,7 +48785,7 @@ ProgressiveQuickSort.prototype.step = function (arr, compare, frame) {
 ProgressiveQuickSort.sort = quickSort;
 
 /* harmony default export */ const util_ProgressiveQuickSort = (ProgressiveQuickSort);
-;// CONCATENATED MODULE: ./src/util/geometry/trianglesSortMixin.js
+;// ./src/util/geometry/trianglesSortMixin.js
 
 
 var trianglesSortMixin_vec3 = dep_glmatrix.vec3;
@@ -51361,7 +48921,7 @@ var p2 = trianglesSortMixin_vec3.create();
         }, frame);
     }
 });
-;// CONCATENATED MODULE: ./src/util/visual.js
+;// ./src/util/visual.js
 function getVisualColor(data) {
     const style = data.getVisual('style');
     if (style) {
@@ -51384,7 +48944,7 @@ function getItemVisualOpacity(data, idx) {
     const style = data.getItemVisual(idx, 'style');
     return style && style.opacity;
 }
-;// CONCATENATED MODULE: ./src/component/common/LabelsBuilder.js
+;// ./src/component/common/LabelsBuilder.js
 
 
 
@@ -51565,7 +49125,7 @@ LabelsBuilder.prototype.dispose = function () {
 }
 
 /* harmony default export */ const common_LabelsBuilder = (LabelsBuilder);
-;// CONCATENATED MODULE: ./src/component/common/Geo3DBuilder.js
+;// ./src/component/common/Geo3DBuilder.js
 
 
 
@@ -52336,7 +49896,7 @@ Geo3DBuilder.prototype = {
 };
 
 /* harmony default export */ const common_Geo3DBuilder = (Geo3DBuilder);
-;// CONCATENATED MODULE: ./src/component/geo3D/Geo3DView.js
+;// ./src/component/geo3D/Geo3DView.js
 
 
 
@@ -52433,7 +49993,7 @@ Geo3DBuilder.prototype = {
         this._geo3DBuilder.dispose();
     }
 }));
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/coord/geo/fix/textCoord.js
+;// ./node_modules/echarts/lib/coord/geo/fix/textCoord.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -52483,13 +50043,12 @@ var coordsOffsetMap = {
   '广东': [0, -10],
   '香港': [10, 5],
   '澳门': [-10, 10],
-  //'北京': [-10, 0],
+  // '北京': [-10, 0],
   '天津': [5, 5]
 };
 function fixTextCoords(mapType, region) {
   if (mapType === 'china') {
     var coordFix = coordsOffsetMap[region.name];
-
     if (coordFix) {
       var cp = region.getCenter();
       cp[0] += coordFix[0] / 10.5;
@@ -52498,7 +50057,7 @@ function fixTextCoords(mapType, region) {
     }
   }
 }
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/coord/geo/fix/geoCoord.js
+;// ./node_modules/echarts/lib/coord/geo/fix/geoCoord.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -52550,14 +50109,13 @@ var geoCoordMap = {
 function fixGeoCoords(mapType, region) {
   if (mapType === 'world') {
     var geoCoord = geoCoordMap[region.name];
-
     if (geoCoord) {
       var cp = [geoCoord[0], geoCoord[1]];
       region.setCenter(cp);
     }
   }
 }
-;// CONCATENATED MODULE: ./src/coord/geo3D/Geo3D.js
+;// ./src/coord/geo3D/Geo3D.js
 
 
 var Geo3D_vec3 = dep_glmatrix.vec3;
@@ -52742,7 +50300,7 @@ Geo3D.prototype = {
 };
 
 /* harmony default export */ const geo3D_Geo3D = (Geo3D);
-;// CONCATENATED MODULE: ./src/coord/geo3DCreator.js
+;// ./src/coord/geo3DCreator.js
 
 
 
@@ -52952,7 +50510,7 @@ var geo3DCreator = {
 };
 
 /* harmony default export */ const coord_geo3DCreator = (geo3DCreator);
-;// CONCATENATED MODULE: ./src/component/geo3D/install.js
+;// ./src/component/geo3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -52979,11 +50537,11 @@ function install_install(registers) {
     registers.registerCoordinateSystem('geo3D', coord_geo3DCreator);
 
 }
-;// CONCATENATED MODULE: ./src/component/geo3D.js
+;// ./src/component/geo3D.js
 
 
 (0,external_echarts_.use)(install_install);
-;// CONCATENATED MODULE: ./src/component/globe/GlobeModel.js
+;// ./src/component/globe/GlobeModel.js
 
 
 
@@ -53192,7 +50750,7 @@ external_echarts_.util.merge(GlobeModel.prototype, componentLightMixin);
 external_echarts_.util.merge(GlobeModel.prototype, componentShadingMixin);
 
 /* harmony default export */ const globe_GlobeModel = (GlobeModel);
-;// CONCATENATED MODULE: ./src/util/sunCalc.js
+;// ./src/util/sunCalc.js
 /*
  (c) 2011-2014, Vladimir Agafonkin
  SunCalc is a JavaScript library for calculating sun/mooon position and light phases.
@@ -53224,10 +50782,10 @@ function toDays (date)   { return toJulian(date) - J2000; }
 
 // general calculations for position
 
-var sunCalc_e = rad * 23.4397; // obliquity of the Earth
+var e = rad * 23.4397; // obliquity of the Earth
 
-function rightAscension(l, b) { return atan(sin(l) * cos(sunCalc_e) - tan(b) * sin(sunCalc_e), cos(l)); }
-function declination(l, b)    { return sunCalc_asin(sin(b) * cos(sunCalc_e) + cos(b) * sin(sunCalc_e) * sin(l)); }
+function rightAscension(l, b) { return atan(sin(l) * cos(e) - tan(b) * sin(e), cos(l)); }
+function declination(l, b)    { return sunCalc_asin(sin(b) * cos(e) + cos(b) * sin(e) * sin(l)); }
 
 function azimuth(H, phi, dec)  { return atan(sin(H), cos(H) * sin(phi) - tan(dec) * cos(phi)); }
 function altitude(H, phi, dec) { return sunCalc_asin(sin(phi) * sin(dec) + cos(phi) * cos(dec) * cos(H)); }
@@ -53278,10 +50836,10 @@ SunCalc.getPosition = function (date, lat, lng) {
 };
 
 /* harmony default export */ const sunCalc = (SunCalc);
-;// CONCATENATED MODULE: ./src/component/globe/atmosphere.glsl.js
+;// ./src/component/globe/atmosphere.glsl.js
 /* harmony default export */ const atmosphere_glsl = ("@export ecgl.atmosphere.vertex\nattribute vec3 position: POSITION;\nattribute vec3 normal : NORMAL;\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform mat4 normalMatrix : WORLDINVERSETRANSPOSE;\n\nvarying vec3 v_Normal;\n\nvoid main() {\n v_Normal = normalize((normalMatrix * vec4(normal, 0.0)).xyz);\n gl_Position = worldViewProjection * vec4(position, 1.0);\n}\n@end\n\n\n@export ecgl.atmosphere.fragment\nuniform mat4 viewTranspose: VIEWTRANSPOSE;\nuniform float glowPower;\nuniform vec3 glowColor;\n\nvarying vec3 v_Normal;\n\nvoid main() {\n float intensity = pow(1.0 - dot(v_Normal, (viewTranspose * vec4(0.0, 0.0, 1.0, 0.0)).xyz), glowPower);\n gl_FragColor = vec4(glowColor, intensity * intensity);\n}\n@end");
 
-;// CONCATENATED MODULE: ./src/component/globe/GlobeView.js
+;// ./src/component/globe/GlobeView.js
 
 
 
@@ -53294,8 +50852,8 @@ SunCalc.getPosition = function (date, lat, lng) {
 
 
 
-util_graphicGL.Shader.import(util_glsl);
-util_graphicGL.Shader.import(atmosphere_glsl);
+util_graphicGL.Shader['import'](util_glsl);
+util_graphicGL.Shader['import'](atmosphere_glsl);
 
 /* harmony default export */ const GlobeView = (external_echarts_.ComponentView.extend({
 
@@ -53739,7 +51297,7 @@ util_graphicGL.Shader.import(atmosphere_glsl);
         this._control.dispose();
     }
 }));
-;// CONCATENATED MODULE: ./src/coord/globe/Globe.js
+;// ./src/coord/globe/Globe.js
 
 var Globe_vec3 = dep_glmatrix.vec3;
 
@@ -53842,7 +51400,7 @@ Globe.prototype = {
 };
 
 /* harmony default export */ const globe_Globe = (Globe);
-;// CONCATENATED MODULE: ./src/coord/globeCreator.js
+;// ./src/coord/globeCreator.js
 
 
 
@@ -54020,7 +51578,7 @@ var globeCreator = {
 };
 
 /* harmony default export */ const coord_globeCreator = (globeCreator);
-;// CONCATENATED MODULE: ./src/component/globe/install.js
+;// ./src/component/globe/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -54055,11 +51613,11 @@ function globe_install_install(registers) {
     });
 
 }
-;// CONCATENATED MODULE: ./src/component/globe.js
+;// ./src/component/globe.js
 
 
 (0,external_echarts_.use)(globe_install_install);
-;// CONCATENATED MODULE: ./src/component/mapbox3D/Mapbox3DModel.js
+;// ./src/component/mapbox3D/Mapbox3DModel.js
 
 
 
@@ -54134,7 +51692,7 @@ external_echarts_.util.merge(Mapbox3DModel.prototype, componentPostEffectMixin);
 external_echarts_.util.merge(Mapbox3DModel.prototype, componentLightMixin);
 
 /* harmony default export */ const mapbox3D_Mapbox3DModel = (Mapbox3DModel);
-;// CONCATENATED MODULE: ./src/component/mapbox3D/Mapbox3DLayer.js
+;// ./src/component/mapbox3D/Mapbox3DLayer.js
 /**
  * @constructor
  * @alias module:echarts-gl/component/mapbox3D/Mapbox3DLayer
@@ -54213,10 +51771,10 @@ Mapbox3DLayer.prototype.dispose = function () {
 };
 
 /* harmony default export */ const mapbox3D_Mapbox3DLayer = (Mapbox3DLayer);
-;// CONCATENATED MODULE: ./src/util/shader/displayShadow.glsl.js
+;// ./src/util/shader/displayShadow.glsl.js
 /* harmony default export */ const displayShadow_glsl = ("\n@export ecgl.displayShadow.vertex\n\n@import ecgl.common.transformUniforms\n\n@import ecgl.common.uv.header\n\n@import ecgl.common.attributes\n\nvarying vec3 v_WorldPosition;\n\nvarying vec3 v_Normal;\n\nvoid main()\n{\n @import ecgl.common.uv.main\n v_Normal = normalize((worldInverseTranspose * vec4(normal, 0.0)).xyz);\n\n v_WorldPosition = (world * vec4(position, 1.0)).xyz;\n gl_Position = worldViewProjection * vec4(position, 1.0);\n}\n\n@end\n\n\n@export ecgl.displayShadow.fragment\n\n@import ecgl.common.uv.fragmentHeader\n\nvarying vec3 v_Normal;\nvarying vec3 v_WorldPosition;\n\nuniform float roughness: 0.2;\n\n#ifdef DIRECTIONAL_LIGHT_COUNT\n@import clay.header.directional_light\n#endif\n\n@import ecgl.common.ssaoMap.header\n\n@import clay.plugin.compute_shadow_map\n\nvoid main()\n{\n float shadow = 1.0;\n\n @import ecgl.common.ssaoMap.main\n\n#if defined(DIRECTIONAL_LIGHT_COUNT) && defined(DIRECTIONAL_LIGHT_SHADOWMAP_COUNT)\n float shadowContribsDir[DIRECTIONAL_LIGHT_COUNT];\n if(shadowEnabled)\n {\n computeShadowOfDirectionalLights(v_WorldPosition, shadowContribsDir);\n }\n for (int i = 0; i < DIRECTIONAL_LIGHT_COUNT; i++) {\n shadow = min(shadow, shadowContribsDir[i] * 0.5 + 0.5);\n }\n#endif\n\n shadow *= 0.5 + ao * 0.5;\n shadow = clamp(shadow, 0.0, 1.0);\n\n gl_FragColor = vec4(vec3(0.0), 1.0 - shadow);\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/component/mapbox3D/Mapbox3DView.js
+;// ./src/component/mapbox3D/Mapbox3DView.js
 
 
 
@@ -54364,7 +51922,7 @@ var TILE_SIZE = 512;
         api.getZr().painter.delLayer(-1000);
     }
 }));
-;// CONCATENATED MODULE: ./src/coord/mapServiceCommon/MapService3D.js
+;// ./src/coord/mapServiceCommon/MapService3D.js
 
 var MapService3D_mat4 = dep_glmatrix.mat4;
 
@@ -54553,7 +52111,7 @@ MapServiceCoordSys3D.prototype = {
 };
 
 /* harmony default export */ const MapService3D = (MapServiceCoordSys3D);
-;// CONCATENATED MODULE: ./src/coord/mapbox3D/Mapbox3D.js
+;// ./src/coord/mapbox3D/Mapbox3D.js
 
 
 function Mapbox3D() {
@@ -54565,7 +52123,7 @@ Mapbox3D.prototype.constructor = Mapbox3D;
 Mapbox3D.prototype.type = 'mapbox3D';
 
 /* harmony default export */ const mapbox3D_Mapbox3D = (Mapbox3D);
-;// CONCATENATED MODULE: ./src/coord/mapServiceCommon/createMapService3DCreator.js
+;// ./src/coord/mapServiceCommon/createMapService3DCreator.js
 
 
 
@@ -54675,7 +52233,7 @@ Mapbox3D.prototype.type = 'mapbox3D';
     };
 }
 
-;// CONCATENATED MODULE: ./src/coord/mapbox3DCreator.js
+;// ./src/coord/mapbox3DCreator.js
 
 
 
@@ -54686,7 +52244,7 @@ var mapbox3DCreator = createMapService3DCreator('mapbox3D', mapbox3D_Mapbox3D, f
 });
 
 /* harmony default export */ const coord_mapbox3DCreator = (mapbox3DCreator);
-;// CONCATENATED MODULE: ./src/component/mapbox3D/install.js
+;// ./src/component/mapbox3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -54712,11 +52270,11 @@ function mapbox3D_install_install(registers) {
         });
     });
 }
-;// CONCATENATED MODULE: ./src/component/mapbox3D.js
+;// ./src/component/mapbox3D.js
 
 
 (0,external_echarts_.use)(mapbox3D_install_install);
-;// CONCATENATED MODULE: ./src/component/maptalks3D/Maptalks3DModel.js
+;// ./src/component/maptalks3D/Maptalks3DModel.js
 
 
 
@@ -54792,7 +52350,7 @@ external_echarts_.util.merge(Maptalks3DModel.prototype, componentPostEffectMixin
 external_echarts_.util.merge(Maptalks3DModel.prototype, componentLightMixin);
 
 /* harmony default export */ const maptalks3D_Maptalks3DModel = (Maptalks3DModel);
-;// CONCATENATED MODULE: ./src/component/maptalks3D/Maptalks3DLayer.js
+;// ./src/component/maptalks3D/Maptalks3DLayer.js
 /**
  * @constructor
  * @alias module:echarts-gl/component/maptalks/Maptalks3DLayer
@@ -54883,7 +52441,7 @@ Maptalks3DLayer.prototype.dispose = function () {
 
 /* harmony default export */ const maptalks3D_Maptalks3DLayer = (Maptalks3DLayer);
 
-;// CONCATENATED MODULE: ./src/component/maptalks3D/Maptalks3DView.js
+;// ./src/component/maptalks3D/Maptalks3DView.js
 
 
 
@@ -55056,7 +52614,7 @@ function getMapboxZoom(res) {
     return 19 - Math.log(res / MAX_RES) / Math.LN2;
 }
 
-;// CONCATENATED MODULE: ./src/coord/maptalks3D/Maptalks3D.js
+;// ./src/coord/maptalks3D/Maptalks3D.js
 
 
 function Maptalks3D() {
@@ -55071,7 +52629,7 @@ Maptalks3D.prototype.constructor = Maptalks3D;
 Maptalks3D.prototype.type = 'maptalks3D';
 
 /* harmony default export */ const maptalks3D_Maptalks3D = (Maptalks3D);
-;// CONCATENATED MODULE: ./src/coord/maptalks3DCreator.js
+;// ./src/coord/maptalks3DCreator.js
 
 
 
@@ -55082,7 +52640,7 @@ var maptalks3DCreator = createMapService3DCreator('maptalks3D', maptalks3D_Mapta
 });
 
 /* harmony default export */ const coord_maptalks3DCreator = (maptalks3DCreator);
-;// CONCATENATED MODULE: ./src/component/maptalks3D/install.js
+;// ./src/component/maptalks3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -55108,12 +52666,12 @@ function maptalks3D_install_install(registers) {
         });
     });
 }
-;// CONCATENATED MODULE: ./src/component/maptalks3D.js
+;// ./src/component/maptalks3D.js
 // Thanks to https://gitee.com/iverson_hu/maptalks-echarts-gl
 
 
 (0,external_echarts_.use)(maptalks3D_install_install);
-;// CONCATENATED MODULE: ./src/chart/bar3D/cartesian3DLayout.js
+;// ./src/chart/bar3D/cartesian3DLayout.js
 
 
 var cartesian3DLayout_vec3 = dep_glmatrix.vec3;
@@ -55194,7 +52752,7 @@ function cartesian3DLayout(seriesModel, coordSys) {
 }
 
 /* harmony default export */ const bar3D_cartesian3DLayout = (cartesian3DLayout);
-;// CONCATENATED MODULE: ./src/chart/bar3D/evaluateBarSparseness.js
+;// ./src/chart/bar3D/evaluateBarSparseness.js
 /* harmony default export */ function evaluateBarSparseness(data, dimX, dimY) {
     var xExtent = data.getDataExtent(dimX);
     var yExtent = data.getDataExtent(dimY);
@@ -55220,7 +52778,7 @@ function cartesian3DLayout(seriesModel, coordSys) {
     }
     return filledCount / tmp.length;
 };
-;// CONCATENATED MODULE: ./src/chart/bar3D/bar3DLayout.js
+;// ./src/chart/bar3D/bar3DLayout.js
 
 
 
@@ -55397,7 +52955,7 @@ function registerBarLayout(registers) {
         });
     });
 }
-;// CONCATENATED MODULE: ./src/util/format.js
+;// ./src/util/format.js
 
 
 var formatUtil = {};
@@ -55440,7 +52998,7 @@ formatUtil.normalizeToArray = function (value) {
 };
 
 /* harmony default export */ const util_format = (formatUtil);
-;// CONCATENATED MODULE: ./src/chart/common/formatTooltip.js
+;// ./src/chart/common/formatTooltip.js
 
 
 
@@ -55523,7 +53081,7 @@ function otherDimToDataDim (data, otherDim) {
             )
         : colorEl + seriesName + formattedValue;
 };
-;// CONCATENATED MODULE: ./src/chart/common/createList.js
+;// ./src/chart/common/createList.js
 
 
 /* harmony default export */ function createList(seriesModel, dims, source) {
@@ -55568,7 +53126,7 @@ function otherDimToDataDim (data, otherDim) {
 
     return data;
 }
-;// CONCATENATED MODULE: ./src/chart/bar3D/Bar3DSeries.js
+;// ./src/chart/bar3D/Bar3DSeries.js
 
 
 
@@ -55654,7 +53212,7 @@ var Bar3DSeries = external_echarts_.SeriesModel.extend({
 external_echarts_.util.merge(Bar3DSeries.prototype, componentShadingMixin);
 
 /* harmony default export */ const bar3D_Bar3DSeries = (Bar3DSeries);
-;// CONCATENATED MODULE: ./src/util/geometry/Bars3DGeometry.js
+;// ./src/util/geometry/Bars3DGeometry.js
 /**
  * Geometry collecting bars data
  *
@@ -56048,7 +53606,7 @@ external_echarts_.util.defaults(BarsGeometry.prototype, dynamicConvertMixin);
 external_echarts_.util.defaults(BarsGeometry.prototype, trianglesSortMixin);
 
 /* harmony default export */ const Bars3DGeometry = (BarsGeometry);
-;// CONCATENATED MODULE: ./src/chart/bar3D/Bar3DView.js
+;// ./src/chart/bar3D/Bar3DView.js
 
 
 
@@ -56373,7 +53931,7 @@ var Bar3DView_vec3 = dep_glmatrix.vec3;
         this.groupGL.removeAll();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/bar3D/install.js
+;// ./src/chart/bar3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -56397,11 +53955,734 @@ function bar3D_install_install(registers) {
         });
     });
 }
-;// CONCATENATED MODULE: ./src/chart/bar3D.js
+;// ./src/chart/bar3D.js
 
 
 (0,external_echarts_.use)(bar3D_install_install);
-;// CONCATENATED MODULE: ./src/chart/line3D/Line3DSeries.js
+;// ./src/chart/wafermap3D/cartesian3DLayout.js
+
+
+var wafermap3D_cartesian3DLayout_vec3 = dep_glmatrix.vec3;
+var cartesian3DLayout_isDimensionStacked = external_echarts_.helper.dataStack.isDimensionStacked;
+
+function cartesian3DLayout_ifCrossZero(extent) {
+    var min = extent[0];
+    var max = extent[1];
+    return !((min > 0 && max > 0) || (min < 0 && max < 0));
+};
+
+function cartesian3DLayout_cartesian3DLayout(seriesModel, coordSys) {
+
+    var data = seriesModel.getData();
+    // var barOnPlane = seriesModel.get('onGridPlane');
+
+    var barSize = seriesModel.get('barSize');
+    if (barSize == null) {
+        var size = coordSys.size;
+        var barWidth;
+        var barDepth;
+        var xAxis = coordSys.getAxis('x');
+        var yAxis = coordSys.getAxis('y');
+
+        if (xAxis.type === 'category') {
+            barWidth = xAxis.getBandWidth() * 0.7;
+        }
+        else {
+            // PENDING
+            barWidth = Math.round(size[0] / Math.sqrt(data.count())) * 0.6;
+        }
+        if (yAxis.type === 'category') {
+            barDepth = yAxis.getBandWidth() * 0.7;
+        }
+        else {
+            barDepth = Math.round(size[1] / Math.sqrt(data.count())) * 0.6;
+        }
+        barSize = [barWidth, barDepth];
+    }
+    else if (!external_echarts_.util.isArray(barSize)) {
+        barSize = [barSize, barSize];
+    }
+
+    var zAxisExtent = coordSys.getAxis('z').scale.getExtent();
+    var ifZAxisCrossZero = cartesian3DLayout_ifCrossZero(zAxisExtent);
+
+    var dims = ['x', 'y', 'z'].map(function (coordDimName) {
+        return seriesModel.coordDimToDataDim(coordDimName)[0];
+    });
+
+    var isStacked = cartesian3DLayout_isDimensionStacked(data, dims[2]);
+    var valueDim = isStacked
+        ? data.getCalculationInfo('stackResultDimension')
+        : dims[2];
+
+    data.each(dims, function (x, y, z, idx) {
+        // TODO zAxis is inversed
+        // TODO On different plane.
+        var stackedValue = data.get(valueDim, idx);
+
+        var baseValue = isStacked ? (stackedValue - z)
+            : (ifZAxisCrossZero ? 0 : zAxisExtent[0]);
+
+        var start = coordSys.dataToPoint([x, y, baseValue]);
+        var end = coordSys.dataToPoint([x, y, stackedValue]);
+        var height = wafermap3D_cartesian3DLayout_vec3.dist(start, end);
+        // PENDING When zAxis is not cross zero.
+        var dir = [0, end[1] < start[1] ? -1 : 1, 0];
+        if (Math.abs(height) === 0) {
+            // TODO
+            height = 0.1;
+        }
+        var size = [barSize[0], height, barSize[1]];
+        data.setItemLayout(idx, [start, dir, size]);
+    });
+
+    data.setLayout('orient', [1, 0, 0]);
+}
+
+/* harmony default export */ const wafermap3D_cartesian3DLayout = (cartesian3DLayout_cartesian3DLayout);
+;// ./src/chart/wafermap3D/evaluateBarSparseness.js
+/* harmony default export */ function wafermap3D_evaluateBarSparseness(data, dimX, dimY) {
+    var xExtent = data.getDataExtent(dimX);
+    var yExtent = data.getDataExtent(dimY);
+
+    // TODO Handle one data situation
+    var xSpan = (xExtent[1] - xExtent[0]) || xExtent[0];
+    var ySpan = (yExtent[1] - yExtent[0]) || yExtent[0];
+    var dimSize = 50;
+    var tmp = new Uint8Array(dimSize * dimSize);
+    for (var i = 0; i < data.count(); i++) {
+        var x = data.get(dimX, i);
+        var y = data.get(dimY, i);
+        var xIdx = Math.floor((x - xExtent[0]) / xSpan * (dimSize - 1));
+        var yIdx = Math.floor((y - yExtent[0]) / ySpan * (dimSize - 1));
+        var idx = yIdx * dimSize + xIdx;
+        tmp[idx] = tmp[idx] || 1;
+    }
+    var filledCount = 0;
+    for (var i = 0; i < tmp.length; i++) {
+        if (tmp[i]) {
+            filledCount++;
+        }
+    }
+    return filledCount / tmp.length;
+};
+;// ./src/chart/wafermap3D/Wafermap3DLayout.js
+
+
+
+
+
+
+var Wafermap3DLayout_vec3 = dep_glmatrix.vec3;
+var Wafermap3DLayout_isDimensionStacked = external_echarts_.helper.dataStack.isDimensionStacked;
+
+function Wafermap3DLayout_globeLayout(seriesModel, coordSys) {
+    var data = seriesModel.getData();
+    var barMinHeight = seriesModel.get('minHeight') || 0;
+    var barSize = seriesModel.get('barSize');
+    var dims = ['lng', 'lat', 'alt'].map(function (coordDimName) {
+        return seriesModel.coordDimToDataDim(coordDimName)[0];
+    });
+    if (barSize == null) {
+        var perimeter = coordSys.radius * Math.PI;
+        var fillRatio = wafermap3D_evaluateBarSparseness(data, dims[0], dims[1]);
+        barSize = [
+            perimeter / Math.sqrt(data.count() / fillRatio),
+            perimeter / Math.sqrt(data.count() / fillRatio)
+        ];
+    }
+    else if (!external_echarts_.util.isArray(barSize)) {
+        barSize = [barSize, barSize];
+    }
+
+    var valueDim = Wafermap3DLayout_getValueDimension(data, dims);
+
+    data.each(dims, function (lng, lat, val, idx) {
+        var stackedValue = data.get(valueDim.dimension, idx);
+        var baseValue = valueDim.isStacked ? (stackedValue - val) : coordSys.altitudeAxis.scale.getExtent()[0];
+        // TODO Stacked with minHeight.
+        var height = Math.max(coordSys.altitudeAxis.dataToCoord(val), barMinHeight);
+        var start = coordSys.dataToPoint([lng, lat, baseValue]);
+        var end = coordSys.dataToPoint([lng, lat, stackedValue]);
+        var dir = Wafermap3DLayout_vec3.sub([], end, start);
+        Wafermap3DLayout_vec3.normalize(dir, dir);
+        var size = [barSize[0], height, barSize[1]];
+        data.setItemLayout(idx, [start, dir, size]);
+    });
+
+    data.setLayout('orient', math_Vector3.UP.array);
+}
+
+function Wafermap3DLayout_geo3DLayout(seriesModel, coordSys) {
+    var data = seriesModel.getData();
+    var barSize = seriesModel.get('barSize');
+    var barMinHeight = seriesModel.get('minHeight') || 0;
+    var dims = ['lng', 'lat', 'alt'].map(function (coordDimName) {
+        return seriesModel.coordDimToDataDim(coordDimName)[0];
+    });
+    if (barSize == null) {
+        var size = Math.min(coordSys.size[0], coordSys.size[2]);
+
+        var fillRatio = wafermap3D_evaluateBarSparseness(data, dims[0], dims[1]);
+        barSize = [
+            size / Math.sqrt(data.count() / fillRatio),
+            size / Math.sqrt(data.count() / fillRatio)
+        ];
+    }
+    else if (!external_echarts_.util.isArray(barSize)) {
+        barSize = [barSize, barSize];
+    }
+    var dir = [0, 1, 0];
+
+    var valueDim = Wafermap3DLayout_getValueDimension(data, dims);
+
+    data.each(dims, function (lng, lat, val, idx) {
+        var stackedValue = data.get(valueDim.dimension, idx);
+        var baseValue = valueDim.isStacked ? (stackedValue - val) : coordSys.altitudeAxis.scale.getExtent()[0];
+
+        var height = Math.max(coordSys.altitudeAxis.dataToCoord(val), barMinHeight);
+        var start = coordSys.dataToPoint([lng, lat, baseValue]);
+        var size = [barSize[0], height, barSize[1]];
+        data.setItemLayout(idx, [start, dir, size]);
+    });
+
+    data.setLayout('orient', [1, 0, 0]);
+}
+
+function Wafermap3DLayout_mapService3DLayout(seriesModel, coordSys) {
+    var data = seriesModel.getData();
+    var dimLng = seriesModel.coordDimToDataDim('lng')[0];
+    var dimLat = seriesModel.coordDimToDataDim('lat')[0];
+    var dimAlt = seriesModel.coordDimToDataDim('alt')[0];
+    var barSize = seriesModel.get('barSize');
+    var barMinHeight = seriesModel.get('minHeight') || 0;
+
+    if (barSize == null) {
+        var xExtent = data.getDataExtent(dimLng);
+        var yExtent = data.getDataExtent(dimLat);
+        var corner0 = coordSys.dataToPoint([xExtent[0], yExtent[0]]);
+        var corner1 = coordSys.dataToPoint([xExtent[1], yExtent[1]]);
+
+        var size = Math.min(
+            Math.abs(corner0[0] - corner1[0]),
+            Math.abs(corner0[1] - corner1[1])
+        ) || 1;
+
+        var fillRatio = wafermap3D_evaluateBarSparseness(data, dimLng, dimLat);
+        // PENDING, data density
+        barSize = [
+            size / Math.sqrt(data.count() / fillRatio),
+            size / Math.sqrt(data.count() / fillRatio)
+        ];
+    }
+    else {
+        if (!external_echarts_.util.isArray(barSize)) {
+            barSize = [barSize, barSize];
+        }
+        barSize[0] /= coordSys.getScale() / 16;
+        barSize[1] /= coordSys.getScale() / 16;
+    }
+
+    var dir = [0, 0, 1];
+    var dims = [dimLng, dimLat, dimAlt];
+
+    var valueDim = Wafermap3DLayout_getValueDimension(data, dims);
+
+    data.each(dims, function (lng, lat, val, idx) {
+        var stackedValue = data.get(valueDim.dimension, idx);
+        var baseValue = valueDim.isStacked ? (stackedValue - val) : 0;
+
+        var start = coordSys.dataToPoint([lng, lat, baseValue]);
+        var end = coordSys.dataToPoint([lng, lat, stackedValue]);
+        var height = Math.max(end[2] - start[2], barMinHeight);
+        var size = [barSize[0], height, barSize[1]];
+        data.setItemLayout(idx, [start, dir, size]);
+    });
+
+    data.setLayout('orient', [1, 0, 0]);
+}
+
+function Wafermap3DLayout_getValueDimension(data, dataDims) {
+    var isStacked = Wafermap3DLayout_isDimensionStacked(data, dataDims[2]);
+    return {
+        dimension: isStacked
+            ? data.getCalculationInfo('stackResultDimension')
+            : dataDims[2],
+        isStacked: isStacked
+    };
+}
+
+
+function Wafermap3DLayout_registerBarLayout(registers) {
+    registers.registerLayout(function (ecModel, api) {
+        ecModel.eachSeriesByType('wafermap3D', function (seriesModel) {
+            var coordSys = seriesModel.coordinateSystem;
+            var coordSysType = coordSys && coordSys.type;
+            if (coordSysType === 'globe') {
+                Wafermap3DLayout_globeLayout(seriesModel, coordSys);
+            }
+            else if (coordSysType === 'cartesian3D') {
+                wafermap3D_cartesian3DLayout(seriesModel, coordSys);
+            }
+            else if (coordSysType === 'geo3D') {
+                Wafermap3DLayout_geo3DLayout(seriesModel, coordSys);
+            }
+            else if (coordSysType === 'mapbox3D' || coordSysType === 'maptalks3D') {
+                Wafermap3DLayout_mapService3DLayout(seriesModel, coordSys);
+            }
+            else {
+                if (true) {
+                    if (!coordSys) {
+                        throw new Error('wafermap3D doesn\'t have coordinate system.');
+                    }
+                    else {
+                        throw new Error('wafermap3D doesn\'t support coordinate system ' + coordSys.type);
+                    }
+                }
+            }
+        });
+    });
+}
+;// ./src/chart/wafermap3D/Wafermap3DSeries.js
+
+
+
+
+
+
+var Wafermap3DSeries_Bar3DSeries = external_echarts_.SeriesModel.extend({
+
+    type: 'series.wafermap3D',
+
+    dependencies: ['globe'],
+
+    visualStyleAccessPathvisu: 'itemStyle',
+
+    getInitialData: function (option, ecModel) {
+        return createList(this);
+    },
+
+    getFormattedLabel: function (dataIndex, status, dataType, dimIndex) {
+        var text = util_format.getFormattedLabel(this, dataIndex, status, dataType, dimIndex);
+        if (text == null) {
+            text = this.getData().get('z', dataIndex);
+        }
+        return text;
+    },
+
+    formatTooltip: function (dataIndex) {
+        return formatTooltip(this, dataIndex);
+    },
+
+    defaultOption: {
+
+        coordinateSystem: 'cartesian3D',
+
+        globeIndex: 0,
+
+        grid3DIndex: 0,
+
+        zlevel: -10,
+
+        // bevelSize, 0 has no bevel
+        bevelSize: 0,
+        // higher is smoother
+        bevelSmoothness: 2,
+
+        // Bar width and depth
+        // barSize: [1, 1],
+
+        // On grid plane when coordinateSystem is cartesian3D
+        onGridPlane: 'xy',
+
+        // Shading of globe
+        shading: 'color',
+
+        minHeight: 0,
+
+        itemStyle: {
+            opacity: 1
+        },
+
+        label: {
+            show: false,
+            distance: 2,
+            textStyle: {
+                fontSize: 14,
+                color: '#000',
+                backgroundColor: 'rgba(255,255,255,0.7)',
+                padding: 3,
+                borderRadius: 3
+            }
+        },
+
+        emphasis: {
+            label: {
+                show: true
+            }
+        },
+
+        animationDurationUpdate: 500
+    }
+});
+
+external_echarts_.util.merge(Wafermap3DSeries_Bar3DSeries.prototype, componentShadingMixin);
+
+/* harmony default export */ const Wafermap3DSeries = (Wafermap3DSeries_Bar3DSeries);
+;// ./src/chart/wafermap3D/Wafermap3DView.js
+
+
+
+
+
+
+
+
+
+var Wafermap3DView_vec3 = dep_glmatrix.vec3;
+
+/* harmony default export */ const Wafermap3DView = (external_echarts_.ChartView.extend({
+
+    type: 'wafermap3D',
+
+    __ecgl__: true,
+
+    init: function (ecModel, api) {
+
+        this.groupGL = new util_graphicGL.Node();
+
+        this._api = api;
+
+        this._labelsBuilder = new common_LabelsBuilder(256, 256, api);
+        var self = this;
+        this._labelsBuilder.getLabelPosition = function (dataIndex, position, distance) {
+            if (self._data) {
+                var layout = self._data.getItemLayout(dataIndex);
+                var start = layout[0];
+                var dir = layout[1];
+                var height = layout[2][1];
+                return Wafermap3DView_vec3.scaleAndAdd([], start, dir, distance + height);
+            }
+            else {
+                return [0, 0];
+            }
+        };
+
+        // Give a large render order.
+        this._labelsBuilder.getMesh().renderOrder = 100;
+    },
+
+    render: function (seriesModel, ecModel, api) {
+console.log('this.', this)
+        // Swap barMesh
+        var tmp = this._prevBarMesh;
+        this._prevBarMesh = this._barMesh;
+        this._barMesh = tmp;
+
+        if (!this._barMesh) {
+            this._barMesh = new util_graphicGL.Mesh({
+                geometry: new Bars3DGeometry(),
+                shadowDepthMaterial: new util_graphicGL.Material({
+                    shader: new util_graphicGL.Shader(
+                        util_graphicGL.Shader.source('ecgl.sm.depth.vertex'),
+                        util_graphicGL.Shader.source('ecgl.sm.depth.fragment')
+                    )
+                }),
+                // Only cartesian3D enable culling
+                // FIXME Performance
+                culling: seriesModel.coordinateSystem.type === 'cartesian3D',
+                // Render after axes
+                renderOrder: 10,
+                // Render normal in normal pass
+                renderNormal: true
+            });
+        }
+
+        this.groupGL.remove(this._prevBarMesh);
+        this.groupGL.add(this._barMesh);
+        this.groupGL.add(this._labelsBuilder.getMesh());
+
+        var coordSys = seriesModel.coordinateSystem;
+        this._doRender(seriesModel, api);
+        if (coordSys && coordSys.viewGL) {
+            coordSys.viewGL.add(this.groupGL);
+
+            var methodName = coordSys.viewGL.isLinearSpace() ? 'define' : 'undefine';
+            this._barMesh.material[methodName]('fragment', 'SRGB_DECODE');
+        }
+
+        this._data = seriesModel.getData();
+
+        this._labelsBuilder.updateData(this._data);
+
+        this._labelsBuilder.updateLabels();
+
+        this._updateAnimation(seriesModel);
+    },
+
+    _updateAnimation: function (seriesModel) {
+        util_graphicGL.updateVertexAnimation(
+            [['prevPosition', 'position'],
+            ['prevNormal', 'normal']],
+            this._prevBarMesh,
+            this._barMesh,
+            seriesModel
+        );
+    },
+
+    _doRender: function (seriesModel, api) {
+        var data = seriesModel.getData();
+        var shading = seriesModel.get('shading');
+        var enableNormal = shading !== 'color';
+        var self = this;
+        var barMesh = this._barMesh;
+
+        var shadingPrefix = 'ecgl.' + shading;
+        if (!barMesh.material || barMesh.material.shader.name !== shadingPrefix) {
+            barMesh.material = util_graphicGL.createMaterial(shadingPrefix, ['VERTEX_COLOR']);
+        }
+
+        util_graphicGL.setMaterialFromModel(
+            shading, barMesh.material, seriesModel, api
+        );
+
+        barMesh.geometry.enableNormal = enableNormal;
+
+        barMesh.geometry.resetOffset();
+
+        // Bevel settings
+        var bevelSize = seriesModel.get('bevelSize');
+        var bevelSegments = seriesModel.get('bevelSmoothness');
+        barMesh.geometry.bevelSegments = bevelSegments;
+
+        barMesh.geometry.bevelSize = bevelSize;
+
+        var colorArr = [];
+        var vertexColors = new Float32Array(data.count() * 4);
+        var colorOffset = 0;
+        var barCount = 0;
+        var hasTransparent = false;
+
+        data.each(function (idx) {
+            if (!data.hasValue(idx)) {
+                return;
+            }
+            var color = getItemVisualColor(data, idx);
+
+            var opacity = getItemVisualOpacity(data, idx);
+            if (opacity == null) {
+                opacity = 1;
+            }
+
+            util_graphicGL.parseColor(color, colorArr);
+            colorArr[3] *= opacity;
+            vertexColors[colorOffset++] = colorArr[0];
+            vertexColors[colorOffset++] = colorArr[1];
+            vertexColors[colorOffset++] = colorArr[2];
+            vertexColors[colorOffset++] = colorArr[3];
+
+            if (colorArr[3] > 0) {
+                barCount++;
+                if (colorArr[3] < 0.99) {
+                    hasTransparent = true;
+                }
+            }
+        });
+
+        barMesh.geometry.setBarCount(barCount);
+
+        var orient = data.getLayout('orient');
+
+        // Map of dataIndex and barIndex.
+        var barIndexOfData = this._barIndexOfData = new Int32Array(data.count());
+        var barCount = 0;
+        data.each(function (idx) {
+            if (!data.hasValue(idx)) {
+                barIndexOfData[idx] = -1;
+                return;
+            }
+            var layout = data.getItemLayout(idx);
+            var start = layout[0];
+            var dir = layout[1];
+            var size = layout[2];
+
+            var idx4 = idx * 4;
+            colorArr[0] = vertexColors[idx4++];
+            colorArr[1] = vertexColors[idx4++];
+            colorArr[2] = vertexColors[idx4++];
+            colorArr[3] = vertexColors[idx4++];
+            if (colorArr[3] > 0) {
+                self._barMesh.geometry.addBar(start, dir, orient, size, colorArr, idx);
+                barIndexOfData[idx] = barCount++;
+            }
+        });
+
+        barMesh.geometry.dirty();
+        barMesh.geometry.updateBoundingBox();
+
+        var material = barMesh.material;
+        material.transparent = hasTransparent;
+        material.depthMask = !hasTransparent;
+        barMesh.geometry.sortTriangles = hasTransparent;
+
+        this._initHandler(seriesModel, api);
+    },
+
+    _initHandler: function (seriesModel, api) {
+        var data = seriesModel.getData();
+        var barMesh = this._barMesh;
+        var isCartesian3D = seriesModel.coordinateSystem.type === 'cartesian3D';
+
+        barMesh.seriesIndex = seriesModel.seriesIndex;
+
+        var lastDataIndex = -1;
+        barMesh.off('mousemove');
+        barMesh.off('mouseout');
+        barMesh.on('mousemove', function (e) {
+            var dataIndex = barMesh.geometry.getDataIndexOfVertex(e.triangle[0]);
+            if (dataIndex !== lastDataIndex) {
+                this._downplay(lastDataIndex);
+                this._highlight(dataIndex);
+                this._labelsBuilder.updateLabels([dataIndex]);
+
+                if (isCartesian3D) {
+                    api.dispatchAction({
+                        type: 'grid3DShowAxisPointer',
+                        value: [data.get('x', dataIndex), data.get('y', dataIndex), data.get('z', dataIndex, true)]
+                    });
+                }
+            }
+
+            lastDataIndex = dataIndex;
+            barMesh.dataIndex = dataIndex;
+        }, this);
+        barMesh.on('mouseout', function (e) {
+            this._downplay(lastDataIndex);
+            this._labelsBuilder.updateLabels();
+            lastDataIndex = -1;
+            barMesh.dataIndex = -1;
+
+            if (isCartesian3D) {
+                api.dispatchAction({
+                    type: 'grid3DHideAxisPointer'
+                });
+            }
+        }, this);
+    },
+
+    _highlight: function (dataIndex) {
+        var data = this._data;
+        if (!data) {
+            return;
+        }
+        var barIndex = this._barIndexOfData[dataIndex];
+        if (barIndex < 0) {
+            return;
+        }
+
+        var itemModel = data.getItemModel(dataIndex);
+        var emphasisItemStyleModel = itemModel.getModel('emphasis.itemStyle');
+        var emphasisColor = emphasisItemStyleModel.get('color');
+        var emphasisOpacity = emphasisItemStyleModel.get('opacity');
+        if (emphasisColor == null) {
+            var color = getItemVisualColor(data, dataIndex);
+            emphasisColor = external_echarts_.color.lift(color, -0.4);
+        }
+        if (emphasisOpacity == null) {
+            emphasisOpacity = getItemVisualOpacity(data, dataIndex);
+        }
+        var colorArr = util_graphicGL.parseColor(emphasisColor);
+        colorArr[3] *= emphasisOpacity;
+
+        this._barMesh.geometry.setColor(barIndex, colorArr);
+
+        this._api.getZr().refresh();
+    },
+
+    _downplay: function (dataIndex) {
+        var data = this._data;
+        if (!data) {
+            return;
+        }
+        var barIndex = this._barIndexOfData[dataIndex];
+        if (barIndex < 0) {
+            return;
+        }
+
+        var color = getItemVisualColor(data, dataIndex);
+        var opacity = getItemVisualOpacity(data, dataIndex);
+
+        var colorArr = util_graphicGL.parseColor(color);
+        colorArr[3] *= opacity;
+
+        this._barMesh.geometry.setColor(barIndex, colorArr);
+
+        this._api.getZr().refresh();
+    },
+
+    highlight: function (seriesModel, ecModel, api, payload) {
+        this._toggleStatus('highlight', seriesModel, ecModel, api, payload);
+    },
+
+    downplay: function (seriesModel, ecModel, api, payload) {
+        this._toggleStatus('downplay', seriesModel, ecModel, api, payload);
+    },
+
+    _toggleStatus: function (status, seriesModel, ecModel, api, payload) {
+        var data = seriesModel.getData();
+        var dataIndex = util_retrieve.queryDataIndex(data, payload);
+
+        var self = this;
+        if (dataIndex != null) {
+            external_echarts_.util.each(util_format.normalizeToArray(dataIndex), function (dataIdx) {
+                status === 'highlight' ? this._highlight(dataIdx) : this._downplay(dataIdx);
+            }, this);
+        }
+        else {
+            data.each(function (dataIdx) {
+                status === 'highlight' ? self._highlight(dataIdx) : self._downplay(dataIdx);
+            });
+        }
+    },
+
+    remove: function () {
+        this.groupGL.removeAll();
+    },
+
+    dispose: function () {
+        this._labelsBuilder.dispose();
+        this.groupGL.removeAll();
+    }
+}));
+;// ./src/chart/wafermap3D/install.js
+// TODO ECharts GL must be imported whatever component,charts is imported.
+
+
+
+
+
+
+
+function wafermap3D_install_install(registers) {
+    registers.registerChartView(Wafermap3DView);
+    registers.registerSeriesModel(Wafermap3DSeries);
+
+    Wafermap3DLayout_registerBarLayout(registers);
+
+    registers.registerProcessor(function (ecModel, api) {
+        ecModel.eachSeriesByType('bar3d', function (seriesModel) {
+            var data = seriesModel.getData();
+            data.filterSelf(function (idx) {
+                return data.hasValue(idx);
+            });
+        });
+    });
+}
+;// ./src/chart/wafermap3D.js
+
+
+(0,external_echarts_.use)(wafermap3D_install_install);
+;// ./src/chart/line3D/Line3DSeries.js
 
 
 
@@ -56439,7 +54720,7 @@ var Line3DSeries = external_echarts_.SeriesModel.extend({
 });
 
 /* harmony default export */ const line3D_Line3DSeries = (Line3DSeries);
-;// CONCATENATED MODULE: ./src/chart/line3D/Line3DView.js
+;// ./src/chart/line3D/Line3DView.js
 
 
 
@@ -56736,7 +55017,7 @@ util_graphicGL.Shader.import(lines3D_glsl);
         this.groupGL.removeAll();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/line3D/install.js
+;// ./src/chart/line3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -56786,11 +55067,11 @@ function line3D_install_install(registers) {
         });
     });
 }
-;// CONCATENATED MODULE: ./src/chart/line3D.js
+;// ./src/chart/line3D.js
 
 
 (0,external_echarts_.use)(line3D_install_install);
-;// CONCATENATED MODULE: ./src/chart/scatter3D/Scatter3DSeries.js
+;// ./src/chart/scatter3D/Scatter3DSeries.js
 
 
 
@@ -56870,7 +55151,7 @@ function line3D_install_install(registers) {
         animationDurationUpdate: 500
     }
 }));
-;// CONCATENATED MODULE: ./src/util/sprite.js
+;// ./src/util/sprite.js
 
 
 function makeSprite(size, canvas, draw) {
@@ -56889,7 +55170,7 @@ function makeSprite(size, canvas, draw) {
     return canvas;
 }
 
-function sprite_makePath(symbol, symbolSize, style, marginBias) {
+function makePath(symbol, symbolSize, style, marginBias) {
     if (!external_echarts_.util.isArray(symbolSize)) {
         symbolSize = [symbolSize, symbolSize];
     }
@@ -57009,7 +55290,7 @@ var spriteUtil = {
      * @param {Object} style
      */
     createSymbolSprite: function (symbol, symbolSize, style, canvas) {
-        var path = sprite_makePath(symbol, symbolSize, style);
+        var path = makePath(symbol, symbolSize, style);
 
         var margin = spriteUtil.getMarginByStyle(style);
 
@@ -57051,7 +55332,7 @@ var spriteUtil = {
 };
 
 /* harmony default export */ const sprite = (spriteUtil);
-;// CONCATENATED MODULE: ./src/util/geometry/verticesSortMixin.js
+;// ./src/util/geometry/verticesSortMixin.js
 
 
 var verticesSortMixin_vec3 = dep_glmatrix.vec3;
@@ -57156,10 +55437,10 @@ var verticesSortMixin_vec3 = dep_glmatrix.vec3;
         }, frame);
     }
 });
-;// CONCATENATED MODULE: ./src/chart/common/sdfSprite.glsl.js
+;// ./src/chart/common/sdfSprite.glsl.js
 /* harmony default export */ const sdfSprite_glsl = ("@export ecgl.sdfSprite.vertex\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform float elapsedTime : 0;\n\nattribute vec3 position : POSITION;\n\n#ifdef VERTEX_SIZE\nattribute float size;\n#else\nuniform float u_Size;\n#endif\n\n#ifdef VERTEX_COLOR\nattribute vec4 a_FillColor: COLOR;\nvarying vec4 v_Color;\n#endif\n\n#ifdef VERTEX_ANIMATION\nattribute vec3 prevPosition;\nattribute float prevSize;\nuniform float percent : 1.0;\n#endif\n\n\n#ifdef POSITIONTEXTURE_ENABLED\nuniform sampler2D positionTexture;\n#endif\n\nvarying float v_Size;\n\nvoid main()\n{\n\n#ifdef POSITIONTEXTURE_ENABLED\n gl_Position = worldViewProjection * vec4(texture2D(positionTexture, position.xy).xy, -10.0, 1.0);\n#else\n\n #ifdef VERTEX_ANIMATION\n vec3 pos = mix(prevPosition, position, percent);\n #else\n vec3 pos = position;\n #endif\n gl_Position = worldViewProjection * vec4(pos, 1.0);\n#endif\n\n#ifdef VERTEX_SIZE\n#ifdef VERTEX_ANIMATION\n v_Size = mix(prevSize, size, percent);\n#else\n v_Size = size;\n#endif\n#else\n v_Size = u_Size;\n#endif\n\n#ifdef VERTEX_COLOR\n v_Color = a_FillColor;\n #endif\n\n gl_PointSize = v_Size;\n}\n\n@end\n\n@export ecgl.sdfSprite.fragment\n\nuniform vec4 color: [1, 1, 1, 1];\nuniform vec4 strokeColor: [1, 1, 1, 1];\nuniform float smoothing: 0.07;\n\nuniform float lineWidth: 0.0;\n\n#ifdef VERTEX_COLOR\nvarying vec4 v_Color;\n#endif\n\nvarying float v_Size;\n\nuniform sampler2D sprite;\n\n@import clay.util.srgb\n\nvoid main()\n{\n gl_FragColor = color;\n\n vec4 _strokeColor = strokeColor;\n\n#ifdef VERTEX_COLOR\n gl_FragColor *= v_Color;\n #endif\n\n#ifdef SPRITE_ENABLED\n float d = texture2D(sprite, gl_PointCoord).r;\n gl_FragColor.a *= smoothstep(0.5 - smoothing, 0.5 + smoothing, d);\n\n if (lineWidth > 0.0) {\n float sLineWidth = lineWidth / 2.0;\n\n float outlineMaxValue0 = 0.5 + sLineWidth;\n float outlineMaxValue1 = 0.5 + sLineWidth + smoothing;\n float outlineMinValue0 = 0.5 - sLineWidth - smoothing;\n float outlineMinValue1 = 0.5 - sLineWidth;\n\n if (d <= outlineMaxValue1 && d >= outlineMinValue0) {\n float a = _strokeColor.a;\n if (d <= outlineMinValue1) {\n a = a * smoothstep(outlineMinValue0, outlineMinValue1, d);\n }\n else {\n a = a * smoothstep(outlineMaxValue1, outlineMaxValue0, d);\n }\n gl_FragColor.rgb = mix(gl_FragColor.rgb * gl_FragColor.a, _strokeColor.rgb, a);\n gl_FragColor.a = gl_FragColor.a * (1.0 - a) + a;\n }\n }\n#endif\n\n#ifdef SRGB_DECODE\n gl_FragColor = sRGBToLinear(gl_FragColor);\n#endif\n}\n@end");
 
-;// CONCATENATED MODULE: ./src/chart/common/PointsMesh.js
+;// ./src/chart/common/PointsMesh.js
 
 
 
@@ -57275,7 +55556,7 @@ var PointsMesh = util_graphicGL.Mesh.extend(function () {
 });
 
 /* harmony default export */ const common_PointsMesh = (PointsMesh);
-;// CONCATENATED MODULE: ./src/chart/common/PointsBuilder.js
+;// ./src/chart/common/PointsBuilder.js
 
 
 
@@ -57862,7 +56143,7 @@ PointsBuilder.prototype = {
 
 /* harmony default export */ const common_PointsBuilder = (PointsBuilder);
 
-;// CONCATENATED MODULE: ./src/chart/scatter3D/Scatter3DView.js
+;// ./src/chart/scatter3D/Scatter3DView.js
 
 
 
@@ -57997,7 +56278,7 @@ PointsBuilder.prototype = {
         this.groupGL.removeAll();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/scatter3D/install.js
+;// ./src/chart/scatter3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -58048,11 +56329,11 @@ function scatter3D_install_install(registers) {
         }
     });
 }
-;// CONCATENATED MODULE: ./src/chart/scatter3D.js
+;// ./src/chart/scatter3D.js
 
 
 (0,external_echarts_.use)(scatter3D_install_install);
-;// CONCATENATED MODULE: ./src/chart/lines3D/lines3DLayout.js
+;// ./src/chart/lines3D/lines3DLayout.js
 
 
 var lines3DLayout_vec3 = dep_glmatrix.vec3;
@@ -58219,7 +56500,7 @@ function lines3DLayout(ecModel, api) {
         }
     });
 };
-;// CONCATENATED MODULE: ./src/chart/lines3D/Lines3DSeries.js
+;// ./src/chart/lines3D/Lines3DSeries.js
 
 
 /* harmony default export */ const Lines3DSeries = (external_echarts_.SeriesModel.extend({
@@ -58285,10 +56566,10 @@ function lines3DLayout(ecModel, api) {
         }
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/lines3D/shader/trail2.glsl.js
+;// ./src/chart/lines3D/shader/trail2.glsl.js
 /* harmony default export */ const trail2_glsl = ("@export ecgl.trail2.vertex\nattribute vec3 position: POSITION;\nattribute vec3 positionPrev;\nattribute vec3 positionNext;\nattribute float offset;\nattribute float dist;\nattribute float distAll;\nattribute float start;\n\nattribute vec4 a_Color : COLOR;\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform vec4 viewport : VIEWPORT;\nuniform float near : NEAR;\n\nuniform float speed : 0;\nuniform float trailLength: 0.3;\nuniform float time;\nuniform float period: 1000;\n\nuniform float spotSize: 1;\n\nvarying vec4 v_Color;\nvarying float v_Percent;\nvarying float v_SpotPercent;\n\n@import ecgl.common.wireframe.vertexHeader\n\n@import ecgl.lines3D.clipNear\n\nvoid main()\n{\n @import ecgl.lines3D.expandLine\n\n gl_Position = currProj;\n\n v_Color = a_Color;\n\n @import ecgl.common.wireframe.vertexMain\n\n#ifdef CONSTANT_SPEED\n float t = mod((speed * time + start) / distAll, 1. + trailLength) - trailLength;\n#else\n float t = mod((time + start) / period, 1. + trailLength) - trailLength;\n#endif\n\n float trailLen = distAll * trailLength;\n\n v_Percent = (dist - t * distAll) / trailLen;\n\n v_SpotPercent = spotSize / distAll;\n\n }\n@end\n\n\n@export ecgl.trail2.fragment\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\nuniform float spotIntensity: 5;\n\nvarying vec4 v_Color;\nvarying float v_Percent;\nvarying float v_SpotPercent;\n\n@import ecgl.common.wireframe.fragmentHeader\n\n@import clay.util.srgb\n\nvoid main()\n{\n if (v_Percent > 1.0 || v_Percent < 0.0) {\n discard;\n }\n\n float fade = v_Percent;\n\n#ifdef SRGB_DECODE\n gl_FragColor = sRGBToLinear(color * v_Color);\n#else\n gl_FragColor = color * v_Color;\n#endif\n\n @import ecgl.common.wireframe.fragmentMain\n\n if (v_Percent > (1.0 - v_SpotPercent)) {\n gl_FragColor.rgb *= spotIntensity;\n }\n\n gl_FragColor.a *= fade;\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/chart/lines3D/TrailMesh2.js
+;// ./src/chart/lines3D/TrailMesh2.js
 
 
 
@@ -58444,7 +56725,7 @@ util_graphicGL.Shader.import(trail2_glsl);
         this.material.set('time', time);
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/lines3D/Lines3DView.js
+;// ./src/chart/lines3D/Lines3DView.js
 
 
 
@@ -58633,7 +56914,7 @@ function getCoordSysSize(coordSys) {
         this.groupGL.removeAll();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/lines3D/install.js
+;// ./src/chart/lines3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -58665,11 +56946,11 @@ function lines3D_install_install(registers) {
         update: 'series.lines3D:toggleEffect'
     }, function () {});
 }
-;// CONCATENATED MODULE: ./src/chart/lines3D.js
+;// ./src/chart/lines3D.js
 
 
 (0,external_echarts_.use)(lines3D_install_install);
-;// CONCATENATED MODULE: ./src/chart/polygons3D/Polygons3DSeries.js
+;// ./src/chart/polygons3D/Polygons3DSeries.js
 
 
 
@@ -58780,7 +57061,7 @@ var Polygons3DSeries = external_echarts_.SeriesModel.extend({
 external_echarts_.util.merge(Polygons3DSeries.prototype, componentShadingMixin);
 
 /* harmony default export */ const polygons3D_Polygons3DSeries = (Polygons3DSeries);
-;// CONCATENATED MODULE: ./src/chart/polygons3D/Polygons3DView.js
+;// ./src/chart/polygons3D/Polygons3DView.js
 
 
 
@@ -58876,7 +57157,7 @@ external_echarts_.util.merge(Polygons3DSeries.prototype, componentShadingMixin);
         })
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/polygons3D/install.js
+;// ./src/chart/polygons3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -58887,11 +57168,11 @@ function polygons3D_install_install(registers) {
     registers.registerChartView(Polygons3DView);
     registers.registerSeriesModel(polygons3D_Polygons3DSeries);
 }
-;// CONCATENATED MODULE: ./src/chart/polygons3D.js
+;// ./src/chart/polygons3D.js
 
 
 (0,external_echarts_.use)(polygons3D_install_install);
-;// CONCATENATED MODULE: ./src/chart/surface/SurfaceSeries.js
+;// ./src/chart/surface/SurfaceSeries.js
 
 
 
@@ -59096,7 +57377,7 @@ var SurfaceSeries = external_echarts_.SeriesModel.extend({
 external_echarts_.util.merge(SurfaceSeries.prototype, componentShadingMixin);
 
 /* harmony default export */ const surface_SurfaceSeries = (SurfaceSeries);
-;// CONCATENATED MODULE: ./src/chart/surface/SurfaceView.js
+;// ./src/chart/surface/SurfaceView.js
 
 
 
@@ -59589,7 +57870,7 @@ function isPointsNaN(pt) {
         this.groupGL.removeAll();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/surface/install.js
+;// ./src/chart/surface/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -59634,11 +57915,11 @@ function surface_install_install(registers) {
         });
     });
 }
-;// CONCATENATED MODULE: ./src/chart/surface.js
+;// ./src/chart/surface.js
 
 
 (0,external_echarts_.use)(surface_install_install);
-;// CONCATENATED MODULE: ./src/chart/map3D/Map3DSeries.js
+;// ./src/chart/map3D/Map3DSeries.js
 
 
 
@@ -59797,7 +58078,7 @@ external_echarts_.util.merge(Map3DSeries.prototype, componentLightMixin);
 external_echarts_.util.merge(Map3DSeries.prototype, componentShadingMixin);
 
 /* harmony default export */ const map3D_Map3DSeries = (Map3DSeries);
-;// CONCATENATED MODULE: ./src/chart/map3D/Map3DView.js
+;// ./src/chart/map3D/Map3DView.js
 
 
 
@@ -59909,7 +58190,7 @@ external_echarts_.util.merge(Map3DSeries.prototype, componentShadingMixin);
         this._geo3DBuilder.dispose();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/map3D/install.js
+;// ./src/chart/map3D/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -59936,11 +58217,11 @@ function map3D_install_install(registers) {
         });
     });
 }
-;// CONCATENATED MODULE: ./src/chart/map3D.js
+;// ./src/chart/map3D.js
 
 
 (0,external_echarts_.use)(map3D_install_install);
-;// CONCATENATED MODULE: ./src/chart/scatterGL/ScatterGLSeries.js
+;// ./src/chart/scatterGL/ScatterGLSeries.js
 
 
 /* harmony default export */ const ScatterGLSeries = (external_echarts_.SeriesModel.extend({
@@ -60003,7 +58284,7 @@ function map3D_install_install(registers) {
 
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/common/GLViewHelper.js
+;// ./src/chart/common/GLViewHelper.js
 
 
 
@@ -60014,7 +58295,7 @@ function GLViewHelper(viewGL) {
 
 GLViewHelper.prototype.reset = function (seriesModel, api) {
     this._updateCamera(api.getWidth(), api.getHeight(), api.getDevicePixelRatio());
-    this._viewTransform = create();
+    this._viewTransform = matrix_create();
     this.updateTransform(seriesModel, api);
 };
 
@@ -60023,7 +58304,7 @@ GLViewHelper.prototype.updateTransform = function (seriesModel, api) {
 
     if (coordinateSystem.getRoamTransform) {
 
-        matrix_invert(this._viewTransform, coordinateSystem.getRoamTransform());
+        invert(this._viewTransform, coordinateSystem.getRoamTransform());
 
         this._setCameraTransform(this._viewTransform);
 
@@ -60087,7 +58368,7 @@ GLViewHelper.prototype._updateCamera = function (width, height, dpr) {
 };
 
 /* harmony default export */ const common_GLViewHelper = (GLViewHelper);
-;// CONCATENATED MODULE: ./src/chart/scatterGL/ScatterGLView.js
+;// ./src/chart/scatterGL/ScatterGLView.js
 
 
 
@@ -60209,7 +58490,7 @@ GLViewHelper.prototype._updateCamera = function (width, height, dpr) {
         this.groupGL.removeAll();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/scatterGL/install.js
+;// ./src/chart/scatterGL/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -60268,11 +58549,11 @@ function scatterGL_install_install(registers) {
         }
     });
 }
-;// CONCATENATED MODULE: ./src/chart/scatterGL.js
+;// ./src/chart/scatterGL.js
 
 
 (0,external_echarts_.use)(scatterGL_install_install);
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/data/Graph.js
+;// ./node_modules/echarts/lib/data/Graph.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -60316,15 +58597,12 @@ function scatterGL_install_install(registers) {
 * specific language governing permissions and limitations
 * under the License.
 */
- // id may be function name of Object, add a prefix to avoid this problem.
 
+// id may be function name of Object, add a prefix to avoid this problem.
 function generateNodeKey(id) {
   return '_EC_' + id;
 }
-
-var Graph_Graph =
-/** @class */
-function () {
+var Graph_Graph = /** @class */function () {
   function Graph(directed) {
     this.type = 'graph';
     this.nodes = [];
@@ -60334,288 +58612,227 @@ function () {
      * @type {Object.<string, module:echarts/data/Graph.Edge>}
      * @private
      */
-
     this._edgesMap = {};
     this._directed = directed || false;
   }
   /**
    * If is directed graph
    */
-
-
   Graph.prototype.isDirected = function () {
     return this._directed;
   };
-
   ;
   /**
    * Add a new node
    */
-
   Graph.prototype.addNode = function (id, dataIndex) {
     id = id == null ? '' + dataIndex : '' + id;
     var nodesMap = this._nodesMap;
-
     if (nodesMap[generateNodeKey(id)]) {
       if (true) {
         console.error('Graph nodes have duplicate name or id');
       }
-
       return;
     }
-
     var node = new GraphNode(id, dataIndex);
     node.hostGraph = this;
     this.nodes.push(node);
     nodesMap[generateNodeKey(id)] = node;
     return node;
   };
-
   ;
   /**
    * Get node by data index
    */
-
   Graph.prototype.getNodeByIndex = function (dataIndex) {
     var rawIdx = this.data.getRawIndex(dataIndex);
     return this.nodes[rawIdx];
   };
-
   ;
   /**
    * Get node by id
    */
-
   Graph.prototype.getNodeById = function (id) {
     return this._nodesMap[generateNodeKey(id)];
   };
-
   ;
   /**
    * Add a new edge
    */
-
   Graph.prototype.addEdge = function (n1, n2, dataIndex) {
     var nodesMap = this._nodesMap;
-    var edgesMap = this._edgesMap; // PNEDING
-
-    if (typeof n1 === 'number') {
+    var edgesMap = this._edgesMap;
+    // PENDING
+    if (isNumber(n1)) {
       n1 = this.nodes[n1];
     }
-
-    if (typeof n2 === 'number') {
+    if (isNumber(n2)) {
       n2 = this.nodes[n2];
     }
-
     if (!(n1 instanceof GraphNode)) {
       n1 = nodesMap[generateNodeKey(n1)];
     }
-
     if (!(n2 instanceof GraphNode)) {
       n2 = nodesMap[generateNodeKey(n2)];
     }
-
     if (!n1 || !n2) {
       return;
     }
-
     var key = n1.id + '-' + n2.id;
     var edge = new GraphEdge(n1, n2, dataIndex);
     edge.hostGraph = this;
-
     if (this._directed) {
       n1.outEdges.push(edge);
       n2.inEdges.push(edge);
     }
-
     n1.edges.push(edge);
-
     if (n1 !== n2) {
       n2.edges.push(edge);
     }
-
     this.edges.push(edge);
     edgesMap[key] = edge;
     return edge;
   };
-
   ;
   /**
    * Get edge by data index
    */
-
   Graph.prototype.getEdgeByIndex = function (dataIndex) {
     var rawIdx = this.edgeData.getRawIndex(dataIndex);
     return this.edges[rawIdx];
   };
-
   ;
   /**
    * Get edge by two linked nodes
    */
-
   Graph.prototype.getEdge = function (n1, n2) {
     if (n1 instanceof GraphNode) {
       n1 = n1.id;
     }
-
     if (n2 instanceof GraphNode) {
       n2 = n2.id;
     }
-
     var edgesMap = this._edgesMap;
-
     if (this._directed) {
       return edgesMap[n1 + '-' + n2];
     } else {
       return edgesMap[n1 + '-' + n2] || edgesMap[n2 + '-' + n1];
     }
   };
-
   ;
   /**
    * Iterate all nodes
    */
-
   Graph.prototype.eachNode = function (cb, context) {
     var nodes = this.nodes;
     var len = nodes.length;
-
     for (var i = 0; i < len; i++) {
       if (nodes[i].dataIndex >= 0) {
         cb.call(context, nodes[i], i);
       }
     }
   };
-
   ;
   /**
    * Iterate all edges
    */
-
   Graph.prototype.eachEdge = function (cb, context) {
     var edges = this.edges;
     var len = edges.length;
-
     for (var i = 0; i < len; i++) {
       if (edges[i].dataIndex >= 0 && edges[i].node1.dataIndex >= 0 && edges[i].node2.dataIndex >= 0) {
         cb.call(context, edges[i], i);
       }
     }
   };
-
   ;
   /**
    * Breadth first traverse
    * Return true to stop traversing
    */
-
   Graph.prototype.breadthFirstTraverse = function (cb, startNode, direction, context) {
     if (!(startNode instanceof GraphNode)) {
       startNode = this._nodesMap[generateNodeKey(startNode)];
     }
-
     if (!startNode) {
       return;
     }
-
     var edgeType = direction === 'out' ? 'outEdges' : direction === 'in' ? 'inEdges' : 'edges';
-
     for (var i = 0; i < this.nodes.length; i++) {
       this.nodes[i].__visited = false;
     }
-
     if (cb.call(context, startNode, null)) {
       return;
     }
-
     var queue = [startNode];
-
     while (queue.length) {
       var currentNode = queue.shift();
       var edges = currentNode[edgeType];
-
       for (var i = 0; i < edges.length; i++) {
         var e = edges[i];
         var otherNode = e.node1 === currentNode ? e.node2 : e.node1;
-
         if (!otherNode.__visited) {
           if (cb.call(context, otherNode, currentNode)) {
             // Stop traversing
             return;
           }
-
           queue.push(otherNode);
           otherNode.__visited = true;
         }
       }
     }
   };
-
-  ; // TODO
+  ;
+  // TODO
   // depthFirstTraverse(
   //     cb, startNode, direction, context
   // ) {
   // };
   // Filter update
-
   Graph.prototype.update = function () {
     var data = this.data;
     var edgeData = this.edgeData;
     var nodes = this.nodes;
     var edges = this.edges;
-
     for (var i = 0, len = nodes.length; i < len; i++) {
       nodes[i].dataIndex = -1;
     }
-
     for (var i = 0, len = data.count(); i < len; i++) {
       nodes[data.getRawIndex(i)].dataIndex = i;
     }
-
     edgeData.filterSelf(function (idx) {
       var edge = edges[edgeData.getRawIndex(idx)];
       return edge.node1.dataIndex >= 0 && edge.node2.dataIndex >= 0;
-    }); // Update edge
-
+    });
+    // Update edge
     for (var i = 0, len = edges.length; i < len; i++) {
       edges[i].dataIndex = -1;
     }
-
     for (var i = 0, len = edgeData.count(); i < len; i++) {
       edges[edgeData.getRawIndex(i)].dataIndex = i;
     }
   };
-
   ;
   /**
    * @return {module:echarts/data/Graph}
    */
-
   Graph.prototype.clone = function () {
     var graph = new Graph(this._directed);
     var nodes = this.nodes;
     var edges = this.edges;
-
     for (var i = 0; i < nodes.length; i++) {
       graph.addNode(nodes[i].id, nodes[i].dataIndex);
     }
-
     for (var i = 0; i < edges.length; i++) {
       var e = edges[i];
       graph.addEdge(e.node1.id, e.node2.id, e.dataIndex);
     }
-
     return graph;
   };
-
   ;
   return Graph;
 }();
-
-var GraphNode =
-/** @class */
-function () {
+var GraphNode = /** @class */function () {
   function GraphNode(id, dataIndex) {
     this.inEdges = [];
     this.outEdges = [];
@@ -60627,91 +58844,138 @@ function () {
   /**
    * @return {number}
    */
-
-
   GraphNode.prototype.degree = function () {
     return this.edges.length;
   };
   /**
    * @return {number}
    */
-
-
   GraphNode.prototype.inDegree = function () {
     return this.inEdges.length;
   };
   /**
   * @return {number}
   */
-
-
   GraphNode.prototype.outDegree = function () {
     return this.outEdges.length;
   };
-
   GraphNode.prototype.getModel = function (path) {
     if (this.dataIndex < 0) {
       return;
     }
-
     var graph = this.hostGraph;
     var itemModel = graph.data.getItemModel(this.dataIndex);
     return itemModel.getModel(path);
   };
-
   GraphNode.prototype.getAdjacentDataIndices = function () {
     var dataIndices = {
       edge: [],
       node: []
     };
-
     for (var i = 0; i < this.edges.length; i++) {
       var adjacentEdge = this.edges[i];
-
       if (adjacentEdge.dataIndex < 0) {
         continue;
       }
-
       dataIndices.edge.push(adjacentEdge.dataIndex);
       dataIndices.node.push(adjacentEdge.node1.dataIndex, adjacentEdge.node2.dataIndex);
     }
-
     return dataIndices;
   };
-
+  GraphNode.prototype.getTrajectoryDataIndices = function () {
+    var connectedEdgesMap = createHashMap();
+    var connectedNodesMap = createHashMap();
+    for (var i = 0; i < this.edges.length; i++) {
+      var adjacentEdge = this.edges[i];
+      if (adjacentEdge.dataIndex < 0) {
+        continue;
+      }
+      connectedEdgesMap.set(adjacentEdge.dataIndex, true);
+      var sourceNodesQueue = [adjacentEdge.node1];
+      var targetNodesQueue = [adjacentEdge.node2];
+      var nodeIteratorIndex = 0;
+      while (nodeIteratorIndex < sourceNodesQueue.length) {
+        var sourceNode = sourceNodesQueue[nodeIteratorIndex];
+        nodeIteratorIndex++;
+        connectedNodesMap.set(sourceNode.dataIndex, true);
+        for (var j = 0; j < sourceNode.inEdges.length; j++) {
+          connectedEdgesMap.set(sourceNode.inEdges[j].dataIndex, true);
+          sourceNodesQueue.push(sourceNode.inEdges[j].node1);
+        }
+      }
+      nodeIteratorIndex = 0;
+      while (nodeIteratorIndex < targetNodesQueue.length) {
+        var targetNode = targetNodesQueue[nodeIteratorIndex];
+        nodeIteratorIndex++;
+        connectedNodesMap.set(targetNode.dataIndex, true);
+        for (var j = 0; j < targetNode.outEdges.length; j++) {
+          connectedEdgesMap.set(targetNode.outEdges[j].dataIndex, true);
+          targetNodesQueue.push(targetNode.outEdges[j].node2);
+        }
+      }
+    }
+    return {
+      edge: connectedEdgesMap.keys(),
+      node: connectedNodesMap.keys()
+    };
+  };
   return GraphNode;
 }();
-
-var GraphEdge =
-/** @class */
-function () {
+var GraphEdge = /** @class */function () {
   function GraphEdge(n1, n2, dataIndex) {
     this.dataIndex = -1;
     this.node1 = n1;
     this.node2 = n2;
     this.dataIndex = dataIndex == null ? -1 : dataIndex;
   }
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   GraphEdge.prototype.getModel = function (path) {
     if (this.dataIndex < 0) {
       return;
     }
-
     var graph = this.hostGraph;
     var itemModel = graph.edgeData.getItemModel(this.dataIndex);
     return itemModel.getModel(path);
   };
-
   GraphEdge.prototype.getAdjacentDataIndices = function () {
     return {
       edge: [this.dataIndex],
       node: [this.node1.dataIndex, this.node2.dataIndex]
     };
   };
-
+  GraphEdge.prototype.getTrajectoryDataIndices = function () {
+    var connectedEdgesMap = createHashMap();
+    var connectedNodesMap = createHashMap();
+    connectedEdgesMap.set(this.dataIndex, true);
+    var sourceNodes = [this.node1];
+    var targetNodes = [this.node2];
+    var nodeIteratorIndex = 0;
+    while (nodeIteratorIndex < sourceNodes.length) {
+      var sourceNode = sourceNodes[nodeIteratorIndex];
+      nodeIteratorIndex++;
+      connectedNodesMap.set(sourceNode.dataIndex, true);
+      for (var j = 0; j < sourceNode.inEdges.length; j++) {
+        connectedEdgesMap.set(sourceNode.inEdges[j].dataIndex, true);
+        sourceNodes.push(sourceNode.inEdges[j].node1);
+      }
+    }
+    nodeIteratorIndex = 0;
+    while (nodeIteratorIndex < targetNodes.length) {
+      var targetNode = targetNodes[nodeIteratorIndex];
+      nodeIteratorIndex++;
+      connectedNodesMap.set(targetNode.dataIndex, true);
+      for (var j = 0; j < targetNode.outEdges.length; j++) {
+        connectedEdgesMap.set(targetNode.outEdges[j].dataIndex, true);
+        targetNodes.push(targetNode.outEdges[j].node2);
+      }
+    }
+    return {
+      edge: connectedEdgesMap.keys(),
+      node: connectedNodesMap.keys()
+    };
+  };
   return GraphEdge;
 }();
-
 function createGraphDataProxyMixin(hostName, dataName) {
   return {
     /**
@@ -60719,7 +58983,7 @@ function createGraphDataProxyMixin(hostName, dataName) {
      */
     getValue: function (dimension) {
       var data = this[hostName][dataName];
-      return data.get(data.getDimension(dimension || 'value'), this.dataIndex);
+      return data.getStore().get(data.getDimensionIndex(dimension || 'value'), this.dataIndex);
     },
     // TODO: TYPE stricter type.
     setVisual: function (key, value) {
@@ -60742,7 +59006,6 @@ function createGraphDataProxyMixin(hostName, dataName) {
     }
   };
 }
-
 ;
 ;
 ;
@@ -60750,7 +59013,7 @@ mixin(GraphNode, createGraphDataProxyMixin('hostGraph', 'data'));
 mixin(GraphEdge, createGraphDataProxyMixin('hostGraph', 'edgeData'));
 /* harmony default export */ const data_Graph = (Graph_Graph);
 
-;// CONCATENATED MODULE: ./node_modules/echarts/lib/data/helper/linkList.js
+;// ./node_modules/echarts/lib/data/helper/linkSeriesData.js
 
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
@@ -60794,18 +59057,15 @@ mixin(GraphEdge, createGraphDataProxyMixin('hostGraph', 'edgeData'));
 * specific language governing permissions and limitations
 * under the License.
 */
-
 /**
  * Link lists and struct (graph or tree)
  */
 
 
 var inner = makeInner();
-
-function linkList(opt) {
+function linkSeriesData(opt) {
   var mainData = opt.mainData;
   var datas = opt.datas;
-
   if (!datas) {
     datas = {
       main: mainData
@@ -60814,26 +59074,24 @@ function linkList(opt) {
       main: 'data'
     };
   }
-
   opt.datas = opt.mainData = null;
-  linkAll(mainData, datas, opt); // Porxy data original methods.
-
+  linkAll(mainData, datas, opt);
+  // Porxy data original methods.
   each(datas, function (data) {
     each(mainData.TRANSFERABLE_METHODS, function (methodName) {
       data.wrapMethod(methodName, curry(transferInjection, opt));
     });
-  }); // Beyond transfer, additional features should be added to `cloneShallow`.
-
-  mainData.wrapMethod('cloneShallow', curry(cloneShallowInjection, opt)); // Only mainData trigger change, because struct.update may trigger
+  });
+  // Beyond transfer, additional features should be added to `cloneShallow`.
+  mainData.wrapMethod('cloneShallow', curry(cloneShallowInjection, opt));
+  // Only mainData trigger change, because struct.update may trigger
   // another changable methods, which may bring about dead lock.
-
   each(mainData.CHANGABLE_METHODS, function (methodName) {
     mainData.wrapMethod(methodName, curry(changeInjection, opt));
-  }); // Make sure datas contains mainData.
-
+  });
+  // Make sure datas contains mainData.
   assert(datas[mainData.dataType] === mainData);
 }
-
 function transferInjection(opt, res) {
   if (isMainData(this)) {
     // Transfer datas to new main data.
@@ -60844,15 +59102,12 @@ function transferInjection(opt, res) {
     // Modify the reference in main data to point newData.
     linkSingle(res, this.dataType, inner(this).mainData, opt);
   }
-
   return res;
 }
-
 function changeInjection(opt, res) {
   opt.struct && opt.struct.update();
   return res;
 }
-
 function cloneShallowInjection(opt, res) {
   // cloneShallow, which brings about some fragilities, may be inappropriate
   // to be exposed as an API. So for implementation simplicity we can make
@@ -60869,8 +59124,6 @@ function cloneShallowInjection(opt, res) {
  * @public
  * @param [dataType] If not specified, return mainData.
  */
-
-
 function getLinkedData(dataType) {
   var mainData = inner(this).mainData;
   return dataType == null || mainData == null ? mainData : inner(mainData).datas[dataType];
@@ -60878,8 +59131,6 @@ function getLinkedData(dataType) {
 /**
  * Get list of all linked data
  */
-
-
 function getLinkedDataAll() {
   var mainData = inner(this).mainData;
   return mainData == null ? [{
@@ -60891,35 +59142,76 @@ function getLinkedDataAll() {
     };
   });
 }
-
 function isMainData(data) {
   return inner(data).mainData === data;
 }
-
 function linkAll(mainData, datas, opt) {
   inner(mainData).datas = {};
   each(datas, function (data, dataType) {
     linkSingle(data, dataType, mainData, opt);
   });
 }
-
 function linkSingle(data, dataType, mainData, opt) {
   inner(mainData).datas[dataType] = data;
   inner(data).mainData = mainData;
   data.dataType = dataType;
-
   if (opt.struct) {
     data[opt.structAttr] = opt.struct;
     opt.struct[opt.datasAttr[dataType]] = data;
-  } // Supplement method.
-
-
+  }
+  // Supplement method.
   data.getLinkedData = getLinkedData;
   data.getLinkedDataAll = getLinkedDataAll;
 }
+/* harmony default export */ const helper_linkSeriesData = (linkSeriesData);
+;// ./node_modules/echarts/lib/data/helper/linkList.js
 
-/* harmony default export */ const helper_linkList = (linkList);
-;// CONCATENATED MODULE: ./src/chart/graphGL/createGraphFromNodeEdge.js
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+
+
+/**
+ * AUTO-GENERATED FILE. DO NOT MODIFY.
+ */
+
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+// TODO: this module is only for compatibility with echarts-gl
+
+/* harmony default export */ const linkList = (helper_linkSeriesData);
+;// ./src/chart/graphGL/createGraphFromNodeEdge.js
 
 
 
@@ -60965,7 +59257,7 @@ function linkSingle(data, dataType, mainData, opt) {
 
     beforeLink && beforeLink(nodeData, edgeData);
 
-    helper_linkList({
+    linkList({
         mainData: nodeData,
         struct: graph,
         structAttr: 'graph',
@@ -60978,7 +59270,7 @@ function linkSingle(data, dataType, mainData, opt) {
 
     return graph;
 };
-;// CONCATENATED MODULE: ./src/chart/graphGL/GraphGLSeries.js
+;// ./src/chart/graphGL/GraphGLSeries.js
 
 
 
@@ -61260,7 +59552,7 @@ var GraphSeries = external_echarts_.SeriesModel.extend({
 });
 
 /* harmony default export */ const GraphGLSeries = (GraphSeries);
-;// CONCATENATED MODULE: ./src/util/geometry/Lines2D.js
+;// ./src/util/geometry/Lines2D.js
 /**
  * Lines geometry
  * Use screen space projected lines lineWidth > MAX_LINE_WIDTH
@@ -61727,10 +60019,10 @@ var Lines2D_LinesGeometry = src_Geometry.extend(function () {
 external_echarts_.util.defaults(Lines2D_LinesGeometry.prototype, dynamicConvertMixin);
 
 /* harmony default export */ const Lines2D = (Lines2D_LinesGeometry);
-;// CONCATENATED MODULE: ./src/chart/graphGL/forceAtlas2.glsl.js
+;// ./src/chart/graphGL/forceAtlas2.glsl.js
 /* harmony default export */ const forceAtlas2_glsl = ("@export ecgl.forceAtlas2.updateNodeRepulsion\n\n#define NODE_COUNT 0\n\nuniform sampler2D positionTex;\n\nuniform vec2 textureSize;\nuniform float gravity;\nuniform float scaling;\nuniform vec2 gravityCenter;\n\nuniform bool strongGravityMode;\nuniform bool preventOverlap;\n\nvarying vec2 v_Texcoord;\n\nvoid main() {\n\n vec4 n0 = texture2D(positionTex, v_Texcoord);\n\n vec2 force = vec2(0.0);\n for (int i = 0; i < NODE_COUNT; i++) {\n vec2 uv = vec2(\n mod(float(i), textureSize.x) / (textureSize.x - 1.0),\n floor(float(i) / textureSize.x) / (textureSize.y - 1.0)\n );\n vec4 n1 = texture2D(positionTex, uv);\n\n vec2 dir = n0.xy - n1.xy;\n float d2 = dot(dir, dir);\n\n if (d2 > 0.0) {\n float factor = 0.0;\n if (preventOverlap) {\n float d = sqrt(d2);\n d = d - n0.w - n1.w;\n if (d > 0.0) {\n factor = scaling * n0.z * n1.z / (d * d);\n }\n else if (d < 0.0) {\n factor = scaling * 100.0 * n0.z * n1.z;\n }\n }\n else {\n factor = scaling * n0.z * n1.z / d2;\n }\n force += dir * factor;\n }\n }\n\n vec2 dir = gravityCenter - n0.xy;\n float d = 1.0;\n if (!strongGravityMode) {\n d = length(dir);\n }\n\n force += dir * n0.z * gravity / (d + 1.0);\n\n gl_FragColor = vec4(force, 0.0, 1.0);\n}\n@end\n\n@export ecgl.forceAtlas2.updateEdgeAttraction.vertex\n\nattribute vec2 node1;\nattribute vec2 node2;\nattribute float weight;\n\nuniform sampler2D positionTex;\nuniform float edgeWeightInfluence;\nuniform bool preventOverlap;\nuniform bool linLogMode;\n\nuniform vec2 windowSize: WINDOW_SIZE;\n\nvarying vec2 v_Force;\n\nvoid main() {\n\n vec4 n0 = texture2D(positionTex, node1);\n vec4 n1 = texture2D(positionTex, node2);\n\n vec2 dir = n1.xy - n0.xy;\n float d = length(dir);\n float w;\n if (edgeWeightInfluence == 0.0) {\n w = 1.0;\n }\n else if (edgeWeightInfluence == 1.0) {\n w = weight;\n }\n else {\n w = pow(weight, edgeWeightInfluence);\n }\n vec2 offset = vec2(1.0 / windowSize.x, 1.0 / windowSize.y);\n vec2 scale = vec2((windowSize.x - 1.0) / windowSize.x, (windowSize.y - 1.0) / windowSize.y);\n vec2 pos = node1 * scale * 2.0 - 1.0;\n gl_Position = vec4(pos + offset, 0.0, 1.0);\n gl_PointSize = 1.0;\n\n float factor;\n if (preventOverlap) {\n d = d - n1.w - n0.w;\n }\n if (d <= 0.0) {\n v_Force = vec2(0.0);\n return;\n }\n\n if (linLogMode) {\n factor = w * log(d) / d;\n }\n else {\n factor = w;\n }\n v_Force = dir * factor;\n}\n@end\n\n@export ecgl.forceAtlas2.updateEdgeAttraction.fragment\n\nvarying vec2 v_Force;\n\nvoid main() {\n gl_FragColor = vec4(v_Force, 0.0, 0.0);\n}\n@end\n\n@export ecgl.forceAtlas2.calcWeightedSum.vertex\n\nattribute vec2 node;\n\nvarying vec2 v_NodeUv;\n\nvoid main() {\n\n v_NodeUv = node;\n gl_Position = vec4(0.0, 0.0, 0.0, 1.0);\n gl_PointSize = 1.0;\n}\n@end\n\n@export ecgl.forceAtlas2.calcWeightedSum.fragment\n\nvarying vec2 v_NodeUv;\n\nuniform sampler2D positionTex;\nuniform sampler2D forceTex;\nuniform sampler2D forcePrevTex;\n\nvoid main() {\n vec2 force = texture2D(forceTex, v_NodeUv).rg;\n vec2 forcePrev = texture2D(forcePrevTex, v_NodeUv).rg;\n\n float mass = texture2D(positionTex, v_NodeUv).z;\n float swing = length(force - forcePrev) * mass;\n float traction = length(force + forcePrev) * 0.5 * mass;\n\n gl_FragColor = vec4(swing, traction, 0.0, 0.0);\n}\n@end\n\n@export ecgl.forceAtlas2.calcGlobalSpeed\n\nuniform sampler2D globalSpeedPrevTex;\nuniform sampler2D weightedSumTex;\nuniform float jitterTolerence;\n\nvoid main() {\n vec2 weightedSum = texture2D(weightedSumTex, vec2(0.5)).xy;\n float prevGlobalSpeed = texture2D(globalSpeedPrevTex, vec2(0.5)).x;\n float globalSpeed = jitterTolerence * jitterTolerence\n * weightedSum.y / weightedSum.x;\n if (prevGlobalSpeed > 0.0) {\n globalSpeed = min(globalSpeed / prevGlobalSpeed, 1.5) * prevGlobalSpeed;\n }\n gl_FragColor = vec4(globalSpeed, 0.0, 0.0, 1.0);\n}\n@end\n\n@export ecgl.forceAtlas2.updatePosition\n\nuniform sampler2D forceTex;\nuniform sampler2D forcePrevTex;\nuniform sampler2D positionTex;\nuniform sampler2D globalSpeedTex;\n\nvarying vec2 v_Texcoord;\n\nvoid main() {\n vec2 force = texture2D(forceTex, v_Texcoord).xy;\n vec2 forcePrev = texture2D(forcePrevTex, v_Texcoord).xy;\n vec4 node = texture2D(positionTex, v_Texcoord);\n\n float globalSpeed = texture2D(globalSpeedTex, vec2(0.5)).r;\n float swing = length(force - forcePrev);\n float speed = 0.1 * globalSpeed / (0.1 + globalSpeed * sqrt(swing));\n\n float df = length(force);\n if (df > 0.0) {\n speed = min(df * speed, 10.0) / df;\n\n gl_FragColor = vec4(node.xy + speed * force, node.zw);\n }\n else {\n gl_FragColor = node;\n }\n}\n@end\n\n@export ecgl.forceAtlas2.edges.vertex\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\n\nattribute vec2 node;\nattribute vec4 a_Color : COLOR;\nvarying vec4 v_Color;\n\nuniform sampler2D positionTex;\n\nvoid main()\n{\n gl_Position = worldViewProjection * vec4(\n texture2D(positionTex, node).xy, -10.0, 1.0\n );\n v_Color = a_Color;\n}\n@end\n\n@export ecgl.forceAtlas2.edges.fragment\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\nvarying vec4 v_Color;\nvoid main() {\n gl_FragColor = color * v_Color;\n}\n@end");
 
-;// CONCATENATED MODULE: ./src/chart/graphGL/ForceAtlas2GPU.js
+;// ./src/chart/graphGL/ForceAtlas2GPU.js
 
 
 
@@ -62198,7 +60490,7 @@ ForceAtlas2GPU.prototype.dispose = function (renderer) {
 };
 
 /* harmony default export */ const graphGL_ForceAtlas2GPU = (ForceAtlas2GPU);
-;// CONCATENATED MODULE: ./src/chart/graphGL/forceAtlas2Worker.js
+;// ./src/chart/graphGL/forceAtlas2Worker.js
 /****************************
  * Vector2 math functions
  ***************************/
@@ -62860,7 +61152,7 @@ function forceAtlas2Worker() {
 }
 
 /* harmony default export */ const graphGL_forceAtlas2Worker = (forceAtlas2Worker);
-;// CONCATENATED MODULE: ./src/chart/graphGL/ForceAtlas2.js
+;// ./src/chart/graphGL/ForceAtlas2.js
 
 
 
@@ -63142,7 +61434,7 @@ ForceAtlas2.prototype.dispose = function (renderer) {
 };
 
 /* harmony default export */ const graphGL_ForceAtlas2 = (ForceAtlas2);
-;// CONCATENATED MODULE: ./src/util/Roam2DControl.js
+;// ./src/util/Roam2DControl.js
 
 
 
@@ -63340,10 +61632,10 @@ var Roam2DControl = core_Base.extend(function () {
 });
 
 /* harmony default export */ const util_Roam2DControl = (Roam2DControl);
-;// CONCATENATED MODULE: ./src/util/shader/lines2D.glsl.js
+;// ./src/util/shader/lines2D.glsl.js
 /* harmony default export */ const lines2D_glsl = ("@export ecgl.lines2D.vertex\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\n\nattribute vec2 position: POSITION;\nattribute vec4 a_Color : COLOR;\nvarying vec4 v_Color;\n\n#ifdef POSITIONTEXTURE_ENABLED\nuniform sampler2D positionTexture;\n#endif\n\nvoid main()\n{\n gl_Position = worldViewProjection * vec4(position, -10.0, 1.0);\n\n v_Color = a_Color;\n}\n\n@end\n\n@export ecgl.lines2D.fragment\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\n\nvarying vec4 v_Color;\n\nvoid main()\n{\n gl_FragColor = color * v_Color;\n}\n@end\n\n\n@export ecgl.meshLines2D.vertex\n\nattribute vec2 position: POSITION;\nattribute vec2 normal;\nattribute float offset;\nattribute vec4 a_Color : COLOR;\n\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\nuniform vec4 viewport : VIEWPORT;\n\nvarying vec4 v_Color;\nvarying float v_Miter;\n\nvoid main()\n{\n vec4 p2 = worldViewProjection * vec4(position + normal, -10.0, 1.0);\n gl_Position = worldViewProjection * vec4(position, -10.0, 1.0);\n\n p2.xy /= p2.w;\n gl_Position.xy /= gl_Position.w;\n\n vec2 N = normalize(p2.xy - gl_Position.xy);\n gl_Position.xy += N * offset / viewport.zw * 2.0;\n\n gl_Position.xy *= gl_Position.w;\n\n v_Color = a_Color;\n}\n@end\n\n\n@export ecgl.meshLines2D.fragment\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\n\nvarying vec4 v_Color;\nvarying float v_Miter;\n\nvoid main()\n{\n gl_FragColor = color * v_Color;\n}\n\n@end");
 
-;// CONCATENATED MODULE: ./src/chart/graphGL/GraphGLView.js
+;// ./src/chart/graphGL/GraphGLView.js
 
 
 
@@ -64075,7 +62367,7 @@ var globalLayoutId = 1;
         this._control.dispose();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/graphGL/install.js
+;// ./src/chart/graphGL/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -64245,11 +62537,11 @@ function graphGL_install_install(registers) {
         update: 'series.graphGL:unfocusNodeAdjacency'
     }, noop);
 }
-;// CONCATENATED MODULE: ./src/chart/graphGL.js
+;// ./src/chart/graphGL.js
 
 
 (0,external_echarts_.use)(graphGL_install_install);
-;// CONCATENATED MODULE: ./src/chart/flowGL/FlowGLSeries.js
+;// ./src/chart/flowGL/FlowGLSeries.js
 
 
 /* harmony default export */ const FlowGLSeries = (external_echarts_.SeriesModel.extend({
@@ -64306,7 +62598,7 @@ function graphGL_install_install(registers) {
         }
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/flowGL/Line2D.js
+;// ./src/chart/flowGL/Line2D.js
 /**
  * Lines geometry
  * Use screen space projected lines lineWidth > MAX_LINE_WIDTH
@@ -64388,10 +62680,10 @@ var Line2D_LinesGeometry = src_Geometry.extend(function () {
 });
 
 /* harmony default export */ const Line2D = (Line2D_LinesGeometry);
-;// CONCATENATED MODULE: ./src/chart/flowGL/vectorFieldParticle.glsl.js
+;// ./src/chart/flowGL/vectorFieldParticle.glsl.js
 /* harmony default export */ const vectorFieldParticle_glsl = ("@export ecgl.vfParticle.particle.fragment\n\nuniform sampler2D particleTexture;\nuniform sampler2D spawnTexture;\nuniform sampler2D velocityTexture;\n\nuniform float deltaTime;\nuniform float elapsedTime;\n\nuniform float speedScaling : 1.0;\n\nuniform vec2 textureSize;\nuniform vec4 region : [0, 0, 1, 1];\nuniform float firstFrameTime;\n\nvarying vec2 v_Texcoord;\n\n\nvoid main()\n{\n vec4 p = texture2D(particleTexture, v_Texcoord);\n bool spawn = false;\n if (p.w <= 0.0) {\n p = texture2D(spawnTexture, fract(v_Texcoord + elapsedTime / 10.0));\n p.w -= firstFrameTime;\n spawn = true;\n }\n vec2 v = texture2D(velocityTexture, fract(p.xy * region.zw + region.xy)).xy;\n v = (v - 0.5) * 2.0;\n p.z = length(v);\n p.xy += v * deltaTime / 10.0 * speedScaling;\n p.w -= deltaTime;\n\n if (spawn || p.xy != fract(p.xy)) {\n p.z = 0.0;\n }\n p.xy = fract(p.xy);\n\n gl_FragColor = p;\n}\n@end\n\n@export ecgl.vfParticle.renderPoints.vertex\n\n#define PI 3.1415926\n\nattribute vec2 texcoord : TEXCOORD_0;\n\nuniform sampler2D particleTexture;\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\n\nuniform float size : 1.0;\n\nvarying float v_Mag;\nvarying vec2 v_Uv;\n\nvoid main()\n{\n vec4 p = texture2D(particleTexture, texcoord);\n\n if (p.w > 0.0 && p.z > 1e-5) {\n gl_Position = worldViewProjection * vec4(p.xy * 2.0 - 1.0, 0.0, 1.0);\n }\n else {\n gl_Position = vec4(100000.0, 100000.0, 100000.0, 1.0);\n }\n\n v_Mag = p.z;\n v_Uv = p.xy;\n\n gl_PointSize = size;\n}\n\n@end\n\n@export ecgl.vfParticle.renderPoints.fragment\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\nuniform sampler2D gradientTexture;\nuniform sampler2D colorTexture;\nuniform sampler2D spriteTexture;\n\nvarying float v_Mag;\nvarying vec2 v_Uv;\n\nvoid main()\n{\n gl_FragColor = color;\n#ifdef SPRITETEXTURE_ENABLED\n gl_FragColor *= texture2D(spriteTexture, gl_PointCoord);\n if (color.a == 0.0) {\n discard;\n }\n#endif\n#ifdef GRADIENTTEXTURE_ENABLED\n gl_FragColor *= texture2D(gradientTexture, vec2(v_Mag, 0.5));\n#endif\n#ifdef COLORTEXTURE_ENABLED\n gl_FragColor *= texture2D(colorTexture, v_Uv);\n#endif\n}\n\n@end\n\n@export ecgl.vfParticle.renderLines.vertex\n\n#define PI 3.1415926\n\nattribute vec3 position : POSITION;\n\nuniform sampler2D particleTexture;\nuniform sampler2D prevParticleTexture;\n\nuniform float size : 1.0;\nuniform vec4 vp: VIEWPORT;\nuniform mat4 worldViewProjection : WORLDVIEWPROJECTION;\n\nvarying float v_Mag;\nvarying vec2 v_Uv;\n\n@import clay.util.rand\n\nvoid main()\n{\n vec4 p = texture2D(particleTexture, position.xy);\n vec4 p2 = texture2D(prevParticleTexture, position.xy);\n\n p.xy = p.xy * 2.0 - 1.0;\n p2.xy = p2.xy * 2.0 - 1.0;\n\n if (p.w > 0.0 && p.z > 1e-5) {\n vec2 dir = normalize(p.xy - p2.xy);\n vec2 norm = vec2(dir.y / vp.z, -dir.x / vp.w) * sign(position.z) * size;\n if (abs(position.z) == 2.0) {\n gl_Position = vec4(p.xy + norm, 0.0, 1.0);\n v_Uv = p.xy;\n v_Mag = p.z;\n }\n else {\n gl_Position = vec4(p2.xy + norm, 0.0, 1.0);\n v_Mag = p2.z;\n v_Uv = p2.xy;\n }\n gl_Position = worldViewProjection * gl_Position;\n }\n else {\n gl_Position = vec4(100000.0, 100000.0, 100000.0, 1.0);\n }\n}\n\n@end\n\n@export ecgl.vfParticle.renderLines.fragment\n\nuniform vec4 color : [1.0, 1.0, 1.0, 1.0];\nuniform sampler2D gradientTexture;\nuniform sampler2D colorTexture;\n\nvarying float v_Mag;\nvarying vec2 v_Uv;\n\nvoid main()\n{\n gl_FragColor = color;\n #ifdef GRADIENTTEXTURE_ENABLED\n gl_FragColor *= texture2D(gradientTexture, vec2(v_Mag, 0.5));\n#endif\n#ifdef COLORTEXTURE_ENABLED\n gl_FragColor *= texture2D(colorTexture, v_Uv);\n#endif\n}\n\n@end\n");
 
-;// CONCATENATED MODULE: ./src/chart/flowGL/VectorFieldParticleSurface.js
+;// ./src/chart/flowGL/VectorFieldParticleSurface.js
 
 
 
@@ -64408,7 +62700,7 @@ var Line2D_LinesGeometry = src_Geometry.extend(function () {
 
 
 
-src_Shader.import(vectorFieldParticle_glsl);
+src_Shader['import'](vectorFieldParticle_glsl);
 
 function createSpriteCanvas(size) {
     var canvas = document.createElement('canvas');
@@ -64834,7 +63126,7 @@ VectorFieldParticleSurface.prototype = {
 };
 
 /* harmony default export */ const flowGL_VectorFieldParticleSurface = (VectorFieldParticleSurface);
-;// CONCATENATED MODULE: ./src/chart/flowGL/FlowGLView.js
+;// ./src/chart/flowGL/FlowGLView.js
 
 
 
@@ -65194,7 +63486,7 @@ VectorFieldParticleSurface.prototype = {
     }
 }));
 
-;// CONCATENATED MODULE: ./src/chart/flowGL/install.js
+;// ./src/chart/flowGL/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -65205,11 +63497,11 @@ function flowGL_install_install(registers) {
     registers.registerChartView(FlowGLView);
     registers.registerSeriesModel(FlowGLSeries);
 }
-;// CONCATENATED MODULE: ./src/chart/flowGL.js
+;// ./src/chart/flowGL.js
 
 
 (0,external_echarts_.use)(flowGL_install_install);
-;// CONCATENATED MODULE: ./src/chart/linesGL/LinesGLSeries.js
+;// ./src/chart/linesGL/LinesGLSeries.js
 
 
 
@@ -65413,7 +63705,7 @@ var LinesGLSeries = external_echarts_.SeriesModel.extend({
 });
 
 /* harmony default export */ const linesGL_LinesGLSeries = (LinesGLSeries);
-;// CONCATENATED MODULE: ./src/chart/linesGL/LinesGLView.js
+;// ./src/chart/linesGL/LinesGLView.js
 
 
 
@@ -65616,7 +63908,7 @@ var LinesGLSeries = external_echarts_.SeriesModel.extend({
         this.groupGL.removeAll();
     }
 }));
-;// CONCATENATED MODULE: ./src/chart/linesGL/install.js
+;// ./src/chart/linesGL/install.js
 // TODO ECharts GL must be imported whatever component,charts is imported.
 
 
@@ -65627,11 +63919,11 @@ function linesGL_install_install(registers) {
     registers.registerChartView(LinesGLView);
     registers.registerSeriesModel(linesGL_LinesGLSeries);
 }
-;// CONCATENATED MODULE: ./src/chart/linesGL.js
+;// ./src/chart/linesGL.js
 
 
 (0,external_echarts_.use)(linesGL_install_install);
-;// CONCATENATED MODULE: ./src/export/all.js
+;// ./src/export/all.js
 
 
 
@@ -65653,72 +63945,9 @@ function linesGL_install_install(registers) {
 
 
 
-/***/ }),
+})();
 
-/***/ "echarts/lib/echarts":
-/*!**************************!*\
-  !*** external "echarts" ***!
-  \**************************/
-/***/ ((module) => {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_echarts_lib_echarts__;
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-/******/ 	// module exports must be returned from runtime so entry inlining is disabled
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__("./src/export/all.js");
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
 });
