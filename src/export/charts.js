@@ -1,4 +1,5 @@
 export {install as Bar3DChart} from '../chart/bar3D/install';
+export {install as Wafermap3DChart} from '../chart/wafermap3D/install';
 export {install as Line3DChart} from '../chart/line3D/install';
 export {install as Scatter3DChart} from '../chart/scatter3D/install';
 export {install as Lines3DChart} from '../chart/lines3D/install';

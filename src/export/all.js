@@ -7,6 +7,7 @@ import '../component/mapbox3D';
 import '../component/maptalks3D';
 
 import '../chart/bar3D';
+import '../chart/wafermap3D';
 import '../chart/line3D';
 import '../chart/scatter3D';
 import '../chart/lines3D';

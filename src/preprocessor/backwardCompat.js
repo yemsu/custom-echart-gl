@@ -1,6 +1,6 @@
 import * as echarts from 'echarts/lib/echarts';
 
-var GL_SERIES = ['bar3D', 'line3D', 'map3D', 'scatter3D', 'surface', 'lines3D', 'scatterGL', 'scatter3D'];
+var GL_SERIES = ['bar3D', 'wafermap3D', 'line3D', 'map3D', 'scatter3D', 'surface', 'lines3D', 'scatterGL', 'scatter3D'];
 
 function convertNormalEmphasis(option, optType) {
     if (option && option[optType] && (option[optType].normal || option[optType].emphasis)) {
