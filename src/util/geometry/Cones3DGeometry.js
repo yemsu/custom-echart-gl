@@ -20,11 +20,17 @@ var mat3 = glMatrix.mat3;
  * @extends clay.Geometry
  */
 
-const BAR_VERTEX_COUNT = 5
-const BAR_TRIANGLE_COUNT = 6
+// vertex count
+const BOTTOM_SHAPE_VERTEX_COUNT = 10 // 도형 꼭지점 개수
+const BOTTOM_VERTEX_COUNT = BOTTOM_SHAPE_VERTEX_COUNT + 1 // 도형 꼭지점 개수 + 가운데 원점
+const TOP_VERTEX_COUNT = 1
+const BAR_VERTEX_COUNT = BOTTOM_VERTEX_COUNT + TOP_VERTEX_COUNT
+// triangle count
+const BOTTOM_TRIANGLE_COUNT = BOTTOM_SHAPE_VERTEX_COUNT
+const SIDE_TRIANGLE_COUNT = BOTTOM_TRIANGLE_COUNT
+const BAR_TRIANGLE_COUNT = BOTTOM_TRIANGLE_COUNT + SIDE_TRIANGLE_COUNT
 var BarsGeometry = Geometry.extend(function () {
     return {
-
         attributes: {
             position: new Geometry.Attribute('position', 'float', 3, 'POSITION'),
             color: new Geometry.Attribute('color', 'float', 4, 'COLOR'),
@@ -130,17 +136,20 @@ var BarsGeometry = Geometry.extend(function () {
             pts[i] = v3Create();
         }
 
-        var cubeFaces3 = [
-            [0, 1, 4], // 바닥점 0,1 + 꼭대기 4
-            [1, 2, 4], // 1,2 + 꼭대기
-            [2, 3, 4], // ...
-            [3, 0, 4],
-            // (선택) 바닥도 면 만들고 싶으면 아래 2개 추가
-            [0, 2, 1],
-            [0, 3, 2]
-          ];
+        const cubeFaces3 = []
+        
+        // 면 그리기
+        // 측면 5개 (꼭대기)
+        for (let i = 0; i < SIDE_TRIANGLE_COUNT; i++) {
+          cubeFaces3.push([i, (i + 1) % SIDE_TRIANGLE_COUNT, SIDE_TRIANGLE_COUNT])
+        }
+        
+        // 바닥 5개 (중심점)
+        for (let i = 0; i < BOTTOM_TRIANGLE_COUNT; i++) {
+          cubeFaces3.push([(i + 1) % BOTTOM_TRIANGLE_COUNT, i, BOTTOM_VERTEX_COUNT])
+        }
+        
         return function (start, dir, leftDir, size, color, dataIndex) {
-
             // Use vertex, triangle maybe sorted.
             var startVertex = this._vertexOffset;
 
@@ -157,21 +166,29 @@ var BarsGeometry = Geometry.extend(function () {
             vec3.negate(ny, py);
             vec3.negate(nz, pz);
 
-            // 바닥 4개 점
-            v3ScaleAndAdd(pts[0], start, px, size[0] / 2);
-            v3ScaleAndAdd(pts[0], pts[0], pz, size[2] / 2);
-            v3ScaleAndAdd(pts[1], start, px, size[0] / 2);
-            v3ScaleAndAdd(pts[1], pts[1], nz, size[2] / 2);
-            v3ScaleAndAdd(pts[2], start, nx, size[0] / 2);
-            v3ScaleAndAdd(pts[2], pts[2], nz, size[2] / 2);
-            v3ScaleAndAdd(pts[3], start, nx, size[0] / 2);
-            v3ScaleAndAdd(pts[3], pts[3], pz, size[2] / 2);
-
-            // 위쪽 좌표 만들기 전에 py방향으로 size[1]만큼 이동한 뒤 계싼
-            v3ScaleAndAdd(end, start, py, size[1]);
-
-            // 일단 사각뿔로 한다고 하면 상단 정점 1개만 정의하면됨.
-            v3ScaleAndAdd(pts[4], start, py, size[1]);
+            const radiusX = size[0] / 2;
+            const radiusZ = size[2] / 2;
+            const angleRad = Math.PI * 2 / BOTTOM_SHAPE_VERTEX_COUNT;
+            
+            // 바닥 정점 5개
+            for (let i = 0; i < BOTTOM_SHAPE_VERTEX_COUNT; i++) {
+                const angle = angleRad * i;
+                const x = Math.cos(angle) * radiusX;
+                const z = Math.sin(angle) * radiusZ;
+            
+                pts[i] = v3Create();
+                v3ScaleAndAdd(pts[i], start, px, x);
+                v3ScaleAndAdd(pts[i], pts[i], pz, z);
+            }
+            
+            // 꼭대기점
+            pts[BOTTOM_SHAPE_VERTEX_COUNT] = v3Create();
+            v3ScaleAndAdd(pts[BOTTOM_SHAPE_VERTEX_COUNT], start, py, size[1]);
+            
+            // 바닥 중심점 
+            pts[BOTTOM_VERTEX_COUNT] = v3Create();
+            vec3.copy(pts[BOTTOM_VERTEX_COUNT], start);
+            
 
             var attributes = this.attributes;
             for (var i = 0; i < cubeFaces3.length; i++) {
