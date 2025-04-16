@@ -27,19 +27,12 @@ var BarsGeometry = Geometry.extend(function () {
 
         attributes: {
             position: new Geometry.Attribute('position', 'float', 3, 'POSITION'),
-            normal: new Geometry.Attribute('normal', 'float', 3, 'NORMAL'),
             color: new Geometry.Attribute('color', 'float', 4, 'COLOR'),
 
             prevPosition: new Geometry.Attribute('prevPosition', 'float', 3),
-            prevNormal: new Geometry.Attribute('prevNormal', 'float', 3)
         },
 
         dynamic: true,
-
-        enableNormal: false,
-
-        bevelSize: 1,
-        bevelSegments: 0,
 
         // Map from vertexIndex to dataIndex.
         _dataIndices: null,
@@ -66,7 +59,6 @@ var BarsGeometry = Geometry.extend(function () {
 
 
     setBarCount: function (barCount) {
-        var enableNormal = this.enableNormal;
         // 	bar 하나당 필요한 정점 개수. 보통 bar는 8개의 정점을 가진다.
         var vertexCount = BAR_VERTEX_COUNT * barCount; 
         // 	bar 하나당 필요한 삼각형 개수. 보통 bar는 12개
@@ -76,12 +68,6 @@ var BarsGeometry = Geometry.extend(function () {
         // GPU에 넘길 VBO(Vertex Buffer Object)를 위한 실제 공간을 Float32Array 등으로 초기화
         if (this.vertexCount !== vertexCount) {
             this.attributes.position.init(vertexCount);
-            if (enableNormal) {
-                this.attributes.normal.init(vertexCount);
-            }
-            else {
-                this.attributes.normal.value = null;
-            }
             this.attributes.color.init(vertexCount);
         }
 
@@ -100,16 +86,6 @@ var BarsGeometry = Geometry.extend(function () {
              */
             this._dataIndices = new Uint32Array(vertexCount);
         }
-    },
-
-    _getBevelBarVertexCount: function (bevelSegments) {
-        return (bevelSegments + 1) * 4 * (bevelSegments + 1) * 2;
-    },
-
-    _getBevelBarTriangleCount: function (bevelSegments) {
-        var widthSegments = bevelSegments * 4 + 3;
-        var heightSegments = bevelSegments * 2 + 1;
-        return (widthSegments + 1) * heightSegments * 2 + 4;
     },
 
     setColor: function (idx, color) {
@@ -168,86 +144,6 @@ var BarsGeometry = Geometry.extend(function () {
             // Use vertex, triangle maybe sorted.
             var startVertex = this._vertexOffset;
 
-            if (this.bevelSize > 0 && this.bevelSegments > 0) {
-                this._addBevelBar(start, dir, leftDir, size, this.bevelSize, this.bevelSegments, color);
-            }
-            else {
-                vec3.copy(py, dir);
-                vec3.normalize(py, py);
-                // x * y => z
-                vec3.cross(pz, leftDir, py);
-                vec3.normalize(pz, pz);
-                // y * z => x
-                vec3.cross(px, py, pz);
-                vec3.normalize(pz, pz);
-
-                vec3.negate(nx, px);
-                vec3.negate(ny, py);
-                vec3.negate(nz, pz);
-
-                // 바닥 4개 점
-                v3ScaleAndAdd(pts[0], start, px, size[0] / 2);
-                v3ScaleAndAdd(pts[0], pts[0], pz, size[2] / 2);
-                v3ScaleAndAdd(pts[1], start, px, size[0] / 2);
-                v3ScaleAndAdd(pts[1], pts[1], nz, size[2] / 2);
-                v3ScaleAndAdd(pts[2], start, nx, size[0] / 2);
-                v3ScaleAndAdd(pts[2], pts[2], nz, size[2] / 2);
-                v3ScaleAndAdd(pts[3], start, nx, size[0] / 2);
-                v3ScaleAndAdd(pts[3], pts[3], pz, size[2] / 2);
-
-                // 위쪽 좌표 만들기 전에 py방향으로 size[1]만큼 이동한 뒤 계싼
-                v3ScaleAndAdd(end, start, py, size[1]);
-
-                // 일단 사각뿔로 한다고 하면 상단 정점 1개만 정의하면됨.
-                v3ScaleAndAdd(pts[4], start, py, size[1]);
-
-                var attributes = this.attributes;
-                for (var i = 0; i < cubeFaces3.length; i++) {
-                    var idx3 = this._triangleOffset * 3;
-                    for (var k = 0; k < 3; k++) {
-                        this.indices[idx3 + k] = cubeFaces3[i][k] + this._vertexOffset;
-                    }
-                    this._triangleOffset++;
-                }
-
-                for (var i = 0; i < pts.length; i++) {
-                    attributes.position.set(this._vertexOffset, pts[i]);
-                    attributes.color.set(this._vertexOffset++, color);
-                }
-            }
-
-            var endVerex = this._vertexOffset;
-
-            for (var i = startVertex; i < endVerex; i++) {
-                this._dataIndices[i] = dataIndex;
-            }
-        };
-    })(),
-
-    /**
-     * Add a bar with bevel
-     * @param {Array.<number>} start
-     * @param {Array.<number>} end
-     * @param {Array.<number>} orient  right direction
-     * @param {Array.<number>} size size on x and z
-     * @param {number} bevelSize
-     * @param {number} bevelSegments
-     * @param {Array.<number>} color
-     */
-    _addBevelBar: (function () {
-        var px = vec3.create();
-        var py = vec3.create();
-        var pz = vec3.create();
-
-        var rotateMat = mat3.create();
-
-        var bevelStartSize = [];
-
-        var xOffsets = [1, -1, -1, 1];
-        var zOffsets = [1, 1, -1, -1];
-        var yOffsets = [2, 0];
-
-        return function (start, dir, leftDir, size, bevelSize, bevelSegments, color) {
             vec3.copy(py, dir);
             vec3.normalize(py, py);
             // x * y => z
@@ -257,93 +153,47 @@ var BarsGeometry = Geometry.extend(function () {
             vec3.cross(px, py, pz);
             vec3.normalize(pz, pz);
 
-            rotateMat[0] = px[0]; rotateMat[1] = px[1]; rotateMat[2] = px[2];
-            rotateMat[3] = py[0]; rotateMat[4] = py[1]; rotateMat[5] = py[2];
-            rotateMat[6] = pz[0]; rotateMat[7] = pz[1]; rotateMat[8] = pz[2];
+            vec3.negate(nx, px);
+            vec3.negate(ny, py);
+            vec3.negate(nz, pz);
 
-            bevelSize = Math.min(size[0], size[2]) / 2 * bevelSize;
+            // 바닥 4개 점
+            v3ScaleAndAdd(pts[0], start, px, size[0] / 2);
+            v3ScaleAndAdd(pts[0], pts[0], pz, size[2] / 2);
+            v3ScaleAndAdd(pts[1], start, px, size[0] / 2);
+            v3ScaleAndAdd(pts[1], pts[1], nz, size[2] / 2);
+            v3ScaleAndAdd(pts[2], start, nx, size[0] / 2);
+            v3ScaleAndAdd(pts[2], pts[2], nz, size[2] / 2);
+            v3ScaleAndAdd(pts[3], start, nx, size[0] / 2);
+            v3ScaleAndAdd(pts[3], pts[3], pz, size[2] / 2);
 
-            for (var i = 0; i < 3; i++) {
-                bevelStartSize[i] = Math.max(size[i] - bevelSize * 2, 0);
-            }
-            var rx = (size[0] - bevelStartSize[0]) / 2;
-            var ry = (size[1] - bevelStartSize[1]) / 2;
-            var rz = (size[2] - bevelStartSize[2]) / 2;
+            // 위쪽 좌표 만들기 전에 py방향으로 size[1]만큼 이동한 뒤 계싼
+            v3ScaleAndAdd(end, start, py, size[1]);
 
-            var pos = [];
-            var normal = [];
-            var vertexOffset = this._vertexOffset;
+            // 일단 사각뿔로 한다고 하면 상단 정점 1개만 정의하면됨.
+            v3ScaleAndAdd(pts[4], start, py, size[1]);
 
-            var endIndices = [];
-            for (var i = 0; i < 2; i++) {
-                endIndices[i] = endIndices[i] = [];
-
-                for (var m = 0; m <= bevelSegments; m++) {
-                    for (var j = 0; j < 4; j++) {
-                        if ((m === 0 && i === 0) || (i === 1 && m === bevelSegments)) {
-                            endIndices[i].push(vertexOffset);
-                        }
-                        for (var n = 0; n <= bevelSegments; n++) {
-
-                            var phi = n / bevelSegments * Math.PI / 2 + Math.PI / 2 * j;
-                            var theta = m / bevelSegments * Math.PI / 2 + Math.PI / 2 * i;
-                            // var r = rx < ry ? (rz < rx ? rz : rx) : (rz < ry ? rz : ry);
-                            normal[0] = rx * Math.cos(phi) * Math.sin(theta);
-                            normal[1] = ry * Math.cos(theta);
-                            normal[2] = rz * Math.sin(phi) * Math.sin(theta);
-                            pos[0] = normal[0] + xOffsets[j] * bevelStartSize[0] / 2;
-                            pos[1] = (normal[1] + ry) + yOffsets[i] * bevelStartSize[1] / 2;
-                            pos[2] = normal[2] + zOffsets[j] * bevelStartSize[2] / 2;
-
-                            // Normal is not right if rx, ry, rz not equal.
-                            if (!(Math.abs(rx - ry) < 1e-6 && Math.abs(ry - rz) < 1e-6)) {
-                                normal[0] /= rx * rx;
-                                normal[1] /= ry * ry;
-                                normal[2] /= rz * rz;
-                            }
-                            vec3.normalize(normal, normal);
-
-                            vec3.transformMat3(pos, pos, rotateMat);
-                            vec3.transformMat3(normal, normal, rotateMat);
-                            vec3.add(pos, pos, start);
-
-                            this.attributes.position.set(vertexOffset, pos);
-                            if (this.enableNormal) {
-                                this.attributes.normal.set(vertexOffset, normal);
-                            }
-                            this.attributes.color.set(vertexOffset, color);
-                            vertexOffset++;
-                        }
-                    }
+            var attributes = this.attributes;
+            for (var i = 0; i < cubeFaces3.length; i++) {
+                var idx3 = this._triangleOffset * 3;
+                for (var k = 0; k < 3; k++) {
+                    this.indices[idx3 + k] = cubeFaces3[i][k] + this._vertexOffset;
                 }
+                this._triangleOffset++;
             }
 
-            var widthSegments = bevelSegments * 4 + 3;
-            var heightSegments = bevelSegments * 2 + 1;
-
-            var len = widthSegments + 1;
-
-            for (var j = 0; j < heightSegments; j ++) {
-                for (var i = 0; i <= widthSegments; i ++) {
-                    var i2 = j * len + i + this._vertexOffset;
-                    var i1 = (j * len + (i + 1) % len) + this._vertexOffset;
-                    var i4 = (j + 1) * len + (i + 1) % len + this._vertexOffset;
-                    var i3 = (j + 1) * len + i + this._vertexOffset;
-
-                    this.setTriangleIndices(this._triangleOffset++, [i4, i2, i1]);
-                    this.setTriangleIndices(this._triangleOffset++, [i4, i3, i2]);
-                }
+            for (var i = 0; i < pts.length; i++) {
+                attributes.position.set(this._vertexOffset, pts[i]);
+                attributes.color.set(this._vertexOffset++, color);
             }
 
-            // Close top and bottom
-            this.setTriangleIndices(this._triangleOffset++, [endIndices[0][0], endIndices[0][2], endIndices[0][1]]);
-            this.setTriangleIndices(this._triangleOffset++, [endIndices[0][0], endIndices[0][3], endIndices[0][2]]);
-            this.setTriangleIndices(this._triangleOffset++, [endIndices[1][0], endIndices[1][1], endIndices[1][2]]);
-            this.setTriangleIndices(this._triangleOffset++, [endIndices[1][0], endIndices[1][2], endIndices[1][3]]);
+            var endVerex = this._vertexOffset;
 
-            this._vertexOffset = vertexOffset;
+            for (var i = startVertex; i < endVerex; i++) {
+                this._dataIndices[i] = dataIndex;
+            }
         };
-    })()
+    })(),
 });
 
 echarts.util.defaults(BarsGeometry.prototype, dynamicConvertMixin);
